@@ -1,0 +1,14 @@
+<div class='lang' [class.selected]='selected' (click)='toggle($event)'>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.97 2.98">
+    <polygon class="cls-1" points="5.97 0 0 0 2.98 2.98 5.97 0"/>
+  </svg>
+  <span>{{lang}}</span>
+</div>
+
+<app-common-overlay *ngIf='selected'>
+  <img src='assets/langu-overlay-ic.svg'/>
+  <h1>החלפת שפה</h1>
+  <h2>עברית</h2>
+  <h2>عربيه</h2>
+  <h2>English</h2>
+</app-common-overlay>

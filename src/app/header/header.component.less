@@ -1,0 +1,31 @@
+@import '../../common.less';
+
+:host {
+    display: flex;
+    width: 100vw;
+    background-color: white;
+    height: calc(@headerHeight + 10px);
+
+    .header {
+        width: 100vw;
+        padding: 0 5px 0 50px;
+        position: fixed;
+        box-shadow: 0px 6px 5px 0px rgba(204,204,204,1);
+        top: 0px;
+        right: 0px;
+        display: flex;
+        background-color: white;
+
+        .container {
+            width: 100%;
+            display: flex;
+            background-color: white;
+            height: @headerHeight;
+            align-items: center;
+            
+            .separator {
+                margin-right: auto;
+            }
+        }
+    }
+}

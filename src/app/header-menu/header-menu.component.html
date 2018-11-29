@@ -1,0 +1,21 @@
+<div class='lang' [class.selected]='selected' (click)='toggle($event)'>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.42 13.81">
+    <defs>
+      <style>
+        .cls-1{fill:none;stroke-miterlimit:10;stroke-width:2px;}
+      </style>
+    </defs>
+    <line class="cls-1" y1="1" x2="16.42" y2="1"/>
+    <line class="cls-1" y1="6.91" x2="16.42" y2="6.91"/>
+    <line class="cls-1" y1="12.81" x2="16.42" y2="12.81"/>
+  </svg>
+</div>
+
+<app-common-overlay *ngIf='selected'>
+  <img src='assets/inverse-landingpage-logo.svg'/>
+  <h2>מאגר המידע הכללי</h2>
+  <h2>סטטיסטיקה מגדרית</h2>
+  <h2>ארגונים ופעילות בתחום המגדר</h2>
+  <h2>מדד המגדר</h2>
+  <h2>אודות</h2>
+</app-common-overlay>

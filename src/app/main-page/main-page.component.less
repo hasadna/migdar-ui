@@ -1,0 +1,86 @@
+@import '../../common.less';
+
+:host {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 80px;    
+
+    .fixed-bg {
+        position: fixed;
+        background-image: url('../../assets/bg-logo-symbol.svg');
+        background-size: cover;
+        top: @headerHeight;
+        right: 0;
+        width: 100vw;
+        height: calc(100vh ~'-' @headerHeight);
+        z-index: -1;
+    }
+
+    .need-help {
+        background-image: url('../../assets/lp-bg.svg');
+        background-size: cover;
+        padding: 40px 80px;
+        margin: 40px 0;
+        width: 100vw;
+        display: flex;
+        flex-flow: column;
+        align-items: center;  
+        justify-content: center;
+        
+        .need-help-main {
+            background-color: white;
+            padding: 40px 100px;
+            margin: 40px 0;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            border-radius: 0 0 10px 10px;
+
+            .logo {
+                width: 100px;
+                margin-bottom: 20px;        
+            }
+
+            span {
+                font-size: 24px;
+                font-family: @secondaryFont;
+            }
+
+            .buttons {
+                margin-top: 20px;
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+                align-items: center;
+
+                div {
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    height: 40px;
+                    width: 200px;
+                    border: 1px solid @primaryPurple;
+                    border-radius: 20px;
+                    margin: 20px;
+                    color: @primaryPurple;
+                    background-color: white;
+
+                    span {
+                        font-size: 16px;
+                    }
+
+                    &:first-child {
+                        color: white;
+                        background-color: @primaryPurple;
+                    }
+
+                    img {
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

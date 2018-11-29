@@ -1,0 +1,57 @@
+@import '../../common.less';
+
+:host {
+
+    .lang {
+        width: @circleButtonSize;
+        height: @circleButtonSize;
+        border-radius: @circleButtonSize;
+        color: @primaryPurple;
+        background-color: @backgroundWhite;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            flex: 0 1 auto;
+            width: 16px;
+            
+            line {
+                stroke: @primaryPurple;
+            }
+        }
+
+        span {
+            flex: 0 0 auto;
+            font-size: @circleButtonTextSize;
+        }
+        &.selected {
+            background-color: @primaryPurple;
+            color: @backgroundWhite;
+
+            svg {
+                line {
+                    stroke: @backgroundWhite;
+                }    
+            }
+        }
+    }
+
+    app-common-overlay {
+        img {
+            width: 200px;
+            margin-bottom: 40px;
+        }
+
+        color: white;
+        font-family: @secondaryFont;
+
+        h2 {
+            font-size: 40px;
+            font-weight: normal;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '../../common.less';
+
+:host {
+    position: fixed;
+    top: @headerHeight;
+    right: 0;
+    width: 100vw;
+    margin: 10px 0;
+    height: calc(100vh ~"-" @headerHeight - 20px);
+
+    background-color: @backgroundDarkTransparency;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}

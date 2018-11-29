@@ -1,0 +1,8 @@
+<div class='header' (click)='langSelected = menuSelected = false'>
+  <div class='container'>
+    <img class='logo' src='assets/sticky-logo.svg'>
+    <span class='separator'></span>
+    <app-header-lang-selector [(selected)]='langSelected'></app-header-lang-selector>
+    <app-header-menu [(selected)]='menuSelected'></app-header-menu>
+  </div>
+</div>
