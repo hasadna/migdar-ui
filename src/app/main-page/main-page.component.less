@@ -94,6 +94,43 @@
         }
     }
 
+    .recently-added {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        background-color: rgba(0,0,0,0.05);
+        padding: 10px 0;
+        width: 100vw;
+
+        h1, h2 {
+            font-family: @secondaryFont;
+            color: @primaryPurple;
+            letter-spacing: 1px;
+            margin: 15px 0;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .cards {
+            display: flex;
+
+            flex-flow: row;
+            max-width: @containerWidth;
+            
+            > * {
+                margin: 10px;
+            }    
+        }
+    }
+
     .need-help {
         background-image: url('../../assets/lp-bg.svg');
         background-size: cover;

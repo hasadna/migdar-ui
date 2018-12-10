@@ -30,6 +30,11 @@
   </div>
 </div>
 <div class='recently-added'>
+  <h1>פריטים שהתווספו למאגר לאחרונה</h1>
+  <div class='cards'>
+    <app-result-card *ngFor='let result of (results | async)' [result]='result'></app-result-card>
+  </div>
+  <h2>עוד פריטים שהתווספו לאחרונה&hellip;</h2>
 </div>
 <div class='need-help'>
   <div class='need-help-main'>

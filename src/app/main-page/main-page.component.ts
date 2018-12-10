@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-main-page',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  results: Observable<any>;
+
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
+    this.results = this.api.fetch('book', 2);
   }
 
 }
