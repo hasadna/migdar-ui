@@ -1,0 +1,293 @@
+@import '../../common.less';
+
+:host {
+    display: relative;
+    width: 100%;
+    height: 100%;
+    
+    .text {
+        position: absolute;
+        display: block;
+        width: 200px;
+        height: 30px;
+
+        animation: 3s infinite rotate;
+
+        .inner-text {
+            white-space: nowrap;
+            color: @primaryPurple;
+            font-family: @secondaryFont;
+            font-weight: bolder;
+            font-size: 20px;
+            margin-top: -17px;
+            margin-right: 20px;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transform-origin: 197px 26px;
+        }
+    }
+
+    .point {
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin-top: -5px;
+        margin-right: -5px;
+        border-radius: 5px;
+        border: none;
+        background-color: @primaryPurple;
+        animation: 3s infinite rotate;
+    }
+
+    .point-circle {
+        position: absolute;
+        display: block;
+        object-fit: cover;
+        width: auto;
+        height: 36px;
+        margin-top: -18px;
+        margin-right: -12px;
+        border: none;
+        animation: 3s infinite flash-circle;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(-22.5deg);
+        }
+
+        to {
+            transform: rotate(-22.5deg);
+        }
+    }
+
+    @keyframes rotate-counter {
+        from {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(22.5deg);
+        }
+
+        to {
+            transform: rotate(22.5deg);
+        }
+    }
+
+    .point0 { animation-name: rotate, point0; }
+    @keyframes point0 {
+        from { opacity: 1.0; }
+        50% { opacity: 0.8875; }
+        to { opacity: 0.8875; }
+    }
+
+
+    .point1 { animation-name: rotate, point1; }
+    @keyframes point1 {
+        from { opacity: 0.8875; }
+        50% { opacity: 0.775; }
+        to { opacity: 0.775; }
+    }
+
+
+    .point2 { animation-name: rotate, point2; }
+    @keyframes point2 {
+        from { opacity: 0.775; }
+        50% { opacity: 0.6625; }
+        to { opacity: 0.6625; }
+    }
+
+
+    .point3 { animation-name: rotate, point3; }
+    @keyframes point3 {
+        from { opacity: 0.6625; }
+        50% { opacity: 0.55; }
+        to { opacity: 0.55; }
+    }
+
+
+    .point4 { animation-name: rotate, point4; }
+    @keyframes point4 {
+        from { opacity: 0.55; }
+        50% { opacity: 0.4375; }
+        to { opacity: 0.4375; }
+    }
+
+
+    .point5 { animation-name: rotate, point5; }
+    @keyframes point5 {
+        from { opacity: 0.4375; }
+        50% { opacity: 0.325; }
+        to { opacity: 0.325; }
+    }
+
+
+    .point6 { animation-name: rotate, point6; }
+    @keyframes point6 {
+        from { opacity: 0.325; }
+        50% { opacity: 0.2125; }
+        to { opacity: 0.2125; }
+    }
+
+
+    .point7 { animation-name: rotate, point7; }
+    @keyframes point7 {
+        from { opacity: 0.2125; }
+        50% { opacity: 0.1; }
+        to { opacity: 0.1; }
+    }
+
+
+    .point8 { animation-name: rotate, point8; }
+    @keyframes point8 {
+        from { opacity: 0.1; }
+        50% { opacity: 0.2125; }
+        to { opacity: 0.2125; }
+    }
+
+
+    .point9 { animation-name: rotate, point9; }
+    @keyframes point9 {
+        from { opacity: 0.2125; }
+        50% { opacity: 0.325; }
+        to { opacity: 0.325; }
+    }
+
+
+    .point10 { animation-name: rotate, point10; }
+    @keyframes point10 {
+        from { opacity: 0.325; }
+        50% { opacity: 0.4375; }
+        to { opacity: 0.4375; }
+    }
+
+
+    .point11 { animation-name: rotate, point11; }
+    @keyframes point11 {
+        from { opacity: 0.4375; }
+        50% { opacity: 0.55; }
+        to { opacity: 0.55; }
+    }
+
+
+    .point12 { animation-name: rotate, point12; }
+    @keyframes point12 {
+        from { opacity: 0.55; }
+        50% { opacity: 0.6625; }
+        to { opacity: 0.6625; }
+    }
+
+
+    .point13 { animation-name: rotate, point13; }
+    @keyframes point13 {
+        from { opacity: 0.6625; }
+        50% { opacity: 0.775; }
+        to { opacity: 0.775; }
+    }
+
+
+    .point14 { animation-name: rotate, point14; }
+    @keyframes point14 {
+        from { opacity: 0.775; }
+        50% { opacity: 0.8875; }
+        to { opacity: 0.8875; }
+    }
+
+
+    .point15 { animation-name: rotate, point15; }
+    @keyframes point15 {
+        from { opacity: 0.8875; }
+        50% { opacity: 1.0; }
+        to { opacity: 1.0; }
+    }
+
+    .text0 { animation-name: rotate-counter, text0, maintext-out; }
+    @keyframes text0 {
+        from { opacity: 1.0; }
+        50% { opacity: 0.8875; }
+        to { opacity: 0.8875; }
+    }
+    @keyframes maintext-out {
+        from { color: white;  margin-right: 35px; }
+        10% { color: @primaryPurple; }
+        to { color: @primaryPurple; }
+    }
+
+
+    .text1 { animation-name: rotate-counter, text1; }
+    @keyframes text1 {
+        from { opacity: 0.8875; }
+        50% { opacity: 0.775; }
+        to { opacity: 0.775; }
+    }
+
+
+    .text2 { animation-name: rotate-counter, text2; }
+    @keyframes text2 {
+        from { opacity: 0.775; }
+        50% { opacity: 0.6625; }
+        to { opacity: 0.6625; }
+    }
+
+
+    .text3 { animation-name: rotate-counter, text3; }
+    @keyframes text3 {
+        from { opacity: 0.6625; }
+        50% { opacity: 0.0; }
+        to { opacity: 0.0; }
+    }
+
+
+    .text12 { animation-name: rotate-counter, text12; }
+    @keyframes text12 {
+        from { opacity: 0.0; }
+        50% { opacity: 0.6625; }
+        to { opacity: 0.6625; }
+    }
+
+
+    .text13 { animation-name: rotate-counter, text13; }
+    @keyframes text13 {
+        from { opacity: 0.6625; }
+        50% { opacity: 0.775; }
+        to { opacity: 0.775; }
+    }
+
+
+    .text14 { animation-name: rotate-counter, text14; }
+    @keyframes text14 {
+        from { opacity: 0.775; }
+        50% { opacity: 0.8875; }
+        to { opacity: 0.8875; }
+    }
+
+
+    .text15 { animation-name: rotate-counter, text15, maintext-in; }
+    @keyframes text15 {
+        from { opacity: 0.8875; }
+        50% { opacity: 1.0; }
+        to { opacity: 1.0; }
+    }
+    @keyframes maintext-in {
+        from { color: @primaryPurple; }
+        30% { color: @primaryPurple; }
+        50% { color: white; margin-right: 35px; }
+        to { color: white; margin-right: 35px; }
+    }
+
+    @keyframes flash-circle {
+        from { opacity: 1; }
+        10% { opacity: 0; }
+        40% { opacity: 0; }
+        50% { opacity: 1; }
+        to { opacity: 1; }
+    }
+
+
+}

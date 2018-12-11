@@ -1,0 +1,22 @@
+<img [style.right]='(points[0].x + RADIUS) + "px"'
+     [style.top]='(-points[0].y + RADIUS) + "px"'
+     src='assets/lp-selected-cyrcle.svg'
+     class='point-circle'/>
+<div *ngFor='let point of points'
+     [style.right]='(point.x + RADIUS) + "px"'
+     [style.top]='(-point.y + RADIUS) + "px"'
+     [style.transform-origin]='(point.x + 5) + "px " + (point.y + 5) + "px"'
+     [class]='"point point" + point.i'
+></div>
+<div class="text"
+      (animationiteration)='rotateLabels()'></div>
+<ng-container *ngFor='let point of points'>
+  <div *ngIf='point.i < 4 || point.i > 11'    
+      [style.right]='(point.x + RADIUS) + "px"'
+      [style.top]='(-point.y + RADIUS) + "px"'
+      [style.transform-origin]='(point.x + 200) + "px " + (point.y + 10) + "px"'
+      [class]='"text"'
+  >
+    <div [class]='"inner-text text" + point.i'>{{point.text}}</div>
+  </div>
+</ng-container>

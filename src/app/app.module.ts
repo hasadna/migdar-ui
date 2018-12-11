@@ -14,6 +14,7 @@ import { MainPageCardComponent } from './main-page-card/main-page-card.component
 import { ResultCardComponent } from './result-card/result-card.component';
 import { ResultCardPublicationComponent } from './result-card-publication/result-card-publication.component';
 import { ResultCardLayoutComponent } from './result-card-layout/result-card-layout.component';
+import { MainPageSpinnerComponent } from './main-page-spinner/main-page-spinner.component';
 
 
 const appRoutes: Routes = [
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     MainPageCardComponent,
     ResultCardComponent,
     ResultCardPublicationComponent,
-    ResultCardLayoutComponent
+    ResultCardLayoutComponent,
+    MainPageSpinnerComponent
   ],
   imports: [
     BrowserModule,
