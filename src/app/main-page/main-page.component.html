@@ -58,24 +58,28 @@
   </div>
 </div>
 <app-main-page-card
+  *ngIf='reveal > 0'
   [colors]="'red'"
   [logo]='"assets/lp-madad-info-ic.svg"'
   [title]='"מדד המגדר"'
   [description]='"ניטור אי השוויון בין נשים לגברים בישראל בתחומי חיים שונים, המאפשר לזהות מגמות של שינוי באי שוויון המגדרי לאורך השנים"'>
 </app-main-page-card>
 <app-main-page-card
+  *ngIf='reveal > 1'
   [colors]="'green'"
   [logo]='"assets/lp-stats-info-ic.svg"'
   [title]='"סטטיסטיקה מגדרית"'
   [description]='"כאן ניתן למצוא נתונים השוואתיים אודות מצבם של נשים וגברים בתחומי חיים שונים. נתונים אלה יכולים לסייע לקידום יוזמות, מדיניות, אקטיביזם, הוראה ומחקר בתחום השוויון המגדרי"'>
 </app-main-page-card>
 <app-main-page-card
+  *ngIf='reveal > 2'
   [colors]="'orange'"
   [logo]='"assets/lp-orgs-info-ic.svg"'
   [title]='"ארגונים ופעילות בתחום המגדר"'
   [description]='"כאן ניתן למצוא מגוון עשיר של ארגונים, יוזמות וגורמים הפועלים לקידום שוויון מגדרי, וכן תכניות ללימודי מגדר במוסדות האקדמיים. המאגר מפרט, בין היתר, תחומי פעילות, שירותים שניתן לקבל ופרטי התקשרות"'>
 </app-main-page-card>
 <app-main-page-card
+  *ngIf='reveal > 3'
   [colors]="'purple'"
   [logo]='"assets/lp-library-info-ic.svg"'
   [title]='"ספריית המקורות"'

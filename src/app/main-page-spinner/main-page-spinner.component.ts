@@ -27,7 +27,6 @@ export class MainPageSpinnerComponent implements OnInit {
   }
 
   rotateLabels() {
-    console.log('rotate');
     const last = this.points[15].text;
     for (let i = 15 ; i > 0 ; i-- ) {
       this.points[i].text = this.points[i - 1].text;

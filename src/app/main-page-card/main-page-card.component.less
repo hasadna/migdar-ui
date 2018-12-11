@@ -5,6 +5,8 @@
     flex-flow: row;
     width: 100%;
     margin: 80px 0;
+    animation: 2s 1 fadein;
+    z-index: -1;
 
     .title {
         flex: 1 1 auto;
@@ -29,7 +31,12 @@
                 margin-left: -30px;
 
                 img {
+                    animation: 1s 1 slidein;
+                    animation-fill-mode: forwards;
+                    animation-delay: 1s;
                     width: 100%;
+                    margin-right: -300px;
+                    opacity: 0;
                 }
             }
 
@@ -66,5 +73,27 @@
         img {
             width: 100%;
         }
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-right: -300px;
+        opacity: 0;
+    }
+
+    to {
+        margin-right: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
