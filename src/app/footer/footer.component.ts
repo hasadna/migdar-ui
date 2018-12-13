@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { BottommerService } from '../bottommer.service';
+
+declare const window: any;
+
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bottommer: BottommerService) { }
 
   ngOnInit() {
   }
 
+
+  @HostListener('window:scroll', ['$event'])
+  scrollHandler(event) {
+    if (window.innerHeight + window.pageYOffset + 50 > window.document.body.scrollHeight) {
+      this.bottommer.emit();
+    }
+  }
 }

@@ -1,0 +1,16 @@
+:host {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    align-items: flex-start;
+    
+    .column {
+        flex: 1 1 50%;
+        display: flex;
+        flex-flow: column;
+
+        > * {
+            margin: 10px;
+        }
+    }
+}

@@ -34,17 +34,6 @@
         }
     }
 
-    .fixed-bg {
-        position: fixed;
-        background-image: url('../../assets/bg-logo-symbol.svg');
-        background-size: cover;
-        top: calc(@headerHeight + 40px);
-        margin-right: -110px;
-        width: @containerWidth - 40px;
-        height: calc(100vh ~'-' @headerHeight);
-        z-index: -1;
-    }
-
     .spinner-widget {
         position: absolute;
         top: calc(@headerHeight + 40px);
@@ -72,6 +61,7 @@
             padding: 30px 40px;
             text-align: center;
             border-radius: 20px;
+            cursor: pointer;
 
             img {
                 height: 60px;
@@ -133,6 +123,7 @@
             display: flex;
 
             flex-flow: row;
+            width: 100%;
             max-width: @containerWidth;
             
             > * {

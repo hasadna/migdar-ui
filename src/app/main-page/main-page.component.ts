@@ -1,8 +1,8 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Observable } from 'rxjs';
-
-declare const window: any;
+import { Router } from '@angular/router';
+import { BottommerService } from '../bottommer.service';
 
 @Component({
   selector: 'app-main-page',
@@ -14,16 +14,15 @@ export class MainPageComponent implements OnInit {
   results: Observable<any>;
   reveal = 0;
 
-  constructor(private api: ApiService) { }
-
-  ngOnInit() {
-    this.results = this.api.fetch('book', 2);
+  constructor(private api: ApiService,
+              private router: Router,
+              private bottommer: BottommerService) {
+    this.bottommer.reachedBottom.subscribe(() => {
+      this.reveal += 1;
+    });
   }
 
-  @HostListener('window:scroll', ['$event'])
-  scrollHandler(event) {
-    if (window.innerHeight + window.pageYOffset + 50 > window.document.body.scrollHeight) {
-      this.reveal += 1;
-    }
+  ngOnInit() {
+    this.results = this.api.fetch(null, 2);
   }
 }

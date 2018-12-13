@@ -15,6 +15,13 @@ import { ResultCardComponent } from './result-card/result-card.component';
 import { ResultCardPublicationComponent } from './result-card-publication/result-card-publication.component';
 import { ResultCardLayoutComponent } from './result-card-layout/result-card-layout.component';
 import { MainPageSpinnerComponent } from './main-page-spinner/main-page-spinner.component';
+import { SearchPageComponent } from './search-page/search-page.component';
+import { SearchPageHeaderComponent } from './search-page-header/search-page-header.component';
+import { SearchFiltersComponent } from './search-filters/search-filters.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
+import { PublicationsPageComponent } from './publications-page/publications-page.component';
+import { PublicationsPageHeaderComponent } from './publications-page-header/publications-page-header.component';
+import { FixedBackgroundComponent } from './fixed-background/fixed-background.component';
 
 
 const appRoutes: Routes = [
@@ -30,7 +37,9 @@ const appRoutes: Routes = [
   //   pathMatch: 'full'
   // },
   // { path: '**', component: PageNotFoundComponent }
-  { path: '', component: MainPageComponent }
+  { path: 'publications', component: PublicationsPageComponent },
+  { path: 'search', component: SearchPageComponent },
+  { path: '', component: MainPageComponent },
 ];
 
 
@@ -47,7 +56,14 @@ const appRoutes: Routes = [
     ResultCardComponent,
     ResultCardPublicationComponent,
     ResultCardLayoutComponent,
-    MainPageSpinnerComponent
+    MainPageSpinnerComponent,
+    SearchPageComponent,
+    SearchPageHeaderComponent,
+    SearchFiltersComponent,
+    SearchResultsComponent,
+    PublicationsPageComponent,
+    PublicationsPageHeaderComponent,
+    FixedBackgroundComponent
   ],
   imports: [
     BrowserModule,
