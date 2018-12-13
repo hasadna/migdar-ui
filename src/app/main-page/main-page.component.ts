@@ -15,7 +15,7 @@ export class MainPageComponent implements OnInit {
   reveal = 0;
 
   constructor(private api: ApiService,
-              private router: Router,
+              public router: Router,
               private bottommer: BottommerService) {
     this.bottommer.reachedBottom.subscribe(() => {
       this.reveal += 1;

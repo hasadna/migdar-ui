@@ -1,0 +1,38 @@
+@import '../../common.less';
+
+:host {
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-image: url('../../assets/innerpage-library-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    padding: 80px 0;
+
+    h1 {
+        color: white;
+        font-size: 80px;
+        font-weight: bold;
+        font-family: @secondaryFont;
+        text-align: center;
+        margin: 0;
+    }
+    
+    h2 {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-family: @secondaryFont;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    app-search-bar {
+        max-width: calc(@containerWidth/2);
+        width: 80%;
+        margin: 20px 0;
+    }
+}

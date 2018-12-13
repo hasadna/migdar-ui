@@ -1,13 +1,13 @@
-<h1>{{result.gd_title}}</h1>
+<h1>{{result.gd_title || result.title}}</h1>
 <div>
   <strong>נוצר על ידי:&nbsp;</strong>
-  <span>{{result.gd_author}}</span>
+  <span>{{result.gd_author || result.author}}</span>
 </div>
 <div>
   <strong>מפרסם:&nbsp;</strong>
-  <span>{{result.gd_publisher}}</span>
+  <span>{{result.gd_publisher || result.publisher}}</span>
 </div>
 <div>
   <span>{{result.gd_pubyear}}</span>&nbsp;|&nbsp;<span>{{result.language_code}}</span>
 </div>
-<p>{{result.gd_notes}}</p>
+<p>{{result.gd_notes || result.notes}}</p>

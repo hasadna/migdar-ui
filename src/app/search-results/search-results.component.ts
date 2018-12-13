@@ -33,8 +33,6 @@ export class SearchResultsComponent implements OnInit {
       setTimeout(() => {
         const columnHeights = [this.column0ref.nativeElement.offsetHeight,
                                this.column1ref.nativeElement.offsetHeight];
-        console.log(this.column0ref.nativeElement);
-        console.log(columnHeights);
         if (columnHeights[0] <= columnHeights[1]) {
           this.columns[0].push(results[currentAmount]);
         } else {

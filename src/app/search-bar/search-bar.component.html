@@ -1,0 +1,8 @@
+<input type='text' (focus)='focus=true' (blur)='focus=!!currentValue'
+                   (change)='onChanged($event)' (keyup)='onChanged($event)'
+                   [style.color]='color' [style.background-color]='backgroundColor'
+                   [style.background-image]='"url(\"assets/" + icon + ".svg\")"'
+/>
+<span [innerHtml]='placeholder' [class.focus]='focus'
+      [style.color]='color' 
+></span>

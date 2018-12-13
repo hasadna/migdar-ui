@@ -22,6 +22,11 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { PublicationsPageComponent } from './publications-page/publications-page.component';
 import { PublicationsPageHeaderComponent } from './publications-page-header/publications-page-header.component';
 import { FixedBackgroundComponent } from './fixed-background/fixed-background.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { ItemPagePublicationComponent } from './item-page-publication/item-page-publication.component';
+import { ItemPageComponent } from './item-page/item-page.component';
+import { ItemPageHeaderComponent } from './item-page-header/item-page-header.component';
+import { ItemPageSearchResultsComponent } from './item-page-search-results/item-page-search-results.component';
 
 
 const appRoutes: Routes = [
@@ -37,6 +42,13 @@ const appRoutes: Routes = [
   //   pathMatch: 'full'
   // },
   // { path: '**', component: PageNotFoundComponent }
+  { path: 'item',
+    children: [
+      {
+        path: '**', component: ItemPageComponent
+      }
+    ]
+  },
   { path: 'publications', component: PublicationsPageComponent },
   { path: 'search', component: SearchPageComponent },
   { path: '', component: MainPageComponent },
@@ -63,7 +75,12 @@ const appRoutes: Routes = [
     SearchResultsComponent,
     PublicationsPageComponent,
     PublicationsPageHeaderComponent,
-    FixedBackgroundComponent
+    FixedBackgroundComponent,
+    SearchBarComponent,
+    ItemPagePublicationComponent,
+    ItemPageComponent,
+    ItemPageHeaderComponent,
+    ItemPageSearchResultsComponent
   ],
   imports: [
     BrowserModule,

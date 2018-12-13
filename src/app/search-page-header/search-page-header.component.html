@@ -1,3 +1,9 @@
-<p>
-  search-page-header works!
-</p>
+<div>
+  <h1>תוצאות</h1>
+  <app-search-bar
+    (changed)='api.search($event)'
+    [color]='"white"'
+    [backgroundColor]='"#785d70"'
+    [icon]='neg-search-ic'
+  ></app-search-bar>
+</div>

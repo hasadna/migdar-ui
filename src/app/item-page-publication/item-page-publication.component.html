@@ -1,0 +1,27 @@
+<app-item-page-header [color]='"purpleBg"'>
+  <div class='header'>
+    <h1>{{document.gd_title || document.title}}</h1>
+    <div class='infoline' *ngIf='document.gd_author || document.author'>
+      <label>מחברות</label>
+      <span>{{document.gd_author || document.author}}</span>
+    </div>
+    <div class='infoline' *ngIf='document.gd_publisher || document.publisher'>
+      <label>מקור</label>
+      <span>{{document.gd_publisher || document.publisher}}</span>
+    </div>
+    <div class='infoline'>
+      <label></label>
+      <span>{{document.gd_pubyear || document.pubyear}}</span>&nbsp;|&nbsp;
+      <span>{{document.gd_language_code || document.language_code}}</span>
+    </div>
+  </div>
+</app-item-page-header>
+<div class='notes'>
+{{document.gd_notes || document.notes}}
+<br/>
+<br/>
+<strong>תגיות:</strong>&nbsp;{{document.gd_tags || document.tags}}
+</div>
+<app-item-page-search-results>
+<h1>אולי יעניין אותך גם&hellip;</h1>
+</app-item-page-search-results>

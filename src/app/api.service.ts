@@ -8,8 +8,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-
-  url = 'https://yodaat.org/search';
+  url = 'https://yodaat.org';
 
   public results = new BehaviorSubject<any[]>([]);
   private terms = new Subject<any>();
@@ -25,6 +24,9 @@ export class ApiService {
   }
 
   search(term) {
+    if (this.params && this.params.term === term) {
+      return;
+    }
     this.results.next([]);
     this.params = {
       term: term,
@@ -40,16 +42,21 @@ export class ApiService {
 
   fetch(term?, count?, offset?) {
     let params = '';
+    if (term) { params += `&q=${encodeURIComponent(term)}`; }
     if (count) { params += `&size=${count}`; }
     if (offset) { params += `&offset=${offset}`; }
-    if (term) { params += `&q=${encodeURIComponent(term)}`; }
+    params += `&dont_highlight=${encodeURIComponent('*')}`;
     if (params.length > 0) {
       params = '?' + params.slice(1);
     }
-    return this.http.get(`${this.url}/all${params}`)
+    return this.http.get(`${this.url}/search/all${params}`)
               .pipe(
                 map((result: any) => result.search_results.map((item) => Object.assign(item.source, {__type: item.type}))),
               );
+  }
+
+  document(doc_id: string) {
+    return this.http.get(`${this.url}/get/${doc_id}`);
   }
 
 }

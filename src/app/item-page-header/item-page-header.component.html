@@ -1,0 +1,12 @@
+<div [class]='"header " + color'>
+  <div class='inner'>
+    <div class='content'>
+       <ng-content></ng-content>
+    </div>
+    <div class='back'>
+      <a (click)='location.back()'>
+        <img src='assets/peview-back-arrow-ic.svg'/>
+      </a>
+    </div>
+  </div>
+</div>

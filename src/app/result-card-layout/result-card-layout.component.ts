@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-result-card-layout',
@@ -8,8 +9,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ResultCardLayoutComponent implements OnInit {
 
   @Input() colorClass;
+  @Input() result: any;
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }

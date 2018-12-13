@@ -1,0 +1,60 @@
+@import '../../common.less';
+
+:host {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+app-item-page-header {
+
+    .header {
+        width: 100%;
+        padding: 30px 0;
+
+        h1 {
+            color: white;
+            font-family: @secondaryFont;
+            letter-spacing: 1px;
+            margin: 30px 0;
+            font-weight: bold;
+            font-size: 36px;
+        }
+
+        .infoline {
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: baseline;
+            color: white;
+            font-size: 22px;
+
+            label {
+                display: block;
+                font-weight: bold;
+                width: 100px;
+            }
+            span {
+                display: block;
+            }
+        }
+    }
+}
+
+.notes {
+    width: 100%;
+    max-width: @containerWidth;
+    font-size: 22px;
+    margin: 60px 0;
+}
+
+app-item-page-search-results {
+
+    h1 {
+        font-family: @secondaryFont;
+        color: @primaryPurple;
+        display: block;
+        margin: 30px 0;
+        font-size: 28px;
+    }
+}

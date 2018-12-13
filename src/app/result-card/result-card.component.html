@@ -1,6 +1,7 @@
 <app-result-card-layout
   *ngIf='result.__type==="publications"'
   [colorClass]='"purple"'
+  [result]='result'
 >
   <app-result-card-publication
     [result]='result'

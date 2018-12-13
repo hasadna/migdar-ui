@@ -1,0 +1,33 @@
+@import '../../common.less';
+
+:host {
+
+    .header {
+        width: 100vw;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin-top: -10px;
+
+        .inner {
+            max-width: @containerWidth;
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            
+            .content {
+                flex: 0 1 100%;
+            }
+
+            .back {
+                cursor: pointer;
+                flex: 0 0 auto;
+                img {
+                    width: 26px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
