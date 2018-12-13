@@ -13,6 +13,7 @@ export class SearchBarComponent implements OnInit {
   @Input() icon = 'search-ic';
   @Output() changed = new EventEmitter<string>();
 
+  focus = false;
   currentValue = '';
 
   constructor() { }
