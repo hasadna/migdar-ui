@@ -1,8 +1,12 @@
+import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 import { ApiService } from '../api.service';
+import { Subscription } from 'rxjs';
 
+@AutoUnsubscribe()
 @Component({
   selector: 'app-item-page',
   templateUrl: './item-page.component.html',
@@ -12,9 +16,10 @@ export class ItemPageComponent implements OnInit {
 
   kind: string = null;
   document: any = null;
+  routeSubs: Subscription;
 
   constructor(private route: ActivatedRoute, private api: ApiService) {
-    route.url.pipe(
+    this.routeSubs = route.url.pipe(
       map((segments) => {
             const parts = [];
             for (const segment of segments) {

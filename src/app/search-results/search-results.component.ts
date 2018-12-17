@@ -1,28 +1,36 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { ApiService } from '../api.service';
 import { BottommerService } from '../bottommer.service';
+import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
+import { Subscription } from 'rxjs';
 
+@AutoUnsubscribe()
 @Component({
   selector: 'app-search-results',
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.less']
 })
-export class SearchResultsComponent implements OnInit {
+export class SearchResultsComponent implements OnInit, OnDestroy {
 
   columns = [[], []];
   @ViewChild('column0') column0ref: ElementRef;
   @ViewChild('column1') column1ref: ElementRef;
+  searchResultsSubs: Subscription;
+  bottommerSubs: Subscription;
 
   constructor(public api: ApiService,
               private bottommer: BottommerService) {
-    this.api.results.subscribe((results) => {
-      if (results.length === 0) {
-        this.columns = [[], []];
-      } else {
-        this.assignCard(results);
-      }
-    });
-    this.bottommer.reachedBottom.subscribe(() => {
+    this.searchResultsSubs =
+      this.api.results.subscribe((results) => {
+        console.log('GOT results', results);
+        console.log('HAVE columns', this.columns);
+        if (results.length === 0) {
+          this.columns = [[], []];
+        } else {
+          this.assignCard(results);
+        }
+      });
+    this.bottommerSubs = this.bottommer.reachedBottom.subscribe(() => {
       api.searchMore();
     });
   }
@@ -46,6 +54,11 @@ export class SearchResultsComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy() {
+    this.api.clearSearch();
+    this.columns = [[], []];
   }
 
 }

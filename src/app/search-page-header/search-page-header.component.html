@@ -1,7 +1,8 @@
 <div>
   <h1>תוצאות</h1>
   <app-search-bar
-    (changed)='api.search($event)'
+    (changed)='search($event)'
+    [term]='term'
     [color]='"white"'
     [backgroundColor]='"#785d70"'
     [icon]='"neg-search-ic"'

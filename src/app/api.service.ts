@@ -40,6 +40,10 @@ export class ApiService {
     this.terms.next(this.params);
   }
 
+  clearSearch(): any {
+    this.results.next([]);
+  }
+
   fetch(term?, count?, offset?) {
     let params = '';
     if (term) { params += `&q=${encodeURIComponent(term)}`; }
@@ -51,7 +55,10 @@ export class ApiService {
     }
     return this.http.get(`${this.url}/search/all${params}`)
               .pipe(
-                map((result: any) => result.search_results.map((item) => Object.assign(item.source, {__type: item.type}))),
+                map((result: any) => {
+                  console.log('got results for', term);
+                  return result.search_results.map((item) => Object.assign(item.source, {__type: item.type}));
+                }),
               );
   }
 

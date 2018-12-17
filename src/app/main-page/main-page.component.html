@@ -3,6 +3,13 @@
     <img src='assets/landingpage-logo.svg'>
     <h1>מרכז ידע בנושא נשים ומגדר בישראל</h1>
     <h2>שיתוף, הנגשה ויצירה של ידע לקידום שוויון מגדרי</h2>
+    <app-search-bar
+      (changed)='search($event)'
+      [color]='"rgba(67, 38, 58)"'
+      [backgroundColor]='"rgba(67, 38, 58, 0.3)"'
+      [icon]='"search-ic"'
+      [instant]='false'
+    ></app-search-bar>
   </div>
 </div>
 <app-fixed-background [color]='"white"'></app-fixed-background>

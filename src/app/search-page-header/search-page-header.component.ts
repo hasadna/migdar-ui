@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { ApiService } from '../api.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-search-page-header',
@@ -8,9 +9,25 @@ import { ApiService } from '../api.service';
 })
 export class SearchPageHeaderComponent implements OnInit {
 
-  constructor(public api: ApiService) { }
+  @Input() term = '';
+
+  constructor(public api: ApiService,
+              private router: Router,
+              private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+  }
+
+  search(term) {
+    this.router.navigate(
+      [],
+      {
+        relativeTo: this.activatedRoute,
+        queryParams: { q: term, },
+        queryParamsHandling: 'merge',
+        replaceUrl: true
+      });
+    this.api.search(term);
   }
 
 }
