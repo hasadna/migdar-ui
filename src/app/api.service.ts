@@ -8,7 +8,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  url = 'https://yodaat.org';
+  url = 'https://api.yodaat.org';
 
   public results = new BehaviorSubject<any[]>([]);
   private terms = new Subject<any>();
