@@ -1,5 +1,7 @@
 @import '../../common.less';
 
+@transitionDuration: 4s;
+
 :host {
     display: relative;
     width: 100%;
@@ -11,20 +13,23 @@
         // width: 200px;
         height: 30px;
 
-        animation: 3s infinite rotate;
+        animation: @transitionDuration infinite rotate;
 
         .inner-text {
             white-space: nowrap;
             color: @primaryPurple;
             font-family: @secondaryFont;
             font-weight: bolder;
-            font-size: 20px;
-            margin-top: -18px;
-            margin-right: 20px;
+            // font-size: 20px;
+            // margin-top: -18px;
+            // margin-right: 20px;
+            font-size: 18px;
+            margin-top: -17px;
+            margin-right: 22px;
             padding: 3px 15px;
             padding-bottom: 4px;
             border-radius: 5px;
-            animation-duration: 3s;
+            animation-duration: @transitionDuration;
             animation-iteration-count: infinite;
             transform-origin: 197px 26px;
         }
@@ -40,7 +45,7 @@
         border-radius: 5px;
         border: none;
         background-color: @primaryPurple;
-        animation: 3s infinite rotate;
+        animation: @transitionDuration infinite rotate;
     }
 
     .point-circle {
@@ -52,7 +57,7 @@
         margin-top: -11px;
         margin-right: -10px;
         border: none;
-        animation: 3s infinite flash-circle;
+        animation: @transitionDuration infinite flash-circle;
     }
 
     @keyframes rotate {
@@ -225,49 +230,49 @@
 
     .text1 { animation-name: rotate-counter, text1; }
     @keyframes text1 {
-        from { opacity: 0.8875; }
-        50% { opacity: 0.775; }
-        to { opacity: 0.775; }
+        from { opacity: 0.8875; font-size: 18px; }
+        50% { opacity: 0.775; font-size: 16px; }
+        to { opacity: 0.775; font-size: 16px; }
     }
 
 
     .text2 { animation-name: rotate-counter, text2; }
     @keyframes text2 {
-        from { opacity: 0.775; }
-        50% { opacity: 0.6625; }
-        to { opacity: 0.6625; }
+        from { opacity: 0.775; font-size: 16px; }
+        50% { opacity: 0.6625; font-size: 14px; }
+        to { opacity: 0.6625; font-size: 14px; }
     }
 
 
     .text3 { animation-name: rotate-counter, text3; }
     @keyframes text3 {
-        from { opacity: 0.6625; }
-        50% { opacity: 0.0; }
-        to { opacity: 0.0; }
+        from { opacity: 0.6625; font-size: 14px; }
+        50% { opacity: 0.0; font-size: 12px; }
+        to { opacity: 0.0; font-size: 12px; }
     }
 
 
     .text12 { animation-name: rotate-counter, text12; }
     @keyframes text12 {
-        from { opacity: 0.0; }
-        50% { opacity: 0.6625; }
-        to { opacity: 0.6625; }
+        from { opacity: 0.0; font-size: 12px; }
+        50% { opacity: 0.6625; font-size: 14px; }
+        to { opacity: 0.6625; font-size: 14px; }
     }
 
 
     .text13 { animation-name: rotate-counter, text13; }
     @keyframes text13 {
-        from { opacity: 0.6625; }
-        50% { opacity: 0.775; }
-        to { opacity: 0.775; }
+        from { opacity: 0.6625; font-size: 14px; }
+        50% { opacity: 0.775; font-size: 16px; }
+        to { opacity: 0.775; font-size: 16px; }
     }
 
 
     .text14 { animation-name: rotate-counter, text14; }
     @keyframes text14 {
-        from { opacity: 0.775; }
-        50% { opacity: 0.8875; }
-        to { opacity: 0.8875; }
+        from { opacity: 0.775; font-size: 16px; }
+        50% { opacity: 0.8875; font-size: 18px; }
+        to { opacity: 0.8875; font-size: 18px; }
     }
 
 

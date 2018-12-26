@@ -19,7 +19,7 @@ export class FooterComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   scrollHandler(event) {
-    if (window.innerHeight + window.pageYOffset + 50 > window.document.body.scrollHeight) {
+    if (window.innerHeight + window.pageYOffset + 300 > window.document.body.scrollHeight) {
       this.bottommer.emit();
     }
   }

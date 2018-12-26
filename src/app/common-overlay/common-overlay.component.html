@@ -1,1 +1,6 @@
-<ng-content></ng-content>
+<div class='host' [class.show]='show'>
+    <div class='close'><img src='assets/neg-close-ic.svg'/></div>
+    <div class='content'>
+        <ng-content></ng-content>
+    </div>
+</div>

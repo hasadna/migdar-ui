@@ -19,24 +19,29 @@
             color: @primaryPurple;
             font-family: @secondaryFont;
             font-weight: normal;
+            max-width: 630px;
+            width: 50%;
 
             img {
                 height: 150px;
             }
             h1 {
-                letter-spacing: 2.5px;
+                letter-spacing: 1px;
                 font-size: 36px;
+                font-weight: normal;
+                margin-top: 20px;
             }
             h2 {
                 letter-spacing: 1.2px;
                 font-size: 22px;
+                margin-bottom: 38px;
             }
         }
     }
 
     .spinner-widget {
         position: absolute;
-        top: calc(@headerHeight + 40px);
+        top: calc(@headerHeight + @headerHeight);
         width: 345px;
         margin-right: 337px;
         height: 345px;
@@ -64,7 +69,7 @@
             cursor: pointer;
 
             img {
-                height: 60px;
+                height: 50px;
             }
 
             h1 {
@@ -73,6 +78,7 @@
                 font-size: 24px;
                 line-height: 1.1em;
                 margin: 20px 0;
+                letter-spacing: 1px;
             }
 
             h2 {
@@ -136,7 +142,7 @@
         background-image: url('../../assets/lp-bg.svg');
         background-size: cover;
         padding: 40px 80px;
-        margin: 40px 0;
+        margin: 0 0 40px 0;
         width: 100vw;
         display: flex;
         flex-flow: column;
@@ -160,6 +166,7 @@
             span {
                 font-size: 24px;
                 font-family: @secondaryFont;
+                color: @primaryPurple;
             }
 
             .buttons {
@@ -175,19 +182,22 @@
                     align-items: center;
                     justify-content: space-evenly;
                     height: 40px;
-                    width: 200px;
+                    width: 170px;
                     border: 1px solid @primaryPurple;
                     border-radius: 20px;
-                    margin: 20px;
+                    margin: 20px 10px;
                     color: @primaryPurple;
                     background-color: white;
 
                     span {
                         font-size: 16px;
+                        font-family: @primaryFont;
                     }
 
                     &:first-child {
-                        color: white;
+                        span {
+                            color: white;
+                        }
                         background-color: @primaryPurple;
                     }
 

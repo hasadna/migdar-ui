@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommonOverlayComponent implements OnInit {
 
+  show = false;
+
   constructor() { }
 
   ngOnInit() {
+    window.setTimeout(() => {
+      this.show = true;
+    }, 0);
   }
 
 }

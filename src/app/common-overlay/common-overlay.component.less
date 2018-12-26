@@ -1,17 +1,40 @@
 @import '../../common.less';
 
-:host {
+div.host {
     position: fixed;
     top: @headerHeight;
     right: 0;
-    width: 100vw;
-    margin: 10px 0 0 0;
-    height: calc(100vh ~"-" @headerHeight - 10px);
+    margin: 10px;
+    height: calc(100vh ~"-" @headerHeight - 20px);
+    width: calc(100% ~"-" 20px);
+    opacity: 0;
 
+    &.show {
+        opacity: 1;
+    }
     background-color: @backgroundDarkTransparency;
+    transition-property: opacity;
+    transition-duration: 0.25s;
 
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+
+    .content {
+        margin-top: -30px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
 }
