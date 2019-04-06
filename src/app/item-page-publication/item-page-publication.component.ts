@@ -13,7 +13,7 @@ export class ItemPagePublicationComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit() {
-    this.api.search(this.document['gd_Life Domains']);
+    this.api.search(this.document['life_areas'].join(' ')); // TODO filter by life areas
   }
 
 }

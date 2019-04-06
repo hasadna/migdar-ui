@@ -1,0 +1,36 @@
+@import '../../common.less';
+
+h1 {
+    font-family: @secondaryFont;
+    color: @primaryOrange;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    margin: 5px 0 10px 0;
+    line-height: 22px;
+}
+
+.tagline {
+    margin-bottom: 40px;
+}
+.details {
+    display: flex;
+    flex-flow: row;
+
+    div:first-child {
+        flex: 0 1 40%;
+    }
+
+    div:last-child {
+        flex: 1 0 60%;
+    }
+}
+
+p, div {
+    font-size: 14px;
+    word-break: break-word;
+}
+
+p {
+    text-align: justify;
+}

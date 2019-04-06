@@ -1,0 +1,127 @@
+@import '../../common.less';
+
+:host {
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+    top: -10px;
+
+    .container {
+        background-color: @primaryOrange;
+        padding: 80px 0;
+        padding-bottom: 160px;
+        width: 100%;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+        margin-bottom: 400px;
+
+        h1 {
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            font-family: @secondaryFont;
+            text-align: center;
+            margin: 0;
+        }
+        
+        h2 {
+            color: white;
+            font-size: 22px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            font-family: @secondaryFont;
+            text-align: center;
+            margin: 20px 0;
+        }            
+    }
+
+    .carousel-card {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        background-color: white;
+        position: absolute;
+        top: 340px;
+
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+
+        h3 {
+            color: @primaryOrange;
+            font-size: 28px;
+            letter-spacing: 1.2;
+            font-weight: normal;
+            padding: 20px 0;
+            padding-top: 0px;
+            font-family: @secondaryFont;
+            transition-property: opacity, font-size;
+            transition-duration: 1s;        
+        }
+
+        img {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            transition-property: height, width, opacity;
+            transition-duration: 1s;
+            height: 350px;
+            width: 700px;    
+            opacity: 1;
+        }
+
+        transition-property: z-index, margin-right, margin-top;
+        transition-duration: 1s;
+
+        &.phase-0 {
+            z-index: 3;
+            margin-right: 0px;
+            margin-top: 0px;
+        }
+
+        &.phase-1 {
+            margin-right: 300px;
+            margin-top: 25px;
+            z-index: 2;
+            h3 {
+                opacity: 0.7;
+            }
+            img {
+                opacity: 0.7;
+                height: 300px;
+                width: 600px;    
+            }
+        }
+
+        &.phase-2 {
+            opacity: 0.2;
+            margin-top: 50px;
+            z-index: 1;
+            h3 {
+                opacity: 0.2;
+            }
+            img {
+                opacity: 0.2;
+                height: 200px;
+                width: 300px;    
+            }
+        }
+
+        &.phase-3 {
+            margin-right: -300px;
+            margin-top: 25px;
+            z-index: 2;
+            h3 {
+                opacity: 0.7;
+            }
+            img {
+                opacity: 0.7;
+                height: 300px;
+                width: 600px;    
+            }
+        }
+
+    }
+    
+}

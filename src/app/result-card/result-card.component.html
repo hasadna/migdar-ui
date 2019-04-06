@@ -8,3 +8,14 @@
   >
   </app-result-card-publication>
 </app-result-card-layout>
+
+<app-result-card-layout
+  *ngIf='result.__type==="orgs"'
+  [colorClass]='"orange"'
+  [result]='result'
+>
+  <app-result-card-organisation
+    [result]='result'
+  >
+  </app-result-card-organisation>
+</app-result-card-layout>

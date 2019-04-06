@@ -1,26 +1,26 @@
 <app-item-page-header [color]='"purpleBg"'>
   <div class='header'>
-    <h1>{{document.gd_title || document.title}}</h1>
-    <div class='infoline' *ngIf='document.gd_author || document.author'>
+    <h1>{{document.title}}</h1>
+    <div class='infoline' *ngIf='document.author'>
       <label>מחברות</label>
-      <span>{{document.gd_author || document.author}}</span>
+      <span>{{document.author}}</span>
     </div>
-    <div class='infoline' *ngIf='document.gd_publisher || document.publisher'>
+    <div class='infoline' *ngIf='document.publisher'>
       <label>מקור</label>
-      <span>{{document.gd_publisher || document.publisher}}</span>
+      <span>{{document.publisher}}</span>
     </div>
     <div class='infoline'>
       <label></label>
-      <span>{{document.gd_pubyear || document.pubyear}}</span>&nbsp;|&nbsp;
-      <span>{{document.gd_language_code || document.language_code}}</span>
+      <span>{{document.pubyear}}</span>&nbsp;|&nbsp;
+      <span>{{document.languages.join(', ')}}</span>
     </div>
   </div>
 </app-item-page-header>
 <div class='notes'>
-{{document.gd_notes || document.notes}}
+{{document.notes}}
 <br/>
 <br/>
-<strong>תגיות:</strong>&nbsp;{{document.gd_tags || document.tags}}
+<strong>תגיות:</strong>&nbsp;{{document.tags.join(', ')}}
 </div>
 <app-item-page-search-results>
 <h1>אולי יעניין אותך גם&hellip;</h1>

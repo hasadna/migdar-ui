@@ -27,6 +27,9 @@ import { ItemPagePublicationComponent } from './item-page-publication/item-page-
 import { ItemPageComponent } from './item-page/item-page.component';
 import { ItemPageHeaderComponent } from './item-page-header/item-page-header.component';
 import { ItemPageSearchResultsComponent } from './item-page-search-results/item-page-search-results.component';
+import { ResultCardOrganisationComponent } from './result-card-organisation/result-card-organisation.component';
+import { OrganisationsPageComponent } from './organisations-page/organisations-page.component';
+import { OrganisationsPageHeaderComponent } from './organisations-page-header/organisations-page-header.component';
 
 
 const appRoutes: Routes = [
@@ -50,6 +53,7 @@ const appRoutes: Routes = [
     ]
   },
   { path: 'publications', component: PublicationsPageComponent },
+  { path: 'organisations', component: OrganisationsPageComponent },
   { path: 'search', component: SearchPageComponent },
   { path: '', component: MainPageComponent },
 ];
@@ -80,7 +84,10 @@ const appRoutes: Routes = [
     ItemPagePublicationComponent,
     ItemPageComponent,
     ItemPageHeaderComponent,
-    ItemPageSearchResultsComponent
+    ItemPageSearchResultsComponent,
+    ResultCardOrganisationComponent,
+    OrganisationsPageComponent,
+    OrganisationsPageHeaderComponent
   ],
   imports: [
     BrowserModule,
