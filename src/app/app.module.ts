@@ -34,6 +34,8 @@ import { StatsPageComponent } from './stats-page/stats-page.component';
 import { StatsPageHeaderComponent } from './stats-page-header/stats-page-header.component';
 import { ResultCardDatasetComponent } from './result-card-dataset/result-card-dataset.component';
 import { DatasetChartComponent } from './dataset-chart/dataset-chart.component';
+import { GenderIndexPageComponent } from './gender-index-page/gender-index-page.component';
+import { GenderIndexPageHeaderComponent } from './gender-index-page-header/gender-index-page-header.component';
 
 
 const appRoutes: Routes = [
@@ -59,6 +61,7 @@ const appRoutes: Routes = [
   { path: 'publications', component: PublicationsPageComponent },
   { path: 'organisations', component: OrganisationsPageComponent },
   { path: 'stats', component: StatsPageComponent },
+  { path: 'gender-index', component: GenderIndexPageComponent },
   { path: 'search', component: SearchPageComponent },
   { path: '', component: MainPageComponent },
 ];
@@ -96,7 +99,9 @@ const appRoutes: Routes = [
     StatsPageComponent,
     StatsPageHeaderComponent,
     ResultCardDatasetComponent,
-    DatasetChartComponent
+    DatasetChartComponent,
+    GenderIndexPageComponent,
+    GenderIndexPageHeaderComponent
   ],
   imports: [
     BrowserModule,

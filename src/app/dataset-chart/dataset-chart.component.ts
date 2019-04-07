@@ -30,7 +30,7 @@ export class DatasetChartComponent implements OnInit {
 
   ngOnInit() {
     const width = 600;
-    const height = 400;
+    const height = 300;
     const marginBottom = 30;
     const marginTop = 30;
     const leftPadding = 70;
