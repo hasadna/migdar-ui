@@ -9,14 +9,30 @@
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
         cursor: pointer;
-        
+        border-top: 2px solid;
+        position: relative;
+
         &.purple {
-            border-top: 2px solid;
             border-color: @primaryPurple;
         }
         &.orange {
-            border-top: 2px solid;
             border-color: @primaryOrange;
+        }
+        &.green {
+            border-color: @primaryGreen;
+        }
+        &.red {
+            border-color: @primaryRed;
+            border-top: 3px solid;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100px;
+                height: 24px;
+                top: -12px;
+                left: 25px;
+                background-image: url('../../assets/madad-lable.svg');
+            }
         }
     }
 }

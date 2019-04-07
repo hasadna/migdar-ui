@@ -1,0 +1,43 @@
+@import '../../common.less';
+
+h1 {
+    font-family: @secondaryFont;
+    color: @primaryGreen;
+    &.gender-index {
+        color: @primaryRed;
+    }
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    margin: 5px 0 10px 0;
+    line-height: 22px;
+}
+
+.legend {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .entry {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        margin: 5px;
+
+        .name {
+            margin: 0 5px;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        .color {
+            margin: 0 5px;
+            height: 0px;
+            width: 15px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            margin-top: 1px;
+        }
+    }
+}

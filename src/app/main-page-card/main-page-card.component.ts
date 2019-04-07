@@ -15,7 +15,6 @@ export class MainPageCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.logo, this.title, this.colors);
   }
 
 }

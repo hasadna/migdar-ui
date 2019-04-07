@@ -1,0 +1,8 @@
+<h1 [class.gender-index]='genderIndex'>{{result.chart_title}}</h1>
+<div class='legend'>
+  <div class='entry' *ngFor='let series of result.series; let idx = index;'>
+    <div class='color' [style.border-color]='color(idx)'></div> 
+    <div class='name'>{{series.gender}}</div>
+  </div>
+</div>
+<app-dataset-chart [series]='result.series'></app-dataset-chart>

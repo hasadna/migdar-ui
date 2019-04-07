@@ -2,11 +2,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-organisations-page-header',
-  templateUrl: './organisations-page-header.component.html',
-  styleUrls: ['./organisations-page-header.component.less']
+  selector: 'app-stats-page-header',
+  templateUrl: './stats-page-header.component.html',
+  styleUrls: ['./stats-page-header.component.less']
 })
-export class OrganisationsPageHeaderComponent implements OnInit, OnDestroy {
+export class StatsPageHeaderComponent implements OnInit, OnDestroy {
 
   phase = 0;
   interval: number;

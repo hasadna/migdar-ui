@@ -1,6 +1,10 @@
 <div class='header' (click)='langSelected = menuSelected = false'>
   <div class='container'>
     <img class='logo' src='assets/sticky-logo.svg' (click)='router.navigateByUrl("/")'>
+    <span *ngIf='headerState.section === "organisations"'
+          class='section orange'>ארגונים ופעילות בתחום המגדר</span>
+    <span *ngIf='headerState.section === "stats"'
+          class='section green'>סטטיסטיקה מגדרית</span>
     <span class='separator'></span>
     <app-header-lang-selector [(selected)]='langSelected'></app-header-lang-selector>
     <app-header-menu [(selected)]='menuSelected'></app-header-menu>

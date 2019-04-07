@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { HeaderStateService } from '../header-state.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public router: Router) { }
+  constructor(public router: Router,
+              public headerState: HeaderStateService) { }
 
   _langSelected = false;
   _menuSelected = false;

@@ -30,6 +30,10 @@ import { ItemPageSearchResultsComponent } from './item-page-search-results/item-
 import { ResultCardOrganisationComponent } from './result-card-organisation/result-card-organisation.component';
 import { OrganisationsPageComponent } from './organisations-page/organisations-page.component';
 import { OrganisationsPageHeaderComponent } from './organisations-page-header/organisations-page-header.component';
+import { StatsPageComponent } from './stats-page/stats-page.component';
+import { StatsPageHeaderComponent } from './stats-page-header/stats-page-header.component';
+import { ResultCardDatasetComponent } from './result-card-dataset/result-card-dataset.component';
+import { DatasetChartComponent } from './dataset-chart/dataset-chart.component';
 
 
 const appRoutes: Routes = [
@@ -54,6 +58,7 @@ const appRoutes: Routes = [
   },
   { path: 'publications', component: PublicationsPageComponent },
   { path: 'organisations', component: OrganisationsPageComponent },
+  { path: 'stats', component: StatsPageComponent },
   { path: 'search', component: SearchPageComponent },
   { path: '', component: MainPageComponent },
 ];
@@ -87,7 +92,11 @@ const appRoutes: Routes = [
     ItemPageSearchResultsComponent,
     ResultCardOrganisationComponent,
     OrganisationsPageComponent,
-    OrganisationsPageHeaderComponent
+    OrganisationsPageHeaderComponent,
+    StatsPageComponent,
+    StatsPageHeaderComponent,
+    ResultCardDatasetComponent,
+    DatasetChartComponent
   ],
   imports: [
     BrowserModule,

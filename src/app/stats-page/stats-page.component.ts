@@ -3,20 +3,21 @@ import { ApiService } from '../api.service';
 import { HeaderStateService } from '../header-state.service';
 
 @Component({
-  selector: 'app-organisations-page',
-  templateUrl: './organisations-page.component.html',
-  styleUrls: ['./organisations-page.component.less']
+  selector: 'app-stats-page',
+  templateUrl: './stats-page.component.html',
+  styleUrls: ['./stats-page.component.less']
 })
-export class OrganisationsPageComponent implements OnInit, OnDestroy {
+export class StatsPageComponent implements OnInit, OnDestroy {
 
   constructor(public api: ApiService, private header: HeaderStateService) { }
 
   ngOnInit() {
-    this.api.search(null, 'orgs');
-    this.header.section = 'organisations';
+    this.api.search(null, 'datasets');
+    this.header.section = 'stats';
   }
 
   ngOnDestroy() {
     this.header.clear();
   }
+
 }

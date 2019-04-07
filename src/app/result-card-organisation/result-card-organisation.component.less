@@ -17,8 +17,15 @@ h1 {
     display: flex;
     flex-flow: row;
 
+    div {
+        display: flex;
+        flex-flow: column;    
+    }
+
     div:first-child {
-        flex: 0 1 40%;
+        flex: 0 1 auto;
+        margin-left: 20px;
+        max-width: 40%;
     }
 
     div:last-child {

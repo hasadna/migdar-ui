@@ -17,7 +17,7 @@
         align-items: center;
         flex-flow: column;
         background-color: white;
-        z-index: 1;
+        z-index: 5;
 
         .container {
             max-width: 1300px;
@@ -30,6 +30,25 @@
             .logo {
                 cursor: pointer;
                 height: 20px;
+            }
+
+            .section {
+                font-family: @secondaryFont;
+                font-size: 17px;
+                font-weight: normal;
+                margin-right: 5px;
+                padding-right: 8px;
+                position: relative;
+                top: 1px;
+
+                &.orange {
+                    border-right: 2px solid @primaryOrange;
+                    color: @primaryOrange;
+                }
+                &.green {
+                    border-right: 2px solid @primaryGreen;
+                    color: @primaryGreen;
+                }
             }
 
             .separator {

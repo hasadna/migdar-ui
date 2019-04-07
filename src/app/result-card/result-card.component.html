@@ -19,3 +19,16 @@
   >
   </app-result-card-organisation>
 </app-result-card-layout>
+
+<app-result-card-layout
+  *ngIf='result.__type==="datasets"'
+  [colorClass]='result.kind === "Gender Index" ? "red" : "green" '
+  [label]='result.kind === "Gender Index" ? "gender-index" : null'
+  [result]='result'
+>
+  <app-result-card-dataset
+    [result]='result'
+    [genderIndex]='result.kind === "Gender Index"'
+  >
+  </app-result-card-dataset>
+</app-result-card-layout>

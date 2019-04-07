@@ -30,7 +30,6 @@ export class SearchBarComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    console.log('CCCCCHANGED', this.term);
   }
 
 }

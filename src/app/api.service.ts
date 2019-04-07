@@ -17,18 +17,22 @@ export class ApiService {
   constructor(private http: HttpClient) {
     this.terms.pipe(
       debounceTime(300),
-      switchMap((params) => this.fetch(params.term, params.count, params.offset))
+      switchMap((params) => this.fetch(params.types, params.term, params.count, params.offset))
     ).subscribe((results) => {
+      this.params.offset += results.length;
       this.results.next(this.results.getValue().concat(results));
     });
   }
 
-  search(term) {
-    if (this.params && this.params.term === term) {
+  search(term, types?) {
+    if (this.params &&
+        this.params.term === term &&
+        this.params.types === types) {
       return;
     }
     this.results.next([]);
     this.params = {
+      types: types || 'all',
       term: term,
       offset: 0,
     };
@@ -36,7 +40,6 @@ export class ApiService {
   }
 
   searchMore(): any {
-    this.params.offset += 10;
     this.terms.next(this.params);
   }
 
@@ -44,16 +47,16 @@ export class ApiService {
     this.results.next([]);
   }
 
-  fetch(term?, count?, offset?) {
+  fetch(types, term?, count?, offset?) {
     let params = '';
-    if (term) { params += `&q=${encodeURIComponent(term)}`; }
     if (count) { params += `&size=${count}`; }
     if (offset) { params += `&offset=${offset}`; }
     params += `&dont_highlight=${encodeURIComponent('*')}`;
     if (params.length > 0) {
       params = '?' + params.slice(1);
     }
-    return this.http.get(`${this.url}/search/all${params}`)
+    if (term) { params = `/${encodeURIComponent(term)}` + params; }
+    return this.http.get(`${this.url}/search/${types}${params}`)
               .pipe(
                 map((result: any) => {
                   console.log('got results for', term);

@@ -26,7 +26,7 @@ export class MainPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.results = this.api.fetch(null, 2);
+    this.results = this.api.fetch('all', null, 2);
   }
 
   search(term) {

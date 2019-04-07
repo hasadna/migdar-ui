@@ -10,6 +10,7 @@ export class ResultCardLayoutComponent implements OnInit {
 
   @Input() colorClass;
   @Input() result: any;
+  @Input() label: string;
 
   constructor(public router: Router) { }
 

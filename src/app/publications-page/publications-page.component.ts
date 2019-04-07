@@ -11,7 +11,7 @@ export class PublicationsPageComponent implements OnInit {
   constructor(public api: ApiService) { }
 
   ngOnInit() {
-    this.api.search(null);
+    this.api.search(null, 'publications');
   }
 
 }
