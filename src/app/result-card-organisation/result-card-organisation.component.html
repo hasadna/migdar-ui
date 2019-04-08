@@ -4,7 +4,7 @@
 </div>
 <div class='details'>
   <div>
-    <strong *ngIf='result.org_website'><a [href]='result.org_website'>לאתר הארגון</a></strong>
+    <strong *ngIf='result.org_website'><a [href]='result.org_website' i18n>לאתר הארגון</a></strong>
     <strong *ngIf='result.org_email_address'><a [href]='"mailto:" + result.org_email_address'>{{result.org_email_address}}</a></strong>
     <p *ngIf='result.org_website || result.org_email_address'></p>
     <p>{{result.org_phone_number}}</p>

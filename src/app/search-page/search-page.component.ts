@@ -23,7 +23,7 @@ export class SearchPageComponent implements OnInit {
       this.activatedRoute.queryParamMap.subscribe((params) => {
         const term = params.get('q');
         this.term = term ? term : '';
-        this.api.search(this.term);
+        this.api.searchTerm(this.term);
       });
   }
 }

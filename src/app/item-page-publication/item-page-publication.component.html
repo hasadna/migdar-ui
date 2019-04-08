@@ -2,11 +2,11 @@
   <div class='header'>
     <h1>{{document.title}}</h1>
     <div class='infoline' *ngIf='document.author'>
-      <label>מחברות</label>
+      <label i18n>מחברות</label>
       <span>{{document.author}}</span>
     </div>
     <div class='infoline' *ngIf='document.publisher'>
-      <label>מקור</label>
+      <label i18n>מקור</label>
       <span>{{document.publisher}}</span>
     </div>
     <div class='infoline'>
@@ -20,8 +20,8 @@
 {{document.notes}}
 <br/>
 <br/>
-<strong>תגיות:</strong>&nbsp;{{document.tags.join(', ')}}
+<strong i18n>תגיות:</strong>&nbsp;{{document.tags.join(', ')}}
 </div>
 <app-item-page-search-results>
-<h1>אולי יעניין אותך גם&hellip;</h1>
+<h1 i18n>אולי יעניין אותך גם&hellip;</h1>
 </app-item-page-search-results>

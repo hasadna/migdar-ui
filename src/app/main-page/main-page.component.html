@@ -1,8 +1,8 @@
 <div class='title'>
   <div class='right-hand'>
     <img src='assets/landingpage-logo.svg'>
-    <h1>מרכז ידע בנושא נשים ומגדר בישראל</h1>
-    <h2>שיתוף, הנגשה ויצירה של ידע לקידום שוויון מגדרי</h2>
+    <h1 i18n>מרכז ידע בנושא נשים ומגדר בישראל</h1>
+    <h2 i18n>שיתוף, הנגשה ויצירה של ידע לקידום שוויון מגדרי</h2>
     <app-search-bar
       (changed)='search($event)'
       [color]='"rgba(67, 38, 58)"'
@@ -19,46 +19,46 @@
 <div class='square-links'>
   <div class='square-link' (click)='router.navigate(["./publications"])'>
     <img src='assets/lp-library-ic.svg'>
-    <h1>ספריית<br/>מקורות</h1>
-    <h2>126,000 פריטים</h2>
+    <h1 i18n>ספריית<br/>מקורות</h1>
+    <h2 i18n>126,000 פריטים</h2>
   </div>
   <div class='square-link' (click)='router.navigate(["./stats"])'>
     <img src='assets/lp-stats-ic.svg'>
-    <h1>סטטיסטיקה<br/>מגדרית</h1>
-    <h2>32,323 פריטים</h2>
+    <h1 i18n>סטטיסטיקה<br/>מגדרית</h1>
+    <h2 i18n>32,323 פריטים</h2>
   </div>
   <div class='square-link' (click)='router.navigate(["./organisations"])'>
     <img src='assets/lp-orgs-ic.svg'>
-    <h1>ארגונים ופעילות<br/>בתחום המגדר</h1>
-    <h2>209 ארגונים</h2>
+    <h1 i18n>ארגונים ופעילות<br/>בתחום המגדר</h1>
+    <h2 i18n>209 ארגונים</h2>
   </div>
   <div class='square-link' (click)='router.navigate(["./gender-index"])'>
     <img src='assets/lp-madad-ic.svg'>
-    <h1>מדד<br/>המגדר</h1>
-    <h2>קראו עוד</h2>
+    <h1 i18n>מדד<br/>המגדר</h1>
+    <h2 i18n>קראו עוד</h2>
   </div>
 </div>
 <div class='recently-added'>
-  <h1>פריטים שהתווספו למאגר לאחרונה</h1>
+  <h1 i18n>פריטים שהתווספו למאגר לאחרונה</h1>
   <div class='cards'>
     <app-result-card *ngFor='let result of (results | async)' [result]='result'></app-result-card>
   </div>
-  <h2>עוד פריטים שהתווספו לאחרונה&hellip;</h2>
+  <h2 i18n>עוד פריטים שהתווספו לאחרונה&hellip;</h2>
 </div>
 <div class='need-help'>
   <div class='need-help-main'>
     <img class='logo' src='assets/question-ic.svg'/>
-    <span>ביקרת במרכז הידע ולא מצאת מה שחיפשת?</span>
-    <span>יש לך מידע רלוונטי לשתף איתנו?</span>
-    <span>הגעת למקום הנכון!</span>
+    <span i18n>ביקרת במרכז הידע ולא מצאת מה שחיפשת?</span>
+    <span i18n>יש לך מידע רלוונטי לשתף איתנו?</span>
+    <span i18n>הגעת למקום הנכון!</span>
     <div class='buttons'>
       <div>
         <img src='assets/neg-share-ic.svg'/>
-        <span>יש לי מה לשתף </span>
+        <span i18n>יש לי מה לשתף </span>
       </div>
       <div>
         <img src='assets/info-ic.svg'/>
-        <span>עזרו לי לאתר מידע</span>
+        <span i18n>עזרו לי לאתר מידע</span>
       </div>
     </div>
   </div>
@@ -67,27 +67,41 @@
   *ngIf='reveal > 0'
   [colors]="'red'"
   [logo]='"assets/lp-madad-info-ic.svg"'
-  [title]='"מדד המגדר"'
-  [description]='"ניטור אי השוויון בין נשים לגברים בישראל בתחומי חיים שונים, המאפשר לזהות מגמות של שינוי באי שוויון המגדרי לאורך השנים"'>
+  >
+  <span class='title' i18n>מדד המגדר</span>
+  <span class='description' i18n>
+    ניטור אי השוויון בין נשים לגברים בישראל בתחומי חיים שונים,
+    המאפשר לזהות מגמות של שינוי באי שוויון המגדרי לאורך השנים
+  </span>
 </app-main-page-card>
 <app-main-page-card
   *ngIf='reveal > 1'
   [colors]="'green'"
-  [logo]='"assets/lp-stats-info-ic.svg"'
-  [title]='"סטטיסטיקה מגדרית"'
-  [description]='"כאן ניתן למצוא נתונים השוואתיים אודות מצבם של נשים וגברים בתחומי חיים שונים. נתונים אלה יכולים לסייע לקידום יוזמות, מדיניות, אקטיביזם, הוראה ומחקר בתחום השוויון המגדרי"'>
+  [logo]='"assets/lp-stats-info-ic.svg"'>
+  <span class='title' i18n>סטטיסטיקה מגדרית</span>
+  <span class='description' i18n>
+    כאן ניתן למצוא נתונים השוואתיים אודות מצבם של נשים וגברים בתחומי חיים שונים.
+    נתונים אלה יכולים לסייע לקידום יוזמות, מדיניות, אקטיביזם, הוראה ומחקר בתחום השוויון המגדרי
+  </span>
 </app-main-page-card>
 <app-main-page-card
   *ngIf='reveal > 2'
   [colors]="'orange'"
   [logo]='"assets/lp-orgs-info-ic.svg"'
-  [title]='"ארגונים ופעילות בתחום המגדר"'
-  [description]='"כאן ניתן למצוא מגוון עשיר של ארגונים, יוזמות וגורמים הפועלים לקידום שוויון מגדרי, וכן תכניות ללימודי מגדר במוסדות האקדמיים. המאגר מפרט, בין היתר, תחומי פעילות, שירותים שניתן לקבל ופרטי התקשרות"'>
+  >
+  <span class='title' i18n>ארגונים ופעילות בתחום המגדר</span>
+  <span class='description' i18n>
+    כאן ניתן למצוא מגוון עשיר של ארגונים, יוזמות וגורמים הפועלים לקידום שוויון מגדרי, וכן תכניות ללימודי מגדר במוסדות האקדמיים.
+    המאגר מפרט, בין היתר, תחומי פעילות, שירותים שניתן לקבל ופרטי התקשרות
+  </span>
 </app-main-page-card>
 <app-main-page-card
   *ngIf='reveal > 3'
   [colors]="'purple'"
   [logo]='"assets/lp-library-info-ic.svg"'
-  [title]='"ספריית המקורות"'
-  [description]='"כלל המידע המקוטלג במרכז הידע: פרסומים, דו״חות,￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼ ניירות עמדה, סרטונים, נתונים סטטיסטיים, ארגונים פמיניסטיים, מחקרים, ועוד ועוד"'>
+  >
+  <span class='title' i18n>ספריית המקורות</span>
+  <span class='description' i18n>
+    כלל המידע המקוטלג במרכז הידע: פרסומים, דו״חות,￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼ ניירות עמדה, סרטונים, נתונים סטטיסטיים, ארגונים פמיניסטיים, מחקרים, ועוד ועוד
+  </span>
 </app-main-page-card>

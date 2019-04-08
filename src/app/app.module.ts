@@ -40,6 +40,9 @@ import { InfoPageComponent } from './info-page/info-page.component';
 import { InfoPageGenderIndexComponent } from './info-page-gender-index/info-page-gender-index.component';
 import { InfoPageInequalityComponent } from './info-page-inequality/info-page-inequality.component';
 import { InfoPageGapsComponent } from './info-page-gaps/info-page-gaps.component';
+import { HorizontalSelectorComponent } from './horizontal-selector/horizontal-selector.component';
+import { SearchFiltersSortingComponent } from './search-filters-sorting/search-filters-sorting.component';
+import { SearchFiltersItemKindComponent } from './search-filters-item-kind/search-filters-item-kind.component';
 
 
 const appRoutes: Routes = [
@@ -112,7 +115,10 @@ const appRoutes: Routes = [
     InfoPageComponent,
     InfoPageGenderIndexComponent,
     InfoPageInequalityComponent,
-    InfoPageGapsComponent
+    InfoPageGapsComponent,
+    HorizontalSelectorComponent,
+    SearchFiltersSortingComponent,
+    SearchFiltersItemKindComponent
   ],
   imports: [
     BrowserModule,

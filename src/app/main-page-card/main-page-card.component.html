@@ -4,8 +4,12 @@
       <img [src]="logo"/>
     </div>
     <div class='text'>
-      <h1 [ngClass]="colors + 'Text'">{{title}}</h1>
-      <h2>{{description}}</h2>  
+      <h1 [ngClass]="colors + 'Text'">
+        <ng-content select='span.title'></ng-content>
+      </h1>
+      <h2>
+        <ng-content select='span.description'></ng-content>
+      </h2>  
     </div>
   </div>
   <div class='bottom'>

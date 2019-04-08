@@ -1,3 +1,25 @@
-<p>
-  search-filters works!
-</p>
+<app-search-filters-sorting 
+  *ngIf='!disableSorting'
+  [sortOrder]='sortOrder'
+  (changed)='sortOrder = $event; refresh()'
+></app-search-filters-sorting>
+<app-search-filters-item-kind
+  *ngIf='!fixItemKind'
+  [itemKind]='itemKind'
+  (changed)='itemKind = $event; refresh()'
+></app-search-filters-item-kind>
+<!-- <app-search-filters-all-properties
+  *ngIf='selectedKind === "all"'
+></app-search-filters-properties>
+<app-search-filters-org-properties
+  *ngIf='selectedKind === "organisations"'
+></app-search-filters-properties>
+<app-search-filters-publication-properties
+  *ngIf='selectedKind === "publications"'
+></app-search-filters-properties>
+<app-search-filters-stats-properties
+  *ngIf='selectedKind === "datasets"'
+></app-search-filters-properties>
+<app-search-filters-gender-index-properties
+  *ngIf='selectedKind === "gender-index"'
+></app-search-filters-properties> -->

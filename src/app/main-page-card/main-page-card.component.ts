@@ -8,8 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MainPageCardComponent implements OnInit {
 
   @Input() logo;
-  @Input() title;
-  @Input() description;
   @Input() colors;
 
   constructor() { }
