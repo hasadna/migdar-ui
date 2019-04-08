@@ -1,0 +1,17 @@
+<app-horizontal-selector>
+  <span class='title' i18n>ארגון לפי</span>
+  <ul>
+    <li [class.selected]='selected==="relevance"'
+        (click)='selected = "relevance"'
+    >רלוונטיות</li>
+    <li [class.selected]='selected==="popularity"'
+        (click)='selected = "popularity"'
+    >פופולריות</li>
+    <li [class.selected]='selected==="lexicographic"'
+        (click)='selected = "lexicographic"'
+    >א-ת</li>
+    <li [class.selected]='selected==="chronological"'
+        (click)='selected = "chronological"'
+    >זמן (חדש לישן)</li>
+  </ul>
+</app-horizontal-selector>

@@ -1,0 +1,45 @@
+@import url('../../common.less');
+
+:host {
+    display: flex;
+    flex-flow: column;
+
+    .title {
+        display: block;
+        font-family: @secondaryFont;
+        color: @primaryPurple;
+        padding: 5px 0;
+        margin: 10px 0;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-bottom: 0.5px solid black;
+    }
+
+    ::ng-deep .options {
+        ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: block;
+                font-family: @secondaryFont;
+                color: black;
+                padding: 3px 10px;
+                padding-left: 20px;
+                font-size: 16px;
+                font-weight: normal;
+                border: none;
+                list-style: none;
+                cursor: pointer;
+
+                &.selected {
+                    background-color: #785d7040;
+                    border-radius: 15px;
+                    cursor: inherit;
+                }
+            }
+        }
+    }
+}

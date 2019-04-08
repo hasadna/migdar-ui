@@ -1,0 +1,20 @@
+<app-horizontal-selector>
+  <span class='title' i18n>הצגת תוצאות</span>
+  <ul>
+    <li [class.selected]='selected==="all"'
+        (click)='selected = "all"'
+    >הכל</li>
+    <li [class.selected]='selected==="publications"'
+        (click)='selected = "publications"'
+    >פרסומים ומדיה</li>
+    <li [class.selected]='selected==="stats"'
+        (click)='selected = "stats"'
+    >סטטיסטיקה מגדרית</li>
+    <li [class.selected]='selected==="organisations"'
+        (click)='selected = "organisations"'
+    >ארגונים ופעילות</li>
+    <li [class.selected]='selected==="gender-index"'
+        (click)='selected = "gender-index"'
+    >מדד המגדר</li>
+  </ul>
+</app-horizontal-selector>
