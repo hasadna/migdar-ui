@@ -36,6 +36,10 @@ import { ResultCardDatasetComponent } from './result-card-dataset/result-card-da
 import { DatasetChartComponent } from './dataset-chart/dataset-chart.component';
 import { GenderIndexPageComponent } from './gender-index-page/gender-index-page.component';
 import { GenderIndexPageHeaderComponent } from './gender-index-page-header/gender-index-page-header.component';
+import { InfoPageComponent } from './info-page/info-page.component';
+import { InfoPageGenderIndexComponent } from './info-page-gender-index/info-page-gender-index.component';
+import { InfoPageInequalityComponent } from './info-page-inequality/info-page-inequality.component';
+import { InfoPageGapsComponent } from './info-page-gaps/info-page-gaps.component';
 
 
 const appRoutes: Routes = [
@@ -63,6 +67,9 @@ const appRoutes: Routes = [
   { path: 'stats', component: StatsPageComponent },
   { path: 'gender-index', component: GenderIndexPageComponent },
   { path: 'search', component: SearchPageComponent },
+  { path: 'gaps', component: InfoPageGapsComponent },
+  { path: 'inequality', component: InfoPageInequalityComponent },
+  { path: 'methodology', component: InfoPageGenderIndexComponent },
   { path: '', component: MainPageComponent },
 ];
 
@@ -101,7 +108,11 @@ const appRoutes: Routes = [
     ResultCardDatasetComponent,
     DatasetChartComponent,
     GenderIndexPageComponent,
-    GenderIndexPageHeaderComponent
+    GenderIndexPageHeaderComponent,
+    InfoPageComponent,
+    InfoPageGenderIndexComponent,
+    InfoPageInequalityComponent,
+    InfoPageGapsComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,52 @@
         color: @primaryPurple;
     }
     
+    .info-links {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+        width: 100%;
+        max-width: 1440px;
+        margin: 40px 0;
+
+        .info-link {
+            flex: 0 0 33%;
+            margin: 0 10px;
+            background-color: white;
+            border: none;
+            border-top: 2px solid @primaryRed;
+            border-bottom-left-radius: 10px;            
+            border-bottom-right-radius: 10px;
+            padding: 20px;
+            padding-top: 10px;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            cursor: pointer;
+    
+            h1 {
+                color: @primaryRed;
+                font-family: @primaryFont;
+                font-size: 26px;
+                font-weight: bold;
+                margin: 0;
+                margin-bottom: 30px;
+            }
+
+            p, h2 {
+                font-family: @primaryFont;
+                font-size: 14px;
+                font-weight: normal;
+                color: black;
+                margin-bottom: 10px;
+            }
+
+            p {
+                text-decoration: underline;
+            }
+        }
+    }
+
     .cards {
         display: flex;
         flex-flow: row;
@@ -74,7 +120,7 @@
                     }
                 }
 
-                &.active {
+                &.active {                   
                     .topic-icon {
                         display: inline-block;
                     }

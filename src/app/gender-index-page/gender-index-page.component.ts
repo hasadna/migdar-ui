@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gender-index-page',
@@ -43,7 +43,7 @@ export class GenderIndexPageComponent implements OnInit {
 
   active_dimension = this.dimensions[0];
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, public router: Router) { }
 
   ngOnInit() {
     this.api.fetch('datasets', null, 1000, 0)
