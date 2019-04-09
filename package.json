@@ -4,10 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --optimization --prod",
+    "build-he": "ng build --optimization --prod -c production",
+    "build-ar": "ng build --optimization --prod -c production-ar",
+    "build-en": "ng build --optimization --prod -c production-en",
+    "build": "npm run build-he && npm run build-en && npm run build-ar",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "i18n": "ng xi18n --i18n-locale he --output-path locale"
   },
   "private": true,
   "dependencies": {

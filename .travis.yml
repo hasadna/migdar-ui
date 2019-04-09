@@ -11,8 +11,11 @@ env:
 services:
 - docker
 install:
+- pip install transifex-client
 - bash .travis.sh install
 script:
+- tx push --source
+- tx pull --mode sourceastranslation -l ar,en 
 - bash .travis.sh script
 deploy:
   skip_cleanup: true
