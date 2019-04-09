@@ -84,7 +84,10 @@ export class ApiService {
 
   document(doc_id: string) {
     return this.http.get(`${this.url}/get/${doc_id}`)
-                    .pipe(map((x: any) => x.value));
+                    .pipe(map((x: any) => {
+                      x.value.doc_id = x.value.doc_id || doc_id;
+                      return x.value;
+                    }));
   }
 
 }

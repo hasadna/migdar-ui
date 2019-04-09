@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import * as d3 from 'd3';
 
 @Component({
@@ -6,7 +6,7 @@ import * as d3 from 'd3';
   templateUrl: './result-card-dataset.component.html',
   styleUrls: ['./result-card-dataset.component.less']
 })
-export class ResultCardDatasetComponent implements OnInit {
+export class ResultCardDatasetComponent implements OnInit, OnChanges {
 
   @Input() result: any;
   @Input() genderIndex: boolean;
@@ -19,6 +19,14 @@ export class ResultCardDatasetComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.refresh();
+  }
+
+  ngOnChanges() {
+    this.refresh();
+  }
+
+  refresh() {
     this.colorScale = d3.scaleSequential(d3.interpolateViridis).domain([0, this.result.series.length - 1]);
   }
 

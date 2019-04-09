@@ -4,16 +4,6 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-
-    h1 {
-        font-size: 24px;
-        margin: 20px 0;
-        display: block;
-        text-align: center;
-        font-family: @secondaryFont;
-        font-weight: 300;
-        color: @primaryPurple;
-    }
     
     .info-links {
         display: flex;
@@ -61,95 +51,4 @@
         }
     }
 
-    .cards {
-        display: flex;
-        flex-flow: row;
-        margin: 20px 0;
-        width: 100%;
-        max-width: @containerWidth;
-
-        > div {
-            margin: 0 10px;
-        }
-
-        .topics {
-            flex: 0 0 25%;
-            display: flex;
-            flex-flow: column;
-
-            .topic {
-                .topic-icon {
-                    display: none;
-                    width: 25px;
-                    margin-left: 10px;
-                }
-
-                .topic-header {
-
-                    display: flex;
-                    flex-flow: row;
-                    align-items: center;
-
-                    font-size: 24px;
-                    color: black;
-                    font-weight: normal;
-                    font-family: @secondaryFont;
-
-                    cursor: pointer;
-
-                    &::before {
-                        content: '';
-                        display: inline-block;
-                        background-image: url('../../assets/dropdown-closed-arrow-ic.svg');
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        width: 15px;
-                        height: 15px;
-                        margin-left: 10px;
-                    }
-                }
-
-                .topic-charts {
-                    display: none;
-                    flex-flow: column;
-                    .chart-title {
-                        font-family: @secondaryFont;
-                        font-size: 13px;
-                        font-weight: lighter;
-                        margin: 10px 25px;
-                    }
-                }
-
-                &.active {                   
-                    .topic-icon {
-                        display: inline-block;
-                    }
-
-                    .topic-header {
-                        font-size: 28px;
-                        color: @primaryRed;
-                        font-weight: bold;
-
-                        &::before {
-                            background-image: url('../../assets/dropdown-open-arrow-ic.svg');
-                        }
-                    }
-
-                    .topic-charts {
-                        display: flex;
-                    }
-                }
-            }
-        }
-
-        .charts {
-            flex: 0 0 50%;
-            display: flex;
-            flex-flow: column;
-
-            .chart {
-                margin-bottom: 20px;
-            }
-        }
-    }
 }

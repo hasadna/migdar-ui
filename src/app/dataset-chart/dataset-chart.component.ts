@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, OnChanges } from '@angular/core';
 
 import * as d3 from 'd3';
 
@@ -17,10 +17,12 @@ interface Series {
   templateUrl: './dataset-chart.component.html',
   styleUrls: ['./dataset-chart.component.less']
 })
-export class DatasetChartComponent implements OnInit {
+export class DatasetChartComponent implements OnInit, OnChanges {
 
   @Input() series: Series[];
   @ViewChild('container') container: ElementRef;
+
+  current = null;
 
   constructor() { }
 
@@ -29,6 +31,14 @@ export class DatasetChartComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.refresh();
+  }
+
+  ngOnChanges() {
+    this.refresh();
+  }
+
+  refresh() {
     const width = 600;
     const height = 300;
     const marginBottom = 30;
@@ -37,11 +47,16 @@ export class DatasetChartComponent implements OnInit {
     const rightPadding = 70;
     const yMargins = marginBottom + marginTop;
 
+    if (this.series !== this.current) {
+      this.current = this.series;
+      this.container.nativeElement.innerHTML = '';
+    } else {
+      return;
+    }
+    console.log('REFRESHING', this.current);
     const svg = d3.select(this.container.nativeElement)
                   .append('svg')
                   .attr('viewBox', `0 0 ${width} ${height}`);
-    const chart = svg.append('g')
-                     .attr('transform', `translate(0, ${marginTop})`);
 
     const data: DataEl[] = [];
     for (const dataset of this.series) {
@@ -55,17 +70,6 @@ export class DatasetChartComponent implements OnInit {
                 .domain(d3.extent(data, (d) => d.y)).nice();
     const colorScale = d3.scaleSequential(d3.interpolateViridis)
                          .domain([0, this.series.length - 1]);
-    const valueline = d3.line<DataEl>()
-      .x((d: DataEl) => x(d.x))
-      .y((d: DataEl) => y(d.y));
-
-    chart.selectAll('.dataline')
-         .data(this.series)
-         .enter()
-         .append('path')
-         .attr('class', 'dataline')
-         .attr('d', (d) => valueline(d.dataset.sort((a, b) => d3.ascending(a.x, b.x))))
-         .style('stroke', (d, i) => colorScale(i));
 
     // Add the X grid
     svg.append('g')
@@ -83,6 +87,19 @@ export class DatasetChartComponent implements OnInit {
                  .ticks(5)
                  .tickSize(-width)
                  .tickFormat((d) => ''));
+    // Add the line
+    const chart = svg.append('g')
+                     .attr('transform', `translate(0, ${marginTop})`);
+    const valueline = d3.line<DataEl>()
+                        .x((d: DataEl) => x(d.x))
+                        .y((d: DataEl) => y(d.y));
+    chart.selectAll('.dataline')
+         .data(this.series)
+         .enter()
+         .append('path')
+         .attr('class', 'dataline')
+         .attr('d', (d) => valueline(d.dataset.sort((a, b) => d3.ascending(a.x, b.x))))
+         .style('stroke', (d, i) => colorScale(i));
 
     // Add the X Axis
     const xAxis = d3.axisBottom(x)

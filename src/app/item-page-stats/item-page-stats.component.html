@@ -1,0 +1,23 @@
+<app-item-page-header [color]='"greenBg"'>
+  <div class='header'>
+    <h1>{{document.chart_title}}</h1>
+  </div>
+</app-item-page-header>
+<app-result-card-dataset [result]='document'></app-result-card-dataset>
+<div class='item-props'>
+  <div class='item-prop'>
+    <label i18n>תיאור</label>
+    <span>{{document.chart_abstract}}</span>
+  </div>
+  <div class='item-prop'>
+    <label i18n>מקור</label>
+    <span>{{document.author}}</span>
+  </div>
+  <div class='item-prop'>
+    <label i18n>תגיות</label>
+    <span>{{document.tags.join(', ')}}</span>
+  </div>
+</div>
+<app-item-page-search-results>
+<h1 i18n>אולי יעניין אותך גם&hellip;</h1>
+</app-item-page-search-results>

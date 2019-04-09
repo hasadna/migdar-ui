@@ -12,7 +12,6 @@ export class StatsPageComponent implements OnInit, OnDestroy {
   constructor(public api: ApiService, private header: HeaderStateService) { }
 
   ngOnInit() {
-    this.api.search(null, 'datasets');
     this.header.section = 'stats';
   }
 

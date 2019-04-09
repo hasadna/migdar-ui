@@ -1,0 +1,23 @@
+<h1 i18n>סדרות נתונים של מדד המגדר</h1>
+<div class='cards'>
+    <div class='topics'>
+        <div class='topic' *ngFor='let dimension of dimensions; let index = index' [class.active]='dimension === active_dimension'>
+            <div class='topic-header' (click)='active_dimension = dimension'>
+                <div class='topic-icon'>
+                    <img [src]='"assets/" + icons[index] + "-ic.svg"'/>
+                </div>
+                <span class='header'>{{dimension}}</span>
+            </div>
+            <div class='topic-charts'>
+                <div class='chart-title' *ngFor='let chart of datasets[dimension]'>
+                    {{chart.chart_title}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='charts'>
+        <div class='chart' *ngFor='let chart of datasets[active_dimension]'>
+            <app-result-card [result]='chart'></app-result-card>
+        </div>
+    </div>
+</div>

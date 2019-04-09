@@ -1,2 +1,4 @@
 <app-item-page-publication [document]='document' *ngIf='document && kind==="publications"'></app-item-page-publication>
 <app-item-page-organisation [document]='document' *ngIf='document && kind==="org"'></app-item-page-organisation>
+<app-item-page-stats [document]='document' *ngIf='document && kind==="dataset" && document.kind!=="Gender Index"'></app-item-page-stats>
+<app-item-page-gender-index [document]='document' *ngIf='document && kind==="dataset" && document.kind==="Gender Index"'></app-item-page-gender-index>

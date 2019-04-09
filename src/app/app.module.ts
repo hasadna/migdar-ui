@@ -44,6 +44,9 @@ import { HorizontalSelectorComponent } from './horizontal-selector/horizontal-se
 import { SearchFiltersSortingComponent } from './search-filters-sorting/search-filters-sorting.component';
 import { SearchFiltersItemKindComponent } from './search-filters-item-kind/search-filters-item-kind.component';
 import { ItemPageOrganisationComponent } from './item-page-organisation/item-page-organisation.component';
+import { ItemPageStatsComponent } from './item-page-stats/item-page-stats.component';
+import { GenderIndexPageFooterComponent } from './gender-index-page-footer/gender-index-page-footer.component';
+import { ItemPageGenderIndexComponent } from './item-page-gender-index/item-page-gender-index.component';
 
 
 const appRoutes: Routes = [
@@ -120,13 +123,19 @@ const appRoutes: Routes = [
     HorizontalSelectorComponent,
     SearchFiltersSortingComponent,
     SearchFiltersItemKindComponent,
-    ItemPageOrganisationComponent
+    ItemPageOrganisationComponent,
+    ItemPageStatsComponent,
+    GenderIndexPageFooterComponent,
+    ItemPageGenderIndexComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      {
+        // enableTracing: true, // <-- debugging purposes only
+        scrollPositionRestoration: 'enabled',
+      }
     ),
     HttpClientModule,
   ],

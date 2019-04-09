@@ -26,6 +26,7 @@ export class SearchFiltersComponent implements OnInit {
       all: 'all',
       publications: 'publications',
       stats: 'datasets',
+      datasets: 'datasets',
       organisations: 'orgs',
       'gender-index': 'datasets',
     }[this.itemKind];
