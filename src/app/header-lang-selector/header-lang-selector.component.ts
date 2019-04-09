@@ -12,14 +12,26 @@ export class HeaderLangSelectorComponent implements OnInit {
 
   constructor() { }
   lang = 'עב';
+  console = console;
 
   ngOnInit() {
+    if (window.location.pathname.startsWith('/en/')) {
+      this.lang = 'en';
+    } else if (window.location.pathname.startsWith('/ar/')) {
+      this.lang = 'عر';
+    } else {
+      this.lang = 'עב';
+    }
   }
 
   toggle(event) {
     this.selected = !this.selected;
     this.selectedChange.emit(this.selected);
     event.stopPropagation();
+  }
+
+  navigate(to) {
+    window.location.href = to;
   }
 
 }

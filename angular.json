@@ -18,7 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/migdar-ui",
+            "outputPath": "dist/he",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,14 +50,14 @@
               "vendorChunk": false,
               "buildOptimizer": true
             },
-            "production-en": {
+            "en": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputPath": "dist/migdar-ui__en",
+              "outputPath": "dist/en",
               "baseHref": "/en/",
               "i18nFile": "src/locale/messages.en.xlf",
               "i18nFormat": "xlf",
@@ -73,14 +73,14 @@
               "vendorChunk": false,
               "buildOptimizer": true
             },
-            "production-ar": {
+            "ar": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputPath": "dist/migdar-ui__ar",
+              "outputPath": "dist/ar",
               "baseHref": "/ar/",
               "i18nFile": "src/locale/messages.ar.xlf",
               "i18nFormat": "xlf",
@@ -107,11 +107,11 @@
             "production": {
               "browserTarget": "migdar-ui:build:production"
             },
-            "production-en": {
-              "browserTarget": "migdar-ui:build:production-en"
+            "en": {
+              "browserTarget": "migdar-ui:build:en"
             },
-            "production-ar": {
-              "browserTarget": "migdar-ui:build:production-ar"
+            "ar": {
+              "browserTarget": "migdar-ui:build:ar"
             }            
           }
         },
