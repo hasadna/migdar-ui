@@ -1,13 +1,14 @@
 @import '../../common.less';
 
 :host {
-
+       
     .header {
         width: 100vw;
         display: flex;
         flex-flow: column;
         align-items: center;
         margin-top: -10px;
+        padding: 30px 0;
 
         .inner {
             max-width: @containerWidth;
@@ -16,8 +17,34 @@
             flex-flow: row;
             align-items: center;
             
-            .content {
+            ::ng-deep .content {
                 flex: 0 1 75%;
+                h1 {
+                    color: white;
+                    font-family: @secondaryFont;
+                    letter-spacing: 1px;
+                    margin: 30px 0;
+                    font-weight: bold;
+                    font-size: 28px;
+                }
+        
+                .infoline {
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: flex-start;
+                    align-items: baseline;
+                    color: white;
+                    font-size: 22px;
+        
+                    label {
+                        display: block;
+                        font-weight: bold;
+                        width: 100px;
+                    }
+                    span {
+                        display: block;
+                    }
+                }
             }
 
             .back {

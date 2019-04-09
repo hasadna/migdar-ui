@@ -1,0 +1,89 @@
+@import '../../common.less';
+
+:host {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.org-card {
+    width: 100%;
+    max-width: @containerWidth;
+    display: flex;
+    flex-flow: row;
+    margin: 60px 0;
+    font-size: 20px;
+
+    .org-contact {
+        flex: 0 0 auto;
+        margin: 10px 50px;
+        display: flex;
+        flex-flow: column;
+
+        .org-website {
+            color: @primaryOrange;
+            border: 1px solid @primaryOrange;
+            border-radius: 25px;
+            height: 50px;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .circles {
+            display: flex;
+            flex-flow: row;
+            margin: 30px 0;
+            & > * {
+                height: 50px;
+                width: 50px;
+                background-color: @opacityOrange;
+                border-radius: 25px;
+                margin-left: 20px;
+            }
+            
+            .org-facebook {
+                background-image: url('../../assets/fb-ic.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 15px;
+            }
+        }
+    }
+
+    .org-info {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column;
+
+        .org-abstract {
+            margin: 10px 0;    
+        }
+
+        .org-prop {
+            display: flex;
+            flex-flow: row;
+            margin: 10px 0;    
+
+            label {
+                flex: 0 0 20%;
+                font-weight: bold;
+            }
+            span {
+
+            }
+        }
+    }
+}
+
+app-item-page-search-results {
+
+    h1 {
+        font-family: @secondaryFont;
+        color: @primaryPurple;
+        display: block;
+        margin: 30px 0;
+        font-size: 28px;
+    }
+}

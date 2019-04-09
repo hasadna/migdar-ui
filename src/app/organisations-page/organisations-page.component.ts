@@ -12,7 +12,6 @@ export class OrganisationsPageComponent implements OnInit, OnDestroy {
   constructor(public api: ApiService, private header: HeaderStateService) { }
 
   ngOnInit() {
-    this.api.search(null, 'orgs');
     this.header.section = 'organisations';
   }
 

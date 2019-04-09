@@ -43,6 +43,7 @@ import { InfoPageGapsComponent } from './info-page-gaps/info-page-gaps.component
 import { HorizontalSelectorComponent } from './horizontal-selector/horizontal-selector.component';
 import { SearchFiltersSortingComponent } from './search-filters-sorting/search-filters-sorting.component';
 import { SearchFiltersItemKindComponent } from './search-filters-item-kind/search-filters-item-kind.component';
+import { ItemPageOrganisationComponent } from './item-page-organisation/item-page-organisation.component';
 
 
 const appRoutes: Routes = [
@@ -118,7 +119,8 @@ const appRoutes: Routes = [
     InfoPageGapsComponent,
     HorizontalSelectorComponent,
     SearchFiltersSortingComponent,
-    SearchFiltersItemKindComponent
+    SearchFiltersItemKindComponent,
+    ItemPageOrganisationComponent
   ],
   imports: [
     BrowserModule,
