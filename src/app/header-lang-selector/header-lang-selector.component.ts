@@ -31,7 +31,14 @@ export class HeaderLangSelectorComponent implements OnInit {
   }
 
   navigate(to) {
-    window.location.href = to;
+    let path = window.location.pathname;
+    if (path.startsWith('/en/') || path.startsWith('/ar/')) {
+      path = path.slice(4);
+    } else {
+      path = path.slice(1);
+    }
+    path = to + path + window.location.search;
+    window.location.href = path;
   }
 
 }
