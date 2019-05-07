@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Subject } from 'rxjs';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-main-page-card',
@@ -9,10 +11,22 @@ export class MainPageCardComponent implements OnInit {
 
   @Input() logo;
   @Input() colors;
+  @Input() types = 'all';
+  @Input() filters = null;
 
-  constructor() { }
+  slide = new Subject<any>();
+
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
+    if (this.types) {
+      this.api.fetch(this.types, null, 1, 0, this.filters)
+      .subscribe((results) => {
+        if (results.length > 0) {
+          this.slide.next(results);
+        }
+      });
+    }
   }
 
 }

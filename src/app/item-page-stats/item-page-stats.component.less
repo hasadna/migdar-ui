@@ -31,8 +31,19 @@
     }
 }
 
-app-result-card-dataset {
-    width: 100%;
+::ng-deep app-result-card-dataset.main {
+    width: 70%;
+    > h1 {
+        display: none;
+    }
+    .legend {
+        .name {
+            font-size: 20px !important;
+        }
+        .color {
+            border-width: 3px !important;
+        }
+    }
 }
 
 app-item-page-search-results {

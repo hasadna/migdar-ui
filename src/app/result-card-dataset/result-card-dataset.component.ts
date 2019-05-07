@@ -10,6 +10,7 @@ export class ResultCardDatasetComponent implements OnInit, OnChanges {
 
   @Input() result: any;
   @Input() genderIndex: boolean;
+  @Input() large: boolean;
   colorScale: d3.ScaleSequential<string>;
 
   constructor() { }

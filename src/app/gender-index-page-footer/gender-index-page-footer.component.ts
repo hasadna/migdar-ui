@@ -42,6 +42,7 @@ export class GenderIndexPageFooterComponent implements OnInit {
 
   datasets = {};
   active_dimension = this.dimensions[0];
+  open = true;
 
   constructor(private api: ApiService, public router: Router) { }
 
@@ -55,6 +56,19 @@ export class GenderIndexPageFooterComponent implements OnInit {
           return prev;
         }, {});
       });
+  }
+
+  selectDimension(selected) {
+    if (selected === this.active_dimension) {
+      this.open = !this.open;
+    } else {
+      this.active_dimension = selected;
+      this.open = true;
+    }
+  }
+
+  scrollToChart(id) {
+    document.getElementById(id).scrollIntoView({block: 'center'});
   }
 
 }

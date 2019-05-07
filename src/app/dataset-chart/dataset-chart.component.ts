@@ -20,6 +20,7 @@ interface Series {
 export class DatasetChartComponent implements OnInit, OnChanges {
 
   @Input() series: Series[];
+  @Input() large: boolean;
   @ViewChild('container') container: ElementRef;
 
   current = null;
@@ -57,6 +58,9 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     const svg = d3.select(this.container.nativeElement)
                   .append('svg')
                   .attr('viewBox', `0 0 ${width} ${height}`);
+    if (this.large) {
+      svg.attr('class', 'large');
+    }
 
     const data: DataEl[] = [];
     for (const dataset of this.series) {

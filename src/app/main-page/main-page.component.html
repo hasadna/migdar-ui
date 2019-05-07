@@ -67,6 +67,8 @@
   *ngIf='reveal > 0'
   [colors]="'red'"
   [logo]='"assets/lp-madad-info-ic.svg"'
+  [types]='"datasets"'
+  [filters]='{"kind":"Gender Index"}'
   >
   <span class='title' i18n>מדד המגדר</span>
   <span class='description' i18n>
@@ -77,7 +79,10 @@
 <app-main-page-card
   *ngIf='reveal > 1'
   [colors]="'green'"
-  [logo]='"assets/lp-stats-info-ic.svg"'>
+  [logo]='"assets/lp-stats-info-ic.svg"'
+  [types]='"datasets"'
+  [filters]='{"kind":"Gender Statistics"}'
+  >
   <span class='title' i18n>סטטיסטיקה מגדרית</span>
   <span class='description' i18n>
     כאן ניתן למצוא נתונים השוואתיים אודות מצבם של נשים וגברים בתחומי חיים שונים.
@@ -88,6 +93,7 @@
   *ngIf='reveal > 2'
   [colors]="'orange'"
   [logo]='"assets/lp-orgs-info-ic.svg"'
+  [types]='"orgs"'
   >
   <span class='title' i18n>ארגונים ופעילות בתחום המגדר</span>
   <span class='description' i18n>
@@ -99,6 +105,7 @@
   *ngIf='reveal > 3'
   [colors]="'purple'"
   [logo]='"assets/lp-library-info-ic.svg"'
+  [types]='"publications"'
   >
   <span class='title' i18n>ספריית המקורות</span>
   <span class='description' i18n>
