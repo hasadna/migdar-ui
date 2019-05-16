@@ -13,7 +13,7 @@ export class GenderIndexPageComponent implements OnInit, OnDestroy {
   constructor(public router: Router, private header: HeaderStateService) { }
 
   ngOnInit() {
-    this.header.section = 'gender-index';
+    this.header.section = 'gender_index';
   }
 
   ngOnDestroy() {

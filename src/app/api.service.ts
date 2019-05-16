@@ -17,14 +17,36 @@ export class ApiService {
   constructor(private http: HttpClient) {
     this.terms.pipe(
       debounceTime(300),
-      switchMap((params) => this.fetch(params.types,
-                                       params.term,
-                                       params.count,
-                                       params.offset,
-                                       params.filters))
-    ).subscribe((results) => {
+      switchMap((params) => {
+        return this.fetch(params.types,
+                          params.term,
+                          params.count,
+                          params.offset,
+                          params.filters)
+                    .pipe(
+                      map((results) => {
+                        return {
+                          results: results,
+                          params: params
+                        };
+                      })
+                    );
+        }
+      )
+    ).subscribe((val) => {
+      let results = val.results;
+      const params = val.params;
+      this.params = params;
+      console.log('GOT PARAMS', params);
+      console.log('GOT RESULTS', results);
+      let current = this.results.getValue();
+      if (params.offset === 0) {
+        current = [];
+        this.results.next(current);
+      }
+      results = current.concat(results);
       this.params.offset += results.length;
-      this.results.next(this.results.getValue().concat(results));
+      this.results.next(results);
     });
   }
 
@@ -42,7 +64,7 @@ export class ApiService {
       offset: 0,
       filters: filters,
     };
-    this.terms.next(this.params);
+    this.terms.next(Object.assign({}, this.params));
   }
 
   searchTerm(term) {
@@ -56,7 +78,7 @@ export class ApiService {
   }
 
   searchMore(): any {
-    this.terms.next(this.params);
+    this.terms.next(Object.assign({}, this.params));
   }
 
   clearSearch(): any {
@@ -65,6 +87,7 @@ export class ApiService {
 
   fetch(types, term?, count?, offset?, filters?) {
     let params = '';
+    console.log('FETCHING', types, term, offset, filters);
     if (count) { params += `&size=${count}`; }
     if (offset) { params += `&offset=${offset}`; }
     if (filters) { params += `&filter=${encodeURIComponent(JSON.stringify(filters))}`; }
@@ -75,10 +98,7 @@ export class ApiService {
     if (term) { params = `/${encodeURIComponent(term)}` + params; }
     return this.http.get(`${this.url}/search/${types}${params}`)
               .pipe(
-                map((result: any) => {
-                  console.log('got results for', term);
-                  return result.search_results.map((item) => Object.assign(item.source, {__type: item.type}));
-                }),
+                map((result: any) => result.search_results.map((item) => Object.assign(item.source, {__type: item.type}))),
               );
   }
 

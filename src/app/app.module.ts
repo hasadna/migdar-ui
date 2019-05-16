@@ -47,6 +47,8 @@ import { ItemPageOrganisationComponent } from './item-page-organisation/item-pag
 import { ItemPageStatsComponent } from './item-page-stats/item-page-stats.component';
 import { GenderIndexPageFooterComponent } from './gender-index-page-footer/gender-index-page-footer.component';
 import { ItemPageGenderIndexComponent } from './item-page-gender-index/item-page-gender-index.component';
+import { SearchFiltersPropertyComponent } from './search-filters-property/search-filters-property.component';
+import { SearchFiltersPropertyFieldNameComponent } from './search-filters-property-field-name/search-filters-property-field-name.component';
 
 
 const appRoutes: Routes = [
@@ -79,7 +81,6 @@ const appRoutes: Routes = [
   { path: 'methodology', component: InfoPageGenderIndexComponent },
   { path: '', component: MainPageComponent },
 ];
-
 
 @NgModule({
   declarations: [
@@ -126,7 +127,9 @@ const appRoutes: Routes = [
     ItemPageOrganisationComponent,
     ItemPageStatsComponent,
     GenderIndexPageFooterComponent,
-    ItemPageGenderIndexComponent
+    ItemPageGenderIndexComponent,
+    SearchFiltersPropertyComponent,
+    SearchFiltersPropertyFieldNameComponent
   ],
   imports: [
     BrowserModule,

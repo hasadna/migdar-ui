@@ -8,6 +8,11 @@
   [itemKind]='itemKind'
   (changed)='itemKind = $event; refresh()'
 ></app-search-filters-item-kind>
+<app-search-filters-property
+  *ngIf='filters.CONFIG[itemKind]'
+  [itemKind]='itemKind'
+  [properties]='filters.CONFIG[itemKind]'
+></app-search-filters-property>
 <!-- <app-search-filters-all-properties
   *ngIf='selectedKind === "all"'
 ></app-search-filters-properties>
@@ -21,5 +26,5 @@
   *ngIf='selectedKind === "datasets"'
 ></app-search-filters-properties>
 <app-search-filters-gender-index-properties
-  *ngIf='selectedKind === "gender-index"'
+  *ngIf='selectedKind === "gender_index"'
 ></app-search-filters-properties> -->

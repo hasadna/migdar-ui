@@ -14,7 +14,7 @@ export class ItemPageGenderIndexComponent implements OnInit, OnDestroy {
   constructor(private header: HeaderStateService) { }
 
   ngOnInit() {
-    this.header.section = 'gender-index';
+    this.header.section = 'gender_index';
   }
 
   ngOnDestroy() {

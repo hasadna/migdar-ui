@@ -4,26 +4,45 @@
     display: flex;
     flex-flow: column;
 
-    .title {
-        display: block;
-        font-family: @secondaryFont;
-        color: @primaryPurple;
+    .title-container {
+
         padding: 5px 0;
         margin: 10px 0;
-        font-size: 18px;
-        font-weight: bold;
         border: none;
         border-bottom: 0.5px solid black;
+
+        ::ng-deep .title {
+            display: flex;
+            flex-flow: row;
+            align-items: flex-end;
+            justify-content: flex-start;
+            font-family: @secondaryFont;
+            color: @primaryPurple;   
+            font-size: 18px;
+            font-weight: bold;
+
+            .left {
+                margin-right: auto;
+                padding-right: 30px;
+                font-size: 13px;
+                opacity: 0.7;
+            }    
+        }
     }
 
     ::ng-deep .options {
+        display: flex;
+        flex-flow: row;
         ul {
             width: 100%;
             margin: 0;
             padding: 0;
 
             li {
-                display: block;
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: flex-start;
                 font-family: @secondaryFont;
                 color: black;
                 padding: 3px 10px;
@@ -34,10 +53,28 @@
                 list-style: none;
                 cursor: pointer;
 
+                .left {
+                    margin-right: auto;
+                    padding-right: 30px;
+                    font-size: 13px;
+                }
+
                 &.selected {
                     background-color: #785d7040;
                     border-radius: 15px;
                     cursor: inherit;
+                }
+
+                &:before {
+                    content: '';
+                    font-size: 13px;
+                    display: inline-block;
+                    width: 13px;
+                    margin-right: -13px;
+                }
+
+                &.checked:before {
+                    content: '✓';
                 }
             }
         }

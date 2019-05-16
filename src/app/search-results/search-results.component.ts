@@ -22,8 +22,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
               private bottommer: BottommerService) {
     this.searchResultsSubs =
       this.api.results.subscribe((results) => {
-        console.log('GOT results', results);
-        console.log('HAVE columns', this.columns);
+        console.log('SHOWING RESULTS', results);
         if (results.length === 0) {
           this.columns = [[], []];
         } else {

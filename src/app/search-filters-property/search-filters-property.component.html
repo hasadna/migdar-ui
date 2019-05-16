@@ -1,0 +1,37 @@
+<app-horizontal-selector>
+  <span class='title'>
+    <span i18n>סינון</span>
+    <span i18n class='left'>נבחרו</span>
+  </span>
+  <ul>
+    <li *ngFor='let item of properties'
+        [class.selected]='selected===item'
+        (click)='selected = item'
+    >
+      <span>
+        <app-search-filters-property-field-name [field]='item.field'></app-search-filters-property-field-name>
+      </span>
+      <span class='left'>
+        {{filters.numSelected(itemKind, item.field)}}
+      </span>
+    </li>
+  </ul>
+</app-horizontal-selector>
+<app-horizontal-selector *ngIf='selected'>
+  <span class='title'>
+    <span>
+      <app-search-filters-property-field-name [field]='selected.field'></app-search-filters-property-field-name>
+    </span>
+    <span i18n class='left' (click)='filters.clear(itemKind, selected.field)' style='cursor:pointer;'>
+      איפוס כל הבחירות
+    </span>
+  </span>
+  <ul *ngFor='let start of range(selected.options.length)'>
+    <li *ngFor='let item of selected.options.slice(start, start+6)'
+        [class.checked]='filters.isSelected(itemKind, selected.field, item.v)'
+        (click)='filters.toggle(itemKind, selected.field, item.v)'
+    >
+      <span>{{item.v}}</span>
+    </li>
+  </ul>
+</app-horizontal-selector>

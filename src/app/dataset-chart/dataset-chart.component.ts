@@ -54,7 +54,6 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     } else {
       return;
     }
-    console.log('REFRESHING', this.current);
     const svg = d3.select(this.container.nativeElement)
                   .append('svg')
                   .attr('viewBox', `0 0 ${width} ${height}`);
