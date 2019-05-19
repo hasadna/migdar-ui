@@ -28,6 +28,7 @@
     "core-js": "^2.6.1",
     "d3": "^5.9.2",
     "ngx-auto-unsubscribe": "^2.4.1",
+    "ngx-rangeslider-component": "^1.0.6",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"

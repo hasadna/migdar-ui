@@ -43,7 +43,9 @@
         background-color: white;
         position: absolute;
         top: 340px;
-
+        width: 700px;
+        text-align: center;
+        
         padding: 20px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -54,24 +56,20 @@
             font-size: 28px;
             letter-spacing: 1.2;
             font-weight: normal;
-            padding: 20px 0;
-            padding-top: 0px;
+            padding: 0;
             font-family: @secondaryFont;
             transition-property: opacity, font-size;
-            transition-duration: 1s;        
+            transition-duration: 1s;
+            min-height: 75px;
         }
 
-        img {
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            transition-property: height, width, opacity;
+        app-dataset-chart {
+            transition-property: opacity;
             transition-duration: 1s;
-            height: 350px;
-            width: 700px;    
             opacity: 1;
         }
 
-        transition-property: z-index, margin-right, margin-top;
+        transition-property: z-index, margin-right, margin-top, width, opacity;
         transition-duration: 1s;
 
         &.phase-0 {
@@ -87,24 +85,21 @@
             h3 {
                 opacity: 0.7;
             }
-            img {
+            width: 600px;    
+            app-dataset-chart {
                 opacity: 0.7;
-                height: 300px;
-                width: 600px;    
             }
         }
 
         &.phase-2 {
-            opacity: 0.2;
             margin-top: 50px;
             z-index: 1;
             h3 {
                 opacity: 0.2;
             }
-            img {
+            width: 300px;    
+            app-dataset-chart {
                 opacity: 0.2;
-                height: 200px;
-                width: 300px;    
             }
         }
 
@@ -115,10 +110,9 @@
             h3 {
                 opacity: 0.7;
             }
-            img {
+            width: 600px;    
+            app-dataset-chart {
                 opacity: 0.7;
-                height: 300px;
-                width: 600px;    
             }
         }
 

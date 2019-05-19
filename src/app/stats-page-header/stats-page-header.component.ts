@@ -10,7 +10,11 @@ export class StatsPageHeaderComponent implements OnInit, OnDestroy {
 
   phase = 0;
   interval: number;
-  constructor(public api: ApiService) { }
+  slides: any;
+
+  constructor(public api: ApiService) {
+    this.slides = api.fetch('datasets', null, 4);
+  }
 
   ngOnInit() {
     this.interval = window.setInterval(() => {

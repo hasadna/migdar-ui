@@ -24,10 +24,10 @@ export class ItemPageOrganisationComponent implements OnInit {
   ngOnInit() {
     this.api.search(
       null,
-      'orgs',
+      'publications',
       {
-        tags: this.document['tags'],
-        // org_name__neq: this.document['org_name']
+        publisher: this.document['alt_names'],
+        // life_areas: this.document['tags'],
       }
     );
   }

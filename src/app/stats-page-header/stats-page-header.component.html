@@ -6,19 +6,9 @@
   נתונים אלו יכולים לסייע לקידום יוזמות, מדיניות, אקטיביזם, הוראה ומחקר בתחום השוויון המגדרי
   </h2>
 </div>
-<div [class]='"carousel-card phase-" + ((phase + 1) % 4)'>
-  <h3>אי שוויון במספרים</h3>
-  <img src="https://via.placeholder.com/700x350?text=Missing%20Content"/>
-</div>
-<div [class]='"carousel-card phase-" + ((phase + 2) % 4)'>
-  <h3>אי שוויון במספרים 2</h3>
-  <img src="https://via.placeholder.com/700x350?text=Missing%20Content"/>
-</div>
-<div [class]='"carousel-card phase-" + ((phase + 3) % 4)'>
-  <h3>3 אי שוויון במספרים</h3>
-  <img src="https://via.placeholder.com/700x350?text=Missing%20Content"/>
-</div>
-<div [class]='"carousel-card phase-" + ((phase + 4) % 4)'>
-  <h3>אי שוויון במספרים 4</h3>
-  <img src="https://via.placeholder.com/700x350?text=Missing%20Content"/>
-</div>
+<ng-container *ngFor='let slide of slides | async; let i = index'>
+  <div [class]='"carousel-card phase-" + ((phase + i) % 4)'>
+    <h3>{{slide.chart_title}}</h3>
+    <app-dataset-chart [series]='slide.series' [large]='true'></app-dataset-chart>
+  </div>
+</ng-container>
