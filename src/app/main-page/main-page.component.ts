@@ -16,7 +16,12 @@ export class MainPageComponent implements OnInit {
   results: Observable<any>;
   reveal = 0;
   bottommerSubs: any;
-  counts = {};
+  counts = {
+    publications: '?',
+    organisations: '?',
+    stats: '?',
+    gender_index: '?',
+  };
 
   constructor(private api: ApiService,
               public router: Router,
