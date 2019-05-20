@@ -20,17 +20,17 @@
   <div class='square-link' (click)='router.navigate(["./publications"])'>
     <img src='assets/lp-library-ic.svg'>
     <h1 i18n>ספריית<br/>מקורות</h1>
-    <h2 i18n>126,000 פריטים</h2>
+    <h2 i18n>{{counts.publications.total_overall | number}} פריטים</h2>
   </div>
   <div class='square-link' (click)='router.navigate(["./stats"])'>
     <img src='assets/lp-stats-ic.svg'>
     <h1 i18n>סטטיסטיקה<br/>מגדרית</h1>
-    <h2 i18n>32,323 פריטים</h2>
+    <h2 i18n>{{counts.stats.total_overall}} פריטים</h2>
   </div>
   <div class='square-link' (click)='router.navigate(["./organisations"])'>
     <img src='assets/lp-orgs-ic.svg'>
     <h1 i18n>ארגונים ופעילות<br/>בתחום המגדר</h1>
-    <h2 i18n>209 ארגונים</h2>
+    <h2 i18n>{{counts.organisations.total_overall}} ארגונים</h2>
   </div>
   <div class='square-link' (click)='router.navigate(["./gender-index"])'>
     <img src='assets/lp-madad-ic.svg'>

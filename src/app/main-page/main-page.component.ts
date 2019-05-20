@@ -16,12 +16,37 @@ export class MainPageComponent implements OnInit {
   results: Observable<any>;
   reveal = 0;
   bottommerSubs: any;
+  counts = {};
 
   constructor(private api: ApiService,
               public router: Router,
               private bottommer: BottommerService) {
     this.bottommerSubs = this.bottommer.reachedBottom.subscribe(() => {
       this.reveal += 1;
+    });
+    api.count(null, [
+      {
+        id: 'publications',
+        doc_types: ['publications'],
+        filters: []
+      },
+      {
+        id: 'organisations',
+        doc_types: ['orgs'],
+        filters: []
+      },
+      {
+        id: 'stats',
+        doc_types: ['datasets'],
+        filters: [{kind: 'Gender Statistics'}]
+      },
+      {
+        id: 'gender_index',
+        doc_types: ['datasets'],
+        filters: [{kind: 'Gender Index'}]
+      },
+    ]).subscribe((results) => {
+      this.counts = results;
     });
   }
 

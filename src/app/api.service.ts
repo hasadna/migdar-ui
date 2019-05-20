@@ -102,6 +102,20 @@ export class ApiService {
               );
   }
 
+  count(term?, config?) {
+    let params = '';
+    console.log('COUNTING', term, config);
+    if (term) { params += `&q=${encodeURIComponent(term)}`; }
+    if (config) { params += `&config=${encodeURIComponent(JSON.stringify(config))}`; }
+    if (params.length > 0) {
+      params = '?' + params.slice(1);
+    }
+    return this.http.get(`${this.url}/search/count${params}`)
+              .pipe(
+                map((result: any) => result.search_counts),
+              );
+  }
+
   document(doc_id: string) {
     return this.http.get(`${this.url}/get/${doc_id}`)
                     .pipe(map((x: any) => {
