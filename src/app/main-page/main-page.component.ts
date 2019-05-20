@@ -17,10 +17,10 @@ export class MainPageComponent implements OnInit {
   reveal = 0;
   bottommerSubs: any;
   counts = {
-    publications: '?',
-    organisations: '?',
-    stats: '?',
-    gender_index: '?',
+    publications: {total_overall: '?'},
+    organisations: {total_overall: '?'},
+    stats: {total_overall: '?'},
+    gender_index: {total_overall: '?'},
   };
 
   constructor(private api: ApiService,
