@@ -11,7 +11,7 @@
 <div class="text"
       (animationiteration)='rotateLabels()'></div>
 <ng-container *ngFor='let point of points'>
-  <div *ngIf='point.i < 4 || point.i > 11'    
+  <div *ngIf='point.i < 4 || point.i > 11'
       [style.right]='(point.x + RADIUS) + "px"'
       [style.top]='(-point.y + RADIUS) + "px"'
       [style.transform-origin]='(point.x + 200) + "px " + (point.y + 10) + "px"'
