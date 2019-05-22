@@ -1,4 +1,4 @@
-<app-search-filters-sorting 
+<app-search-filters-sorting
   *ngIf='!disableSorting'
   [sortOrder]='sortOrder'
   (changed)='sortOrder = $event; refresh()'
@@ -13,18 +13,3 @@
   [itemKind]='itemKind'
   [properties]='filters.CONFIG[itemKind]'
 ></app-search-filters-property>
-<!-- <app-search-filters-all-properties
-  *ngIf='selectedKind === "all"'
-></app-search-filters-properties>
-<app-search-filters-org-properties
-  *ngIf='selectedKind === "organisations"'
-></app-search-filters-properties>
-<app-search-filters-publication-properties
-  *ngIf='selectedKind === "publications"'
-></app-search-filters-properties>
-<app-search-filters-stats-properties
-  *ngIf='selectedKind === "datasets"'
-></app-search-filters-properties>
-<app-search-filters-gender-index-properties
-  *ngIf='selectedKind === "gender_index"'
-></app-search-filters-properties> -->
