@@ -6,7 +6,7 @@ if [ "${1}" == "install" ]; then
     curl -L https://raw.githubusercontent.com/OriHoch/travis-ci-operator/master/travis_ci_operator.sh > $HOME/bin/travis_ci_operator.sh &&\
     bash $HOME/bin/travis_ci_operator.sh init
     [ "$?" != "0" ] && exit 1
-    ([ -z "${DOCKER_USER}" ] || ! travis_ci_operator.sh docker-login) && echo WARNING! Failed to login to Docker)
+    ([ -z "${DOCKER_USER}" ] || ! travis_ci_operator.sh docker-login) && echo WARNING! Failed to login to Docker
     exit 0
 
 elif [ "${1}" == "script" ]; then
