@@ -174,4 +174,5 @@ export const FILTERS_CONFIG = {'all': [{'field': 'languages',
                         {'v': 'עוצמה', 'v__ar': 'قوة', 'v__en': 'Power'},
                         {'v': 'פמיניזם', 'v__ar': 'نسويّة', 'v__en': 'Feminism'},
                         {'v': 'תקשורת', 'v__ar': 'إعلام', 'v__en': 'Media'},
-                        {'v': 'תרבות וספורט', 'v__ar': 'ثقافة ورياضة', 'v__en': 'Culture & Sport'}]}]}
+                        {'v': 'תרבות וספורט', 'v__ar': 'ثقافة ورياضة', 'v__en': 'Culture & Sport'}]}]};
+
