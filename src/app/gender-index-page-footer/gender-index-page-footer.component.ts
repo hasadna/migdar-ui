@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ApiService } from '../api.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { BottommerService } from '../bottommer.service';
 
 @Component({
   selector: 'app-gender-index-page-footer',
@@ -41,10 +42,20 @@ export class GenderIndexPageFooterComponent implements OnInit {
   ];
 
   datasets = {};
-  active_dimension = this.dimensions[0];
+  active_dimension = null;
   open = true;
 
-  constructor(private api: ApiService, public router: Router) { }
+  @ViewChild('datasetsSection') datasetsSection: ElementRef;
+
+  constructor(private api: ApiService, public router: Router,
+              private activatedRoute: ActivatedRoute,
+              private bottommer: BottommerService) {
+    this.bottommer.reachedBottom.subscribe(() => {
+      if (!this.active_dimension) {
+        this.selectDimension(this.dimensions[0]);
+      }
+    });
+  }
 
   ngOnInit() {
     this.api.fetch('datasets', null, 1000, 0)
@@ -58,6 +69,14 @@ export class GenderIndexPageFooterComponent implements OnInit {
           return prev;
         }, {});
       });
+    this.activatedRoute.queryParamMap.subscribe((params) => {
+      let dimension = params.get('section');
+      if (dimension !== this.active_dimension) {
+        this.datasetsSection.nativeElement.scrollIntoView();
+        dimension = dimension || this.dimensions[0];
+        this.selectDimension(dimension);
+      }
+    });
   }
 
   selectDimension(selected) {
@@ -66,6 +85,15 @@ export class GenderIndexPageFooterComponent implements OnInit {
     } else {
       this.active_dimension = selected;
       this.open = true;
+      this.router.navigate(
+        [],
+        {
+          relativeTo: this.activatedRoute,
+          queryParams: { section: selected, },
+          queryParamsHandling: 'merge',
+          replaceUrl: false
+        }
+      );
     }
   }
 

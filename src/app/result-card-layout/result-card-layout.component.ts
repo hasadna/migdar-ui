@@ -10,11 +10,13 @@ export class ResultCardLayoutComponent implements OnInit {
 
   @Input() colorClass;
   @Input() result: any;
+  @Input() queryParams: string;
   @Input() label: string;
 
   constructor(public router: Router) { }
 
   ngOnInit() {
+    this.queryParams = this.queryParams || '';
   }
 
 }
