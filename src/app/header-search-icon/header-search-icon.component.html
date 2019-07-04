@@ -1,0 +1,10 @@
+<div class='container' #container [class.active]='active'>
+  <img src='assets/search-ic.svg' (click)='active = true'/>
+  <app-search-bar
+      (changed)='search($event)'
+      [color]='"rgba(67, 38, 58)"'
+      [backgroundColor]='"rgba(67, 38, 58, 0.2)"'
+      [icon]='"search-ic"'
+      [instant]='false'
+  ></app-search-bar>
+</div>

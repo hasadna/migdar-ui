@@ -17,10 +17,13 @@
   </div>
 </app-item-page-header>
 <div class='notes'>
-{{document.notes}}
-<br/>
-<br/>
-<strong i18n>תגיות:</strong>&nbsp;{{document.tags.join(', ')}}
+  {{document.notes}}
+</div>
+<div class='actions'>
+  <a class='link' *ngIf='document.url' [href]='document.url' target='_blank'>לינק למקור</a>
+</div>
+<div class='notes'>
+  <strong i18n>תגיות:</strong>&nbsp;{{document.tags.join(', ')}}
 </div>
 <app-item-page-search-results>
 <h1 i18n>אולי יעניין אותך גם&hellip;</h1>

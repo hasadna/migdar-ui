@@ -32,4 +32,9 @@ export class ItemPageOrganisationComponent implements OnInit {
     );
   }
 
+  logo() {
+    const url = `assets/logos/${this.document.entity_id}.png`;
+    return url;
+  }
+
 }

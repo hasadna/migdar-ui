@@ -14,4 +14,9 @@ export class ResultCardOrganisationComponent implements OnInit {
   ngOnInit() {
   }
 
+  logo() {
+    const url = `assets/logos/${this.result.entity_id}.png`;
+    return url;
+  }
+
 }

@@ -49,6 +49,7 @@ import { GenderIndexPageFooterComponent } from './gender-index-page-footer/gende
 import { ItemPageGenderIndexComponent } from './item-page-gender-index/item-page-gender-index.component';
 import { SearchFiltersPropertyComponent } from './search-filters-property/search-filters-property.component';
 import { SearchFiltersPropertyFieldNameComponent } from './search-filters-property-field-name/search-filters-property-field-name.component';
+import { HeaderSearchIconComponent } from './header-search-icon/header-search-icon.component';
 
 
 const appRoutes: Routes = [
@@ -117,7 +118,8 @@ const appRoutes: Routes = [
     GenderIndexPageFooterComponent,
     ItemPageGenderIndexComponent,
     SearchFiltersPropertyComponent,
-    SearchFiltersPropertyFieldNameComponent
+    SearchFiltersPropertyFieldNameComponent,
+    HeaderSearchIconComponent
   ],
   imports: [
     BrowserModule,

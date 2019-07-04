@@ -13,6 +13,7 @@ import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 export class SearchPageComponent implements OnInit {
 
   term = '';
+  kind = 'all';
   activatedRouteSubs: Subscription;
 
   constructor(public api: ApiService,
@@ -23,6 +24,8 @@ export class SearchPageComponent implements OnInit {
       this.activatedRoute.queryParamMap.subscribe((params) => {
         const term = params.get('q');
         this.term = term ? term : '';
+        const kind = params.get('kind');
+        this.kind = kind ? kind : 'all';
         this.api.searchTerm(this.term);
       });
   }

@@ -4,10 +4,11 @@
     <div class='infoline' *ngIf='document.tagline'>
       <span>{{document.tagline}}</span>
     </div>
-  </div>
+  </div>-
 </app-item-page-header>
 <div class='org-card'>
   <div class='org-contact'>
+    <img class='logo' [src]='logo()' onerror='this.style.display="none"'/>
     <a [href]='website()' class='org-website' *ngIf='document.org_website' target='_blank' i18n>
     לאתר הארגון
     </a>

@@ -6,7 +6,7 @@
 <app-search-filters-item-kind
   *ngIf='!fixItemKind'
   [itemKind]='itemKind'
-  (changed)='itemKind = $event; refresh()'
+  (changed)='switchKind($event)'
 ></app-search-filters-item-kind>
 <app-search-filters-property
   *ngIf='filters.CONFIG[itemKind]'

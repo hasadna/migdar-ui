@@ -1,5 +1,13 @@
 <app-fixed-background [color]='"rgba(0,0,0,0.05)"'></app-fixed-background>
 <app-organisations-page-header></app-organisations-page-header>
-<app-search-filters [itemKind]='"organisations"' [fixItemKind]='true'></app-search-filters>
+<app-search-filters [itemKind]='"orgs"' [fixItemKind]='true'></app-search-filters>
+<app-search-bar
+    (changed)='api.searchTerm($event)'
+    [color]='"rgb(255, 178, 55)"'
+    [backgroundColor]='"rgba(255, 178, 55, 0.2)"'
+    [icon]='"search-ic"'
+    [instant]='true'
+    [placeholder]='"<strong>שם ארגון או פעילות בתחום</strong>"'
+></app-search-bar>
 <h1 i18n>ארגונים ופעילות בתחום המגדר</h1>
 <app-search-results></app-search-results>

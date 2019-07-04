@@ -75,6 +75,14 @@
     ניטור אי השוויון בין נשים לגברים בישראל בתחומי חיים שונים,
     המאפשר לזהות מגמות של שינוי באי שוויון המגדרי לאורך השנים
   </span>
+  <app-search-bar
+    (changed)='search($event, "gender_index")'
+    [color]='"rgba(239, 82, 65)"'
+    [backgroundColor]='"rgba(239, 82, 65, 0.2)"'
+    [icon]='"search-ic"'
+    [instant]='false'
+    [placeholder]='"<strong>לדוגמא:</strong> כלכלה ושוק העבודה, עוני&hellip;"'
+  ></app-search-bar>
 </app-main-page-card>
 <app-main-page-card
   *ngIf='reveal > 1'
@@ -88,6 +96,14 @@
     כאן ניתן למצוא נתונים השוואתיים אודות מצבם של נשים וגברים בתחומי חיים שונים.
     נתונים אלה יכולים לסייע לקידום יוזמות, מדיניות, אקטיביזם, הוראה ומחקר בתחום השוויון המגדרי
   </span>
+  <app-search-bar
+    (changed)='search($event, "stats")'
+    [color]='"rgb(137, 163, 59)"'
+    [backgroundColor]='"rgba(137, 163, 59, 0.2)"'
+    [icon]='"search-ic"'
+    [instant]='false'
+    [placeholder]='"<strong>חיפוש נתונים, אינפוגרפיקה</strong>"'
+  ></app-search-bar>
 </app-main-page-card>
 <app-main-page-card
   *ngIf='reveal > 2'
@@ -100,6 +116,14 @@
     כאן ניתן למצוא מגוון עשיר של ארגונים, יוזמות וגורמים הפועלים לקידום שוויון מגדרי, וכן תכניות ללימודי מגדר במוסדות האקדמיים.
     המאגר מפרט, בין היתר, תחומי פעילות, שירותים שניתן לקבל ופרטי התקשרות
   </span>
+  <app-search-bar
+    (changed)='search($event, "orgs")'
+    [color]='"rgb(255, 178, 55)"'
+    [backgroundColor]='"rgba(255, 178, 55, 0.2)"'
+    [icon]='"search-ic"'
+    [instant]='false'
+    [placeholder]='"<strong>שם ארגון או פעילות בתחום</strong>"'
+  ></app-search-bar>
 </app-main-page-card>
 <app-main-page-card
   *ngIf='reveal > 3'
@@ -109,6 +133,14 @@
   >
   <span class='title' i18n>ספריית המקורות</span>
   <span class='description' i18n>
-    כלל המידע המקוטלג במרכז הידע: פרסומים, דו״חות,￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼ ניירות עמדה, סרטונים, נתונים סטטיסטיים, ארגונים פמיניסטיים, מחקרים, ועוד ועוד
+    כלל המידע המקוטלג במרכז הידע: פרסומים, דו״חות, ניירות עמדה, סרטונים, נתונים סטטיסטיים, ארגונים פמיניסטיים, מחקרים, ועוד ועוד
   </span>
+  <app-search-bar
+    (changed)='search($event, "publications")'
+    [color]='"rgb(89, 51, 77)"'
+    [backgroundColor]='"rgba(89, 51, 77, 0.2)"'
+    [icon]='"search-ic"'
+    [instant]='false'
+    [placeholder]='"<strong>חיפוש מאמר, דו״ח, סרטון, ארגונים&hellip;</strong>"'
+  ></app-search-bar>
 </app-main-page-card>

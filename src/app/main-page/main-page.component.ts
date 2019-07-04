@@ -18,7 +18,7 @@ export class MainPageComponent implements OnInit {
   bottommerSubs: any;
   counts = {
     publications: {total_overall: 0},
-    organisations: {total_overall: 0},
+    orgs: {total_overall: 0},
     stats: {total_overall: 0},
     gender_index: {total_overall: 0},
   };
@@ -36,19 +36,14 @@ export class MainPageComponent implements OnInit {
         filters: []
       },
       {
-        id: 'organisations',
+        id: 'orgs',
         doc_types: ['orgs'],
         filters: []
       },
       {
         id: 'stats',
         doc_types: ['datasets'],
-        filters: [{kind: 'Gender Statistics'}]
-      },
-      {
-        id: 'gender_index',
-        doc_types: ['datasets'],
-        filters: [{kind: 'Gender Index'}]
+        filters: []
       },
     ]).subscribe((results) => {
       this.counts = results;
@@ -59,7 +54,8 @@ export class MainPageComponent implements OnInit {
     this.results = this.api.fetch('all', null, 2);
   }
 
-  search(term) {
-    this.router.navigateByUrl(`/search?q=${encodeURIComponent(term)}`);
+  search(term, kind) {
+    kind = kind || 'all';
+    this.router.navigateByUrl(`/search?q=${encodeURIComponent(term)}&kind=${kind}`);
   }
 }

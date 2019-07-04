@@ -12,7 +12,7 @@ export class OrganisationsPageComponent implements OnInit, OnDestroy {
   constructor(public api: ApiService, private header: HeaderStateService) { }
 
   ngOnInit() {
-    this.header.section = 'organisations';
+    this.header.section = 'orgs';
   }
 
   ngOnDestroy() {

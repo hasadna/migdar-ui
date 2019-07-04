@@ -30,6 +30,7 @@ export class FilterManagerService {
   }
 
   update(kind) {
+    this.selected[kind] = this.selected[kind] || {};
     const filters = {};
     for (const field of Object.keys(this.selected[kind])) {
       const values = this.selected[kind][field];
