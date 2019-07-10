@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService } from '../api.service';
 import { HeaderStateService } from '../header-state.service';
+import { SearchManager } from '../search-manager';
 
 @Component({
   selector: 'app-organisations-page',
@@ -9,13 +10,19 @@ import { HeaderStateService } from '../header-state.service';
 })
 export class OrganisationsPageComponent implements OnInit, OnDestroy {
 
-  constructor(public api: ApiService, private header: HeaderStateService) { }
+  search: SearchManager;
+
+  constructor(public api: ApiService, private header: HeaderStateService) {
+    this.search = new SearchManager(this.api);
+  }
 
   ngOnInit() {
     this.header.section = 'orgs';
+    this.search.search(null, 'orgs');
   }
 
   ngOnDestroy() {
     this.header.clear();
   }
+
 }

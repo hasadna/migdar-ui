@@ -59,7 +59,7 @@ export class GenderIndexPageFooterComponent implements OnInit {
 
   ngOnInit() {
     this.api.fetch('datasets', null, 1000, 0)
-      .subscribe((results: any[]) => {
+      .subscribe(({results, total}) => {
         const gender_index_results = results
             .filter((x) => x.kind === 'Gender Index')
             .sort((a, b) => a.series[0].order_index - b.series[0].order_index);

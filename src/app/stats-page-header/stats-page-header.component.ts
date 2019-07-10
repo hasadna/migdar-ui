@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService } from '../api.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-stats-page-header',
@@ -13,7 +14,10 @@ export class StatsPageHeaderComponent implements OnInit, OnDestroy {
   slides: any;
 
   constructor(public api: ApiService) {
-    this.slides = api.fetch('datasets', null, 4);
+    this.slides = api.fetch('datasets', null, 4)
+      .pipe(
+        map(({results, total}) => results)
+      );
   }
 
   ngOnInit() {

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
+import { SearchManager } from '../search-manager';
 
 @Component({
   selector: 'app-item-page-publication',
@@ -9,11 +10,14 @@ import { ApiService } from '../api.service';
 export class ItemPagePublicationComponent implements OnInit {
 
   @Input() document: any;
+  search: SearchManager;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService) {
+    this.search = new SearchManager(api);
+  }
 
   ngOnInit() {
-    this.api.search(this.document['life_areas'].join(' ')); // TODO filter by life areas
+    this.search.search(this.document['life_areas'].join(' ')); // TODO filter by life areas
   }
 
 }

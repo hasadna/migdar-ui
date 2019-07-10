@@ -8,23 +8,36 @@
     background-color: rgba(@primaryPurple, 1.0);
     padding: 80px 0;
 
-    div {
+    > div {
         max-width: @containerWidth;
         width: 100%;
         display: flex;
         flex-flow: row;
-        align-items: center;
+        align-items: flex-start;
     }
 
-    h1 {
+    .title {
         flex: 0 0 auto;
-        color: white;
-        font-size: 70px;
-        font-weight: bold;
-        font-family: @secondaryFont;
-        text-align: center;
-        margin-top: -15px;
         margin-left: 50px;
+        display: flex;
+        flex-flow: column;
+
+        h1 {
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            font-family: @secondaryFont;
+            text-align: right;
+            margin-top: -28px;
+        }
+        
+        h2 {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: @secondaryFont;
+            text-align: right;
+        }
     }
 
     app-search-bar {

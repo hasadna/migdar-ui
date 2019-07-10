@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
+import { SearchManager } from '../search-manager';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-item-page-organisation',
@@ -9,8 +11,11 @@ import { ApiService } from '../api.service';
 export class ItemPageOrganisationComponent implements OnInit {
 
   @Input() document: any;
+  search: SearchManager;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, public _: I18nService) {
+    this.search = new SearchManager(api);
+  }
 
   website() {
     const website = this.document['org_website'];
@@ -22,12 +27,19 @@ export class ItemPageOrganisationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.api.search(
+    this.search.queue.push(
+      {
+        types: 'publications',
+        filters: {
+          life_areas: this.document['life_areas'],
+        }
+      }
+    );
+    this.search.search(
       null,
       'publications',
       {
         publisher: this.document['alt_names'],
-        // life_areas: this.document['tags'],
       }
     );
   }

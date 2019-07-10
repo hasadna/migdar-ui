@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FILTERS_CONFIG } from './constants';
+import { FILTERS_CONFIG, ALLOWED_FIELDS } from './constants';
 import { Subject, BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -38,7 +38,19 @@ export class FilterManagerService {
         filters[field] = values;
       }
     }
+    console.log('filters update', kind, filters);
     this.updated.next(filters);
+    return filters;
+  }
+
+  updateFrom(kind, filters) {
+    this.selected[kind] = this.selected[kind] || {};
+    for (const field of Object.keys(filters)) {
+      if (ALLOWED_FIELDS.has(field)) {
+        this.selected[kind][field] = filters[field];
+      }
+    }
+    this.update(kind);
   }
 
   deselect(kind, field, value) {

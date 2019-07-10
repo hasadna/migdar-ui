@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { BottommerService } from '../bottommer.service';
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
+import { map } from 'rxjs/operators';
 
 @AutoUnsubscribe()
 @Component({
@@ -51,7 +52,9 @@ export class MainPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.results = this.api.fetch('all', null, 2);
+    this.results = this.api.fetch('all', null, 2).pipe(
+      map(({results, total}) => results)
+    );
   }
 
   search(term, kind) {

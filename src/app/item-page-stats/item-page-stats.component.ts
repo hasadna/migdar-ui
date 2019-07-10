@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { ApiService } from '../api.service';
+import { SearchManager } from '../search-manager';
 
 @Component({
   selector: 'app-item-page-stats',
@@ -9,10 +10,13 @@ import { ApiService } from '../api.service';
 export class ItemPageStatsComponent implements OnInit, OnChanges {
 
   @Input() document: any;
+  search: SearchManager;
 
   data_sources = [];
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService) {
+    this.search = new SearchManager(api);
+  }
 
   ngOnInit() {
     this.refresh();
@@ -38,7 +42,8 @@ export class ItemPageStatsComponent implements OnInit, OnChanges {
         }
       }
     }
-    this.api.search(
+    this.search = new SearchManager(this.api);
+    this.search.search(
       null,
       'datasets',
       {

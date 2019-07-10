@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SearchManager } from '../search-manager';
 
 @Component({
   selector: 'app-item-page-search-results',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-page-search-results.component.less']
 })
 export class ItemPageSearchResultsComponent implements OnInit {
+
+  @Input() manager: SearchManager;
 
   constructor() { }
 

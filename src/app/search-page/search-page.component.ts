@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
+import { SearchManager } from '../search-manager';
+import { FilterManagerService } from '../filter-manager.service';
 
 @AutoUnsubscribe()
 @Component({
@@ -11,22 +13,56 @@ import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
   styleUrls: ['./search-page.component.less']
 })
 export class SearchPageComponent implements OnInit {
-
   term = '';
   kind = 'all';
-  activatedRouteSubs: Subscription;
 
-  constructor(public api: ApiService,
-              private activatedRoute: ActivatedRoute) { }
+  activatedRouteSubs: Subscription;
+  search: SearchManager;
+
+  constructor(private api: ApiService,
+              private router: Router,
+              private activatedRoute: ActivatedRoute,
+              private filterManager: FilterManagerService) {
+  }
 
   ngOnInit() {
     this.activatedRouteSubs =
       this.activatedRoute.queryParamMap.subscribe((params) => {
-        const term = params.get('q');
-        this.term = term ? term : '';
-        const kind = params.get('kind');
-        this.kind = kind ? kind : 'all';
-        this.api.searchTerm(this.term);
+        this.term = params.get('q') || '';
+
+        this.kind = params.get('kind');
+        const searchKind = {
+          all: 'all',
+          publications: 'publications',
+          stats: 'datasets',
+          datasets: 'datasets',
+          orgs: 'orgs',
+          gender_index: 'datasets',
+        }[this.kind] || 'all';
+
+        let filters = params.get('filters');
+        filters = filters ? JSON.parse(filters) : {};
+        this.filterManager.updateFrom(this.kind, filters);
+        const searchFilters = Object.assign(filters,
+          {
+            stats: {kind: 'Gender Statistics'},
+            gender_index: {kind: 'Gender Index'},
+          }[this.kind] || {}
+        );
+
+        this.search = new SearchManager(this.api);
+        this.search.search(this.term, searchKind, searchFilters);
+      });
+  }
+
+  updateFilters(filters) {
+    this.router.navigate(
+      [],
+      {
+        relativeTo: this.activatedRoute,
+        queryParams: { filters: JSON.stringify(filters), },
+        queryParamsHandling: 'merge',
+        replaceUrl: true
       });
   }
 }

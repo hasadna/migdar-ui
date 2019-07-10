@@ -1,5 +1,10 @@
 <div>
-  <h1 i18n>תוצאות</h1>
+  <div class='title'>
+    <h1 i18n>תוצאות</h1>
+    <h2 *ngIf='num_results == 0' i18n>לא נמצאו תוצאות</h2>
+    <h2 *ngIf='num_results > 0' i18n>נמצאו {{num_results | number}} תוצאות</h2>
+    <h2 *ngIf='!num_results && num_results !== 0'>&nbsp;</h2>
+  </div>
   <app-search-bar
     (changed)='search($event)'
     [term]='term'

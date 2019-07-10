@@ -1,4 +1,5 @@
 <app-fixed-background [color]='"rgba(0,0,0,0.05)"'></app-fixed-background>
-<app-publications-page-header></app-publications-page-header>
-<app-search-filters [itemKind]='"publications"' [fixItemKind]='true'></app-search-filters>
-<app-search-results></app-search-results>
+<app-publications-page-header (updated)='search=search.newFromTerm($event)'></app-publications-page-header>
+<app-search-filters [itemKind]='"publications"' [fixItemKind]='true' (updated)='search=search.newFromFilters($event)'>
+</app-search-filters>
+<app-search-results [manager]='search'></app-search-results>

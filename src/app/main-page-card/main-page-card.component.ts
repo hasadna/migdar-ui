@@ -21,7 +21,7 @@ export class MainPageCardComponent implements OnInit {
   ngOnInit() {
     if (this.types) {
       this.api.fetch(this.types, null, 1, 0, this.filters)
-      .subscribe((results) => {
+      .subscribe(({results, total}) => {
         if (results.length > 0) {
           this.slide.next(results);
         }

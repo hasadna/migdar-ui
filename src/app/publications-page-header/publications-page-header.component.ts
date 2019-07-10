@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -8,9 +8,13 @@ import { ApiService } from '../api.service';
 })
 export class PublicationsPageHeaderComponent implements OnInit {
 
+  @Output() updated = new EventEmitter<string>();
   constructor(public api: ApiService) { }
 
   ngOnInit() {
   }
 
+  updatedTerm(term) {
+    this.updated.emit(term);
+  }
 }

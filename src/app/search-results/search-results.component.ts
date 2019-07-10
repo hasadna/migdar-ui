@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy, Input, OnChanges } from '@angular/core';
 import { ApiService } from '../api.service';
 import { BottommerService } from '../bottommer.service';
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
+import { SearchManager } from '../search-manager';
 
 @AutoUnsubscribe()
 @Component({
@@ -10,8 +11,10 @@ import { Subscription } from 'rxjs';
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.less']
 })
-export class SearchResultsComponent implements OnInit, OnDestroy {
+export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
 
+  @Input() manager: SearchManager;
+  @Input() results: Observable<any>;
   columns = [[], []];
   @ViewChild('column0') column0ref: ElementRef;
   @ViewChild('column1') column1ref: ElementRef;
@@ -20,44 +23,46 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
 
   constructor(public api: ApiService,
               private bottommer: BottommerService) {
-    this.searchResultsSubs =
-      this.api.results.subscribe((results) => {
-        console.log('SHOWING RESULTS', results);
-        if (results.length === 0) {
-          this.columns = [[], []];
-        } else {
-          this.assignCard(results);
-        }
-      });
-    this.bottommerSubs = this.bottommer.reachedBottom.subscribe(() => {
-      api.searchMore();
-    });
-  }
-
-  assignCard(results) {
-    const currentAmount = this.columns[0].length + this.columns[1].length;
-    if (results.length > currentAmount) {
-      setTimeout(() => {
-        const columnHeights = [this.column0ref.nativeElement.offsetHeight,
-                               this.column1ref.nativeElement.offsetHeight];
-        if (columnHeights[0] <= columnHeights[1]) {
-          this.columns[0].push(results[currentAmount]);
-        } else {
-          this.columns[1].push(results[currentAmount]);
-        }
-        if (results.length > 1) {
-          this.assignCard(results);
-        }
-      }, 0);
-    }
   }
 
   ngOnInit() {
+    this.bottommerSubs = this.bottommer.reachedBottom.subscribe(() => {
+      this.manager.searchMore();
+    });
   }
 
   ngOnDestroy() {
-    this.api.clearSearch();
     this.columns = [[], []];
+  }
+
+  ngOnChanges() {
+    if (this.searchResultsSubs) {
+      this.searchResultsSubs.unsubscribe();
+    }
+    if (this.manager) {
+      this.searchResultsSubs =
+        this.manager.results.subscribe((result) => {
+          this.assignCard(result);
+        });
+    } else if (this.results) {
+      this.searchResultsSubs =
+        this.results.subscribe((result) => {
+          this.assignCard(result);
+        });
+    }
+    this.columns = [[], []];
+  }
+
+  assignCard(result) {
+    setTimeout(() => {
+      const columnHeights = [this.column0ref.nativeElement.offsetHeight,
+                              this.column1ref.nativeElement.offsetHeight];
+      if (columnHeights[0] <= columnHeights[1]) {
+        this.columns[0].push(result);
+      } else {
+        this.columns[1].push(result);
+      }
+    }, 0);
   }
 
 }

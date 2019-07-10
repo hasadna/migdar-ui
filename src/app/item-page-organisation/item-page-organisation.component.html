@@ -1,8 +1,8 @@
 <app-item-page-header [color]='"orangeBg"'>
   <div class='header'>
-    <h1>{{document.org_name}}</h1>
+    <h1>{{_._(document, 'org_name')}}</h1>
     <div class='infoline' *ngIf='document.tagline'>
-      <span>{{document.tagline}}</span>
+      <span>{{_._(document, 'tagline')}}</span>
     </div>
   </div>-
 </app-item-page-header>
@@ -25,43 +25,37 @@
     </span>
   </div>
   <div class='org-info'>
-    <span class='org-abstract'>{{document.objective}}</span>
+    <span class='org-abstract'>{{_._(document, 'objective')}}</span>
     <div class='org-prop' *ngIf='document.specialties && document.specialties.length'>
       <label i18n>תחומי פעילות עיקריים</label>
-      <span>{{document.specialties.join(', ')}}</span>
+      <span>{{_._(document, 'specialties').join(', ')}}</span>
     </div>
     <div class='org-prop' *ngIf='document.provided_services && document.provided_services.length'>
       <label i18n>סוגי שירותים</label>
-      <span>{{document.provided_services.join(', ')}}</span>
+      <span>{{_._(document, 'provided_services').join(', ')}}</span>
     </div>
     <div class='org-prop' *ngIf='document.languages && document.languages.length'>
       <label i18n>שפות</label>
-      <span>{{document.languages.join(', ')}}</span>
+      <span>{{_._(document, 'languages').join(', ')}}</span>
     </div>
     <div class='org-prop' *ngIf='document.regions && document.regions.length'>
       <label i18n>אזור גיאוגרפי</label>
-      <span>{{document.regions.join(', ')}}</span>
+      <span>{{_._(document, 'regions').join(', ')}}</span>
     </div>
     <div class='org-prop' *ngIf='document.org_kind'>
       <label i18n>סוג הארגון</label>
-      <span>{{document.org_kind}}</span>
+      <span>{{_._(document, 'org_kind')}}</span>
     </div>
     <div class='org-prop' *ngIf='document.life_areas && document.life_areas.length'>
       <label i18n>תחומי חיים</label>
-      <span>{{document.life_areas.join(', ')}}</span>
+      <span>{{_._(document, 'life_areas').join(', ')}}</span>
     </div>
     <div class='org-prop' *ngIf='document.tags && document.tags.length'>
       <label i18n>תגיות</label>
-      <span>{{document.tags.join(', ')}}</span>
+      <span>{{_._(document, 'tags').join(', ')}}</span>
     </div>
   </div>
-
-
-
-
-
-
 </div>
-<app-item-page-search-results>
+<app-item-page-search-results [manager]='search'>
 <h1 i18n>אולי יעניין אותך גם&hellip;</h1>
 </app-item-page-search-results>

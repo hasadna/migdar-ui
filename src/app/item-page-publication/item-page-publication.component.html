@@ -20,11 +20,11 @@
   {{document.notes}}
 </div>
 <div class='actions'>
-  <a class='link' *ngIf='document.url' [href]='document.url' target='_blank'>לינק למקור</a>
+  <a class='link' *ngIf='document.url' [href]='document.url' target='_blank'>קישור למקור</a>
 </div>
 <div class='notes'>
   <strong i18n>תגיות:</strong>&nbsp;{{document.tags.join(', ')}}
 </div>
-<app-item-page-search-results>
+<app-item-page-search-results [manager]='search'>
 <h1 i18n>אולי יעניין אותך גם&hellip;</h1>
 </app-item-page-search-results>

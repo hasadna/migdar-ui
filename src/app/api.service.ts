@@ -10,79 +10,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class ApiService {
   url = 'https://api.yodaat.org';
 
-  public results = new BehaviorSubject<any[]>([]);
-  private terms = new Subject<any>();
-  params: any;
-
   constructor(private http: HttpClient) {
-    this.terms.pipe(
-      debounceTime(300),
-      switchMap((params) => {
-        return this.fetch(params.types,
-                          params.term,
-                          params.count,
-                          params.offset,
-                          params.filters)
-                    .pipe(
-                      map((results) => {
-                        return {
-                          results: results,
-                          params: params
-                        };
-                      })
-                    );
-        }
-      )
-    ).subscribe((val) => {
-      let results = val.results;
-      const params = val.params;
-      this.params = params;
-      console.log('GOT PARAMS', params);
-      console.log('GOT RESULTS', results);
-      let current = this.results.getValue();
-      if (params.offset === 0) {
-        current = [];
-        this.results.next(current);
-      }
-      results = current.concat(results);
-      this.params.offset += results.length;
-      this.results.next(results);
-    });
-  }
-
-  search(term, types?, filters?) {
-    if (this.params &&
-        this.params.term === term &&
-        this.params.types === types &&
-        this.params.filters === filters) {
-      return;
-    }
-    this.results.next([]);
-    this.params = {
-      types: types || 'all',
-      term: term,
-      offset: 0,
-      filters: filters,
-    };
-    this.terms.next(Object.assign({}, this.params));
-  }
-
-  searchTerm(term) {
-    this.search(term,
-                this.params ? this.params.types : null,
-                this.params ? this.params.filters : null);
-  }
-
-  searchParams(types?, filters?) {
-    this.search(this.params ? this.params.term : null, types, filters);
-  }
-
-  searchMore(): any {
-    this.terms.next(Object.assign({}, this.params));
-  }
-
-  clearSearch(): any {
-    this.results.next([]);
   }
 
   fetch(types, term?, count?, offset?, filters?) {
@@ -98,7 +26,11 @@ export class ApiService {
     if (term) { params = `/${encodeURIComponent(term)}` + params; }
     return this.http.get(`${this.url}/search/${types}${params}`)
               .pipe(
-                map((result: any) => result.search_results.map((item) => Object.assign(item.source, {__type: item.type}))),
+                map((result: any) => {
+                  const results = result.search_results.map((item) => Object.assign(item.source, {__type: item.type}));
+                  const total = result.search_counts._current.total_overall;
+                  return {results, total};
+                }),
               );
   }
 
