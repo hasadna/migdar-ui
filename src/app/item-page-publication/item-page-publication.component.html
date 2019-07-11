@@ -20,7 +20,7 @@
   {{_._(document, 'notes')}}
 </div>
 <div class='actions'>
-  <a class='link' *ngIf='document.url' [href]='document.url' target='_blank'>קישור למקור</a>
+  <a class='link' *ngIf='document.url' [href]='document.url' target='_blank' i18n>קישור למקור</a>
 </div>
 <div class='notes'>
   <strong i18n>תגיות:</strong>&nbsp;{{_._(document, 'tags').join(', ')}}
