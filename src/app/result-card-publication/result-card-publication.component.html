@@ -1,13 +1,13 @@
-<h1>{{result.title}}</h1>
+<h1>{{_._(result, 'title')}}</h1>
 <div>
   <strong i18n>נוצר על ידי:&nbsp;</strong>
-  <span>{{result.author}}</span>
+  <span>{{_._(result, 'authors')}}</span>
 </div>
 <div>
   <strong i18n>מקור:&nbsp;</strong>
-  <span>{{result.publisher}}</span>
+  <span>{{_._(result, 'publisher')}}</span>
 </div>
 <div>
-  <span>{{result.pubyear}}</span>&nbsp;|&nbsp;<span>{{result.languages.join(', ')}}</span>
+  <span>{{result.pubyear}}</span>&nbsp;|&nbsp;<span>{{_._(result, 'languages').join(', ')}}</span>
 </div>
-<p>{{result.notes}}</p>
+<p>{{_._(result, 'notes')}}</p>

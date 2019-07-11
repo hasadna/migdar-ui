@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
 import { SearchManager } from '../search-manager';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-item-page-publication',
@@ -12,7 +13,7 @@ export class ItemPagePublicationComponent implements OnInit {
   @Input() document: any;
   search: SearchManager;
 
-  constructor(private api: ApiService) {
+  constructor(private api: ApiService, public _: I18nService) {
     this.search = new SearchManager(api);
   }
 

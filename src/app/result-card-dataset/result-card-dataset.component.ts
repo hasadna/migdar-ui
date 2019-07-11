@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import * as d3 from 'd3';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-result-card-dataset',
@@ -13,7 +14,7 @@ export class ResultCardDatasetComponent implements OnInit, OnChanges {
   @Input() large: boolean;
   colorScale: d3.ScaleSequential<string>;
 
-  constructor() { }
+  constructor(public _: I18nService) { }
 
   color(idx) {
     return this.colorScale(idx);

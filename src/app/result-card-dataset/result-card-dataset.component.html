@@ -2,7 +2,7 @@
 <div class='legend'>
   <div class='entry' *ngFor='let series of result.series; let idx = index;'>
     <div class='color' [style.border-color]='color(idx)'></div> 
-    <div class='name'>{{series.gender}}</div>
+    <div class='name'>{{_._(series, 'gender')}}</div>
   </div>
 </div>
 <app-dataset-chart [series]='result.series' [large]='large'></app-dataset-chart>

@@ -1,29 +1,29 @@
 <app-item-page-header [color]='"purpleBg"'>
   <div class='header'>
-    <h1>{{document.title}}</h1>
-    <div class='infoline' *ngIf='document.author'>
+    <h1>{{_._(document, 'title')}}</h1>
+    <div class='infoline' *ngIf='document.authors'>
       <label i18n>מחברות</label>
-      <span>{{document.author}}</span>
+      <span>{{_._(document, 'authors')}}</span>
     </div>
     <div class='infoline' *ngIf='document.publisher'>
       <label i18n>מקור</label>
-      <span>{{document.publisher}}</span>
+      <span>{{_._(document, 'publisher')}}</span>
     </div>
     <div class='infoline'>
       <label></label>
       <span>{{document.pubyear}}</span>&nbsp;|&nbsp;
-      <span>{{document.languages.join(', ')}}</span>
+      <span>{{_._(document, 'languages').join(', ')}}</span>
     </div>
   </div>
 </app-item-page-header>
 <div class='notes'>
-  {{document.notes}}
+  {{_._(document, 'notes')}}
 </div>
 <div class='actions'>
   <a class='link' *ngIf='document.url' [href]='document.url' target='_blank'>קישור למקור</a>
 </div>
 <div class='notes'>
-  <strong i18n>תגיות:</strong>&nbsp;{{document.tags.join(', ')}}
+  <strong i18n>תגיות:</strong>&nbsp;{{_._(document, 'tags').join(', ')}}
 </div>
 <app-item-page-search-results [manager]='search'>
 <h1 i18n>אולי יעניין אותך גם&hellip;</h1>
