@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { BottommerService } from '../bottommer.service';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-gender-index-page-footer',
@@ -49,7 +50,8 @@ export class GenderIndexPageFooterComponent implements OnInit {
 
   constructor(private api: ApiService, public router: Router,
               private activatedRoute: ActivatedRoute,
-              private bottommer: BottommerService) {
+              private bottommer: BottommerService,
+              public _: I18nService) {
     this.bottommer.reachedBottom.subscribe(() => {
       if (!this.active_dimension) {
         this.selectDimension(this.dimensions[0]);
