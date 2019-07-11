@@ -13,11 +13,11 @@
             </div>
             <div class='topic-charts'>
                 <div class='chart-title' *ngFor='let chart of datasets[dimension]'>
-                    <a (click)='scrollToChart(chart.doc_id)'>{{chart.chart_title}}</a>
+                    <a (click)='scrollToChart(chart.doc_id)'>{{_._(chart, 'chart_title')}}</a>
                 </div>
             </div>
         </div>
-        <h3><a href='assets/recommendations.pdf' target='_blank'>עיקרי ממצאים והמלצות</a></h3>
+        <h3><a href='assets/recommendations.pdf' target='_blank' i18n>עיקרי ממצאים והמלצות</a></h3>
     </div>
     <div class='charts'>
         <ng-container *ngFor='let chart of this.datasets[this.active_dimension]'>
