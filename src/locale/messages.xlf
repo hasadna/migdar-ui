@@ -10,7 +10,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">114</context>
+          <context context-type="linenumber">115</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header-menu/header-menu.component.html</context>
@@ -33,7 +33,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">94</context>
+          <context context-type="linenumber">95</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header-menu/header-menu.component.html</context>
@@ -203,7 +203,7 @@
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="0fbd85c343992c16e3b926297b1283f12297d22f" datatype="html">
@@ -213,14 +213,14 @@
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">115</context>
+          <context context-type="linenumber">116</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f4f25b62ffaa046eaba0a33c279ec3e357bbbd0e" datatype="html">
         <source>ספריית המקורות</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">134</context>
+          <context context-type="linenumber">135</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e91249af56f70452ef4973bc0fd034baf9b460e0" datatype="html">
@@ -229,7 +229,7 @@
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">135</context>
+          <context context-type="linenumber">136</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b3227b76ed018f53b5019b3316988fd9eb808b63" datatype="html">
@@ -370,6 +370,13 @@
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="14d36c3a00e672ab721b2e306b4a73202068b701" datatype="html">
+        <source>קישור למקור</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/item-page-publication/item-page-publication.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="637036aa0e4351d47ee15b1eee3b270219fe9ec7" datatype="html">
         <source>תגיות:</source>
         <context-group purpose="location">
@@ -419,11 +426,25 @@
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="c5aafb9103c078a6f33ced5092116ee43ce45842" datatype="html">
+        <source>צילום: תמר עבאדי, מולטימדיה מכון ון ליר</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/organisations-page-header/organisations-page-header.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="a3bb8bc7f74eb4aedf669774db811973046aae0f" datatype="html">
         <source>יוצרות סולידריות</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/organisations-page-header/organisations-page-header.component.html</context>
           <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="76446ffaa8990ed5136d372467ff88f4a9afd478" datatype="html">
+        <source>צילום: איתך-מעכי ופורום ארגוני צעירות</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/organisations-page-header/organisations-page-header.component.html</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="04bd02a900b63228ff64783e117c849ae791a704" datatype="html">
@@ -433,11 +454,25 @@
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="b16a8662196e872324cf87e2c33a334d0260ba52" datatype="html">
+        <source>צילום: יובל עופר</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/organisations-page-header/organisations-page-header.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="45a357cd6bfdf5f7a8c6cfffda296d4a9067e248" datatype="html">
         <source>פועלות לשיפור מצבן של נשים בשוק העבודה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/organisations-page-header/organisations-page-header.component.html</context>
           <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f03b361183e459911619bbf6cac616de954f83ce" datatype="html">
+        <source>צילום: שיר ניומן</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/organisations-page-header/organisations-page-header.component.html</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fa3aa3521a4363c970d9cc3a995113728e654cdd" datatype="html">
