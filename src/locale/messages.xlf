@@ -10,7 +10,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">115</context>
+          <context context-type="linenumber">116</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header-menu/header-menu.component.html</context>
@@ -18,7 +18,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/organisations-page/organisations-page.component.html</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">14</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/organisations-page-header/organisations-page-header.component.html</context>
@@ -213,6 +213,13 @@
           <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="3220ce6c3e1b635bb322d1c73beca9a747c7f916" datatype="html">
+        <source>&lt;strong&gt;חיפוש נתונים, אינפוגרפיקה&lt;/strong&gt;</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/main-page/main-page.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="0fbd85c343992c16e3b926297b1283f12297d22f" datatype="html">
         <source>
     כאן ניתן למצוא מגוון עשיר של ארגונים, יוזמות וגורמים הפועלים לקידום שוויון מגדרי, וכן תכניות ללימודי מגדר במוסדות האקדמיים.
@@ -220,14 +227,25 @@
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">116</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="00b5423f7c0a9dd9f651d140d06ca74a4ea1c484" datatype="html">
+        <source>&lt;strong&gt;שם ארגון או פעילות בתחום&lt;/strong&gt;</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/main-page/main-page.component.html</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/organisations-page/organisations-page.component.html</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f4f25b62ffaa046eaba0a33c279ec3e357bbbd0e" datatype="html">
         <source>ספריית המקורות</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">135</context>
+          <context context-type="linenumber">137</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e91249af56f70452ef4973bc0fd034baf9b460e0" datatype="html">
@@ -236,7 +254,14 @@
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">136</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8be85c2f4338945dee60173f20634bc96f5dc4a5" datatype="html">
+        <source>&lt;strong&gt;חיפוש מאמר, דו״ח, סרטון, ארגונים…&lt;/strong&gt;</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/main-page/main-page.component.html</context>
+          <context context-type="linenumber">147</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b3227b76ed018f53b5019b3316988fd9eb808b63" datatype="html">
@@ -644,6 +669,27 @@
           <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="d56bb3b9a2e45c43cf65476c96970848673cfd22" datatype="html">
+        <source>המגמה של צמצום הפער המגדרי בייצוג הפוליטי<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>נעצרה בבחירות לכנסת ה-21</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="303fa34d0d197d74ebbdc3996fd608120dd02430" datatype="html">
+        <source>הפער המגדרי הולך וגדל עם השנים</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="040e85a6bcb075cf45804adacd0a2d29367a216b" datatype="html">
+        <source>&quot;הרצפה עולה אך התקרה נוסקת&quot; - הפער המגדרי בשכר הולך וגדל</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="099e5a14a145ddcbae0f973092bcc251874834bd" datatype="html">
         <source>מדד המגדר?</source>
         <context-group purpose="location">
@@ -777,6 +823,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-footer/gender-index-page-footer.component.html</context>
           <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4c1287bcac989acbeaebe68a916be493e696b222" datatype="html">
+        <source>עיקרי ממצאים והמלצות</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/gender-index-page-footer/gender-index-page-footer.component.html</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ba5ee2f86cc5f865d21b30baea9a94ae79210b92" datatype="html">
