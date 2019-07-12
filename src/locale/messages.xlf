@@ -63,6 +63,10 @@
           <context context-type="linenumber">19</context>
         </context-group>
         <context-group purpose="location">
+          <context context-type="sourcefile">app/result-card-layout/result-card-layout.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
@@ -545,10 +549,6 @@
           <context context-type="sourcefile">app/gender-index-page/gender-index-page.component.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/info-page-inequality/info-page-inequality.component.html</context>
-          <context context-type="linenumber">2</context>
-        </context-group>
       </trans-unit>
       <trans-unit id="c1f8cce15684adbcef19e2c1fc2999f54be368e5" datatype="html">
         <source>בחינת האי-שוויון המגדרי נעשית לא רק על פי ההבחנה הבינארית בין גברים לנשים אלא גם בהצטלבויות בין מגדר לבין מיקומים חברתיים שונים, כמו הפריפריה והחברה הערבית בישראל.</source>
@@ -697,11 +697,111 @@
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="483baff4b36b98cbffd015998d1a1819cef1270a" datatype="html">
-        <source>באיזה ממד אי השוויון בין נשים לגברים עמוק יותר?</source>
+      <trans-unit id="145970a37503a659e1ab0921e87d7be424d596e0" datatype="html">
+        <source>אי שוויון לאורך זמן?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/info-page-inequality/info-page-inequality.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="699ee8fcfd78e9d5499f475da3704b25805152d6" datatype="html">
+        <source>
+  כיצד משתנה רמת האי שוויון בין נשים לגברים לאורך השנים? האם האי שוויון מצטמצם באופן עקבי? מדד המגדר בוחן שינויים ברמת האי שוויון המגדרי בישראל לאורך השנים. התרשים מתאר את השינוי ברמת האי-שוויון המגדרי בישראל משנת 2004 ואילך. כל נקודה בתרשים מייצגת שקלול של כלל האינדיקטורים המרכיבים את מדד המגדר והמשמשים לבחינת התפתחות האי-שוויון המגדרי בכל שנה בהשוואה לשנה הקודמת. 2004 היא שנת הבסיס לחישוב השינוי (שנת ה&quot;אפס&quot;).  מבחינה גרפית, עליה מצביעה על גידול באי-שוויון בין נשים לגברים וירידה מצביעה על צמצום אי השוויון.
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/info-page-inequality/info-page-inequality.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c6fd1cb24b494220048795da03b252983a56cc0c" datatype="html">
+        <source>
+ראוי לציין שבאינדיקטורים שאינם משקפים יחס בין מצב הנשים למצב הגברים, למשל מספר תלונות על מקרי אלימות במשפחה, ככל שהמספר גדל ביחס לאוכלוסייה כן גדל האי-שוויון ועולה המדד. מסיבות מתודולוגיות, הממדים של תרבות ותקשורת, החברה הערבית, החברה החרדית, והפריפריה אינם נכללים בחישוב המצרפי של רמת האי-שוויון המגדרי.
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/info-page-inequality/info-page-inequality.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="93b5a777fd153cb5723b07aa649a31fa1d8ff1e6" datatype="html">
+        <source>
+בתרשים אפשר להבחין בשלוש תקופות עיקריות שבהן השתנתה מגמת האי-שוויון המגדרי בשנים שנבדקו: בתקופה הראשונה, בין 2004 ל-2007, ניכר גידול באי-שוויון המגדרי (למעט שנת 2006); ובתקופה השנייה, מ-2008 עד 2013, מסתמנת מגמת ירידה באי-שוויון המגדרי (למעט שנת 2010). בתקופה השלישית, החל משנת 2013, רמת האי שוויון נותרת ללא שינוי. 
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/info-page-inequality/info-page-inequality.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f61b4bf83cda074cd47b5f4b44b46be47587e4e8" datatype="html">
+        <source>
+בבחינת כלל הממדים והאינדיקטורים משנת 2004 עולה כי באף אחד מהם לא חל צמצום עקבי באי-שוויון בתקופת המדידה, כלומר מגמת השיפור אינה עקבית ובת קיימא. עם זאת, בהתבוננות כוללת על האי-שוויון היום לעומת האי-שוויון בשנת המדידה הראשונה ניכר שיפור מסוים בהיקף כללי של כ-12%. 
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/info-page-inequality/info-page-inequality.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7fa38ff0e1c27213b8746f8e14a534f4a9eb94ed" datatype="html">
+        <source>
+    עומק האי-שוויון 
+  </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/info-page-gaps/info-page-gaps.component.html</context>
           <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f1a98ae65facc5e739ac70f8aacb1f0a7a3f1164" datatype="html">
+        <source>
+מהו תחום החיים שבו הפערים בין נשים לגברים הם הגדולים ביותר? מהו התחום השוויוני ביותר? אומדן עומק האי שוויון במדד המגדר מאפשר להשוות בין הממדים (תחומים) השונים במדד ולקבוע באיזה ממד הפער המגדרי הגדול ביותר ובאיזה הקטן ביותר. פירוט מלא של המתודולוגיה לחישוב עומק האי שוויון מופיע ב
+<x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>דוח מדד המגדר<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/info-page-gaps/info-page-gaps.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6ac607e41ecea7eff5798e7d395febda836fd7d8" datatype="html">
+        <source>
+מסיבות מתודולוגיות, לא כל האינדיקטורים המרכיבים את מדד המגדר כלולים באומדן זה. האינדיקטורים שנכללו הם רק אלה שיש בהם ערך מספרי גם לנשים וגם לגברים. למשל, אם הפער בין נשים לגברים בהכנסה החודשית הממוצעת ברוטו בשנה מסוימת הוא 30%, והפער בין נשים לגברים בשכר לשעה הוא 15%, אז האי-שוויון בשכר החודשי גבוה פי שניים מהאי-שוויון בשכר לשעה. כך, ברשימה של עשרות אינדיקטורים, שהם כ-70% מכלל האינדיקטורים במדד, אפשר להשוות את העומק או העוצמה של האי-שוויון, לזהות תחומים שבהם יש יותר אי-שוויון, ולדרג את האינדיקטורים לפי חומרת מצב האי-שוויון בהם. 
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/info-page-gaps/info-page-gaps.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="43fa2dc80a98535f0fc941cb91f555fcf24cfc0a" datatype="html">
+        <source>
+הממדים שכל האינדיקטורים בהם נכללים במדידת עומק האי-שוויון הם: השכלה, שוק העבודה, עוני, זמן, החברה החרדית, ופריפריה. הממדים שרק חלק מהאינדיקטורים בהם נכללים במדידה: עוצמה, מגדור מקצועי, מצב משפחתי, אלימות כלפי נשים, בריאות והחברה הערבית. ארבעת הממדים שנותרו מחוץ למדידת עומק האי-שוויון הם מצב משפחתי, אלימות כלפי נשים, בריאות, ותרבות ותקשורת. ממד המצב המשפחתי לא נכלל בתרשים משום שהאינדיקטור של ראשות משפחות חד-הוריות הופך את עומק האי-שוויון בממד זה לקיצוני ואינו מאפשר התבוננות השוואתית בממדים; ממד האלימות כלפי נשים לא נכלל בתרשים משום שבהגדרתו אין בו השוואה לאלימות כלפי גברים, ולכן לאי-שוויון בו אין ממד של עומק אלא רק של כיוון; ממד הבריאות לא נכלל בתרשים כיוון שהוא מורכב מאינדיקטור יחיד; ממד התרבות והתקשורת לא נכלל בתרשים משום שהאינדיקטורים בו מבוססים על נקודות זמן מעטות מדי.
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/info-page-gaps/info-page-gaps.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3242b9ebae2778460f1aab87145eb70fa35a2244" datatype="html">
+        <source>
+חשוב לציין שמדד עומק האי-שוויון נוטה לכיוון האינדיקטורים שבהם המדידה הכמותית מקובלת וסטנדרטית. אלו אינדיקטורים שיש בהם ערך מספרי גם לנשים וגם לגברים, ולכן מדידת האי-שוויון המגדרי בהם שמרנית יחסית, במובן שהיא מתייחסת לנושאים אשר מוסכם בשיח המקצועי ובקרב קובעי/ות המדיניות שהם מבטאים את הפערים המגדריים בחברה. ההתמקדות באינדיקטורים אלו מותירה מחוץ לחישוב אינדיקטורים חדשניים יותר, שנעשה בהם שימוש מועט במדדים מקובלים. במיוחד בולט הדבר בממד האלימות נגד נשים ובממד התרבות והמדיה. אם כן, מדד עומק האי-שוויון המגדרי הוא קונבנציונלי יותר ומאתגר פחות מבחינת הנושאים שהוא מודד. עם זאת, הוא מציב אתגר לשיח המקצועי בהקשר המתודולוגי, שכן מדדי המגדר הקיימים לא ביצעו מדידה כזאת במספר רב של תחומים.
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/info-page-gaps/info-page-gaps.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c80d250aea0498f15057e571dcc00a82a5dcbf9e" datatype="html">
+        <source>
+שני התרשימים להלן מציגים שני חישובים שונים של עומק האי-שוויון: בתרשים הראשון מוצג עומק האי-שוויון של הממדים השונים. ניתן לראות שבממדי העוצמה והמגדור המקצועי האי-שוויון בין נשים לגברים הוא העמוק ביותר, ובממדי ההשכלה והזמן אי השוויון הוא הנמוך ביותר.
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/info-page-gaps/info-page-gaps.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="65e2cd031d229d9e53ccc4816fd66875c34d78fd" datatype="html">
+        <source>
+בתרשים השני מוצגים שינויים לאורך זמן בעומק האי-שוויון, בכלל האינדיקטורים הנכללים באומדן. כפי שמראה התרשים, עומק האי שוויון ב-2004, שנת תחילת המדידה, היה 75%. האי-שוויון העמוק ביותר נמדד ב-2007 (79%), ובשנים שלאחר מכן חלה ירידה הדרגתית עד ל-68% בשנת 2010. בשנת 2011 שוב העמיק האי-שוויון עד לשיעור של 75%. בשנת 2012 חל שיפור ומאז עומק האי-שוויון נע בין 65% ל-66%. בשנת 2016 חל שיפור נוסף ועומק האי-שוויון ירד ל-60%. הירידה שחלה בעומק האי-שוויון בשנים האחרונות נובעת בעיקר משינויים בשלושה ממדים: ההשכלה, העוני והעוצמה (בעיקר עוצמה פוליטית). בחברה הערבית (שבה נמדד עומק האי-שוויון בנפרד), שבה האי-שוויון הוא הגבוה ביותר, ניכרת מגמה של צמצום פערים, אם כי הפערים המגדריים בה גבוהים הרבה יותר מהפערים בכלל החברה הישראלית. פערי המגדר בממד העוני הצטמצמו בעקבות הרעה במצבם הכללי של העשירונים הבינוניים והנמוכים באוכלוסייה. צמצום הפערים המגדריים בממד העוצמה הפוליטית נובע מהגידול במספר הנשים שנבחרו כחברות כנסת בבחירות שנערכו ב-2013 או שנכנסו לכנסת לאחר מכן (עד לבחירות לכנסת ה-21). לסיכום אפשר לומר כי על פי מדד המגדר, האי-שוויון בין גברים לנשים בישראל נותר ללא שינוי משמעותי בשנים האחרונות. 
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/info-page-gaps/info-page-gaps.component.html</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ae579baa35eb3ea372bd52d730f446e13e5f607b" datatype="html">
