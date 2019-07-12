@@ -1,7 +1,7 @@
 @import '../../common.less';
 
 :host {
-    div {
+    > div {
         border: 0;
         padding: 20px;
         min-height: 200px;
@@ -11,6 +11,10 @@
         cursor: pointer;
         border-top: 2px solid;
         position: relative;
+
+        .gender-index-label {
+            display: none;
+        }
 
         &.purple {
             border-color: @primaryPurple;
@@ -22,16 +26,21 @@
             border-color: @primaryGreen;
         }
         &.red {
-            border-color: @primaryRed;
-            &::before {
-                content: '';
+
+            .gender-index-label {
+                display: block;
                 position: absolute;
-                width: 100px;
                 height: 24px;
                 top: -12px;
-                left: 25px;
-                background-image: url('../../assets/madad-lable.svg');
+                left: 30px;
+                background-color: @primaryRed;
+                border-radius: 12px;
+                font-weight: normal;
+                color: white;
+                padding: 1px 13px;;
             }
+
+            border-color: @primaryRed;
         }
     }
 }
