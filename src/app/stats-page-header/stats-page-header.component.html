@@ -8,7 +8,7 @@
 </div>
 <ng-container *ngFor='let slide of slides | async; let i = index'>
   <div [class]='"carousel-card phase-" + ((phase + i) % 4)'>
-    <h3>{{slide.chart_title}}</h3>
+    <h3 [routerLink]="['/item/' + slide.doc_id]">{{slide.chart_title}}</h3>
     <app-dataset-chart [series]='slide.series' [large]='true'></app-dataset-chart>
   </div>
 </ng-container>

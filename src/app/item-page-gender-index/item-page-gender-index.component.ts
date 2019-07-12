@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges, Input, OnDestroy } from '@angular/core';
 import { ApiService } from '../api.service';
 import { HeaderStateService } from '../header-state.service';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-item-page-gender-index',
@@ -11,7 +12,8 @@ export class ItemPageGenderIndexComponent implements OnInit, OnDestroy {
 
   @Input() document: any;
 
-  constructor(private header: HeaderStateService) { }
+  constructor(private header: HeaderStateService,
+              public _: I18nService) { }
 
   ngOnInit() {
     this.header.section = 'gender_index';

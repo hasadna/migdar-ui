@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, OnChanges } from '@angular/core';
-
+import { colorScale } from '../constants';
 import * as d3 from 'd3';
 
 interface DataEl {
@@ -21,6 +21,7 @@ export class DatasetChartComponent implements OnInit, OnChanges {
 
   @Input() series: Series[];
   @Input() large: boolean;
+
   @ViewChild('container') container: ElementRef;
 
   current = null;
@@ -67,12 +68,12 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     }
     const x = d3.scalePoint()
                 .range([leftPadding, width - rightPadding])
-                .domain(data.map((d) => d.x));
+                .domain(data.map((d) => d.x).sort());
     const y = d3.scaleLinear()
                 .range([height - yMargins, 0])
                 .domain(d3.extent(data, (d) => d.y)).nice();
-    const colorScale = d3.scaleSequential(d3.interpolateViridis)
-                         .domain([0, this.series.length - 1]);
+    // const colorScale = d3.scaleSequential(d3.interpolateViridis)
+    //                      .domain([0, this.series.length - 1]);
 
     // Add the X grid
     svg.append('g')
@@ -102,7 +103,7 @@ export class DatasetChartComponent implements OnInit, OnChanges {
          .append('path')
          .attr('class', 'dataline')
          .attr('d', (d) => valueline(d.dataset.sort((a, b) => d3.ascending(a.x, b.x))))
-         .style('stroke', (d, i) => colorScale(i));
+         .style('stroke', colorScale);
 
     // Add the X Axis
     const xAxis = d3.axisBottom(x)

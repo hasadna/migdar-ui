@@ -1,4 +1,4 @@
-<div [class]='colorClass' (click)='router.navigateByUrl("/item/"+result.doc_id+queryParams)'>
-<div class='gender-index-label' i18n>מדד המגדר</div>
-<ng-content></ng-content>
-</div>
+<a [class]='colorClass' [routerLink]="['/item/' + result.doc_id]" [queryParams]="queryParams">
+    <div class='gender-index-label' i18n>מדד המגדר</div>
+    <ng-content></ng-content>
+</a>

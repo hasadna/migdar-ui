@@ -170,3 +170,48 @@ export const FILTERS_CONFIG = {'all': [{'field': 'languages',
                         {'v': 'תרבות וספורט', 'v__ar': 'ثقافة ورياضة', 'v__en': 'Culture & Sport'}]}]};
 
 export const ALLOWED_FIELDS = new Set(['languages', 'life_areas', 'compact_services', 'regions', 'org_kind', 'item_kind', 'source_kind']);
+
+
+export function colorScale(series, index) {
+    if (!series.gender) {
+        return '#ef5241';
+    }
+    if (series.gender.includes('נשים')) {
+      return '#59334d';
+    } else if (series.gender.includes('גברים')) {
+      return '#33a0a3';
+    } else {
+      const colors = [
+        '#ef5241',
+        '#6661d1',
+        '#68788c',
+        '#d6b618',
+        '#ef7625',
+        '#002070￼￼￼￼￼￼￼￼',
+        '#44b8e0',
+        '#b658cc',
+        '#f29eb5',
+      ];
+      return colors[index % colors.length];
+    }
+  }
+
+//   export function colorScale(series, index) {
+//     if (series.gender.includes('נשים')) {
+//       return '#59334d';
+//     } else if (series.gender.includes('גברים')) {
+//       return '#ef7625';
+//     } else {
+//       const colors = [
+// '#624db2',
+// '#0d6270',
+// '#9b261e',
+// '#464e35',
+// '#9b8579',
+// '#a3025e',
+// '#6a6674',
+// '#8aae7f',
+//       ];
+//       return colors[index % colors.length];
+//     }
+//   }
