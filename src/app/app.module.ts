@@ -50,6 +50,10 @@ import { ItemPageGenderIndexComponent } from './item-page-gender-index/item-page
 import { SearchFiltersPropertyComponent } from './search-filters-property/search-filters-property.component';
 import { SearchFiltersPropertyFieldNameComponent } from './search-filters-property-field-name/search-filters-property-field-name.component';
 import { HeaderSearchIconComponent } from './header-search-icon/header-search-icon.component';
+import { GenericPageComponent } from './generic-page/generic-page.component';
+import { GenericPageAboutComponent } from './generic-page-about/generic-page-about.component';
+import { GenericPageEulaComponent } from './generic-page-eula/generic-page-eula.component';
+import { GenericPagePrivacyComponent } from './generic-page-privacy/generic-page-privacy.component';
 
 
 const appRoutes: Routes = [
@@ -68,6 +72,9 @@ const appRoutes: Routes = [
   { path: 'gaps', component: InfoPageGapsComponent },
   { path: 'inequality', component: InfoPageInequalityComponent },
   { path: 'methodology', component: InfoPageGenderIndexComponent },
+  { path: 'about', component: GenericPageAboutComponent },
+  { path: 'eula', component: GenericPageEulaComponent },
+  { path: 'privacy', component: GenericPagePrivacyComponent },
   { path: '', component: MainPageComponent },
 ];
 
@@ -119,7 +126,11 @@ const appRoutes: Routes = [
     ItemPageGenderIndexComponent,
     SearchFiltersPropertyComponent,
     SearchFiltersPropertyFieldNameComponent,
-    HeaderSearchIconComponent
+    HeaderSearchIconComponent,
+    GenericPageComponent,
+    GenericPageAboutComponent,
+    GenericPageEulaComponent,
+    GenericPagePrivacyComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,7 @@ export class ItemPagePublicationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.search.search(this.document['life_areas'].join(' ')); // TODO filter by life areas
+    this.search.search(null, 'all', {tags: this.document['tags']});
   }
 
 }

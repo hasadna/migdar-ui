@@ -36,11 +36,13 @@ export class ItemPageOrganisationComponent implements OnInit {
       }
     );
     this.search.search(
-      null,
+      this.document['org_name'],
       'publications',
-      {
-        publisher: this.document['alt_names'],
-      }
+      this.document['alt_names'].map(
+        (name) => {
+          return {publisher__like: name};
+        }
+      )
     );
   }
 
