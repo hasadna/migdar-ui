@@ -578,123 +578,151 @@
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="1768d8177db0598b05a249159c98c92c567b6edd" datatype="html">
+        <source>אומדן זה מאפשר להשוות בין הממדים השונים של מדד המגדר ולדרג אותם לפי עומק הפער המגדרי הקיים בהם. ניתן גם לבחון את עוצמת האי שוויון בכל ממד לאורך זמן ולדעת אילו שינויים חלו בו במהלך השנים.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/gender-index-page/gender-index-page.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="733a96500b63caf6f887c37d23b4ca6f51efed08" datatype="html">
+        <source>עוד בנושא הפער המגדרי</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/gender-index-page/gender-index-page.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7b662252398890d5b55612a88b02168a8731268d" datatype="html">
+        <source>כאן ניתן לראות את תוצאות מדד המגדר, הבוחן את אי השוויון בין נשים לגברים בישראל במגוון תחומי חיים ועל פני עשרות אינדיקטורים.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cbc35653f43d736c95df7aa780589cfad4ee7dbd" datatype="html">
+        <source>מדד המגדר בוחן את רמת האי שוויון המגדרי לאורך השנים, מציג מגמות שינוי ומאפשר לזהות באיזה תחום הפער המגדרי הוא העמוק ביותר.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="b9ba1546741345be774a86a644678b609d0ef2bf" datatype="html">
         <source>השכלה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d20349c18053d41e6f391794ae879edabbc4a317" datatype="html">
         <source>שוק העבודה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5a991c5646e09741fdcb2f4e39f53c870698149a" datatype="html">
         <source>מגדור מקצועי</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="512060dbf954332d82a6f4bd4643f138611cfef5" datatype="html">
         <source>עוני</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="27159212deda6d75c35dd1b2030cb70e4289681d" datatype="html">
         <source>החברה הערבית</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d1e8eed74ef4a0c3b0304cd989b35104d1df2dfa" datatype="html">
         <source>עוצמה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="970f30af701dcea79d70e52082a2a847a99ad530" datatype="html">
         <source>תרבות ותקשורת</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9fd0de41e871fec3a5b3d2d07096d548bc44e718" datatype="html">
         <source>מצב משפחתי</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="edb9da53c7d5acc6ad6f4a837a62a5ccf0f6fd4d" datatype="html">
         <source>זמן</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="042bf4e9f75bd86ac8e3e71b55a771894f715237" datatype="html">
         <source>החברה החרדית</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6d675fa5f24881f4b40b0bf14c4097deb6bd8bce" datatype="html">
         <source>אלימות</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ffc83de9250f9d59c6a85613e3f5481db33a4f7e" datatype="html">
         <source>בריאות</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8e688e54a84bfc6dcd4410ef1b2bb15c3ac4d98d" datatype="html">
         <source>פריפריה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1992c8b190e638411001230eddb544397a03639f" datatype="html">
         <source>הפער המגדרי גדל עם השנים</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d56bb3b9a2e45c43cf65476c96970848673cfd22" datatype="html">
         <source>המגמה של צמצום הפער המגדרי בייצוג הפוליטי<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>נעצרה בבחירות לכנסת ה-21</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="303fa34d0d197d74ebbdc3996fd608120dd02430" datatype="html">
         <source>הפער המגדרי הולך וגדל עם השנים</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="040e85a6bcb075cf45804adacd0a2d29367a216b" datatype="html">
         <source>&quot;הרצפה עולה אך התקרה נוסקת&quot; - הפער המגדרי בשכר הולך וגדל</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="099e5a14a145ddcbae0f973092bcc251874834bd" datatype="html">
