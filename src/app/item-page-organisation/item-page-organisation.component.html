@@ -4,7 +4,7 @@
     <div class='infoline' *ngIf='document.tagline'>
       <span>{{_._(document, 'tagline')}}</span>
     </div>
-  </div>-
+  </div>
 </app-item-page-header>
 <div class='org-card'>
   <div class='org-contact'>
@@ -19,9 +19,14 @@
     <span *ngIf='document.hotline_phone_number'>
       {{document.hotline_phone_number}}
     </span>    
+    <span *ngIf='document.org_phone_number'>
+      {{document.org_phone_number}}
+    </span>    
+    <span *ngIf='document.org_address'>
+      {{document.org_address}}
+    </span>    
     <span class='circles'>
-      <a *ngIf='document.org_facebook' class='org-facebook' [href]='document.org_facebook'>
-      </a>
+      <a *ngIf='document.org_facebook' class='org-facebook' [href]='document.org_facebook' target='_blank'></a>
     </span>
   </div>
   <div class='org-info'>

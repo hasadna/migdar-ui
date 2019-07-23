@@ -11,7 +11,7 @@
     </div>
     <div class='infoline'>
       <label></label>
-      <span>{{document.pubyear | 0}}</span>&nbsp;|&nbsp;
+      <span>{{Math.trunc(result.pubyear)}}</span>&nbsp;|&nbsp;
       <span>{{_._(document, 'languages').join(', ')}}</span>
     </div>
   </div>

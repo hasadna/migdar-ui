@@ -9,13 +9,10 @@
     <label i18n>תיאור</label>
     <span>{{_._(document, 'chart_abstract')}}</span>
   </div>
-  <div class='item-prop' *ngIf='document.author'>
-    <label i18n>יוצרות</label>
-    <span>{{_._(document, 'author')}}</span>
-  </div>
-  <div class='item-prop' *ngIf='document.institution'>
-    <label i18n>מקור</label>
-    <span>{{_._(document, 'institution')}}</span>
+  <div class='item-prop' *ngIf='data_sources && data_sources[0]'>
+    <label i18n>מקור נתונים</label>
+    <span *ngIf='!data_sources[0].link'>{{data_sources[0].title}}</span>
+    <a *ngIf='data_sources[0].link' [href]='data_sources[0].link'>{{data_sources[0].title}}</a>
   </div>
   <div class='item-prop'>
     <label i18n>תגיות</label>
