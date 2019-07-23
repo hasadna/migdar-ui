@@ -12,6 +12,7 @@ export class ItemPagePublicationComponent implements OnInit {
 
   @Input() document: any;
   search: SearchManager;
+  trunc = Math.trunc;
 
   constructor(private api: ApiService, public _: I18nService) {
     this.search = new SearchManager(api);

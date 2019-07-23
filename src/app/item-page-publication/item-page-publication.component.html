@@ -11,7 +11,7 @@
     </div>
     <div class='infoline'>
       <label></label>
-      <span>{{Math.trunc(result.pubyear)}}</span>&nbsp;|&nbsp;
+      <span>{{trunc(document.pubyear)}}</span>&nbsp;|&nbsp;
       <span>{{_._(document, 'languages').join(', ')}}</span>
     </div>
   </div>
@@ -23,7 +23,18 @@
   <a class='link' *ngIf='document.url' [href]='document.url' target='_blank' i18n>קישור למקור</a>
 </div>
 <div class='notes'>
-  <strong i18n>תגיות:</strong>&nbsp;{{_._(document, 'tags').join(', ')}}
+  <div class='prop' *ngIf='document.source_kind'>
+    <strong i18n>סוג מקור:</strong>&nbsp;{{_._(document, 'source_kind').join(', ')}}
+  </div>
+  <div class='prop' *ngIf='document.item_kind'>
+    <strong i18n>סוג פריט:</strong>&nbsp;{{_._(document, 'item_kind').join(', ')}}
+  </div>
+  <div class='prop' *ngIf='document.life_areas'>
+    <strong i18n>תחום חיים:</strong>&nbsp;{{_._(document, 'life_areas').join(', ')}}
+  </div>
+  <div class='prop' *ngIf='document.tags'>
+    <strong i18n>תגיות:</strong>&nbsp;{{_._(document, 'tags').join(', ')}}
+  </div>
 </div>
 <app-item-page-search-results [manager]='search'>
 <h1 i18n>אולי יעניין אותך גם&hellip;</h1>

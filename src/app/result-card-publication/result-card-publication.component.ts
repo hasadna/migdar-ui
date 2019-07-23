@@ -9,6 +9,7 @@ import { I18nService } from '../i18n.service';
 export class ResultCardPublicationComponent implements OnInit {
 
   @Input() result: any;
+  trunc = Math.trunc;
 
   constructor(public _: I18nService) { }
 
