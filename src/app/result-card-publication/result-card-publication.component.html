@@ -10,4 +10,8 @@
 <div>
   <span>{{trunc(result.pubyear)}}</span>&nbsp;|&nbsp;<span>{{_._(result, 'languages').join(', ')}}</span>
 </div>
+<div class='tags'>
+  <strong i18n>תגיות:&nbsp;</strong>
+  <span *ngFor="let tag of _._(result, 'tags')"><a>{{tag}}</a></span>
+</div>
 <p>{{_._(result, 'notes')}}</p>
