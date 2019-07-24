@@ -67,6 +67,11 @@ export class FilterManagerService {
     this.update(kind);
   }
 
+  clearKind(kind) {
+    this.selected[kind] = {};
+    this.update(kind);
+  }
+
   toggle(kind, field, value) {
     if (this.isSelected(kind, field, value)) {
       this.deselect(kind, field, value);
