@@ -4,6 +4,8 @@
 <br/>
 ארגונים פמיניסטיים, מחקרים, ועוד ועוד
 </h2>
-<app-search-bar
-  (changed)='updatedTerm($event)'
-></app-search-bar>
+<div class='search-bar' #searchBar>
+  <app-search-bar
+    (changed)='updatedTerm($event)'
+  ></app-search-bar>
+</div>
