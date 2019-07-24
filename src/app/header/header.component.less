@@ -29,9 +29,10 @@
             .logo {
                 cursor: pointer;
                 height: 20px;
+                // border-left: 2px solid @primaryPurple;
             }
 
-            .section {
+            .section-link {
                 font-family: @secondaryFont;
                 font-size: 17px;
                 font-weight: normal;
@@ -39,18 +40,23 @@
                 padding-right: 8px;
                 position: relative;
                 top: 1px;
+                color: black;
+                opacity: 0.5;
+                border-right: none;
+                transition: color 200ms;
+                cursor: pointer;
 
-                &.orange {
-                    border-right: 2px solid @primaryOrange;
-                    color: @primaryOrange;
-                }
-                &.green {
-                    border-right: 2px solid @primaryGreen;
-                    color: @primaryGreen;
-                }
-                &.red {
-                    border-right: 2px solid @primaryRed;
-                    color: @primaryRed;
+                &:hover, &.active {
+                    opacity: 1;
+                    &.orange {
+                        color: @primaryOrange;
+                    }
+                    &.green {
+                        color: @primaryGreen;
+                    }
+                    &.red {
+                        color: @primaryRed;
+                    }    
                 }
             }
 
