@@ -41,13 +41,18 @@
                 position: relative;
                 top: 1px;
                 color: black;
-                opacity: 0.5;
+                opacity: 0.35;
                 border-right: none;
-                transition: color 200ms;
+                transition-property: color opacity;
+                transition-duration: 200ms;
+                line-height: 20.5px;
                 cursor: pointer;
 
                 &:hover, &.active {
                     opacity: 1;
+                    &.purple {
+                        color: @primaryPurple;
+                    }
                     &.orange {
                         color: @primaryOrange;
                     }
