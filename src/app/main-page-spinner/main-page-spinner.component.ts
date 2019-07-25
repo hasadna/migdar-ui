@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FILTERS_CONFIG } from '../constants';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-main-page-spinner',
@@ -9,11 +11,12 @@ export class MainPageSpinnerComponent implements OnInit {
 
   points = [];
   RADIUS = 172.5;
-  TITLES = ['פמיניזם', 'חברה בישראל', 'תקשורת', 'משפט', 'ביטחון', 'מעגל החיים וזמן', 'דת',
-            'מדע, טכנולוגיה וסביבה', 'בריאות ומיניות', 'אלימות מגדרית', 'משפחה', 'תרבות וספורט',
-            'עוצמה', 'עוני', 'כלכלה ושוק העבודה', 'השכלה'];
+  // TITLES = ['פמיניזם', 'חברה בישראל', 'תקשורת', 'משפט', 'ביטחון', 'מעגל החיים וזמן', 'דת',
+  //           'מדע, טכנולוגיה וסביבה', 'בריאות ומיניות', 'אלימות מגדרית', 'משפחה', 'תרבות וספורט',
+  //           'עוצמה', 'עוני', 'כלכלה ושוק העבודה', 'השכלה'];
+  TITLES = FILTERS_CONFIG.gender_index[0].options;
 
-  constructor() { }
+  constructor(public _: I18nService) { }
 
   ngOnInit() {
     for (let i = 0 ; i < 16 ; i++ ) {

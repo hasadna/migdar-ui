@@ -17,6 +17,6 @@
       [style.transform-origin]='(point.x + 200) + "px " + (point.y + 10) + "px"'
       [class]='"text"'
   >
-    <div [class]='"inner-text text" + point.i'>{{point.text}}</div>
+    <div [class]='"inner-text text" + point.i'>{{_._(point.text, 'v')}}</div>
   </div>
 </ng-container>
