@@ -29,20 +29,6 @@ export class ItemPageStatsComponent implements OnInit, OnChanges {
 
   refresh() {
     this.data_sources = [];
-    const used = new Set();
-    for (const dataset of this.document.series) {
-      if (dataset.source_description) {
-        const key = dataset.source_description + dataset.source_url;
-        if (!used.has(key)) {
-          this.data_sources.push({
-            series: dataset.series_title,
-            title: dataset.source_description,
-            link: dataset.source_url
-          });
-          used.add(key);
-        }
-      }
-    }
     this.search = new SearchManager(this.api);
     this.search.search(
       null,

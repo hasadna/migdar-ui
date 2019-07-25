@@ -9,10 +9,10 @@
     <label i18n>תיאור</label>
     <span>{{_._(document, 'chart_abstract')}}</span>
   </div>
-  <div class='item-prop' *ngIf='data_sources && data_sources[0]'>
+  <div class='item-prop' *ngIf='document.series && document.series[0].source_description'>
     <label i18n>מקור נתונים</label>
-    <span *ngIf='!data_sources[0].link'>{{data_sources[0].title}}</span>
-    <a *ngIf='data_sources[0].link' [href]='data_sources[0].link'>{{data_sources[0].title}}</a>
+    <span *ngIf='!document.series[0].source_url'>{{document.series[0].source_description}}</span>
+    <a *ngIf='document.series[0].source_url' [href]='document.series[0].source_url' target='_blank'>{{document.series[0].source_description}}</a>
   </div>
   <div class='item-prop'>
     <label i18n>תגיות</label>

@@ -1,0 +1,42 @@
+@import '../../common.less';
+
+:host {
+    .container {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        cursor: pointer;
+
+        padding: 3px 10px;
+        margin: 10px 10px;    
+        
+        img {
+            margin-left: 5px;
+            width: 32px;
+        }
+        img.active {
+            display: none;
+        }
+
+        span {
+            background-color: transparent;
+            color: @primaryRed;
+            white-space: nowrap;
+            font-size: 22px;
+        }
+
+        &.active {
+            img {
+                display: none;
+            }
+            img.active {
+                display: inline-block;
+            }
+            background-color: @primaryRed;
+            border-radius: 25px;       
+            span{
+                color: white;
+            }
+        }
+    }
+}

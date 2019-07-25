@@ -27,7 +27,9 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
 
   ngOnInit() {
     this.bottommerSubs = this.bottommer.reachedBottom.subscribe(() => {
-      this.manager.searchMore();
+      if (this.manager) {
+        this.manager.searchMore();
+      }
     });
   }
 

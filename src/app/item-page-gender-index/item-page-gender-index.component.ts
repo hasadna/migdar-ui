@@ -23,10 +23,4 @@ export class ItemPageGenderIndexComponent implements OnInit, OnDestroy {
     this.header.clear();
   }
 
-  data_source() {
-    if (this.document && this.document.data_sources && this.document.data_sources.length) {
-      return this.document.data_sources[0];
-    }
-    return null;
-  }
 }

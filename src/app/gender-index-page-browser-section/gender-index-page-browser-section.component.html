@@ -1,0 +1,13 @@
+<div class='menu' (click)='open = !open' #menu [id]='name'>
+  <img [src]='"assets/gender_index_30x30/White/neg-" + slug + "-ic.svg"'/>
+  <span>{{display}}</span>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.97 2.98">
+    <polygon class="cls-1" points="5.97 0 0 0 2.98 2.98 5.97 0"/>
+  </svg>
+</div>
+<div class='dropdown' [class.open]='open'>
+  <div class='dropdown-item' *ngFor='let chart of charts' [routerLink]='"/item/" + chart.doc_id'>
+    {{_._(chart, 'chart_title')}}
+  </div>  
+</div>
+<app-search-results [results]='chartsObservable'></app-search-results>

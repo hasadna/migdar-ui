@@ -71,8 +71,8 @@ export class GenderIndexPageFooterComponent implements OnInit {
           return prev;
         }, {});
       });
-    this.activatedRoute.queryParamMap.subscribe((params) => {
-      let dimension = params.get('section');
+    this.activatedRoute.fragment.subscribe((fragment) => {
+      let dimension = fragment;
       if (dimension !== this.active_dimension) {
         this.datasetsSection.nativeElement.scrollIntoView();
         dimension = dimension || this.dimensions[0];

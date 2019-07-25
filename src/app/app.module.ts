@@ -54,6 +54,9 @@ import { GenericPageComponent } from './generic-page/generic-page.component';
 import { GenericPageAboutComponent } from './generic-page-about/generic-page-about.component';
 import { GenericPageEulaComponent } from './generic-page-eula/generic-page-eula.component';
 import { GenericPagePrivacyComponent } from './generic-page-privacy/generic-page-privacy.component';
+import { GenderIndexPageBrowserComponent } from './gender-index-page-browser/gender-index-page-browser.component';
+import { GenderIndexPageBrowserHeaderElementComponent } from './gender-index-page-browser-header-element/gender-index-page-browser-header-element.component';
+import { GenderIndexPageBrowserSectionComponent } from './gender-index-page-browser-section/gender-index-page-browser-section.component';
 
 
 const appRoutes: Routes = [
@@ -130,7 +133,10 @@ const appRoutes: Routes = [
     GenericPageComponent,
     GenericPageAboutComponent,
     GenericPageEulaComponent,
-    GenericPagePrivacyComponent
+    GenericPagePrivacyComponent,
+    GenderIndexPageBrowserComponent,
+    GenderIndexPageBrowserHeaderElementComponent,
+    GenderIndexPageBrowserSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -139,6 +145,7 @@ const appRoutes: Routes = [
       {
         // enableTracing: true, // <-- debugging purposes only
         scrollPositionRestoration: 'enabled',
+        anchorScrolling: 'disabled',
       }
     ),
     HttpClientModule,

@@ -1,0 +1,71 @@
+@import '../../common.less';
+
+:host {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+
+    .menu {
+        white-space: nowrap;
+        font-size: 22px;
+        background-color: @primaryRed;
+        border-radius: 25px;       
+        color: white;
+        padding: 3px 20px;
+        display: flex;
+        flex-flow: row;
+        cursor: pointer;
+        z-index: 2;
+        margin: 40px 0;
+
+        img {
+            width: 32px;
+        }
+
+        span {
+            margin: 0 10px;
+        }
+
+        svg {
+            width: 10px;
+            margin-top: 3px;
+
+            polygon {
+                fill: white;
+            }
+        }
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 60px;
+        padding: 10px;
+        padding-top: 35px;
+        background-color: @primaryRed;
+        z-index: 1;
+        display: none;
+        opacity: 0;
+
+        &.open {
+            display: flex;
+            opacity: 1;
+            flex-flow: column;
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 18px;
+            margin: 3px 0;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    app-search-results {
+        margin-bottom: 0px;
+    }
+}
