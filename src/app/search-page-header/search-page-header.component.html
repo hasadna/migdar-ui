@@ -6,10 +6,12 @@
     <h2 *ngIf='!num_results && num_results !== 0'>&nbsp;</h2>
   </div>
   <app-search-bar
+    *ngIf='!tag'
     (changed)='search($event)'
     [term]='term'
     [color]='"white"'
     [backgroundColor]='"#785d70"'
     [icon]='"neg-search-ic"'
   ></app-search-bar>
+  <div class='tag' *ngIf='tag'><span [routerLink]='"/search"'>&times;</span>{{tag}}</div>
 </div>

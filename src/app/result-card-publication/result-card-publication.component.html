@@ -8,10 +8,12 @@
   <span>{{_._(result, 'publisher')}}</span>
 </div>
 <div>
-  <span>{{trunc(result.pubyear)}}</span>&nbsp;|&nbsp;<span>{{_._(result, 'languages').join(', ')}}</span>
+  <span>{{result.year}}</span>&nbsp;|&nbsp;<span>{{_._(result, 'languages').join(', ')}}</span>
 </div>
 <div class='tags'>
   <strong i18n>תגיות:&nbsp;</strong>
-  <span *ngFor="let tag of _._(result, 'tags')"><a>{{tag}}</a></span>
+  <span *ngFor="let tag of _._(result, 'tags')"
+    [routerLink]='"/search"' [queryParams]='{"tag": tag, "kind": "all"}'
+  ><a>{{tag}}</a></span>
 </div>
 <p>{{_._(result, 'notes')}}</p>

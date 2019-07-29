@@ -15,14 +15,14 @@ export class SearchFiltersComponent implements OnInit {
   @Input() fixItemKind: boolean;
   @Input() itemKind: string;
   @Input() sortOrder: string;
-  @Output() updated = new EventEmitter<any>();
+  @Output() updated = new EventEmitter<any[]>();
 
   constructor(public filters: FilterManagerService,
               private router: Router,
               private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.sortOrder = this.sortOrder || 'relevance';
+    this.sortOrder = this.sortOrder || '';
     this.itemKind = this.itemKind || 'all';
     this.refresh();
     this.filters.updated.subscribe((filters) => {
@@ -46,7 +46,7 @@ export class SearchFiltersComponent implements OnInit {
   }
 
   refresh() {
-    let filters = this.filters.updated.getValue();
-    this.updated.emit(filters);
+    const filters = this.filters.updated.getValue();
+    this.updated.emit([filters, this.sortOrder]);
   }
 }

@@ -1,14 +1,24 @@
 @import '../../common.less';
 
 :host {
-    > a {
+    position: relative;
+
+    .catcher {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 80px;
+        cursor: pointer;
+    }
+
+    > div {
         border: 0;
         padding: 20px;
         min-height: 200px;
         background-color: white;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-        cursor: pointer;
         border-top: 2px solid;
         position: relative;
         display: block;

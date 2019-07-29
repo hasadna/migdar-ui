@@ -6,3 +6,9 @@
   </div>
 </div>
 <app-dataset-chart [series]='result.series' [large]='large'></app-dataset-chart>
+<div class='tags'>
+  <strong i18n>תגיות:&nbsp;</strong>
+  <span *ngFor="let tag of _._(result, 'tags')"
+    [routerLink]='"/search"' [queryParams]='{"tag": tag, "kind": "all"}'
+  ><a>{{tag}}</a></span>
+</div>

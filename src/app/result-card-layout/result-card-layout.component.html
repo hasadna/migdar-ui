@@ -1,4 +1,5 @@
-<a [class]='colorClass' [routerLink]="['/item/' + result.doc_id]" [queryParams]="queryParams">
+<div [class]='colorClass'>
     <div class='gender-index-label' i18n>מדד המגדר</div>
     <ng-content></ng-content>
-</a>
+    <div class='catcher' [routerLink]="['/item/' + result.doc_id]" [queryParams]="queryParams"></div>
+</div>

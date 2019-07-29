@@ -12,6 +12,7 @@ import { Subscription } from 'rxjs';
 export class SearchPageHeaderComponent implements OnInit, OnChanges {
 
   @Input() term = '';
+  @Input() tag = '';
   @Input() manager: SearchManager;
   num_results: Number;
   num_results_sub: Subscription;

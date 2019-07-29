@@ -10,6 +10,11 @@ h1 {
     line-height: 22px;
 }
 
+p, div, span {
+    font-size: 16px;
+    word-break: break-word;
+}
+
 .tagline {
     margin-bottom: 40px;
 }
@@ -26,6 +31,10 @@ h1 {
             align-self: center;
             margin: 10px;
         }
+
+        p {
+            margin: 5px 0;
+        }
     }
 
     div:first-child {
@@ -40,10 +49,26 @@ h1 {
 }
 
 p, div {
-    font-size: 14px;
+    // font-size: 14px;
     word-break: break-word;
 }
 
 p {
     text-align: justify;
+}
+
+
+.tags {
+    margin: 10px 0;
+    a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 2px 10px;
+        margin: 3px 5px;
+        background-color: #eee;
+        border-radius: 20px;
+        background-color: #785d7040;
+        transition: background-color 200ms;
+        cursor: pointer;
+    }
 }

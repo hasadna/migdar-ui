@@ -1,5 +1,5 @@
 <app-fixed-background [color]='"rgba(0,0,0,0.05)"'></app-fixed-background>
-<app-search-page-header [term]='term' [manager]='search'></app-search-page-header>
+<app-search-page-header [tag]='tag' [term]='term' [manager]='search'></app-search-page-header>
 <app-search-filters [itemKind]='kind' (updated)='updateFilters($event)'>
 </app-search-filters>
 <app-search-results *ngIf='search' [manager]='search'></app-search-results>

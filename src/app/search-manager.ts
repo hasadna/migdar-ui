@@ -20,7 +20,8 @@ export class SearchManager {
                                 params.term,
                                 params.count,
                                 params.offset,
-                                params.filters);
+                                params.filters,
+                                params.sortOrder);
         })
       ).subscribe(({results, total}) => {
         console.log('GOT RESULTS', results.length, 'TOTAL:', total);
@@ -31,16 +32,17 @@ export class SearchManager {
         this.params.offset += results.length;
         if (results.length === 0 && this.queue.length > 0) {
           const next = this.queue.shift();
-          this.search(next.term, next.types, next.filters);
+          this.search(next.term, next.types, next.filters, next.sortOrder);
         }
       });
     }
 
-    search(term, types?, filters?) {
+    search(term, types?, filters?, sortOrder?) {
       if (this.params &&
           this.params.term === term &&
           this.params.types === types &&
-          this.params.filters === filters) {
+          this.params.filters === filters &&
+          this.params.sortOrder === sortOrder) {
         return;
       }
       this.results.next([]);
@@ -49,6 +51,7 @@ export class SearchManager {
         term: term,
         offset: 0,
         filters: filters,
+        sortOrder: sortOrder
       };
       this.terms.next(Object.assign({}, this.params));
     }
@@ -56,16 +59,19 @@ export class SearchManager {
     searchTerm(term) {
       this.search(term,
                   this.params ? this.params.types : null,
-                  this.params ? this.params.filters : null);
+                  this.params ? this.params.filters : null,
+                  this.params ? this.params.sortOrder : null);
     }
 
     searchMore(): any {
       this.terms.next(Object.assign({}, this.params));
     }
 
-    newFromFilters(filters) {
+    newFromFilters(event) {
+      const filters = event[0];
+      const sortOrder = event[1];
       const _search = new SearchManager(this.api);
-      _search.search(this.params.term, this.params.types, filters);
+      _search.search(this.params.term, this.params.types, filters, sortOrder);
       return _search;
     }
 

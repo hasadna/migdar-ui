@@ -15,6 +15,7 @@ import { FilterManagerService } from '../filter-manager.service';
 export class SearchPageComponent implements OnInit {
   term = '';
   kind = 'all';
+  tag = null;
 
   activatedRouteSubs: Subscription;
   search: SearchManager;
@@ -29,6 +30,7 @@ export class SearchPageComponent implements OnInit {
     this.activatedRouteSubs =
       this.activatedRoute.queryParamMap.subscribe((params) => {
         this.term = params.get('q') || '';
+        this.tag = params.get('tag');
 
         this.kind = params.get('kind');
         const searchKind = {
@@ -47,7 +49,8 @@ export class SearchPageComponent implements OnInit {
           {
             stats: {kind: 'Gender Statistics'},
             gender_index: {kind: 'Gender Index'},
-          }[this.kind] || {}
+          }[this.kind] || {},
+          this.tag ? {tags: this.tag} : {}
         );
 
         this.search = new SearchManager(this.api);
@@ -55,12 +58,14 @@ export class SearchPageComponent implements OnInit {
       });
   }
 
-  updateFilters(filters) {
+  updateFilters(event) {
+    const filters = event[0];
+    const sortOrder = event[1];
     this.router.navigate(
       [],
       {
         relativeTo: this.activatedRoute,
-        queryParams: { filters: JSON.stringify(filters), },
+        queryParams: { filters: JSON.stringify(filters), sortOrder: sortOrder },
         queryParamsHandling: 'merge',
         replaceUrl: true
       });
