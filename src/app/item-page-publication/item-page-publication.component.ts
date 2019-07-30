@@ -19,7 +19,7 @@ export class ItemPagePublicationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.search.search(null, 'all', {tags: this.document['tags']});
+    this.search.search(null, 'all', {tags: this.document['tags']}, '-year');
   }
 
 }

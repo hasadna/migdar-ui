@@ -42,7 +42,8 @@ export class ItemPageOrganisationComponent implements OnInit {
         (name) => {
           return {publisher__like: name};
         }
-      )
+      ),
+      '-year'
     );
   }
 

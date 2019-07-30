@@ -14,7 +14,7 @@ export class PublicationsPageComponent implements OnInit, OnDestroy {
 
   constructor(public api: ApiService, private header: HeaderStateService) {
     this.search = new SearchManager(api);
-    this.search.search(null, 'publications');
+    this.search.search(null, 'publications', {}, 'title_kw');
   }
 
   ngOnInit() {

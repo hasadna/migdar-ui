@@ -18,7 +18,7 @@ export class OrganisationsPageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.header.section = 'orgs';
-    this.search.search(null, 'orgs');
+    this.search.search(null, 'orgs', {}, 'title_kw');
   }
 
   ngOnDestroy() {

@@ -1,6 +1,11 @@
 <app-fixed-background [color]='"rgba(0,0,0,0.05)"'></app-fixed-background>
 <app-stats-page-header></app-stats-page-header>
-<app-search-filters [itemKind]='"datasets"' [fixItemKind]='true' (updated)='search=search.newFromFilters($event)'>
+<app-search-filters
+    [itemKind]='"datasets"'
+    [fixItemKind]='true'
+    [manager]='search'
+    (updated)='search=search.newFromFilters($event)'
+>
 </app-search-filters>
 <h1 i18n>סטטיסטיקה מגדרית</h1>
 <app-search-results [manager]='search'></app-search-results>

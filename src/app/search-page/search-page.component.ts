@@ -16,6 +16,7 @@ export class SearchPageComponent implements OnInit {
   term = '';
   kind = 'all';
   tag = null;
+  sortOrder = null;
 
   activatedRouteSubs: Subscription;
   search: SearchManager;
@@ -52,10 +53,12 @@ export class SearchPageComponent implements OnInit {
           }[this.kind] || {},
           this.tag ? {tags: this.tag} : {}
         );
-        const sortOrder = params.get('sortOrder');
+        this.sortOrder = params.get('sortOrder');
 
         this.search = new SearchManager(this.api);
-        this.search.search(this.term, searchKind, searchFilters, sortOrder);
+        window.setTimeout(() => {
+          this.search.search(this.term, searchKind, searchFilters, this.sortOrder);
+        }, 0);
       });
   }
 

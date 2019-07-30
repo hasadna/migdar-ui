@@ -1,5 +1,5 @@
 <div [class]='colorClass'>
     <div class='gender-index-label' i18n>מדד המגדר</div>
     <ng-content></ng-content>
-    <div class='catcher' [routerLink]="['/item/' + result.doc_id]" [queryParams]="queryParams"></div>
+    <a class='catcher' [routerLink]="['/item/' + result.doc_id]" [queryParams]="queryParams"></a>
 </div>

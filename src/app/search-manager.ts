@@ -1,4 +1,4 @@
-import { Subject } from 'rxjs';
+import { Subject, BehaviorSubject } from 'rxjs';
 import { debounceTime, switchMap, map } from 'rxjs/operators';
 import { ApiService } from './api.service';
 
@@ -10,12 +10,14 @@ export class SearchManager {
     public totals = new Subject<any>();
     public params: any = {};
     public queue = [];
+    public parameterStream = new BehaviorSubject<any>(null);
     private terms = new Subject<any>();
 
     constructor(private api: ApiService) {
       this.terms.pipe(
         debounceTime(300),
         switchMap((params) => {
+          this.parameterStream.next(params);
           return this.api.fetch(params.types,
                                 params.term,
                                 params.count,
@@ -38,6 +40,9 @@ export class SearchManager {
     }
 
     search(term, types?, filters?, sortOrder?) {
+      if (!sortOrder && !term) {
+        sortOrder = 'title_kw';
+      }
       if (this.params &&
           this.params.term === term &&
           this.params.types === types &&

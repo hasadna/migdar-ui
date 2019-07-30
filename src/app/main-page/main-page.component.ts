@@ -52,7 +52,7 @@ export class MainPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.results = this.api.fetch('all', null, 2).pipe(
+    this.results = this.api.fetch('all', null, 2, 0, {}, '-year').pipe(
       map(({results, total}) => results)
     );
   }

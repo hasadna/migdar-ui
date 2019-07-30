@@ -3,15 +3,18 @@
   <ul>
     <li [class.selected]='selected===""'
         (click)='selected = ""'
+        *ngIf='term'
+        i18n
     >רלוונטיות</li>
     <!--li [class.selected]='selected==="popularity"'
-        (click)='selected = "popularity"'
-    >פופולריות</li>
-    <li [class.selected]='selected==="lexicographic"'
-        (click)='selected = "lexicographic"'
-    >א-ת</li-->
-    <li [class.selected]='selected==="year"'
-        (click)='selected = "year"'
+        (click)='selected = "popularity"' i18n
+    >פופולריות</li-->
+    <li [class.selected]='selected===""'
+        (click)='selected = ""' i18n
+        *ngIf='!term'
+    >א-ת</li>
+    <li [class.selected]='selected==="-year"'
+        (click)='selected = "-year"' i18n
     >זמן (חדש לישן)</li>
   </ul>
 </app-horizontal-selector>

@@ -37,7 +37,8 @@ export class ItemPageStatsComponent implements OnInit, OnChanges {
         life_areas: this.document['life_areas'],
         tags: this.document['tags'],
         doc_id__not: this.document['doc_id'],
-      }
+      },
+      'title_kw'
     );
   }
 

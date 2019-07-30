@@ -15,6 +15,7 @@ export class SearchFiltersComponent implements OnInit {
   @Input() fixItemKind: boolean;
   @Input() itemKind: string;
   @Input() sortOrder: string;
+  @Input() manager: SearchManager;
   @Output() updated = new EventEmitter<any[]>();
 
   constructor(public filters: FilterManagerService,

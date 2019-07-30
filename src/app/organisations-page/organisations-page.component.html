@@ -1,6 +1,11 @@
 <app-fixed-background [color]='"rgba(0,0,0,0.05)"'></app-fixed-background>
 <app-organisations-page-header></app-organisations-page-header>
-<app-search-filters [itemKind]='"orgs"' [fixItemKind]='true' (updated)='search=search.newFromFilters($event)'>
+<app-search-filters
+    [itemKind]='"orgs"'
+    [manager]='search'
+    [fixItemKind]='true'
+    (updated)='search=search.newFromFilters($event)'
+>
 </app-search-filters>
 <app-search-bar
     (changed)='search=search.newFromTerm($event)'

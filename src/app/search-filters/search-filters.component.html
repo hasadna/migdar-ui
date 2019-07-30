@@ -1,6 +1,7 @@
 <app-search-filters-sorting
   *ngIf='!disableSorting'
   [sortOrder]='sortOrder'
+  [manager]='manager'
   (changed)='sortOrder = $event; refresh()'
 ></app-search-filters-sorting>
 <app-search-filters-item-kind
