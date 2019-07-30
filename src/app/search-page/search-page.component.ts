@@ -52,9 +52,10 @@ export class SearchPageComponent implements OnInit {
           }[this.kind] || {},
           this.tag ? {tags: this.tag} : {}
         );
+        const sortOrder = params.get('sortOrder');
 
         this.search = new SearchManager(this.api);
-        this.search.search(this.term, searchKind, searchFilters);
+        this.search.search(this.term, searchKind, searchFilters, sortOrder);
       });
   }
 
