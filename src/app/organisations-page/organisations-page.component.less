@@ -18,4 +18,17 @@
     app-search-bar {
         max-width: 600px;
     }
+
+    @media only screen and (max-width: 700px)  {
+        app-search-bar {
+            max-width: 85%;
+            margin-bottom: 10px;
+        }
+        app-search-filters {
+            display: none;
+        }
+        > h1 { 
+            display: none;
+        }
+    }
 }

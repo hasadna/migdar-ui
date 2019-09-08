@@ -47,7 +47,8 @@
         z-index: 1;
         display: none;
         opacity: 0;
-
+        max-width: 85%;
+        
         &.open {
             display: flex;
             opacity: 1;
@@ -68,5 +69,13 @@
 
     app-search-results {
         margin-bottom: 0px;
+    }
+
+    @media only screen and (max-width: 700px)  {
+        .dropdown {
+            .dropdown-item {
+                margin: 5px 0;
+            }
+        }
     }
 }

@@ -5,11 +5,12 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    background-color: @primaryPurple;
     background-image: url('../../assets/innerpage-library-bg.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: bottom;
-    padding: 50px 0;
+    padding: 50px 20px;
 
     h1 {
         color: white;
@@ -32,7 +33,22 @@
 
     .search-bar {
         max-width: calc(@containerWidth/2);
-        width: 80%;
+        width: 85%;
         margin: 20px 0;
+    }
+
+    @media only screen and (max-width: 700px)  {
+        .search-bar {
+            width: 100%;
+        }
+        br {
+            display: none;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2 {
+            font-size: 22px;
+        }
     }
 }
