@@ -43,6 +43,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
     if (this.searchResultsSubs) {
       this.searchResultsSubs.unsubscribe();
     }
+    this.ngOnDestroy();
     if (this.manager) {
       this.searchResultsSubs =
         this.manager.results.subscribe((result) => {
@@ -54,23 +55,24 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
           this.assignCard(result);
         });
     }
-    this.ngOnDestroy();
   }
 
   assignCard(result) {
     setTimeout(() => {
+      this.columnAll.push(result);
       try {
         const columnHeights = [this.column0ref.nativeElement.offsetHeight,
                                this.column1ref.nativeElement.offsetHeight];
-        if (columnHeights[0] <= columnHeights[1]) {
+        if (columnHeights[0] < columnHeights[1]) {
           this.columns[0].push(result);
-        } else {
+        } else if (columnHeights[0] > columnHeights[1]) {
           this.columns[1].push(result);
+        } else {
+          this.columns[this.columnAll.length % 2].push(result);
         }
       } catch (e) {
-        console.log('ERROR');
+        console.log('failed to add to columns');
       }
-      this.columnAll.push(result);
     }, 0);
   }
 

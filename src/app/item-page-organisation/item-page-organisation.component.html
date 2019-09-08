@@ -13,7 +13,7 @@
     לאתר הארגון
     </a>
     <a [href]='"mailto:" + document.org_email_address'
-       *ngIf='document.org_email_address'>
+       *ngIf='document.org_email_address' class='ltr'>
       {{document.org_email_address}}
     </a>    
     <span *ngIf='document.hotline_phone_number'>

@@ -58,4 +58,31 @@
             }
         }
     }
+
+    @media only screen and (max-width: 1290px)  {
+        .header {
+            padding: 30px 20px;
+        }
+    }
+
+    @media only screen and (max-width: 700px)  {
+        .header {
+            .inner {
+                ::ng-deep .content {
+                    flex: 0 1 100%;
+
+                    h1 {
+                        font-size: 24px;
+                        margin: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+    
+                .back {
+                    display: none;
+                }
+            }
+        }
+    }
+
 }
