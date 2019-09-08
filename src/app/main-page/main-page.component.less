@@ -16,6 +16,9 @@
         margin-bottom: 60px;
 
         .right-hand {
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
             color: @primaryPurple;
             font-family: @secondaryFont;
             font-weight: normal;
@@ -53,7 +56,8 @@
         display: flex;
         flex-flow: row;
         justify-content: space-between;
-        margin: 60px 0;
+        margin: 60px 20px;
+        padding: 0 20px;
         width: 100%;
 
         .square-link {
@@ -208,6 +212,114 @@
                     }
                 }
             }
+        }
+    }
+
+    @media only screen and (max-width: 1290px)  {
+        .title {
+            align-items: center;
+
+            .right-hand {
+                align-items: center;
+                min-width: 600px;
+            }
+        }
+
+        .spinner-widget {
+            display: none;
+        }
+
+        .square-links {
+
+            .square-link {
+                padding: 30px 10px;
+                img {
+                    display: none;
+                }
+                h1 {
+                    font-size: 20px;
+                    margin: 8px 0;
+                }
+            }
+        }
+
+        .need-help {
+            .need-help-main {
+                padding: 40px 60px;
+            }
+        }
+
+    }
+    
+    @media only screen and (max-width: 700px)  {
+        .title {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            
+            .right-hand {
+                min-width: auto;
+                width: 85%;
+
+                img {
+                    height: 120px;
+                }
+    
+                h1, h2 {
+                    text-align: center;
+                }
+
+                h1 {
+                    font-size: 21px;
+                }
+
+                h2 {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .square-links {
+            margin: 20px 20px;
+            flex-flow: column;
+            align-items: center;
+
+            .square-link {
+                justify-content: space-between;
+                flex-flow: row;
+                margin: 10px 10px !important;
+                padding: 7px 20px;
+                width: 300px;
+                max-width: 90%;
+                
+                h1 {
+                    br {
+                        display: none;
+                    }
+                    span {
+                        margin: 0 0.12em;
+                    }
+                    text-align: right;
+                    font-size: 16px;
+                }
+
+                h2 {
+                    white-space: nowrap;
+                    margin-right: 15px;
+                }
+            }
+        }
+        
+        .recently-added {
+            h1 {
+                font-size: 21px;
+            }
+            .cards {
+                flex-flow: column;
+            }
+        }
+
+        .need-help {
+            display: none;
         }
     }
 }

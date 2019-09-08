@@ -75,3 +75,27 @@
         }
     }
 }
+
+@media only screen and (max-width: 700px)  {
+    :host {
+        height: 200px;
+        .main {
+            height: 150px;
+            .main-container {
+                .section {
+                    display: none;
+                }
+                .section:last-child {
+                    display: flex;
+                }
+            }
+        }
+
+        .credits {
+            font-size: 14px;
+            p {
+                margin: 0 5px;
+            }
+        }
+    }    
+}

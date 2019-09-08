@@ -16,7 +16,7 @@
     </div>
   </div>
 </div>
-<div class='slide'>
+<div class='slide' [class.no-mobile]='noMobileCard'>
   <ng-container *ngFor='let slide of slide | async'>
     <app-result-card [result]='slide'></app-result-card>
   </ng-container>

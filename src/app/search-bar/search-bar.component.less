@@ -20,7 +20,7 @@ input[type=text] {
     margin-bottom: -25px;
 }
 
-span {
+.placeholder {
     position: relative;
     font-family: @primaryFont;
     color: @primaryPurple;
@@ -29,8 +29,19 @@ span {
     font-size: 16px;
     font-weight: normal;
     pointer-events: none;
+    width: ~'calc(100% - 60px)';
+    overflow-x: hidden;
+    display: inline-block;
+    white-space: nowrap;
 
     &.focus {
         visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 700px)  {
+    .placeholder {
+        font-size: 14px;
+        overflow: hidden;
     }
 }

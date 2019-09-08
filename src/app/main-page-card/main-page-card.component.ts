@@ -13,6 +13,7 @@ export class MainPageCardComponent implements OnInit {
   @Input() colors;
   @Input() types = 'all';
   @Input() filters = null;
+  @Input() noMobileCard = false;
 
   slide = new Subject<any>();
 

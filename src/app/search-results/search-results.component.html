@@ -1,7 +1,10 @@
-<div #column0 class='column'>
+<div #column0 class='column desktop'>
   <app-result-card *ngFor="let result of columns[0]" [result]='result'></app-result-card>
 </div>
-<div #column1 class='column'>
+<div #column1 class='column desktop'>
   <app-result-card *ngFor="let result of columns[1]" [result]='result'></app-result-card>
+</div>
+<div #columnA class='column mobile'>
+  <app-result-card *ngFor="let result of columnAll" [result]='result'></app-result-card>
 </div>
 

@@ -16,6 +16,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
   @Input() manager: SearchManager;
   @Input() results: Observable<any>;
   columns = [[], []];
+  columnAll = [];
   @ViewChild('column0') column0ref: ElementRef;
   @ViewChild('column1') column1ref: ElementRef;
   searchResultsSubs: Subscription;
@@ -35,6 +36,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
 
   ngOnDestroy() {
     this.columns = [[], []];
+    this.columnAll = [];
   }
 
   ngOnChanges() {
@@ -52,18 +54,23 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
           this.assignCard(result);
         });
     }
-    this.columns = [[], []];
+    this.ngOnDestroy();
   }
 
   assignCard(result) {
     setTimeout(() => {
-      const columnHeights = [this.column0ref.nativeElement.offsetHeight,
-                              this.column1ref.nativeElement.offsetHeight];
-      if (columnHeights[0] <= columnHeights[1]) {
-        this.columns[0].push(result);
-      } else {
-        this.columns[1].push(result);
+      try {
+        const columnHeights = [this.column0ref.nativeElement.offsetHeight,
+                               this.column1ref.nativeElement.offsetHeight];
+        if (columnHeights[0] <= columnHeights[1]) {
+          this.columns[0].push(result);
+        } else {
+          this.columns[1].push(result);
+        }
+      } catch (e) {
+        console.log('ERROR');
       }
+      this.columnAll.push(result);
     }, 0);
   }
 
