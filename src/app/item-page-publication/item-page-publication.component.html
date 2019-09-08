@@ -7,12 +7,11 @@
     </div>
     <div class='infoline' *ngIf='document.publisher'>
       <label i18n>מקור</label>
-      <span>{{_._(document, 'publisher')}}</span>
-    </div>
-    <div class='infoline'>
-      <label></label>
-      <span>{{document.year}}</span>&nbsp;|&nbsp;
-      <span>{{_._(document, 'languages').join(', ')}}</span>
+      <span>
+        <span>{{_._(document, 'publisher')}}</span><br/>
+        <span>{{document.year}}</span>&nbsp;|&nbsp;
+        <span>{{_._(document, 'languages').join(', ')}}</span>
+      </span>
     </div>
   </div>
 </app-item-page-header>

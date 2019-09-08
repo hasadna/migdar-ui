@@ -7,10 +7,6 @@
     width: @containerWidth;
     max-width: 100%;
 
-    @media only screen and (max-width: 1290px)  {
-        padding: 0 20px;
-    }
-
     .item-props {
         display: flex;
         flex-flow: column;
@@ -30,30 +26,57 @@
             }
         }
     }
-}
 
-::ng-deep app-result-card-dataset.main {
-    width: 70%;
-    > h1 {
-        display: none;
-    }
-    .legend {
-        .name {
-            font-size: 20px !important;
+    ::ng-deep app-result-card-dataset.main {
+        width: 70%;
+        > h1 {
+            display: none;
         }
-        .color {
-            border-width: 3px !important;
+        .legend {
+            .name {
+                font-size: 20px !important;
+            }
+            .color {
+                border-width: 3px !important;
+            }
         }
     }
-}
 
-app-item-page-search-results {
+    app-item-page-search-results {
 
-    h1 {
-        font-family: @secondaryFont;
-        color: @primaryPurple;
-        display: block;
-        margin: 30px 0;
-        font-size: 28px;
+        h1 {
+            font-family: @secondaryFont;
+            color: @primaryPurple;
+            display: block;
+            margin: 30px 0;
+            font-size: 28px;
+        }
+    }
+
+    @media only screen and (max-width: 1290px)  {
+        padding: 0 20px;
+    }
+
+    @media only screen and (max-width: 700px)  {
+        .item-props {
+            margin-top: 10px;
+            .item-prop {
+                flex-flow: column;
+                margin: 10px 0;
+                label {
+                    flex:  0 0 auto;
+                }
+            }
+        }
+
+        app-result-card-dataset.main {
+            margin-top: 30px;
+            width: 100%;
+            .legend {
+                .name {
+                    font-size: 14px !important;
+                }
+            }
+        }
     }
 }
