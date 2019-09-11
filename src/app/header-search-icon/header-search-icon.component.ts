@@ -25,7 +25,7 @@ export class HeaderSearchIconComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   close() {
     window.setTimeout(() => {
       this.searchBar.term = '';

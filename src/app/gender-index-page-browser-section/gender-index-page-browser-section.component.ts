@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, OnChanges, ViewChild, ElementRef, HostListener, AfterViewInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, ViewChild,
+         ElementRef, HostListener, AfterViewInit, Output, EventEmitter } from '@angular/core';
 import { from } from 'rxjs';
 import { I18nService } from '../i18n.service';
 import { ActivatedRoute } from '@angular/router';

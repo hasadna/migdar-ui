@@ -55,7 +55,8 @@ import { GenericPageAboutComponent } from './generic-page-about/generic-page-abo
 import { GenericPageEulaComponent } from './generic-page-eula/generic-page-eula.component';
 import { GenericPagePrivacyComponent } from './generic-page-privacy/generic-page-privacy.component';
 import { GenderIndexPageBrowserComponent } from './gender-index-page-browser/gender-index-page-browser.component';
-import { GenderIndexPageBrowserHeaderElementComponent } from './gender-index-page-browser-header-element/gender-index-page-browser-header-element.component';
+import { GenderIndexPageBrowserHeaderElementComponent
+ } from './gender-index-page-browser-header-element/gender-index-page-browser-header-element.component';
 import { GenderIndexPageBrowserSectionComponent } from './gender-index-page-browser-section/gender-index-page-browser-section.component';
 import { GenericPageContactComponent } from './generic-page-contact/generic-page-contact.component';
 
