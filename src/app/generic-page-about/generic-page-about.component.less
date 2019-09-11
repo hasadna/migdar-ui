@@ -1,6 +1,14 @@
 @import '../../common.less';
 
 :host {
+    .org {
+        display: flex;
+        flex-flow: row;
+        max-width: @containerWidth;
+        align-items: center;
+        margin: 20px 0;
+    }
+
     .logos {
         display: flex;
         flex-flow: row;
@@ -8,26 +16,49 @@
         align-items: flex-end;
         flex-wrap: wrap;
         justify-content: space-evenly;
+    }
 
-        .logo {
-            display: flex;
-            flex-flow: column;
-            justify-content: flex-end;
-            align-items: center;
-            max-width: ~'calc(100% / 6)';
-            min-width: calc(@containerWidth / 10);
-            margin: 15px ~'calc(100%  / 24)';
+    .logo {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        align-items: center;
+        max-width: ~'calc(100% / 6)';
+        min-width: 175px;
+        margin: 15px ~'calc(100%  / 24)';
 
-            img {
-                width: 100%;
+        img {
+            width: 100%;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+            text-align: center;
+            min-height: 70px;
+        }
+    }
+
+    .team-cols {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+
+        .col {
+            flex: 0 0 20%;
+
+            h3 {
+                margin: 10px 20px;
+                color: @primaryPurple;
+                font-weight: bold;
+                font-size: 22px;
             }
 
-            label {
-                font-size: 18px;
-                font-weight: bold;
-                margin: 10px 0;
-                text-align: center;
-                min-height: 70px;
+            li {
+                list-style: none;
+                font-size: 20px;
+                font-family: @primaryFont;
             }
         }
     }
