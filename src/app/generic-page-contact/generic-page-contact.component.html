@@ -1,0 +1,47 @@
+<app-generic-page>
+  <h1 i18n>
+    צרו קשר 
+  </h1>
+
+  <h3 i18n>ביקרת במאגר הידע בנושא מגדר ולא מצאת את מה שחיפשת? יש לך מידע רלוונטי שתרצי לחלוק? הגעת למקום הנכון!</h3>
+  <h3 i18n>צרו קשר במייל <a href='mailto:info@yodaat.org'>info@yodaat.org</a> ואנו נחזור אליכן בהקדם</h3>
+
+  <div class='contact-forms'>
+    <div class='form-kinds'>
+      <div class='kind' [class.active]='selected == "help"' (click)='selected = "help"'>
+        <img src='assets/contact-help-ic.svg'/>
+        <h3>סיוע באיתור מידע</h3>
+      </div>
+      <div class='kind' [class.active]='selected == "add"' (click)='selected = "add"'>
+        <img src='assets/contact-add-ic.svg'/>
+        <h3>הוספת חומרים למאגר</h3>
+      </div>
+      <div class='kind' [class.active]='selected == "other"' (click)='selected = "other"'>
+        <img src='assets/contact-other-ic.svg'/>
+        <h3>שירותים נוספים</h3>
+      </div>
+    </div>
+    <div class='contact-form'>
+      <div *ngIf='selected == "help"' i18n>
+        לא מצאת מה שחיפשת? ניתן לפנות אלינו וננסה לסייע! מלאי מטה טופס בקשת איתור ומציאת מידע
+      </div>
+      <div *ngIf='selected == "add"' i18n>
+        האם יש ברשותך (או ידוע לך על) פרסום כלשהו, נתונים או מידע רלוונטי שעדיין לא כלולים במרכז הידע? נשמח להוסיף למאגר!
+      </div>
+      <div *ngIf='selected == "other"' i18n>
+        צוות המרכז מעניק שירותי מידע ומחקר שונים, כגון סקירות ספרות, מחקרים השוואתיים, עיבוד נתונים, איתור מקורות מידע,
+        למידה מנסיונות מוצלחים (best practives), ועוד. 
+        חלק משירותים אלה ניתנים בתשלום. לפרטים נוספים ניתן לפנות לצוות המרכז.
+      </div>
+      <input type='text' #fullName     placeholder='שם מלא*'/>
+      <input type='text' #phoneNum     placeholder='מספר טלפון/טלפון נייד'/>
+      <input type='text' #organization placeholder='שיוך ארגוני'/>
+      <input type='text' #itemLink     placeholder='לינק לפריט המידע' *ngIf='selected == "add"'/>
+      <textarea rows='5' #requestBody  placeholder='מה חיפשת ולא מצאת? מה מטרת החיפוש?' *ngIf='selected == "help"'></textarea>
+      <textarea rows='5' #requestBody  placeholder='פרטים אודות הפרסום/מידע: כותרת, תיאור קצר, מקור' *ngIf='selected == "add"'></textarea>
+      <textarea rows='5' #requestBody  placeholder='ספרי לנו מהו השירות המבוקש' *ngIf='selected == "other"'></textarea>
+      <a class='send' [href]='mailto()' target='_blank'>שליחת הודעה</a>
+    </div>
+  </div>
+
+</app-generic-page>

@@ -5,6 +5,14 @@
     flex-flow: column;
     align-items: center;
 
+    .bg {
+        position: absolute;
+        height: 100%;
+        width: 100vw;
+        background-color: @backgroundLight;
+        z-index: -1;
+    }
+
     app-item-page-header {
         ::ng-deep {
             .header .inner .content {

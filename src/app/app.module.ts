@@ -57,6 +57,7 @@ import { GenericPagePrivacyComponent } from './generic-page-privacy/generic-page
 import { GenderIndexPageBrowserComponent } from './gender-index-page-browser/gender-index-page-browser.component';
 import { GenderIndexPageBrowserHeaderElementComponent } from './gender-index-page-browser-header-element/gender-index-page-browser-header-element.component';
 import { GenderIndexPageBrowserSectionComponent } from './gender-index-page-browser-section/gender-index-page-browser-section.component';
+import { GenericPageContactComponent } from './generic-page-contact/generic-page-contact.component';
 
 
 const appRoutes: Routes = [
@@ -76,6 +77,7 @@ const appRoutes: Routes = [
   { path: 'inequality', component: InfoPageInequalityComponent },
   { path: 'methodology', component: InfoPageGenderIndexComponent },
   { path: 'about', component: GenericPageAboutComponent },
+  { path: 'contact-us', component: GenericPageContactComponent },
   { path: 'eula', component: GenericPageEulaComponent },
   { path: 'privacy', component: GenericPagePrivacyComponent },
   { path: '', component: MainPageComponent },
@@ -136,7 +138,8 @@ const appRoutes: Routes = [
     GenericPagePrivacyComponent,
     GenderIndexPageBrowserComponent,
     GenderIndexPageBrowserHeaderElementComponent,
-    GenderIndexPageBrowserSectionComponent
+    GenderIndexPageBrowserSectionComponent,
+    GenericPageContactComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,105 @@
+@import '../../common.less';
+
+:host {
+
+    ::ng-deep {
+        app-generic-page > .content {
+            padding-top: 40px;
+            max-width: @containerWidth !important;
+            position: relative;
+        }
+    }
+
+    h3 {
+        color: @primaryPurple;
+        font-family: @secondaryFont;
+        font-size: 22px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .contact-forms {
+        display: flex;
+        flex-flow: row;
+        margin-top: 40px;
+
+        .form-kinds {
+            flex: 0 0 auto;
+            display: flex;
+            flex-flow: column;
+            min-width: 300px;
+    
+            .kind {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                cursor: pointer;
+                margin: 10px 0;
+
+                img {
+                    width: 30px;
+                    max-height: 25px;
+                    margin-left: 10px;
+                }
+
+                h3 {
+                    white-space: nowrap;
+                    margin: 0;
+                }
+
+                &.active {
+                    h3 {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .contact-form {
+            flex: 1 1 auto;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            padding: 10px 50px;
+
+            div {
+                margin-bottom: 20px;
+            }
+
+            input {
+                width: 40%;
+                font-size: 18px;
+                padding: 10px 20px;
+                margin: 10px 0;
+                background-color: white;
+                border: none;
+                border-radius: 25px;
+            }
+
+            textarea {
+                width: 80%;
+                font-size: 18px;
+                padding: 10px 20px;
+                margin: 10px 0;
+                background-color: white;
+                border: none;
+                border-top: 2px solid @primaryPurple;
+                font-family: @primaryFont;
+            }
+
+            .send {
+                font-size: 18px;
+                font-family: @secondaryFont;
+                font-weight: bold;
+                padding: 10px 20px;
+                margin: 10px 0;
+                color: white;
+                background-color: @primaryPurple;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+}
