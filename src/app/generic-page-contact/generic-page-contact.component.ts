@@ -7,7 +7,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class GenericPageContactComponent implements OnInit {
 
-  selected = 'help';
+  selected = 'add';
 
   @ViewChild('fullName') fullName: ElementRef;
   @ViewChild('phoneNum') phoneNum: ElementRef;
