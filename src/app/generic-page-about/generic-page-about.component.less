@@ -1,6 +1,13 @@
 @import '../../common.less';
 
 :host {
+
+    h2 {
+        font-family: @secondaryFont !important;
+        font-size: 36px;
+        font-weight: 400;
+    }
+
     .org {
         display: flex;
         flex-flow: row;
@@ -33,7 +40,7 @@
 
         label {
             font-size: 18px;
-            font-weight: bold;
+            font-weight: normal;
             margin: 10px 0;
             text-align: center;
             min-height: 70px;
@@ -49,10 +56,15 @@
             flex: 0 0 20%;
 
             h3 {
-                margin: 10px 20px;
+                margin: 10px 0px;
                 color: @primaryPurple;
                 font-weight: bold;
                 font-size: 22px;
+                margin-top: 20px;
+            }
+
+            ul {
+                padding: 0;
             }
 
             li {
