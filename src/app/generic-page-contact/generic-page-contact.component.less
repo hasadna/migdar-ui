@@ -64,20 +64,25 @@
 
             div {
                 margin-bottom: 20px;
+                font-size: 20px;
+                font-family: @primaryFont;
             }
 
             input {
                 width: 40%;
+                min-width: 300px;
                 font-size: 18px;
                 padding: 10px 20px;
                 margin: 10px 0;
                 background-color: white;
                 border: none;
                 border-radius: 25px;
+                font-family: @primaryFont;
             }
 
             textarea {
                 width: 80%;
+                min-width: 300px;
                 font-size: 18px;
                 padding: 10px 20px;
                 margin: 10px 0;
@@ -99,6 +104,35 @@
                 border-radius: 25px;
                 cursor: pointer;
                 text-decoration: none;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 700px)  {
+        .contact-forms {
+            flex-flow: column;
+
+            .form-kinds {
+                flex-flow: row;
+                margin: 20px 0;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #444;
+
+                .kind {
+                    margin: 0 10px;
+                    h3 {
+                        font-size: 18px;
+                        white-space: normal;
+                    }
+                }
+            }
+
+            .contact-form {
+                padding: 20px;
+
+                input, textarea {
+                    width: 100%;
+                }
             }
         }
     }
