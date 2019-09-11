@@ -2,4 +2,11 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    @media only screen and (max-width: 700px)  {
+        ::ng-deep app-search-filters-property {
+            display: none;
+        }
+    }
+
 }

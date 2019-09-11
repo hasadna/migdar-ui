@@ -83,4 +83,28 @@ p {
     .tags {
         display: none;
     }
+    .tagline {
+        margin-bottom: 20px;
+    }   
+    .details {
+        flex-flow: column;
+
+        div {
+            max-width: auto !important;
+            img {
+                display: none;
+            }    
+        }
+
+        div:first-child {
+            flex: 1 1 auto;
+            margin-left: 0;
+            max-width: 100%;
+        }
+    
+        div:last-child {
+            display: none;
+        }
+    
+    }
 }

@@ -64,4 +64,22 @@
     app-search-bar {
         flex: 0 1 100%;
     }
+
+    @media only screen and (max-width: 1290px)  {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media only screen and (max-width: 700px)  {
+        padding: 20px;
+        > div {
+            flex-flow: column;
+
+            app-search-bar {
+                margin: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+
 }
