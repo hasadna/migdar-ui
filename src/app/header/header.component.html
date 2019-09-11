@@ -1,6 +1,6 @@
 <div class='header' (click)='langSelected = menuSelected = false'>
   <div class='container'>
-    <img class='logo' src='assets/sticky-logo.svg' (click)='router.navigateByUrl("/")'>
+    <img class='logo' src='assets/sticky-color-logo.svg' (click)='router.navigateByUrl("/")'>
     <span class='section-link purple' [class.active]='headerState.section === "publications"' i18n [routerLink]='"/publications"'>מאגר המידע הכללי</span>
     <span class='section-link green'  [class.active]='headerState.section === "stats"' i18n [routerLink]='"/stats"'>סטטיסטיקה מגדרית</span>
     <span class='section-link orange' [class.active]='headerState.section === "orgs"' i18n [routerLink]='"/organisations"'>ארגונים ופעילות בתחום המגדר</span>
