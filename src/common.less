@@ -59,3 +59,16 @@
 
 @tagsBg:#785d7018;
 @tagsFg:#444;
+@tagsBgHover:#785d7030;
+@tagsFgHover:#888;
+
+.tagsMixin {
+    background-color: @tagsBg;
+    color: @tagsFg;
+    transition-property: color, background-color;
+    transition-duration: 0.5s;
+    &:hover {
+        background-color: @tagsBgHover;
+        color: @tagsFgHover;
+    }    
+}
