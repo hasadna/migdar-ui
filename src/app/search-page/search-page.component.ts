@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 import { SearchManager } from '../search-manager';
 import { FilterManagerService } from '../filter-manager.service';
+import { filter } from 'rxjs/operators';
 
 @AutoUnsubscribe()
 @Component({

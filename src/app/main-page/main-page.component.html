@@ -17,10 +17,12 @@
   <app-main-page-spinner></app-main-page-spinner>
 </div>
 <div class='square-links'>
-  <div class='square-link' (click)='router.navigate(["./publications"])'>
-    <img src='assets/lp-library-ic.svg'>
-    <h1 i18n><span>ספריית</span><br/><span>מקורות</span></h1>
-    <h2 i18n>{{counts.publications.total_overall | number}} פריטים</h2>
+  <div class='square-link'>
+    <a routerLink='publications'>
+      <img src='assets/lp-library-ic.svg'>
+      <h1 i18n><span>ספריית</span><br/><span>מקורות</span></h1>
+      <h2 i18n>{{counts.publications.total_overall | number}} פריטים</h2>
+    </a>
   </div>
   <div class='square-link' (click)='router.navigate(["./stats"])'>
     <img src='assets/lp-stats-ic.svg'>

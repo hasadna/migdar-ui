@@ -2,11 +2,14 @@
     display: flex;
     flex-flow: row;
     align-items: flex-start;
-    flex-wrap: wrap;
     width: 100%;
     padding: 20px 40px;
 
     > * {
         margin: 0 10px;
+    }
+
+    @media only screen and (max-width: 1290px)  {
+        flex-wrap: wrap;
     }
 }

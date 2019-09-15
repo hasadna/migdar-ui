@@ -14,7 +14,7 @@ export class MainPageSpinnerComponent implements OnInit {
   // TITLES = ['פמיניזם', 'חברה בישראל', 'תקשורת', 'משפט', 'ביטחון', 'מעגל החיים וזמן', 'דת',
   //           'מדע, טכנולוגיה וסביבה', 'בריאות ומיניות', 'אלימות מגדרית', 'משפחה', 'תרבות וספורט',
   //           'עוצמה', 'עוני', 'כלכלה ושוק העבודה', 'השכלה'];
-  TITLES = FILTERS_CONFIG.gender_index[0].options;
+  TITLES = FILTERS_CONFIG.all[0].options;
 
   constructor(public _: I18nService) { }
 

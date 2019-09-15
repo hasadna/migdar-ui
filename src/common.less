@@ -72,3 +72,19 @@
         color: @tagsFgHover;
     }    
 }
+
+.fadeoff {
+    width: 100%;
+    position: relative;
+    max-height: 196px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: ~'calc(196px - 1em)';
+        height: 1em;
+        left: 0;
+        width: 70px;
+        background: linear-gradient(to left, #ffffff00 0%, #ffffffff 100%);
+    }   
+}

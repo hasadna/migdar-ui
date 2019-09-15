@@ -17,6 +17,10 @@
       [style.transform-origin]='(point.x + 200) + "px " + (point.y + 10) + "px"'
       [class]='"text"'
   >
-    <div [class]='"inner-text text" + point.i'>{{_._(point.text, 'v')}}</div>
+    <div [class]='"inner-text text" + point.i'>
+      <a routerLink='search' [queryParams]='{filters: "{\"life_areas\":[\"" + point.text.v + "\"]}"}'>
+        {{_._(point.text, 'v')}}
+      </a>
+    </div>
   </div>
 </ng-container>

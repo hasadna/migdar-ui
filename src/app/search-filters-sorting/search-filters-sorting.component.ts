@@ -24,12 +24,14 @@ export class SearchFiltersSortingComponent implements OnInit, OnChanges {
     if (this.sub) {
       this.sub.unsubscribe();
     }
-    this.sub = this.manager.parameterStream.subscribe((params) => {
-      console.log('QQQQ', params);
-      if (params) {
-        this.term = params.term;
-      }
-    });
+    if (this.manager) {
+      this.sub = this.manager.parameterStream.subscribe((params) => {
+        console.log('QQQQ', params);
+        if (params) {
+          this.term = params.term;
+        }
+      });
+    }
   }
   get selected(): string {
     return this.sortOrder;
