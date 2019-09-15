@@ -18,26 +18,32 @@
 </div>
 <div class='square-links'>
   <div class='square-link'>
-    <a routerLink='publications'>
+    <a href='/publications'>
       <img src='assets/lp-library-ic.svg'>
       <h1 i18n><span>ספריית</span><br/><span>מקורות</span></h1>
       <h2 i18n>{{counts.publications.total_overall | number}} פריטים</h2>
     </a>
   </div>
-  <div class='square-link' (click)='router.navigate(["./stats"])'>
-    <img src='assets/lp-stats-ic.svg'>
-    <h1 i18n><span>סטטיסטיקה</span><br/><span>מגדרית</span></h1>
-    <h2 i18n>{{counts.stats.total_overall}} פריטים</h2>
+  <div class='square-link'>
+    <a href='/stats'>
+      <img src='assets/lp-stats-ic.svg'>
+      <h1 i18n><span>סטטיסטיקה</span><br/><span>מגדרית</span></h1>
+      <h2 i18n>{{counts.stats.total_overall}} פריטים</h2>
+    </a>
   </div>
-  <div class='square-link' (click)='router.navigate(["./organisations"])'>
-    <img src='assets/lp-orgs-ic.svg'>
-    <h1 i18n><span>ארגונים ופעילות</span><br/><span>בתחום המגדר</span></h1>
-    <h2 i18n>{{counts.orgs.total_overall}} ארגונים</h2>
+  <div class='square-link'>
+    <a href='/organisations'>
+      <img src='assets/lp-orgs-ic.svg'>
+      <h1 i18n><span>ארגונים ופעילות</span><br/><span>בתחום המגדר</span></h1>
+      <h2 i18n>{{counts.orgs.total_overall}} ארגונים</h2>
+    </a>
   </div>
-  <div class='square-link' (click)='router.navigate(["./gender-index"])'>
-    <img src='assets/lp-madad-ic.svg'>
-    <h1 i18n><span>מדד</span><br/><span>המגדר</span></h1>
-    <h2 i18n>קראו עוד</h2>
+  <div class='square-link'>
+    <a href='/gender-index'>
+      <img src='assets/lp-madad-ic.svg'>
+      <h1 i18n><span>מדד</span><br/><span>המגדר</span></h1>
+      <h2 i18n>קראו עוד</h2>
+    </a>
   </div>
 </div>
 <div class='recently-added'>

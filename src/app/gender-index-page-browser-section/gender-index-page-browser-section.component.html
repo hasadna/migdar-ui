@@ -6,8 +6,10 @@
   </svg>
 </div>
 <div class='dropdown' [class.open]='open'>
-  <div class='dropdown-item' *ngFor='let chart of charts' [routerLink]='"/item/" + chart.doc_id'>
-    {{_._(chart, 'chart_title')}}
+  <div class='dropdown-item' *ngFor='let chart of charts'>
+    <a [href]='"/item/" + chart.doc_id'>
+      {{_._(chart, 'chart_title')}}
+    </a>
   </div>  
 </div>
 <app-search-results [results]='chartsObservable'></app-search-results>

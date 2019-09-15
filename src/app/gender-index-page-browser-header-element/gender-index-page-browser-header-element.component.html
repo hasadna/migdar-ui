@@ -1,7 +1,7 @@
-<div class='container' [class.active]='active === name'
-     [routerLink]="'.'" [fragment]="name"
->
-  <img class='active' [src]='"assets/gender_index_30x30/White/neg-" + slug + "-ic.svg"'/>
-  <img class='inactive' [src]='"assets/gender_index_30x30/Red/" + slug + "-ic.svg"'/>
-  <span>{{display}}</span>
+<div class='container' [class.active]='active === name'>
+  <a [href]='"gender-index#" + name'>
+    <img class='active' [src]='"assets/gender_index_30x30/White/neg-" + slug + "-ic.svg"'/>
+    <img class='inactive' [src]='"assets/gender_index_30x30/Red/" + slug + "-ic.svg"'/>
+    <span>{{display}}</span>
+  </a>
 </div>
