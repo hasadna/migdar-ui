@@ -147,9 +147,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       {
-        // enableTracing: true, // <-- debugging purposes only
-        scrollPositionRestoration: 'enabled',
-        anchorScrolling: 'disabled',
+        enableTracing: true, // <-- debugging purposes only
+        // scrollPositionRestoration: 'enabled',
+        // anchorScrolling: 'disabled',
       }
     ),
     HttpClientModule,

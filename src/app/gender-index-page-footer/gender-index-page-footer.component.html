@@ -26,7 +26,7 @@
             >
                 <app-result-card 
                     [result]='chart'
-                    [queryParams]='{"section": active_dimension}'
+                    [queryParams]='"?section=" + active_dimension'
                 ></app-result-card>
             </div>
         </ng-container>
