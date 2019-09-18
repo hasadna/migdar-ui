@@ -79,12 +79,15 @@
     max-height: 196px;
 
     &:after {
-        content: '';
+        content: '…';
         position: absolute;
-        top: ~'calc(196px - 1em)';
-        height: 1em;
+        top: ~'calc(188px - 1em)';
+        height: 2em;
         left: 0;
-        width: 70px;
-        background: linear-gradient(to left, #ffffff00 0%, #ffffffff 100%);
+        width: 200px;
+        background: linear-gradient(to right, #ffffffff 0%, #ffffffff 65px, #ffffffcc 65px, #ffffff00 100%);
+        text-align: left;
+        padding-left: 50px;
+        color: rgba(0,0,0, 20%)
     }   
 }

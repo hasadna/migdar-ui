@@ -5,7 +5,6 @@ import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 import { Subscription, Observable } from 'rxjs';
 import { SearchManager } from '../search-manager';
 
-@AutoUnsubscribe()
 @Component({
   selector: 'app-search-results',
   templateUrl: './search-results.component.html',
@@ -34,16 +33,25 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
     });
   }
 
-  ngOnDestroy() {
+  clear() {
     this.columns = [[], []];
     this.columnAll = [];
+  }
+
+  ngOnDestroy() {
+    if (this.bottommerSubs) {
+      this.bottommerSubs.unsubscribe();
+    }
+    if (this.searchResultsSubs) {
+      this.searchResultsSubs.unsubscribe();
+    }
   }
 
   ngOnChanges() {
     if (this.searchResultsSubs) {
       this.searchResultsSubs.unsubscribe();
     }
-    this.ngOnDestroy();
+    this.clear();
     if (this.manager) {
       this.searchResultsSubs =
         this.manager.results.subscribe((result) => {

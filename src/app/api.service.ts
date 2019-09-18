@@ -16,15 +16,14 @@ export class ApiService {
   fetch(types, term?, count?, offset?, filters?, sortOrder?) {
     let params = '';
     console.log('FETCHING', types, term, offset, filters);
+    if (term) { params += `&q=${encodeURIComponent(term)}`; }
     if (count) { params += `&size=${count}`; }
     if (offset) { params += `&offset=${offset}`; }
     if (filters) { params += `&filter=${encodeURIComponent(JSON.stringify(filters))}`; }
     if (sortOrder) { params += `&order=${sortOrder}`; }
-    params += `&dont_highlight=${encodeURIComponent('*')}`;
     if (params.length > 0) {
       params = '?' + params.slice(1);
     }
-    if (term) { params = `/${encodeURIComponent(term)}` + params; }
     return this.http.get(`${this.url}/search/${types}${params}`)
               .pipe(
                 map((result: any) => {
