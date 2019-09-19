@@ -2646,39 +2646,32 @@
           <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="dbee87152ecae2e19123009515d01179b9817b58" datatype="html">
-        <source>אם את חושבת כי פרטיותך נפגעה בעת השימוש באתר, אנא פני למרכז הידע </source>
+      <trans-unit id="b39a78e8879e84074203d53877e10575ed3158d5" datatype="html">
+        <source>אם את חושבת כי פרטיותך נפגעה בעת השימוש באתר, אנא פני למרכז הידע &quot;יודעת&quot; באמצעות כתובת הדואר האלקטרוני privacy@yodaat.org. צוות אתר מרכז הידע &quot;יודעת&quot; עומד לרשותך לכל פניה, שאלה או בקשה.  הפניות תיבחנה ותעננה תוך פרק זמן סביר.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
           <context context-type="linenumber">68</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="80347c9786070f3a2fb053954157d6f89dcfadb1" datatype="html">
-        <source>יודעת&quot; באמצעות כתובת הדואר האלקטרוני privacy@yodaat.org. צוות אתר מרכז הידע &quot;יודעת&quot; עומד לרשותך לכל פניה, שאלה או בקשה.  הפניות תיבחנה ותעננה תוך פרק זמן סביר.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3a28323bed868b28ab4bd39dec93a27290bfb061" datatype="html">
         <source>שינויים במדיניות הפרטיות </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="837f6de3b316cf47ec33d43caf333569fb259337" datatype="html">
         <source>צוות מרכז הידע &quot;יודעת&quot; יהיה רשאי לשנות מעת לעת את תנאי השימוש באתר ו/או מדינות הפרטיות. אם יבוצעו שינויים מהותיים תופיע על כך הודעה בעמוד הבית של אתר &quot;יודעת&quot; 7 ימים לפני כניסת השינוי לתוקף. עם זאת, אם התיקון מחויב על פי דין - ישונה לאלתר ותינתן הודעה על כך באתר הבית של אתר &quot;יודעת&quot;. אם המשתמשת לא מסכימה לשינוי, היא רשאית לחדול מלעשות שימוש באתר, רשאית לבקש את מחיקת המידע האישי, אם קיים, ממאגר מרכז הידע &quot;יודעת&quot;. צוות מרכז הידע &quot;יודעת&quot; יסיר את המשתמשת תוך פרק זמן סביר מרגע הגשת בקשתה. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2b88255bbba183e509582f3a078c4852ede85ef3" datatype="html">
         <source>* הנוסח בעברית של מדיניות הפרטיות הוא הנוסח התקף מבחינה משפטית, אם יש אי התאמה או סתירה בין הנוסחים (עברית/ערבית/אנגלית).</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5bfede3887c5fc747ccbcf45180ab8863fdd219c" datatype="html">
