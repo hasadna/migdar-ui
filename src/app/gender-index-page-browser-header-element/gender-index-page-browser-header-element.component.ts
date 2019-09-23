@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-gender-index-page-browser-header-element',
@@ -13,7 +14,7 @@ export class GenderIndexPageBrowserHeaderElementComponent implements OnInit {
   @Input() name: string;
   @Input() display: string;
 
-  constructor() { }
+  constructor(public _: I18nService) { }
 
   ngOnInit() {
   }

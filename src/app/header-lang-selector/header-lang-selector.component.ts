@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-header-lang-selector',
@@ -10,7 +11,7 @@ export class HeaderLangSelectorComponent implements OnInit {
   @Input() selected: boolean;
   @Output() selectedChange = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor(public _: I18nService) { }
   lang = 'עב';
   console = console;
 

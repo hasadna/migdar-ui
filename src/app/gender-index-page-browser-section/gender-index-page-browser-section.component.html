@@ -7,7 +7,7 @@
 </div>
 <div class='dropdown' [class.open]='open'>
   <div class='dropdown-item' *ngFor='let chart of charts'>
-    <a [href]='"/item/" + chart.doc_id'>
+    <a [href]='_.P("/item/" + chart.doc_id)'>
       {{_._(chart, 'chart_title')}}
     </a>
   </div>  

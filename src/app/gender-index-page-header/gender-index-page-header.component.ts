@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService } from '../api.service';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-gender-index-page-header',
@@ -10,7 +11,7 @@ export class GenderIndexPageHeaderComponent implements OnInit, OnDestroy {
 
   phase = 0;
   interval: number;
-  constructor(public api: ApiService) { }
+  constructor(public api: ApiService, public _: I18nService) { }
 
   ngOnInit() {
     this.interval = window.setInterval(() => {

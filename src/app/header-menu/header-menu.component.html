@@ -12,13 +12,13 @@
 </div>
 
 <app-common-overlay *ngIf='selected'>
-  <a href='/'><img src='assets/footer-logo.svg' height='110px'/></a>
-  <h2 i18n ><a href='/publications'>מאגר המידע הכללי</a></h2>
-  <h2 i18n ><a href='/stats'>סטטיסטיקה מגדרית</a></h2>
-  <h2 i18n ><a href='/organisations'>ארגונים ופעילות בתחום המגדר</a></h2>
-  <h2 i18n ><a href='/gender-index'>מדד המגדר</a></h2>
-  <h2 i18n ><a href='/about'>אודות</a></h2>
-  <h2 i18n ><a href='/contact-us'>צרו קשר</a></h2>
-  <h2 i18n ><a href='/eula'>תקנון האתר</a></h2>
-  <h2 i18n ><a href='/privacy'>מדיניות פרטיות</a></h2>
+  <a [href]="_.P('/')"><img src='assets/footer-logo.svg' height='110px'/></a>
+  <h2 i18n ><a [href]="_.P('/publications')">מאגר המידע הכללי</a></h2>
+  <h2 i18n ><a [href]="_.P('/stats')">סטטיסטיקה מגדרית</a></h2>
+  <h2 i18n ><a [href]="_.P('/organisations')">ארגונים ופעילות בתחום המגדר</a></h2>
+  <h2 i18n ><a [href]="_.P('/gender-index')">מדד המגדר</a></h2>
+  <h2 i18n ><a [href]="_.P('/about')">אודות</a></h2>
+  <h2 i18n ><a [href]="_.P('/contact-us')">צרו קשר</a></h2>
+  <h2 i18n ><a [href]="_.P('/eula')">תקנון האתר</a></h2>
+  <h2 i18n ><a [href]="_.P('/privacy')">מדיניות פרטיות</a></h2>
 </app-common-overlay>

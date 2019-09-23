@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-generic-page-about',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenericPageAboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _: I18nService) { }
 
   ngOnInit() {
   }

@@ -2,13 +2,13 @@
   <div class='main-container'>
     <div class='section'>
       <img src='assets/footer-help.svg'/>
-      <h1 i18n><a href='/contact-us'>עזרו לנו להשתפר</a></h1>
+      <h1 i18n><a [href]="_.P('/contact-us')">עזרו לנו להשתפר</a></h1>
     </div>
     <div class='section'>
       <img class='separator' src='assets/line-footer.svg'/>
     </div>
     <div class='section'>
-      <a href='/'><img class='logo' src='assets/footer-logo.svg'/></a>
+      <a [href]="_.P('/')"><img class='logo' src='assets/footer-logo.svg'/></a>
     </div>
     <div class='section'>
       <img class='separator' src='assets/line-footer.svg'/>

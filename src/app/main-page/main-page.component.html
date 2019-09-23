@@ -18,28 +18,28 @@
 </div>
 <div class='square-links'>
   <div class='square-link'>
-    <a href='/publications'>
+    <a [href]="_.P('/publications')">
       <img src='assets/lp-library-ic.svg'>
       <h1 i18n><span>ספריית</span><br/><span>מקורות</span></h1>
       <h2 i18n>{{counts.publications.total_overall | number}} פריטים</h2>
     </a>
   </div>
   <div class='square-link'>
-    <a href='/stats'>
+    <a [href]="_.P('/stats')">
       <img src='assets/lp-stats-ic.svg'>
       <h1 i18n><span>סטטיסטיקה</span><br/><span>מגדרית</span></h1>
       <h2 i18n>{{counts.stats.total_overall}} פריטים</h2>
     </a>
   </div>
   <div class='square-link'>
-    <a href='/organisations'>
+    <a [href]="_.P('/organisations')">
       <img src='assets/lp-orgs-ic.svg'>
       <h1 i18n><span>ארגונים ופעילות</span><br/><span>בתחום המגדר</span></h1>
       <h2 i18n>{{counts.orgs.total_overall}} ארגונים</h2>
     </a>
   </div>
   <div class='square-link'>
-    <a href='/gender-index'>
+    <a [href]="_.P('/gender-index')">
       <img src='assets/lp-madad-ic.svg'>
       <h1 i18n><span>מדד</span><br/><span>המגדר</span></h1>
       <h2 i18n>קראו עוד</h2>
@@ -51,7 +51,7 @@
   <div class='cards'>
     <app-result-card *ngFor='let result of (results | async)' [result]='result'></app-result-card>
   </div>
-  <h2 i18n><a href="/search">עוד פריטים שהתווספו לאחרונה&hellip;</a></h2>
+  <h2 i18n><a [href]="_.P('/search')">עוד פריטים שהתווספו לאחרונה&hellip;</a></h2>
 </div>
 <div class='need-help'>
   <div class='need-help-main'>
@@ -62,11 +62,11 @@
     <div class='buttons'>
       <div>
         <img src='assets/neg-share-ic.svg'/>
-        <span i18n>יש לי מה לשתף </span>
+        <a class='text' [href]="_.P('/contact-us')"><span i18n>יש לי מה לשתף </span></a>
       </div>
       <div>
         <img src='assets/info-ic.svg'/>
-        <span i18n>עזרו לי לאתר מידע</span>
+        <a class='text' [href]="_.P('/contact-us')"><span i18n>עזרו לי לאתר מידע</span></a>
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { BottommerService } from '../bottommer.service';
+import { I18nService } from '../i18n.service';
 
 declare const window: any;
 
@@ -11,7 +12,9 @@ declare const window: any;
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private bottommer: BottommerService) { }
+
+  constructor(private bottommer: BottommerService,
+              public _: I18nService) {}
 
   ngOnInit() {
   }

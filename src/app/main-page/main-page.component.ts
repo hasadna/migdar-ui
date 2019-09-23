@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { BottommerService } from '../bottommer.service';
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 import { map } from 'rxjs/operators';
+import { I18nService } from '../i18n.service';
 
 @AutoUnsubscribe()
 @Component({
@@ -26,7 +27,8 @@ export class MainPageComponent implements OnInit {
 
   constructor(private api: ApiService,
               public router: Router,
-              private bottommer: BottommerService) {
+              private bottommer: BottommerService,
+              public _: I18nService) {
     this.bottommerSubs = this.bottommer.reachedBottom.subscribe(() => {
       this.reveal += 1;
     });
