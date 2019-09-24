@@ -1364,55 +1364,13 @@
           <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4ab7a901be4ee407d2fbde3775e92d6ed3bb4152" datatype="html">
-        <source>לוגו ספריית יונס</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">81</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="9b21be43421cb4d9511d5d4985a3518114ac4626" datatype="html">
-        <source>לוגו מפתח חיפה</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">85</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="53c13ecd169881ab35d9c47db8804deba85ec589" datatype="html">
-        <source>לוגו הספריה הלאומית</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">89</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="4c67a00081af6e257d6aba7136b75887f4359321" datatype="html">
         <source>
 המידע אודות ארגונים ופעילות בתחום המגדר הוא פרי שיתוף פעולה עם עו&quot;ד קרן גרינבלט, קואליציית שותפות, עמותת איתך-מעכי, מיכל זאבי ושדולת הנשים בישראל
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">93</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="cdbe1e3468f6686da4ad63c99f5039a1a6b9d37a" datatype="html">
-        <source>לוגו שותפות</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">100</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="562c5e2c731ab62c02faefe6d0fd74ac824e191f" datatype="html">
-        <source>לוגו איתך מעכי</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">104</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="f788fd416a469b9d452bb2339c36abe0ca5f3f62" datatype="html">
-        <source>לוגו שדולת הנשים</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">108</context>
+          <context context-type="linenumber">90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="788eeff242d66dfc6a3602a89040a1fd207a4be4" datatype="html">
@@ -1421,364 +1379,245 @@
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">112</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="0f8d620d0d0c791c71b1e2b4032426546dc8c3a9" datatype="html">
-        <source>לוגו הקליניקה</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">119</context>
+          <context context-type="linenumber">106</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a3d4f5e7c04d4ccf4d330244351de01430b921b3" datatype="html">
         <source>קרנות ומוסדות שתומכים במדד המגדר (בהווה ובעבר)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">123</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2d401193c3255b4ccada249ce1a576388d6b22bc" datatype="html">
-        <source>קרן דפנה</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">125</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="dabf7d3625b37d0078c0411f0bc56b6ee98fa110" datatype="html">
-        <source>משרד המדע והטכנולוגיה</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">126</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="fc67b448318706b5c4b9d3b1350ada1c8cb966af" datatype="html">
-        <source>Greater Miami Jewish Federation: Women&apos;s Amutot Initiative</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">127</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="29e73b9936f89d9b8735b76cd2992d22117a2a51" datatype="html">
-        <source>Jewish Women’s Foundation of Metropolitan Chicago</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">128</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="b397f3a9515e5c3ea42856bd6d0de7116121e6a1" datatype="html">
-        <source>קרן פרס בראשית</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">129</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3c7e54c59632110c77422b2958ec47e644daa7ec" datatype="html">
-        <source>Kahn Foundation</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">130</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ea3f7d7f2375ac8e29250661f10dbfa9ab725a4c" datatype="html">
-        <source>מתן משקיעים בקהילה</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">131</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="d957fd36876b3c258e60a1353c32b7d036836391" datatype="html">
-        <source>Jewish Community Foundation of Greater Phoenix</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">132</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="094f5d6837f196d1c734aa75c95cfee8ce836bbe" datatype="html">
-        <source>Jewish Women’s Foundation of the Greater Palm Beaches</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">133</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="f2f5140bad3c7d9c08a13dcb6762518df350a0ca" datatype="html">
-        <source>Tikkun Olam: Women&apos;s Foundation of Greater Washington </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">134</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="c4565a046415cacbb08c9f4367483d9926b64698" datatype="html">
-        <source>Jewish Women&apos;s Fund of Atlanta</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">135</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="86b1f874dd66ec0e0a62db35ec3eec501549b33d" datatype="html">
-        <source>מכון ון ליר בירושלים</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">136</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="b9a17a617df41f4c535d3d3fb4890b2a31923735" datatype="html">
-        <source>The Miriam Fund</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">137</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="ef2579db9730e41a00e43cf3289a50e51c5439ee" datatype="html">
-        <source>The Hadassah Foundation</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">138</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="44e6a816e3b1644905caf5b4ce894371b8f1643d" datatype="html">
-        <source>קרן פרידריך אברט בישראל</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">139</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="d6579c0ff6b5e5f9d7284bd7014f9e37c5dac6ea" datatype="html">
-        <source>UN WOMEN</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">140</context>
+          <context context-type="linenumber">116</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cc1d11482fe6ef559d497bab8a1ddde94a4aad44" datatype="html">
         <source>יודעת - מרכז ידע נשים ומגדר</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">143</context>
+          <context context-type="linenumber">136</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1e35a3d372e483df911253f16305ad307e0d897f" datatype="html">
         <source>צוות יודעת</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">146</context>
+          <context context-type="linenumber">139</context>
         </context-group>
       </trans-unit>
       <trans-unit id="150bdc41da0e20c58b39de3432a8f84f10041a1e" datatype="html">
         <source>פרופ&apos; חנה הרצוג</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">148</context>
+          <context context-type="linenumber">141</context>
         </context-group>
       </trans-unit>
       <trans-unit id="599a9dbddbc3dc31a0f28a4c52ef581c9cfca290" datatype="html">
         <source>פרופ&apos; נעמי חזן</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">149</context>
+          <context context-type="linenumber">142</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f63a3a3d510075e154d57f6fdb24a4e3c5ffe85f" datatype="html">
         <source>הדס בן אליהו</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">150</context>
+          <context context-type="linenumber">143</context>
         </context-group>
       </trans-unit>
       <trans-unit id="0ecd869a5cc95eb11ddf1ca5588de1a383622606" datatype="html">
         <source>רונה ברייר גארב</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">151</context>
+          <context context-type="linenumber">144</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4e818f463d5ee01da39a89f5fae3abf117899cd5" datatype="html">
         <source>ענת כץ-ארוג&apos;ס</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">152</context>
+          <context context-type="linenumber">145</context>
         </context-group>
       </trans-unit>
       <trans-unit id="16d3ce5d83d5aa4f23603255b87eaa9b65b873d7" datatype="html">
         <source>שבי קורזן</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">153</context>
+          <context context-type="linenumber">146</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5348a9f40e1a82f870dd6ecaf9b5c43749465ea9" datatype="html">
         <source>אדם קריב</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">154</context>
+          <context context-type="linenumber">147</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6886f1e7965f95e53fd38bd4775e1a2742d1906d" datatype="html">
         <source>הילה אורן</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">155</context>
+          <context context-type="linenumber">148</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4f05d1cca9311269f780323f6ad427fb2e5ae50c" datatype="html">
         <source>דורית חיזי</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">156</context>
+          <context context-type="linenumber">149</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7765bd86788c4935bfd32eb17b01fbe6fdc98831" datatype="html">
         <source>אורי הוך</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">157</context>
+          <context context-type="linenumber">150</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c0f6a5388d6e0f9f97231030b97d0f7361953e56" datatype="html">
         <source>ד&quot;ר דפנה גץ</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">163</context>
+          <context context-type="linenumber">156</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e06b882acd495f689c9d2b8eac378c05668457b3" datatype="html">
         <source>אורלי נתן</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">164</context>
+          <context context-type="linenumber">157</context>
         </context-group>
       </trans-unit>
       <trans-unit id="917d4295ab53ba6da8707b8af824efb94280e7c7" datatype="html">
         <source>סימה ציפרפל</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">165</context>
+          <context context-type="linenumber">158</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5369f910c21cead57996c96ba1046de8c0e66ed7" datatype="html">
         <source>חבצלת שפירא</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">166</context>
+          <context context-type="linenumber">159</context>
         </context-group>
       </trans-unit>
       <trans-unit id="27b90de8573715af8c8e9414e6618f5a7338ab51" datatype="html">
         <source>ד&quot;ר טלי פפרמן</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">167</context>
+          <context context-type="linenumber">160</context>
         </context-group>
       </trans-unit>
       <trans-unit id="91e50a4b45cdda8dd27956786ee0dd0bc04b82ee" datatype="html">
         <source>איילת רווה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">168</context>
+          <context context-type="linenumber">161</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c2a5fa13925076d0dd15c521a1de86b63bb00613" datatype="html">
         <source>ציפי בוכניק</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">169</context>
+          <context context-type="linenumber">162</context>
         </context-group>
       </trans-unit>
       <trans-unit id="89eba4ed91cb3661a4044f2927391533a6294259" datatype="html">
         <source>ורד סגל</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">170</context>
+          <context context-type="linenumber">163</context>
         </context-group>
       </trans-unit>
       <trans-unit id="385c1b88943a1a9d2bd6dd31713fd58c0399ca50" datatype="html">
         <source>תמיר גולן</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">171</context>
+          <context context-type="linenumber">164</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b10161c68e318a7be78df6570213bb8ea41e70e7" datatype="html">
         <source>ועדת ההיגוי</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">175</context>
+          <context context-type="linenumber">168</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6cc0984f6263fd1b358b5a66ed08c2f94ed88f14" datatype="html">
         <source>פרופ&apos; דפנה הקר (יו&quot;ר)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">177</context>
+          <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d5077d225dcacd4c44dd29684b4c29e8f9bc94c7" datatype="html">
         <source>פרופ&apos; שי לביא</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">178</context>
+          <context context-type="linenumber">171</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1bd3bdc720e01e75a7dd735078a110bc9aa4b7c7" datatype="html">
         <source>ד&quot;ר סיגל רון</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">179</context>
+          <context context-type="linenumber">172</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c8af2a69f516f0dabe6eeaf6a4dc2268de4e8515" datatype="html">
         <source>פרופ&apos; קרין נהון</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">180</context>
+          <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
       <trans-unit id="0e665d0db85f3add43081c44d52757229ca46d40" datatype="html">
         <source>חמוטל גורי</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">181</context>
+          <context context-type="linenumber">174</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f16a70005abf991505d941f34d67ec92ede67ebd" datatype="html">
         <source>פרופ&apos; צבי טריגר</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">182</context>
+          <context context-type="linenumber">175</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6a4ee7495838e8ab7c544c79c308de93c4e1dffc" datatype="html">
         <source>עו&quot;ד רבקה שוורץ</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">188</context>
+          <context context-type="linenumber">181</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d1c26daaa2d9cc0f747f13fcf2e58251557213db" datatype="html">
         <source>רים יונס</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">189</context>
+          <context context-type="linenumber">182</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ceea4cdd8b968d312843328f1317c29d0b56585d" datatype="html">
         <source>שירה אוחיון</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">190</context>
+          <context context-type="linenumber">183</context>
         </context-group>
       </trans-unit>
       <trans-unit id="574d03ddb94884addcc09143ab0b4d8e8dd7ecd7" datatype="html">
         <source>ד&quot;ר מראם מסארווה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">191</context>
+          <context context-type="linenumber">184</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f47d90c7c976ffc0334a2f0d343606c9ff683bbd" datatype="html">
         <source>ד&quot;ר ירון שוורץ </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
-          <context context-type="linenumber">192</context>
+          <context context-type="linenumber">185</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1574ab72df3d813b12489110bbcdd3f002a8550f" datatype="html">
