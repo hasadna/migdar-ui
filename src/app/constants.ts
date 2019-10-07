@@ -202,7 +202,7 @@ export function colorScale(series, index) {
     if (series.gender.includes('נשים')) {
       return '#59334d';
     } else if (series.gender.includes('גברים')) {
-      return '#33a0a3';
+      return '#8693a3';
     } else {
       const colors = [
         '#ef5241',
