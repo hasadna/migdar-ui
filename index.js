@@ -46,7 +46,7 @@ for (const conf of CONFS) {
             res.render(`${conf[1]}index.html`, {
               lang: conf[1].slice(0, 2),
               title: 'יודעת - ' + (body.org_name || body.title || body.chart_title),
-              image_url: 'https://yodaat.org/assets/landingpage-logo.svg',
+              image_url: 'https://yodaat.org/assets/social-preview.png',
               description: body.objective || body.notes || body.chart_abstract,
               url: `${externalUrl}${req.originalUrl}`
             })      
@@ -56,7 +56,7 @@ for (const conf of CONFS) {
         res.render(`${conf[1]}index.html`, {
           lang: conf[1].slice(0, 2),
           title: 'יודעת هي تعرف she knows',
-          image_url: 'https://yodaat.org/assets/landingpage-logo.svg',
+          image_url: 'https://yodaat.org/assets/social-preview.png',
           description: 'מרכז ידע בנושא נשים ומגדר בישראל',
           url: `${externalUrl}${req.originalUrl}`
         });  
