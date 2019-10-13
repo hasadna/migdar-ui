@@ -20,6 +20,11 @@ nunjucks.configure(rootDir, {
 });
 
 app.set('port', process.env.PORT || 8000);
+
+app.get('/sitemap.xml', function(req, res) {
+  res.status(301).redirect('https://api.yodaat.org/data/sitemap.xml')
+});
+
 for (const conf of CONFS) {
     const _rootDir = `${rootDir}${conf[1]}`;
     console.log(conf[0],'->',_rootDir);
