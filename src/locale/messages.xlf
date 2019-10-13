@@ -1432,7 +1432,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="4e818f463d5ee01da39a89f5fae3abf117899cd5" datatype="html">
-        <source>ענת כץ-ארוג&apos;ס</source>
+        <source>ענת כץ-ארוג&apos;אס</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
           <context context-type="linenumber">145</context>

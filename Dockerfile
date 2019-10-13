@@ -12,7 +12,9 @@ WORKDIR /app/
 
 COPY --from=build /app/index.js index.js
 COPY --from=build /app/dist dist
-RUN npm install express
+COPY --from=build /app/server/package.json .
+COPY --from=build /app/server/package-lock.json .
+RUN npm install
 
 EXPOSE 8000
 

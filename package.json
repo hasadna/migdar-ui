@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "serve": "node index.js",
     "build-he": "ng build --optimization --prod -c production",
     "build-ar": "ng build --optimization --prod -c ar",
     "build-en": "ng build --optimization --prod -c en",
