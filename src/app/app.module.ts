@@ -59,6 +59,7 @@ import { GenderIndexPageBrowserHeaderElementComponent
  } from './gender-index-page-browser-header-element/gender-index-page-browser-header-element.component';
 import { GenderIndexPageBrowserSectionComponent } from './gender-index-page-browser-section/gender-index-page-browser-section.component';
 import { GenericPageContactComponent } from './generic-page-contact/generic-page-contact.component';
+import { CardPageComponent } from './card-page/card-page.component';
 
 
 const appRoutes: Routes = [
@@ -66,6 +67,13 @@ const appRoutes: Routes = [
     children: [
       {
         path: '**', component: ItemPageComponent
+      }
+    ]
+  },
+  { path: 'card',
+    children: [
+      {
+        path: '**', component: CardPageComponent
       }
     ]
   },
@@ -140,7 +148,8 @@ const appRoutes: Routes = [
     GenderIndexPageBrowserComponent,
     GenderIndexPageBrowserHeaderElementComponent,
     GenderIndexPageBrowserSectionComponent,
-    GenericPageContactComponent
+    GenericPageContactComponent,
+    CardPageComponent
   ],
   imports: [
     BrowserModule,
