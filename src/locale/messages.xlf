@@ -483,7 +483,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="54e43e45d412cb23077f7228e2ce0abfe3b71a7e" datatype="html">
@@ -1139,18 +1139,25 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">21</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-gender-index/item-page-gender-index.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="63b3c6aa7be2465ed702ed84bc8b600a135684a8" datatype="html">
+        <source>הורידי תמונה</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="409f8222555911c085a7c8eccedf5e0ab24f7829" datatype="html">
         <source>תיאור</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">12</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-gender-index/item-page-gender-index.component.html</context>
@@ -1161,7 +1168,7 @@
         <source>מקור נתונים</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">16</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-gender-index/item-page-gender-index.component.html</context>
@@ -1432,7 +1439,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="4e818f463d5ee01da39a89f5fae3abf117899cd5" datatype="html">
-        <source>ענת כץ-ארוג&apos;אס</source>
+        <source>ענת כץ-ארוג&apos;ס</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-about/generic-page-about.component.html</context>
           <context context-type="linenumber">145</context>
