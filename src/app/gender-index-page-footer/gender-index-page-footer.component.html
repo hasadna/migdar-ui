@@ -23,11 +23,14 @@
         <ng-container *ngFor='let chart of this.datasets[this.active_dimension]'>
             <div class='chart'
                  [id]='chart.doc_id'
-            >
-                <app-result-card 
+            >   
+                <a [href]='"/item/" + chart.doc_id + "?section=" + active_dimension'>
+                    <img [src]='"https://api.yodaat.org/data/" + chart.doc_id'/>
+                </a>
+                <!-- app-result-card 
                     [result]='chart'
                     [queryParams]='"?section=" + active_dimension'
-                ></app-result-card>
+                ></app-result-card -->
             </div>
         </ng-container>
     </div>

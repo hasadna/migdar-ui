@@ -60,6 +60,7 @@ import { GenderIndexPageBrowserHeaderElementComponent
 import { GenderIndexPageBrowserSectionComponent } from './gender-index-page-browser-section/gender-index-page-browser-section.component';
 import { GenericPageContactComponent } from './generic-page-contact/generic-page-contact.component';
 import { CardPageComponent } from './card-page/card-page.component';
+import { ResultCardImgComponent } from './result-card-img/result-card-img.component';
 
 
 const appRoutes: Routes = [
@@ -149,7 +150,8 @@ const appRoutes: Routes = [
     GenderIndexPageBrowserHeaderElementComponent,
     GenderIndexPageBrowserSectionComponent,
     GenericPageContactComponent,
-    CardPageComponent
+    CardPageComponent,
+    ResultCardImgComponent
   ],
   imports: [
     BrowserModule,

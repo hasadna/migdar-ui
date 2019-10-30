@@ -1,10 +1,22 @@
-<div #column0 class='column desktop'>
-  <app-result-card *ngFor="let result of columns[0]" [result]='result'></app-result-card>
-</div>
-<div #column1 class='column desktop'>
-  <app-result-card *ngFor="let result of columns[1]" [result]='result'></app-result-card>
-</div>
-<div class='column mobile'>
-  <app-result-card *ngFor="let result of columnAll" [result]='result'></app-result-card>
-</div>
-
+<ng-container *ngIf='!image'>
+  <div #column0 class='column desktop'>
+    <app-result-card *ngFor="let result of columns[0]" [result]='result'></app-result-card>
+  </div>
+  <div #column1 class='column desktop'>
+    <app-result-card *ngFor="let result of columns[1]" [result]='result'></app-result-card>
+  </div>
+  <div class='column mobile'>
+    <app-result-card *ngFor="let result of columnAll" [result]='result'></app-result-card>
+  </div>
+</ng-container>
+<ng-container *ngIf='image'>
+  <div #column0 class='column desktop'>
+    <app-result-card-img *ngFor="let result of columns[0]" [result]='result'></app-result-card-img>
+  </div>
+  <div #column1 class='column desktop'>
+    <app-result-card-img *ngFor="let result of columns[1]" [result]='result'></app-result-card-img>
+  </div>
+  <div class='column mobile'>
+    <app-result-card-img *ngFor="let result of columnAll" [result]='result'></app-result-card-img>
+  </div>
+</ng-container>

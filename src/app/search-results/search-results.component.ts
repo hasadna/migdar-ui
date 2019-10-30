@@ -14,6 +14,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input() manager: SearchManager;
   @Input() results: Observable<any>;
+  @Input() image = false;
   columns = [[], []];
   columnAll = [];
   @ViewChild('column0') column0ref: ElementRef;
