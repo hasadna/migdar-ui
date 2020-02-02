@@ -13,6 +13,7 @@ export class ResultCardDatasetComponent implements OnChanges{
   @Input() result: any;
   @Input() genderIndex: boolean;
   @Input() large: boolean;
+  @Input() tags = true;
 
   colorScale = cs;
   _series = null;

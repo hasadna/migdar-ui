@@ -9,6 +9,7 @@ export class ResultCardComponent implements OnInit {
 
   @Input() result: any;
   @Input() queryParams: any;
+  @Input() tags = true;
 
   constructor() { }
 
