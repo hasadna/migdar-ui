@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-result-card-img',
@@ -9,7 +10,7 @@ export class ResultCardImgComponent implements OnInit {
 
   @Input() result: any;
 
-  constructor() { }
+  constructor(public _: I18nService) { }
 
   ngOnInit() {
   }

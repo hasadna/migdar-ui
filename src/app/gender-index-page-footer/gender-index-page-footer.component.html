@@ -25,7 +25,7 @@
                  [id]='chart.doc_id'
             >   
                 <a [href]='"/item/" + chart.doc_id + "?section=" + active_dimension'>
-                    <img [src]='"https://api.yodaat.org/data/" + chart.doc_id'/>
+                    <img [src]='"https://api.yodaat.org/data" + _.P("/" + chart.doc_id)'/>
                 </a>
                 <!-- app-result-card 
                     [result]='chart'

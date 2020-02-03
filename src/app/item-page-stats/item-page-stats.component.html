@@ -5,7 +5,7 @@
 </app-item-page-header>
 <app-result-card-dataset class='main' [result]='document' [large]='true'></app-result-card-dataset>
 <div class='card-menu'>
-  <a [href]='"https://api.yodaat.org/data/" + document.doc_id + ".png"' target='_blank' i18n>הורדת תמונה</a>
+  <a [href]='"https://api.yodaat.org/data" + _.P("/" + document.doc_id) + ".png"' target='_blank' i18n>הורדת תמונה</a>
 </div>
 <div class='item-props'>
   <div class='item-prop'>
@@ -17,10 +17,10 @@
     <span *ngIf='!document.series[0].source_url'>{{document.series[0].source_description}}</span>
     <a *ngIf='document.series[0].source_url' [href]='document.series[0].source_url' target='_blank'>{{document.series[0].source_description}}</a>
   </div>
-  <div class='item-prop'>
+  <!--div class='item-prop'>
     <label i18n>תגיות</label>
     <span>{{_._(document, 'tags').join(', ')}}</span>
-  </div>
+  </div-->
 </div>
 <app-item-page-search-results [manager]='search'>
 <h1 i18n>אולי יעניין אותך גם&hellip;</h1>

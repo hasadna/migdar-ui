@@ -3,3 +3,22 @@ a {
         width: 100%;
     }
 }
+
+.tags {
+    margin: 10px 0;
+    a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 2px 10px;
+        margin: 3px 5px;
+        border-radius: 20px;
+        .tagsMixin;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 700px)  {
+    .tags {
+        display: none;
+    }
+}

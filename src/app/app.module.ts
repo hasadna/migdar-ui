@@ -61,6 +61,7 @@ import { GenderIndexPageBrowserSectionComponent } from './gender-index-page-brow
 import { GenericPageContactComponent } from './generic-page-contact/generic-page-contact.component';
 import { CardPageComponent } from './card-page/card-page.component';
 import { ResultCardImgComponent } from './result-card-img/result-card-img.component';
+import { CardSharePageComponent } from './card-share-page/card-share-page.component';
 
 
 const appRoutes: Routes = [
@@ -75,6 +76,13 @@ const appRoutes: Routes = [
     children: [
       {
         path: '**', component: CardPageComponent
+      }
+    ]
+  },
+  { path: 'card-share',
+    children: [
+      {
+        path: '**', component: CardSharePageComponent
       }
     ]
   },
@@ -151,7 +159,8 @@ const appRoutes: Routes = [
     GenderIndexPageBrowserSectionComponent,
     GenericPageContactComponent,
     CardPageComponent,
-    ResultCardImgComponent
+    ResultCardImgComponent,
+    CardSharePageComponent
   ],
   imports: [
     BrowserModule,
