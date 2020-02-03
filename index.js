@@ -35,11 +35,12 @@ for (const conf of CONFS) {
 }
 for (const conf of CONFS) {
   const _rootDir = `${rootDir}${conf[1]}`;
-  app.route(conf[0] + '*')
+  const langPrefix = conf[0];
+  app.route(langPrefix + '*')
     .get(function(req, res) {
-      const item_prefix = `${conf[0]}item`;
+      const item_prefix = `${langPrefix}item`;
       if (req.originalUrl.startsWith(item_prefix)) {
-        const doc_id = req.path.slice(item_prefix.length+1);
+        const doc_id = req.path.slice(item_prefix.length + 1);
         console.log('FETCHING', doc_id);
         request({
           url: apiServer + '/get/' + doc_id,
@@ -48,10 +49,14 @@ for (const conf of CONFS) {
           console.log(error, response, body);
           if (response.statusCode === 200 && body !== null && body.value) {
             body = body.value;
+            let image_url='https://yodaat.org/assets/social-preview.png';
+            if (doc_id.startsWith('dataset/')) {
+              image_url = `https://api.yodaat.org/data${langPrefix}${doc_id}-share.png`;
+            }
             res.render(`${conf[1]}index.html`, {
               lang: conf[1].slice(0, 2),
               title: 'יודעת - ' + (body.org_name || body.title || body.chart_title),
-              image_url: 'https://yodaat.org/assets/social-preview.png',
+              image_url: image_url,
               description: body.objective || body.notes || body.chart_abstract,
               url: `${externalUrl}${req.originalUrl}`
             })      
