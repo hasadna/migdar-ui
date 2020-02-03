@@ -12,8 +12,8 @@
 </div>
 <div class='tags'>
   <strong i18n>תגיות:&nbsp;</strong>
-  <span *ngFor="let tag of _._(result, 'tags')"
-    [routerLink]='"/search"' [queryParams]='{"tag": tag, "kind": "all"}'
-  ><a>{{tag}}</a></span>
+  <span *ngFor="let tag of _.tags(result)"
+    [routerLink]='"/search"' [queryParams]='{"tag": tag.src, "kind": "all"}'
+  ><a>{{tag.dst}}</a></span>
 </div>
 <p>{{_._(result, 'notes')}}</p>

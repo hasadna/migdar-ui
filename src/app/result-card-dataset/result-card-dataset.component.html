@@ -8,7 +8,7 @@
 <app-dataset-chart [series]='_series' [large]='large'></app-dataset-chart>
 <div class='tags' *ngIf='tags'>
   <strong i18n>תגיות:&nbsp;</strong>
-  <span *ngFor="let tag of _._(result, 'tags')">
-    <a [href]='_.P("/search?kind=all&tag=" + tag)'>{{tag}}</a>
+  <span *ngFor="let tag of _.tags(result)">
+    <a [href]='_.P("/search?kind=all&tag=" + tag.src)'>{{tag.dst}}</a>
   </span>
 </div>

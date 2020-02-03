@@ -5,8 +5,9 @@
 <div class='details'>
   <div>
     <img [src]='logo()' onerror='this.style.display="none"'/>
-    <strong *ngIf='result.org_website'><a [href]='result.org_website' i18n>לאתר הארגון</a></strong>
-    <strong *ngIf='result.org_email_address'><a [href]='"mailto:" + result.org_email_address'>{{result.org_email_address}}</a></strong>
+    <strong class='website' *ngIf='result.org_website'><a [href]='result.org_website' target='_blank' i18n>לאתר הארגון
+    </a></strong>
+    <strong *ngIf='result.org_email_address'><a [href]='"mailto:" + result.org_email_address' target='_blank'>{{result.org_email_address}}</a></strong>
     <p *ngIf='result.org_website || result.org_email_address'></p>
     <p>{{result.hotline_phone_number}}</p>
     <p>{{result.org_phone_number}}</p>
@@ -18,7 +19,7 @@
 </div>
 <div class='tags'>
   <strong i18n>תגיות:&nbsp;</strong>
-  <span *ngFor="let tag of _._(result, 'tags')"
-    [routerLink]='"/search"' [queryParams]='{"tag": tag, "kind": "all"}'
-  ><a>{{tag}}</a></span>
+  <span *ngFor="let tag of _.tags(result)"
+    [routerLink]='"/search"' [queryParams]='{"tag": tag.src, "kind": "all"}'
+  ><a>{{tag.dst}}</a></span>
 </div>

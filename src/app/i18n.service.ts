@@ -14,6 +14,18 @@ export class  I18nService {
     return item[field + '__' + this.locale] || item[field];
   }
 
+  tags(item) {
+    const ret = [];
+    const tags = item['tags'] || [];
+    const dstTags = item['tags__' + this.locale] || tags;
+    for (let i = 0 ; i < tags.length ; i++) {
+      const src = tags[i];
+      const dst = dstTags[i];
+      ret.push({src, dst});
+    }
+    return ret;
+  }
+
   P(path: string) {
     if (this.locale === 'ar' || this.locale === 'en') {
       return `/${this.locale}${path}`;

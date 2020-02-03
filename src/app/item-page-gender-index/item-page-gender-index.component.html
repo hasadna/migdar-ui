@@ -17,9 +17,5 @@
     <span *ngIf='!document.series[0].source_url'>{{document.series[0].source_description}}</span>
     <a *ngIf='document.series[0].source_url' [href]='document.series[0].source_url' target='_blank'>{{document.series[0].source_description}}</a>
   </div>
-  <!--div class='item-prop'>
-    <label i18n>תגיות</label>
-    <span>{{_._(document, 'tags').join(', ')}}</span>
-  </div-->
 </div>
 <app-gender-index-page-browser [active]='document.gender_index_dimension'></app-gender-index-page-browser>
