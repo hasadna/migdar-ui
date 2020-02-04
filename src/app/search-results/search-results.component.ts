@@ -14,6 +14,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input() manager: SearchManager;
   @Input() results: Observable<any>;
+  @Input() simple = false;
   @Input() image = false;
   columns = [[], []];
   columnAll = [];
@@ -67,22 +68,31 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   assignCard(result) {
-    setTimeout(() => {
+    if (this.simple) {
       this.columnAll.push(result);
-      try {
-        const columnHeights = [this.column0ref.nativeElement.offsetHeight,
-                               this.column1ref.nativeElement.offsetHeight];
-        if (columnHeights[0] < columnHeights[1]) {
-          this.columns[0].push(result);
-        } else if (columnHeights[0] > columnHeights[1]) {
-          this.columns[1].push(result);
-        } else {
-          this.columns[this.columnAll.length % 2].push(result);
-        }
-      } catch (e) {
-        console.log('failed to add to columns');
+      if (this.columns[0].length <= this.columns[1].length) {
+        this.columns[0].push(result);
+      } else {
+        this.columns[1].push(result);
       }
-    }, 0);
+    } else {
+      setTimeout(() => {
+        this.columnAll.push(result);
+        try {
+          const columnHeights = [this.column0ref.nativeElement.offsetHeight,
+                                 this.column1ref.nativeElement.offsetHeight];
+          if (columnHeights[0] < columnHeights[1]) {
+            this.columns[0].push(result);
+          } else if (columnHeights[0] > columnHeights[1]) {
+            this.columns[1].push(result);
+          } else {
+            this.columns[this.columnAll.length % 2].push(result);
+          }
+        } catch (e) {
+          console.log('failed to add to columns');
+        }
+      }, 0);
+    }
   }
 
 }

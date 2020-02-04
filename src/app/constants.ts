@@ -199,9 +199,9 @@ export function colorScale(series, index) {
     if (!series.gender) {
         return '#ef5241';
     }
-    if (series.gender.includes('נשים')) {
+    if (series.gender.includes('נשים') || series.gender.includes('בנות')) {
       return '#59334d';
-    } else if (series.gender.includes('גברים')) {
+    } else if (series.gender.includes('גברים') || series.gender.includes('בנים')) {
       return '#8693a3';
     } else {
       const colors = [

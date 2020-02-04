@@ -2,11 +2,17 @@
 
 :host {
     background-color: white;
+    display: flex;
+    flex-flow: column;
 
-    a {
-        img {
-            width: 100%;
-        }
+    .image {
+        flex: 1 0 ~'calc(max(33vw, 480px))';
+        a {
+            img {
+                width: 100%;
+                min-height: 70%;
+            }
+        }            
     }
     
     .tags {

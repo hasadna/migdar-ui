@@ -1,10 +1,11 @@
-<a [href]='_.P("/item/" + result.doc_id)'>
-    <img [src]='"https://api.yodaat.org/data" + _.P("/" + result.doc_id + ".png")'/>
-</a>
+<div class='image'>
+    <a [href]='_.P("/item/" + result.doc_id)'>
+        <img [src]='"https://api.yodaat.org/data" + _.P("/" + result.doc_id + ".png")' (load)='loaded = true'/>
+    </a>
+</div>
 <div class='tags'>
   <strong i18n>תגיות:&nbsp;</strong>
   <span *ngFor="let tag of _.tags(result)">
     <a [href]='_.P("/search?kind=all&tag=" + tag.src)'>{{tag.dst}}</a>
   </span>
 </div>
-
