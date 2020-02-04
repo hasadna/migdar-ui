@@ -1,6 +1,6 @@
 <div class='image'>
     <a [href]='_.P("/item/" + result.doc_id)'>
-        <img [src]='"https://api.yodaat.org/data" + _.P("/" + result.doc_id + ".png")' (load)='loaded = true'/>
+        <img *ngIf='visible' [src]='"https://api.yodaat.org/data" + _.P("/" + result.doc_id + ".png")'/>
     </a>
 </div>
 <div class='tags'>

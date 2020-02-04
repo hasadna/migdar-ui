@@ -11,12 +11,12 @@
 </ng-container>
 <ng-container *ngIf='image'>
   <div #column0 class='column desktop'>
-    <app-result-card-img *ngFor="let result of columns[0]" [result]='result'></app-result-card-img>
+    <app-result-card-img *ngFor="let result of columns[0]" [result]='result' [visible]='visible'></app-result-card-img>
   </div>
   <div #column1 class='column desktop'>
-    <app-result-card-img *ngFor="let result of columns[1]" [result]='result'></app-result-card-img>
+    <app-result-card-img *ngFor="let result of columns[1]" [result]='result' [visible]='visible'></app-result-card-img>
   </div>
-  <div class='column mobile'>
-    <app-result-card-img *ngFor="let result of columnAll" [result]='result'></app-result-card-img>
+  <div #mobilecolumn class='column mobile'>
+    <app-result-card-img *ngFor="let result of columnAll" [result]='result' [visible]='visible'></app-result-card-img>
   </div>
 </ng-container>

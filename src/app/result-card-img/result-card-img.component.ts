@@ -9,6 +9,7 @@ import { I18nService } from '../i18n.service';
 export class ResultCardImgComponent implements OnInit {
 
   @Input() result: any;
+  @Input() visible = true;
   loaded = false;
 
   constructor(public _: I18nService) { }

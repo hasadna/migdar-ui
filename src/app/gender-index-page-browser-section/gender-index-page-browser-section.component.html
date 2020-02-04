@@ -1,4 +1,5 @@
-<div class='menu' (click)='open = !open' #menu [id]='name'>
+<div class='menu' (click)='open = !open' #menu>
+  <a class='anchor' [id]='name'></a>
   <img [src]='"assets/gender_index_30x30/White/neg-" + slug + "-ic.svg"'/>
   <span>{{display}}</span>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.97 2.98">
