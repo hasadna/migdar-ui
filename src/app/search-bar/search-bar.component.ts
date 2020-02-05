@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angu
 })
 export class SearchBarComponent implements OnInit, OnChanges {
 
-  @Input() placeholder = '<strong>מה תרצו לחפש?</strong> שם מאמר, תוכן בנושא מסויים&hellip;';
+  @Input() placeholder;
   @Input() color = '#59334d';
   @Input() backgroundColor = '#fff';
   @Input() icon = 'search-ic';
