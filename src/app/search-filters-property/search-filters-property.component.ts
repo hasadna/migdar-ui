@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { FilterManagerService } from '../filter-manager.service';
+import { I18nService } from '../i18n.service';
 
 @Component({
   selector: 'app-search-filters-property',
@@ -12,7 +13,8 @@ export class SearchFiltersPropertyComponent implements OnInit, OnChanges {
   @Input() properties: any[];
   selected = null;
 
-  constructor(public filters: FilterManagerService) { }
+  constructor(public filters: FilterManagerService,
+              public _: I18nService) { }
 
   ngOnInit() {
     this.selected = this.properties[0];

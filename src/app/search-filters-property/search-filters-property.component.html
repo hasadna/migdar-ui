@@ -31,7 +31,7 @@
         [class.checked]='filters.isSelected(itemKind, selected.field, item.v)'
         (click)='filters.toggle(itemKind, selected.field, item.v)'
     >
-      <span>{{item.v}}</span>
+      <span>{{_._(item, 'v')}}</span>
     </li>
   </ul>
 </app-horizontal-selector>

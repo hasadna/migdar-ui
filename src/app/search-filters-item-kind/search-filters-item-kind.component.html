@@ -3,18 +3,23 @@
   <ul>
     <li [class.selected]='selected==="all"'
         (click)='selected = "all"'
+        i18n
     >הכל</li>
     <li [class.selected]='selected==="publications"'
         (click)='selected = "publications"'
+        i18n
     >פרסומים ומדיה</li>
     <li [class.selected]='selected==="stats"'
         (click)='selected = "stats"'
+        i18n
     >סטטיסטיקה מגדרית</li>
     <li [class.selected]='selected==="orgs"'
         (click)='selected = "orgs"'
+        i18n
     >ארגונים ופעילות</li>
     <li [class.selected]='selected==="gender_index"'
         (click)='selected = "gender_index"'
+        i18n
     >מדד המגדר</li>
   </ul>
 </app-horizontal-selector>
