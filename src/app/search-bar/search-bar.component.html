@@ -3,7 +3,9 @@
                    [value]='term'
                    [style.color]='color' [style.background-color]='backgroundColor'
                    [style.background-image]='"url(\"assets/" + icon + ".svg\")"'
+                   appLtr
 />
 <span [innerHtml]='placeholder' [class.focus]='focus || !!term'
       [style.color]='color' class='placeholder'
+      appLtr
 ></span>

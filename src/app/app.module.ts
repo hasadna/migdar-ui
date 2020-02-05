@@ -63,6 +63,7 @@ import { CardPageComponent } from './card-page/card-page.component';
 import { ResultCardImgComponent } from './result-card-img/result-card-img.component';
 import { CardSharePageComponent } from './card-share-page/card-share-page.component';
 import { ShareButtonComponent } from './share-button/share-button.component';
+import { LtrDirective } from './ltr.directive';
 
 
 const appRoutes: Routes = [
@@ -162,7 +163,8 @@ const appRoutes: Routes = [
     CardPageComponent,
     ResultCardImgComponent,
     CardSharePageComponent,
-    ShareButtonComponent
+    ShareButtonComponent,
+    LtrDirective
   ],
   imports: [
     BrowserModule,

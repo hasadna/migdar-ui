@@ -6,8 +6,11 @@ import { LOCALE_ID } from '@angular/core';
 })
 export class  I18nService {
 
+  ltr = false;
+
   constructor(@Inject(LOCALE_ID) public locale: string) {
     console.log('LOCALE', locale);
+    this.ltr = locale === 'en';
   }
 
   _(item, field) {

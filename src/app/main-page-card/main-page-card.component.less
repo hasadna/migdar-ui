@@ -16,6 +16,11 @@
         padding-left: 50px;
         width: 50%;
 
+        &.ltr {
+            padding-left: 0;
+            padding-right: 50px;
+        }
+
         .top {
             display: flex;
             flex-flow: row;
@@ -36,6 +41,19 @@
                     width: 100%;
                     margin-right: -300px;
                     opacity: 0;
+                }
+
+                &.ltr {
+                    margin-right: -30px;
+                    margin-left: auto;
+
+                    img {
+                        animation: 1s 1 slideinltr;
+                        animation-fill-mode: forwards;
+                        animation-delay: 1s;
+                        margin-left: -300px;
+                        margin-right: auto;
+                    }
                 }
             }
 
@@ -126,6 +144,19 @@
         opacity: 1;
     }
 }
+
+@keyframes slideinltr {
+    from {
+        margin-left: -300px;
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 0px;
+        opacity: 1;
+    }
+}
+
 
 @keyframes fadein {
     from {

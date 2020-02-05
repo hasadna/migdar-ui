@@ -48,6 +48,11 @@
         right: 336px;
         height: 0;
         top: -392px;
+
+        &.ltr {
+            left: 336px;
+            right: auto;
+        }
     }
 
     .square-links {
@@ -305,8 +310,17 @@
                     margin-right: 15px;
                 }
             }
+
+            &.ltr {
+                .square-link {
+                    h2 {
+                        margin-left: 15px;
+                        margin-right: auto;
+                    }
+                }
+            }    
         }
-        
+                
         .recently-added {
             h1 {
                 font-size: 21px;
