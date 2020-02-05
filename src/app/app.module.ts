@@ -62,6 +62,7 @@ import { GenericPageContactComponent } from './generic-page-contact/generic-page
 import { CardPageComponent } from './card-page/card-page.component';
 import { ResultCardImgComponent } from './result-card-img/result-card-img.component';
 import { CardSharePageComponent } from './card-share-page/card-share-page.component';
+import { ShareButtonComponent } from './share-button/share-button.component';
 
 
 const appRoutes: Routes = [
@@ -160,7 +161,8 @@ const appRoutes: Routes = [
     GenericPageContactComponent,
     CardPageComponent,
     ResultCardImgComponent,
-    CardSharePageComponent
+    CardSharePageComponent,
+    ShareButtonComponent
   ],
   imports: [
     BrowserModule,

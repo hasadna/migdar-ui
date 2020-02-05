@@ -27,8 +27,14 @@ export class ApiService {
     return this.http.get(`${this.url}/search/${types}${params}`)
               .pipe(
                 map((result: any) => {
-                  const results = result.search_results.map((item) => Object.assign(item.source, {__type: item.type}));
-                  const total = result.search_counts._current.total_overall;
+                  let results = [];
+                  if (result.search_results) {
+                    results = result.search_results.map((item) => Object.assign(item.source, {__type: item.type}));
+                  }
+                  let total = 0;
+                  if (result.searcg_counts) {
+                    total = result.search_counts._current.total_overall;
+                  }
                   return {results, total};
                 }),
               );
