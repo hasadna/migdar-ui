@@ -1,4 +1,4 @@
-<app-horizontal-selector>
+<app-horizontal-selector appLtr>
   <span class='title'>
     <span i18n>סינון</span>
     <span i18n class='left'>נבחרו</span>
@@ -17,7 +17,7 @@
     </li>
   </ul>
 </app-horizontal-selector>
-<app-horizontal-selector *ngIf='selected'>
+<app-horizontal-selector *ngIf='selected' appLtr>
   <span class='title'>
     <span>
       <app-search-filters-property-field-name [field]='selected.field'></app-search-filters-property-field-name>

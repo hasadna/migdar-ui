@@ -25,6 +25,13 @@
             font-size: 18px;
         }
 
+        &.ltr {
+            img { 
+                margin-left: 0;
+                margin-right: 20px;
+            }
+        }
+
         &.active {
             img {
                 display: none;
@@ -41,7 +48,7 @@
     }
 
     @media only screen and (max-width: 700px)  {
-        .container {
+        .container a {
             margin: 10px 0;
             padding: 3px 5px;
             span {
@@ -50,7 +57,7 @@
             img {
                 margin-right: ~'calc(100vw / 14 - 22.5px)';
                 margin-left: ~'calc(100vw / 14 - 22.5px)';
-            }    
+            }
         }
     }
 }
