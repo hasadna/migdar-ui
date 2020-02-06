@@ -32,7 +32,7 @@ export class ApiService {
                     results = result.search_results.map((item) => Object.assign(item.source, {__type: item.type}));
                   }
                   let total = 0;
-                  if (result.searcg_counts) {
+                  if (result.search_counts) {
                     total = result.search_counts._current.total_overall;
                   }
                   return {results, total};

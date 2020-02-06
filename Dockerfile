@@ -1,4 +1,4 @@
-FROM node:8-alpine AS build
+FROM node:10-alpine AS build
 
 COPY . /app/
 RUN cd /app/ && \
@@ -6,7 +6,7 @@ RUN cd /app/ && \
     npm run build
 
 
-FROM node:8-alpine
+FROM node:10-alpine
 
 WORKDIR /app/
 

@@ -38,13 +38,12 @@ export class FilterManagerService {
         filters[field] = values;
       }
     }
-    console.log('filters update', kind, filters);
     this.updated.next(filters);
     return filters;
   }
 
   updateFrom(kind, filters) {
-    this.selected[kind] = this.selected[kind] || {};
+    this.selected[kind] = {};
     for (const field of Object.keys(filters)) {
       if (ALLOWED_FIELDS.has(field)) {
         this.selected[kind][field] = filters[field];

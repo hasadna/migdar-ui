@@ -46,7 +46,7 @@ export class SearchPageComponent implements OnInit {
 
         let filters = params.get('filters');
         filters = filters ? JSON.parse(filters) : {};
-        this.filterManager.updateFrom(this.kind, filters);
+        this.filterManager.updateFrom(searchKind, filters);
         const searchFilters = Object.assign(filters,
           {
             stats: {kind: 'Gender Statistics'},

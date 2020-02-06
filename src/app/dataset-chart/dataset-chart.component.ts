@@ -46,7 +46,7 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     const height = 300;
     const marginBottom = 30;
     const marginTop = 30;
-    const leftPadding = 70;
+    const leftPadding = 90;
     const rightPadding = 70;
     const yMargins = marginBottom + marginTop;
 

@@ -39,9 +39,9 @@ for (const conf of CONFS) {
   app.route(langPrefix + '*')
     .get(function(req, res) {
       const item_prefix = `${langPrefix}item`;
+      const tag_prefix = `${langPrefix}search?tag=`;
       if (req.originalUrl.startsWith(item_prefix)) {
         const doc_id = req.path.slice(item_prefix.length + 1);
-        console.log('FETCHING', doc_id);
         request({
           url: apiServer + '/get/' + doc_id,
           json: true
@@ -61,6 +61,16 @@ for (const conf of CONFS) {
               url: `${externalUrl}${req.originalUrl}`
             })      
           }
+        });
+      } else if (req.originalUrl.startsWith(tag_prefix)) {
+        const tag = req.query.tag;
+        const image_url='https://yodaat.org/assets/social-preview.png';
+        res.render(`${conf[1]}index.html`, {
+          lang: conf[1].slice(0, 2),
+          title: 'יודעת - ' + tag,
+          image_url: image_url,
+          description: `פרסומים, ארגונים ומידע הקשורים ל${tag}`,
+          url: `${externalUrl}${req.originalUrl}`
         });
       } else {
         res.render(`${conf[1]}index.html`, {

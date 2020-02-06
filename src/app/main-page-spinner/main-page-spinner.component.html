@@ -18,7 +18,7 @@
       [class]='"text"'
   >
     <div [class]='"inner-text text" + point.i'>
-      <a routerLink='search' [queryParams]='{filters: "{\"life_areas\":[\"" + point.text.v + "\"]}"}'>
+      <a routerLink='search' [queryParams]='{filters: "{\"life_areas\":[\"" + point.text.v + "\"]}", sortOrder: "-year"}'>
         {{_._(point.text, 'v')}}
       </a>
     </div>
