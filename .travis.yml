@@ -22,5 +22,5 @@ deploy:
   provider: script
   script: bash .travis.sh deploy
   on:
-    all_branches: true
+    all_branches: false
     condition: $TRAVIS_PULL_REQUEST = "false"
