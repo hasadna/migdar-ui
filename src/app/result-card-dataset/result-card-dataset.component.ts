@@ -8,7 +8,7 @@ import { colorScale as cs } from '../constants';
   templateUrl: './result-card-dataset.component.html',
   styleUrls: ['./result-card-dataset.component.less']
 })
-export class ResultCardDatasetComponent implements OnChanges{
+export class ResultCardDatasetComponent implements OnChanges {
 
   @Input() result: any;
   @Input() genderIndex: boolean;
