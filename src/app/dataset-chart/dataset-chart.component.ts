@@ -10,6 +10,7 @@ interface DataEl {
 interface Series {
   dataset: DataEl[];
   gender: string;
+  units: string;
 }
 
 @Component({
@@ -66,6 +67,10 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     for (const dataset of this.series) {
       data.push(...dataset.dataset);
     }
+    let xValues = Array.from(new Set(data.map((d) => d.x))).sort();
+    if (!this.large && xValues.length > 16) {
+      xValues = xValues.filter((v, i) => i % 2);
+    }
     const x = d3.scalePoint()
                 .range([leftPadding, width - rightPadding])
                 .domain(data.map((d) => d.x).sort());
@@ -108,6 +113,7 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     // Add the X Axis
     const xAxis = d3.axisBottom(x)
                     .tickSize(0)
+                    .tickValues(xValues)
                     .tickFormat((d) => d.replace(RegExp('[0-9]{2}([0-9]{2})', 'g'), `'$1`))
                     ;
     svg.append('g')
@@ -115,19 +121,24 @@ export class DatasetChartComponent implements OnInit, OnChanges {
         .call(xAxis);
 
     // Add the Y Axis
+    const suffix = {
+      'אחוזים עד 100': '%',
+      'ש"ח': ' ₪'
+    }[this.series[0].units] || '';
     const yAxis = d3.axisLeft(y)
                     .tickSize(0)
                     .ticks(5)
+                    .tickFormat((d) => d3.format(',.2~f')(d) + suffix)
                     .tickPadding(-4);
     svg.append('g')
-       .attr('transform', `translate(0, ${marginTop - 8})`)
+       .attr('class', 'y-axis')
+       .attr('transform', `translate(${leftPadding - 16}, ${marginTop - 8})`)
        .call(yAxis);
 
     svg.append('path')
        .attr('class', 'bottom')
        .attr('transform', `translate(0, ${height - marginBottom})`)
        .attr('d', `M0,0H${width}`);
-
   }
 
 }

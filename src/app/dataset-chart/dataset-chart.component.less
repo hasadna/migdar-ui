@@ -26,8 +26,14 @@
                 font-size: 15px;
                 font-weight: 100;
                 direction: ltr;
-                text-anchor: start;
+                text-anchor: middle;
                 fill: #444;
+            }
+
+            .y-axis {
+                .tick text {
+                    text-anchor: end;
+                }    
             }
 
             &.large {
