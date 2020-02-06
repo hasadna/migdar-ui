@@ -14,7 +14,7 @@ export class StatsPageHeaderComponent implements OnInit, OnDestroy {
   slides: any;
 
   constructor(public api: ApiService) {
-    this.slides = api.fetch('datasets', null, 4)
+    this.slides = api.fetch('datasets', null, 4, 0, {'kind': 'Gender Statistics'})
       .pipe(
         map(({results, total}) => results)
       );
