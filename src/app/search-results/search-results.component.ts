@@ -75,7 +75,6 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   addToColumn(result, simple) {
-    this.columnAll.push(result);
     if (simple) {
       this.columns[this.columnAll.length % 2].push(result);
     } else {
@@ -93,6 +92,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
         console.log('failed to add to columns');
       }
     }
+    this.columnAll.push(result);
   }
 
   assignCard(result) {
