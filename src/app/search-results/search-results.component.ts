@@ -75,6 +75,9 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   addToColumn(result, simple) {
+    if (!result) {
+      return;
+    }
     if (simple) {
       this.columns[this.columnAll.length % 2].push(result);
     } else {
