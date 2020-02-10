@@ -57,7 +57,7 @@ for (const conf of CONFS) {
               lang: conf[1].slice(0, 2),
               title: 'יודעת - ' + (body.org_name || body.title || body.chart_title),
               image_url: image_url,
-              description: body.objective || body.notes || body.chart_abstract,
+              description: 'מרכז ידע נשים ומגדר - ' + (body.objective || body.notes || body.chart_abstract),
               url: `${externalUrl}${req.originalUrl}`
             })      
           }
@@ -69,7 +69,7 @@ for (const conf of CONFS) {
           lang: conf[1].slice(0, 2),
           title: 'יודעת - ' + tag,
           image_url: image_url,
-          description: `פרסומים, ארגונים ומידע הקשורים ל${tag}`,
+          description: `מרכז ידע בנושא נשים ומגדר בישראל - פרסומים, ארגונים ומידע הקשורים ל${tag}`,
           url: `${externalUrl}${req.originalUrl}`
         });
       } else {
