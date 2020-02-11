@@ -17,6 +17,7 @@ export class SearchPageComponent implements OnInit {
   term = '';
   kind = 'all';
   tag = null;
+  itag = null;
   sortOrder = null;
 
   activatedRouteSubs: Subscription;
@@ -33,6 +34,7 @@ export class SearchPageComponent implements OnInit {
       this.activatedRoute.queryParamMap.subscribe((params) => {
         this.term = params.get('q') || '';
         this.tag = params.get('tag');
+        this.itag = params.get('itag') || params.get('tag');
 
         this.kind = params.get('kind');
         const searchKind = {

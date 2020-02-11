@@ -13,6 +13,7 @@ const CONFS = [
   ['/en/', 'en/'],
   ['/',    'he/'],
 ];
+const TITLE = 'יודעת هي تعرف she knows';
 
 nunjucks.configure(rootDir, {
   autoescape: true,
@@ -63,11 +64,11 @@ for (const conf of CONFS) {
           }
         });
       } else if (req.originalUrl.startsWith(tag_prefix)) {
-        const tag = req.query.tag;
+        const tag = req.query.itag || req.query.tag;
         const image_url='https://yodaat.org/assets/social-preview.png';
         res.render(`${conf[1]}index.html`, {
           lang: conf[1].slice(0, 2),
-          title: 'יודעת - ' + tag,
+          title: TITLE + ' - ' + tag,
           image_url: image_url,
           description: `מרכז ידע בנושא נשים ומגדר בישראל - פרסומים, ארגונים ומידע הקשורים ל${tag}`,
           url: `${externalUrl}${req.originalUrl}`
@@ -75,7 +76,7 @@ for (const conf of CONFS) {
       } else {
         res.render(`${conf[1]}index.html`, {
           lang: conf[1].slice(0, 2),
-          title: 'יודעת هي تعرف she knows',
+          title: TITLE,
           image_url: 'https://yodaat.org/assets/social-preview.png',
           description: 'מרכז ידע בנושא נשים ומגדר בישראל',
           url: `${externalUrl}${req.originalUrl}`
