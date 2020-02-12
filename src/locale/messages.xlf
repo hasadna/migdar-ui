@@ -1254,7 +1254,18 @@
     </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/search-filters-property/search-filters-property.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b07fdf38b2a286f49e23533882c1921fc117b6e9" datatype="html">
+        <source>שנים</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/search-filters-property/search-filters-property.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/search-filters-property-field-name/search-filters-property-field-name.component.html</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d0130f81d09f666a93e381f646b362ef7f94afcd" datatype="html">
@@ -2714,6 +2725,27 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/card-share-page/card-share-page.component.html</context>
           <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7182e3bd48229575a3345e86033d5d423bde986a" datatype="html">
+        <source>מציג תוצאות</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/time-range-selector/time-range-selector.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ab36a0a6822cd3a3766ad7d1ddf71cdb90699015" datatype="html">
+        <source>משנת</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/time-range-selector/time-range-selector.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="46190e8a98f3fbf76c84344379c2eb6949beb06d" datatype="html">
+        <source>עד שנת</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/time-range-selector/time-range-selector.component.html</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
     </body>
