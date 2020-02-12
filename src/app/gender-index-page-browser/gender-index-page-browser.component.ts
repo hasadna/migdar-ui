@@ -14,12 +14,14 @@ export class GenderIndexPageBrowserComponent implements OnInit {
   results: any[] = [];
   selected = null;
   savedActive = null;
+  preload_item = 'השכלה';
 
   constructor(private api: ApiService, private activatedRoute: ActivatedRoute) {
     this.activatedRoute.fragment.subscribe((fragment) => {
       const dimension = fragment;
       if (dimension) {
         this.selected = dimension;
+        this.preload_item = dimension;
       }
     });
   }

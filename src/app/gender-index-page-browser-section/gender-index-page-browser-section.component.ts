@@ -15,6 +15,7 @@ export class GenderIndexPageBrowserSectionComponent implements OnInit, OnChanges
   @Input() slug: string;
   @Input() name: string;
   @Input() display: string;
+  @Input() preload: boolean;
   @Output() active = new EventEmitter<string>();
 
   open = false;

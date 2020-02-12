@@ -50,7 +50,6 @@ export class SearchManager {
           this.params.sortOrder === sortOrder) {
         return;
       }
-      this.results.next([]);
       this.params = {
         types: types || 'all',
         term: term,

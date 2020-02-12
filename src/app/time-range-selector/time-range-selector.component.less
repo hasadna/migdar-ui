@@ -1,0 +1,31 @@
+@import '../../common.less';
+
+:host {
+    width: 100%;
+
+    div {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        .range {
+            background-color: #785d7040;
+            border-radius: 15px;
+            padding: 3px 8px;
+        }
+        > * {
+            margin: 3px;
+        }
+    }
+
+    .container {
+        ::ng-deep {
+            svg {
+                width: 100%;
+                .handle {
+                    fill: @primaryPurple;
+                    stroke: none;
+                }
+            }    
+        }
+    }
+}

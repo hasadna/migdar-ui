@@ -28,6 +28,7 @@
     "@types/d3": "^5.7.2",
     "core-js": "^2.6.1",
     "d3": "^5.9.2",
+    "d3-simple-slider": "^1.5.4",
     "ngx-auto-unsubscribe": "^2.4.1",
     "ngx-rangeslider-component": "^1.0.6",
     "rxjs": "~6.3.3",

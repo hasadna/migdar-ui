@@ -200,7 +200,8 @@ export const FILTERS_CONFIG = {'all': [{'field': 'life_areas',
               {'v': 'תקשורת', 'v__ar': 'إعلام', 'v__en': 'Media'},
               {'v': 'תרבות וספורט', 'v__ar': 'ثقافة ورياضة', 'v__en': 'Culture & Sport'}]}]};
 
-export const ALLOWED_FIELDS = new Set(['languages', 'life_areas', 'compact_services', 'regions', 'org_kind', 'item_kind', 'source_kind']);
+export const ALLOWED_FIELDS = new Set(['languages', 'life_areas', 'compact_services', 'regions','org_kind', 'item_kind', 'source_kind']);
+export const RANGE_FIELDS = new Set(['year__gte', 'year__lte']);
 
 
 export function colorScale(series, index) {

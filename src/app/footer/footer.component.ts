@@ -23,7 +23,7 @@ export class FooterComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscription = this.checkerObs.pipe(
-      debounceTime(1000)
+      debounceTime(250)
     ).subscribe(() => {
       if (window.innerHeight + window.pageYOffset + 300 > window.document.body.scrollHeight) {
         this.bottommer.emit();

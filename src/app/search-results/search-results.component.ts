@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewChild, ElementRef, OnDestroy, Input, OnChanges, HostListener } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy, Input, OnChanges, HostListener, Renderer2 } from '@angular/core';
 import { ApiService } from '../api.service';
 import { BottommerService } from '../bottommer.service';
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 import { Subscription, Observable, Subject } from 'rxjs';
 import { SearchManager } from '../search-manager';
-import { debounceTime } from 'rxjs/operators';
+import { debounceTime, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search-results',
@@ -16,6 +16,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
   @Input() manager: SearchManager;
   @Input() results: any[];
   @Input() image = false;
+  @Input() preload = false;
   columns = [[], []];
   columnAll = [];
   @ViewChild('column0') column0ref: ElementRef;
@@ -25,13 +26,23 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
   bottommerSubs: Subscription;
   visible = false;
   visibleObs = new Subject<any>();
+  scrollListenerUnsubscribe: () => void;
+  br: ClientRect;
 
   constructor(public api: ApiService,
-              private bottommer: BottommerService) {
+              private bottommer: BottommerService,
+              private renderer: Renderer2) {
       this.visibleObs.pipe(
+        debounceTime(100),
+        map(() => {
+          this.visibleIfNeeded();
+        }),
         debounceTime(1000)
       ).subscribe(() => {
-        this.visibleIfNeeded();
+        this.updateBr();
+      });
+      this.scrollListenerUnsubscribe = this.renderer.listen('window', 'scroll', () => {
+        this.visibleObs.next(true);
       });
   }
 
@@ -43,6 +54,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
         }
       });
     }
+    this.visible = this.preload;
   }
 
   clear() {
@@ -72,6 +84,12 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
     } else if (this.results && this.results.length) {
       this.assignCards(this.results);
     }
+  }
+
+  updateBr() {
+    const el: Element = this.column0ref.nativeElement || this.mobilecolumnref.nativeElement;
+    this.br = el.getBoundingClientRect();
+    this.visibleIfNeeded();
   }
 
   addToColumn(result, simple) {
@@ -117,18 +135,14 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   visibleIfNeeded() {
-    console.log('visibleIfNeeded?');
-    const el: Element = this.column0ref.nativeElement || this.mobilecolumnref.nativeElement;
-    const br = el.getBoundingClientRect();
-    const visible = br.top < 1000 && br.bottom > 0;
+    if (!this.br) {
+      this.updateBr();
+    }
+    const visible = this.br.top < 1000 && this.br.bottom > 0;
     if (this.columnAll.length && !this.visible && visible) {
       this.visible = true;
+      this.scrollListenerUnsubscribe();
     }
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  scrollHandler(event) {
-    this.visibleObs.next(true);
   }
 
 }

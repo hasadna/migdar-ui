@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { FILTERS_CONFIG, ALLOWED_FIELDS } from './constants';
-import { Subject, BehaviorSubject } from 'rxjs';
+import { FILTERS_CONFIG, ALLOWED_FIELDS, RANGE_FIELDS } from './constants';
+import { Subject, BehaviorSubject, forkJoin } from 'rxjs';
+import { ApiService } from './api.service';
+import { debounceTime } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +12,36 @@ export class FilterManagerService {
   public CONFIG = FILTERS_CONFIG;
 
   private selected = {};
+  public absRange = {};
+  public selectedRange = {year__gte: 0, year__lte: 0};
 
   public updated = new BehaviorSubject<any>({});
+  public updateChannel = new Subject<string>();
 
-  constructor() { }
+  constructor(private api: ApiService) {
+    forkJoin([
+      this.api.fetch(
+        'publications', null, 1, 0, {}, 'year'
+      ),
+      this.api.fetch(
+        'publications', null, 1, 0, {}, '-year'
+      )
+    ]).subscribe((results) => {
+      this.absRange = {
+        year__gte: results[0].results[0].year,
+        year__lte: results[1].results[0].year
+      };
+      RANGE_FIELDS.forEach((field) => {
+        this.selectedRange[field] = this.selectedRange[field] || this.absRange[field];
+      });
+      console.log('GOT RANGES', this.absRange, this.selectedRange);
+    });
+    this.updateChannel.pipe(
+      debounceTime(100)
+    ).subscribe((kind) => {
+      this.update(kind);
+    })
+  }
 
   get(kind: string, field: string): string[] {
     this.selected[kind] = this.selected[kind] || {};
@@ -38,6 +66,11 @@ export class FilterManagerService {
         filters[field] = values;
       }
     }
+    RANGE_FIELDS.forEach((field) => {
+      if (this.selectedRange[field] && this.selectedRange[field] !== this.absRange[field]) {
+        filters[field] = this.selectedRange[field];
+      }
+    });
     this.updated.next(filters);
     return filters;
   }
@@ -48,7 +81,11 @@ export class FilterManagerService {
       if (ALLOWED_FIELDS.has(field)) {
         this.selected[kind][field] = filters[field];
       }
+      if (RANGE_FIELDS.has(field)) {
+        this.selectedRange[field] = parseInt(filters[field], 10) || this.absRange[field];
+      }
     }
+    console.log('updateFrom', kind, filters, this.selectedRange);
     this.update(kind);
   }
 
@@ -78,5 +115,13 @@ export class FilterManagerService {
       this.select(kind, field, value);
     }
     this.update(kind);
+  }
+
+  yearRange(kind, range) {
+    this.selectedRange = {
+      year__gte: range[0],
+      year__lte: range[1]
+    };
+    this.updateChannel.next(kind);
   }
 }

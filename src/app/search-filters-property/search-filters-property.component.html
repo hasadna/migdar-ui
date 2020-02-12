@@ -15,9 +15,17 @@
         {{filters.numSelected(itemKind, item.field)}}
       </span>
     </li>
+    <li [class.selected]='selected==="time_range"'
+        (click)='selected = "time_range"'
+        *ngIf='itemKind === "publications" || itemKind === "all"'
+      >
+      <span>
+        <app-search-filters-property-field-name [field]='"time_range"'></app-search-filters-property-field-name>
+      </span>
+    </li>
   </ul>
 </app-horizontal-selector>
-<app-horizontal-selector *ngIf='selected' appLtr>
+<app-horizontal-selector *ngIf='selected && selected!=="time_range"' appLtr>
   <span class='title'>
     <span>
       <app-search-filters-property-field-name [field]='selected.field'></app-search-filters-property-field-name>
@@ -32,6 +40,17 @@
         (click)='filters.toggle(itemKind, selected.field, item.v)'
     >
       <span>{{_._(item, 'v')}}</span>
+    </li>
+  </ul>
+</app-horizontal-selector>
+<app-horizontal-selector *ngIf='filters.absRange && selected && selected==="time_range"' appLtr>
+  <span class='title'>
+    <span i18n>שנים</span>
+  </span>
+  <ul>
+    <li>
+      <app-time-range-selector (range)='filters.yearRange(itemKind, $event)'>
+      </app-time-range-selector>
     </li>
   </ul>
 </app-horizontal-selector>

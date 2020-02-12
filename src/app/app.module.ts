@@ -64,6 +64,7 @@ import { ResultCardImgComponent } from './result-card-img/result-card-img.compon
 import { CardSharePageComponent } from './card-share-page/card-share-page.component';
 import { ShareButtonComponent } from './share-button/share-button.component';
 import { LtrDirective } from './ltr.directive';
+import { TimeRangeSelectorComponent } from './time-range-selector/time-range-selector.component';
 
 
 const appRoutes: Routes = [
@@ -164,7 +165,8 @@ const appRoutes: Routes = [
     ResultCardImgComponent,
     CardSharePageComponent,
     ShareButtonComponent,
-    LtrDirective
+    LtrDirective,
+    TimeRangeSelectorComponent
   ],
   imports: [
     BrowserModule,
