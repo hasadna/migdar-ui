@@ -2600,8 +2600,8 @@
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="a23f8a931051d1ee4bfe15333332fa68444979a8" datatype="html">
-        <source>ביקרת במאגר הידע בנושא מגדר ולא מצאת את מה שחיפשת? יש לך מידע רלוונטי שתרצי לחלוק? הגעת למקום הנכון!</source>
+      <trans-unit id="4950f0e30682f96045a853e31716443985f836e7" datatype="html">
+        <source>ביקרת במרכז הידע ולא מצאת את מה שחיפשת? יש לך מידע רלוונטי שתרצי לחלוק? הגעת למקום הנכון!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
           <context context-type="linenumber">6</context>
