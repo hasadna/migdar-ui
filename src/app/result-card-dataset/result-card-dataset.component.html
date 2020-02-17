@@ -9,6 +9,6 @@
 <div class='tags' *ngIf='tags'>
   <strong i18n>תגיות:&nbsp;</strong>
   <span *ngFor="let tag of _.tags(result)">
-    <a [href]='_.P("/search?tag=" + tag.src + "kind=all&filters={}&itag=" + tag.dst)'>{{tag.dst}}</a>
+    <a [href]='_.P("/search?tag=" + tag.src + "&itag=" + tag.dst + "&kind=all&filters={}&sortOrder=-year")'>{{tag.dst}}</a>
   </span>
 </div>
