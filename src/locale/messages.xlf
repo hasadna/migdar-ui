@@ -366,6 +366,13 @@
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="2854724f1b9609dca1ba9d295946ffd96d75c5bf" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/><x id="TAG_IMG" ctype="image" equiv-text="&lt;img/&gt;"/> דף הפייסבוק שלנו<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header-menu/header-menu.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="e4f686f6d8f6aa5aa7741a3e410f39aa69c9a70e" datatype="html">
         <source>החלפת שפה</source>
         <context-group purpose="location">
@@ -1287,6 +1294,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/search-filters-property-field-name/search-filters-property-field-name.component.html</context>
           <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e21d8217677585b7ca8ce318f59492eb15c11c00" datatype="html">
+        <source>הצטרפו אלינו</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header-search-icon/header-search-icon.component.html</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2b33250250362334062c4e322af70522ea112cbc" datatype="html">
