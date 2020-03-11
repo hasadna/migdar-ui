@@ -1,10 +1,12 @@
+@import '../../common.less';
+
 :host {
     .container {
         display: flex;
         flex-flow: row;
         justify-content: flex-start;
         align-items: center;
-        width: 40px;
+        width: 140px;
         overflow: hidden;
         position: relative;
         transition: width 1s;
@@ -15,13 +17,48 @@
             app-search-bar {
                 opacity: 1;
             }
+            .fb {
+                opacity: 0;
+                pointer-events: none;
+                width: 0;
+            }
         }
 
-        img {
+        > .icon {
             width: 20px;
             margin-right: 20px;
             z-index: 1;
             flex: 0 0 auto;
+        }
+        .fb {
+            .icon {
+                width: 34px;
+                height: 34px;
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: center;
+                border-radius: 17px;
+                background: @primaryPurple;
+                flex: 0 0 auto;
+                img {
+                    width: 10px;
+                }
+                margin: 0 10px;
+            }
+            width: 100px;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            span {
+                color: @primaryPurple;
+                font-size: 14px;
+                line-height: 1.1;
+            }
+            transition: opacity 1s;
+            flex: 0 0 auto;
+
         }
         app-search-bar {
             flex: 0 0 auto;

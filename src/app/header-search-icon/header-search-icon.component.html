@@ -1,5 +1,11 @@
 <div class='container' #container [class.active]='active' appLtr>
-  <img src='assets/search-ic.svg' (click)='active = true'/>
+  <img class='icon' src='assets/search-ic.svg' (click)='active = true'/>
+  <div class='fb'>
+    <a class='icon' href='https://facebook.com/yodaat1/' target='_blank'>
+      <img src='assets/share-by-fb-ic.svg'/>
+    </a>
+    <span i18n>הצטרפו אלינו</span>
+  </div>
   <app-search-bar
       #searchBar
       (changed)='search($event)'
