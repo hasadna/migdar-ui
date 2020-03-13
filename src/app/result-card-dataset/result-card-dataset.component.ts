@@ -24,6 +24,7 @@ export class ResultCardDatasetComponent implements OnChanges {
 
   ngOnChanges() {
     if (this.result) {
+      this.ratio = this.result.chart_kind === 'hbars' ? 200 : 50;
       window.setTimeout(() => {
         this._chart = this.result;
         analyzeColors(this._chart);
