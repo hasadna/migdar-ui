@@ -203,30 +203,49 @@ export const FILTERS_CONFIG = {'all': [{'field': 'life_areas',
 export const ALLOWED_FIELDS = new Set(['languages', 'life_areas', 'compact_services', 'regions','org_kind', 'item_kind', 'source_kind']);
 export const RANGE_FIELDS = new Set(['year__gte', 'year__lte']);
 
+export function analyzeColors(chart) {
+  const colors = [
+    '#ef5241',
+    '#6661d1',
+    '#68788c',
+    '#d6b618',
+    '#ef7625',
+    '#002070',
+    '#44b8e0',
+    '#b658cc',
+    '#f29eb5',
+  ];
 
-export function colorScale(series, index) {
-    if (!series.gender) {
-        return '#ef5241';
-    }
-    if (series.gender.includes('נשים') || series.gender.includes('בנות')) {
-      return '#59334d';
-    } else if (series.gender.includes('גברים') || series.gender.includes('בנים')) {
-      return '#8693a3';
-    } else {
-      const colors = [
-        '#ef5241',
-        '#6661d1',
-        '#68788c',
-        '#d6b618',
-        '#ef7625',
-        '#002070',
-        '#44b8e0',
-        '#b658cc',
-        '#f29eb5',
-      ];
-      return colors[index % colors.length];
+  let numWomen = 0;
+  let numMen = 0;
+  for (const s of chart.series) {
+    if (s.gender) {
+      if (s.gender.includes('נשים') || s.gender.includes('בנות') || s.gender.includes('אישה')) {
+        s.__color__woman = true;
+        numWomen++;
+      } else if (s.gender.includes('גברים') || s.gender.includes('בנים') || s.gender.includes('גבר')) {
+        s.__color__man = true;
+        numMen++;
+      }
     }
   }
+  const ignoreGenders = numWomen > 1 || numMen > 1;
+  let index = 0;
+  for (const s of chart.series) {
+    if (!ignoreGenders && s.__color__woman) {
+      s.__color = '#59334d';
+    } else if (!ignoreGenders && s.__color__man) {
+      s.__color = '#8693a3';
+    } else {
+      s.__color = colors[index % colors.length];
+      index++;
+    }
+  }
+}
+
+export function colorScale(series) {
+  return series.__color;
+}
 
 //   export function colorScale(series, index) {
 //     if (series.gender.includes('נשים')) {

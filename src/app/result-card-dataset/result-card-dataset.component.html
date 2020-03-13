@@ -1,11 +1,11 @@
 <h1 [class.gender-index]='genderIndex' *ngIf='title'>{{_._(result, 'chart_title')}}</h1>
-<div class='legend'>
+<div class='legend' *ngIf='_chart && _chart.chart_type !== "hbars"'>
   <div class='entry' *ngFor='let series of result.series; let idx = index;'>
-    <div class='color' [style.border-color]='colorScale(series, idx)'></div> 
+    <div class='color' [style.border-color]='colorScale(series)'></div> 
     <div class='name'>{{_._(series, 'gender')}}</div>
   </div>
 </div>
-<app-dataset-chart [chart]='_chart' [large]='large'></app-dataset-chart>
+<app-dataset-chart [chart]='_chart' [large]='large' (ratio)='ratio = $event * 100' [style.padding-bottom]='ratio + "%"'></app-dataset-chart>
 <div class='tags' *ngIf='tags'>
   <strong i18n>תגיות:&nbsp;</strong>
   <span *ngFor="let tag of _.tags(result)">

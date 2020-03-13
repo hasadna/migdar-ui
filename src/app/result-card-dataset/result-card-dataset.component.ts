@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import * as d3 from 'd3';
 import { I18nService } from '../i18n.service';
-import { colorScale as cs } from '../constants';
+import { colorScale as cs, analyzeColors } from '../constants';
 
 @Component({
   selector: 'app-result-card-dataset',
@@ -18,6 +18,7 @@ export class ResultCardDatasetComponent implements OnChanges {
 
   colorScale = cs;
   _chart = null;
+  ratio = 50;
 
   constructor(public _: I18nService) { }
 
@@ -25,6 +26,7 @@ export class ResultCardDatasetComponent implements OnChanges {
     if (this.result) {
       window.setTimeout(() => {
         this._chart = this.result;
+        analyzeColors(this._chart);
       }, 100);
     } else {
       this._chart = null;

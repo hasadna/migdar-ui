@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, OnChanges, EventEmitter, Output } from '@angular/core';
 import { colorScale } from '../constants';
 import * as d3 from 'd3';
+import { I18nService } from '../i18n.service';
 
 interface DataEl {
   x: string;
@@ -22,13 +23,14 @@ export class DatasetChartComponent implements OnInit, OnChanges {
 
   @Input() chart: any;
   @Input() large: boolean;
+  @Output() ratio = new EventEmitter<number>();
 
   @ViewChild('container') container: ElementRef;
 
   current = null;
   series: Series[] = null;
 
-  constructor() { }
+  constructor(private _: I18nService) { }
 
   parseYear(x): number {
     return parseInt(x.split('/')[0], 10);
@@ -53,13 +55,15 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     } else {
       return;
     }
+    let r = 0;
     if (this.chart.chart_type === 'stacked') {
-      this.stacked();
+      r = this.stacked();
     } else if (this.chart.chart_type === 'hbars') {
-      this.hbars();
+      r = this.hbars();
     } else {
-      this.line();
+      r = this.line();
     }
+    this.ratio.emit(r);
   }
 
   addXAxis(svg, x, xValues, position) {
@@ -142,8 +146,8 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     const svg = this.addSvg(width, height);
 
     const x = d3.scaleLinear()
-                .range([leftPadding, width - rightPadding])
-                .domain(d3.extent(data, (d) => d.y))
+                .range([0, width - rightPadding - leftPadding])
+                .domain([0, d3.max(data, (d) => d.y)])
                 .nice();
     const g = d3.scaleBand()
                 .range([0, height - yMargins])
@@ -154,38 +158,71 @@ export class DatasetChartComponent implements OnInit, OnChanges {
                 .domain(data.map((d) => d.x).sort())
                 .padding(0.15);
 
-    this.addGrid(svg, x, y, width, height, marginTop, marginBottom);
-
     // Create the stack
     const chart = svg.append('g')
                      .attr('transform', `translate(0, ${marginTop})`);
-    chart.selectAll('.bar-stack')
-         .data(<any[]>stack)
-         .enter()
-         .append('g')
-         .attr('class', 'bar-stack')
-         .style('fill', (d, i) => {
-            return colorScale(this.series[i], i);
-          });
+    const groups = chart.selectAll('.bar-group')
+         .data(<any[]>this.series)
+         .enter();
+    groups.append('g')
+           .attr('class', 'bar-group')
+           .attr('transform', (d) => `translate(0, ${g(d.gender) + seriesPadding})`)
+           .style('fill', colorScale);
+    groups.append('text')
+          .attr('class', 'series-label')
+          .attr('dy', seriesPadding - 4)
+          .attr('x', 0)
+          .attr('y', (d) => g(d.gender))
+          .text((d) => this._._(d, 'gender'))
+          .style('fill', colorScale);
 
+    const group = chart.selectAll('g.bar-group').selectAll('rect')
+         .data((d: any) => d.dataset)
+         .enter();
+    group.append('rect')
+          .attr('x', leftPadding)
+          .attr('y', (d: any) => y(d.x))
+          .attr('width', (d: any) => x(d.y))
+          .attr('height', y.bandwidth());
+    group.append('text')
+         .attr('class', 'label')
+         .attr('x', leftPadding)
+         .attr('y', (d: any) => y(d.x))
+         .attr('dy', y.bandwidth() / 2)
+         .attr('dx', -4)
+         .style('dominant-baseline', 'middle')
+         .text((d: any) => d.x);
 
-    chart.selectAll('g.bar-stack').selectAll('rect')
-         .data((d) => <any[]>d, (s) => (<any>s).x)
-         .enter()
-         .append('rect')
-         .attr('x', (d, i) => x(prepared[i].x))
-         .attr('y', (d) => y(d[1]))
-         .attr('height', (d) => y(d[0]) - y(d[1]))
-         .attr('width', x.bandwidth());
+    const suffix = {
+      'אחוזים עד 100': '%',
+      'ש"ח': ' ₪'
+    }[this.series[0].units] || '';
+    // const yAxis = d3.axisLeft(y)
+    //                 .tickSize(0)
+    //                 .ticks(5)
+    //                 .tickFormat((d: any) => d3.format(',.2~f')(d) + suffix)
+    //                 .tickPadding(-4);
+    // svg.append('g')
+    //     .attr('class', 'y-axis')
+    //     .attr('transform', `translate(${top}, ${left})`)
+    //     .call(yAxis);
+    // this.addXAxis(svg, x, xValues, height - marginBottom + 8);
 
-    this.addXAxis(svg, x, xValues, height - marginBottom + 8);
-    this.addYAxis(svg, y, leftPadding - 16, marginTop - 8);
+    const xAxis = d3.axisTop(x)
+                    .tickSize(5)
+                    // .ticks(5)
+                    .tickFormat((d: any) => d3.format(',.2~f')(d) + suffix)
+                    ;
+    svg.append('g')
+        .attr('transform', `translate(${leftPadding}, ${marginTop})`)
+        .call(xAxis);
 
     svg.append('path')
        .attr('class', 'bottom')
-       .attr('transform', `translate(0, ${height - marginBottom})`)
+       .attr('transform', `translate(0, ${marginTop})`)
        .attr('d', `M0,0H${width}`);
 
+    return height / width;
   }
 
   stacked() {
@@ -243,9 +280,7 @@ export class DatasetChartComponent implements OnInit, OnChanges {
          .enter()
          .append('g')
          .attr('class', 'bar-stack')
-         .style('fill', (d, i) => {
-            return colorScale(this.series[i], i);
-          });
+         .style('fill', (d, i) => colorScale(this.series[i]));
 
 
     chart.selectAll('g.bar-stack').selectAll('rect')
@@ -265,6 +300,7 @@ export class DatasetChartComponent implements OnInit, OnChanges {
        .attr('transform', `translate(0, ${height - marginBottom})`)
        .attr('d', `M0,0H${width}`);
 
+    return height / width;
   }
 
   line() {
@@ -316,6 +352,8 @@ export class DatasetChartComponent implements OnInit, OnChanges {
        .attr('class', 'bottom')
        .attr('transform', `translate(0, ${height - marginBottom})`)
        .attr('d', `M0,0H${width}`);
+
+    return height / width;
   }
 
 }
