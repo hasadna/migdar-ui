@@ -17,17 +17,17 @@ export class ResultCardDatasetComponent implements OnChanges {
   @Input() title = true;
 
   colorScale = cs;
-  _series = null;
+  _chart = null;
 
   constructor(public _: I18nService) { }
 
   ngOnChanges() {
     if (this.result) {
       window.setTimeout(() => {
-        this._series = this.result.series;
+        this._chart = this.result;
       }, 100);
     } else {
-      this._series = null;
+      this._chart = null;
     }
   }
 

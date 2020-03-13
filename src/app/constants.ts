@@ -219,7 +219,7 @@ export function colorScale(series, index) {
         '#68788c',
         '#d6b618',
         '#ef7625',
-        '#002070￼￼￼￼￼￼￼￼',
+        '#002070',
         '#44b8e0',
         '#b658cc',
         '#f29eb5',
