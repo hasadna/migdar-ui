@@ -7,7 +7,8 @@
 <div class='card-menu' appLtr>
   <app-share-button kind='madad'></app-share-button>
   <a [href]='"https://api.yodaat.org/data" + _.P("/" + document.doc_id) + "-share.png"' target='_blank' i18n>הורדת תמונה</a>
-  <a [href]='"https://api.yodaat.org/data/" + document.doc_id + ".xlsx"' target='_blank' i18n>הורדת קובץ נתונים</a>
+  <a [href]='"https://api.yodaat.org/data/" + document.doc_id + ".xlsx"' target='_blank' i18n>קובץ נתונים</a>
+  <a *ngIf='document.full_data_source' [href]='document.full_data_source' target='_blank' i18n>הנתונים המלאים</a>
 </div>
 <div class='item-props'>
   <div class='item-prop'>

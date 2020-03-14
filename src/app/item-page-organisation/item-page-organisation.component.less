@@ -61,6 +61,15 @@
                     background-size: 15px;
                 }
             }
+
+            .budgetkey {
+                a {
+                    font-size: 16px;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
     
         .org-info {
@@ -117,11 +126,8 @@
                     max-width: 150px;
                 }
 
-                .circles {
-                    flex-flow: column;
-                    & > * {
-                        margin: 0;
-                    }
+                .budgetkey {
+                    display: none;
                 }
             }
         }
