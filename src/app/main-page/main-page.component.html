@@ -12,6 +12,13 @@
       placeholder='<strong>מה תרצו לחפש?</strong> שם מאמר, תוכן בנושא מסויים&hellip;'
       i18n-placeholder
     ></app-search-bar>
+    <div class='samples'>
+      <h3><span i18n>חיפושים לדוגמא:</span>&nbsp;
+          <strong><a [href]='_.P("/search?tag=מגיפת+הקורונה&kind=all&filters={}&sortOrder=-year")' i18n>מגיפת הקורונה</a></strong>
+          <a [href]='_.P("/search?q=אלימות+במשפחה&kind=all&filters={}&sortOrder=-year")' i18n>אלימות במשפחה</a>
+          <a [href]='_.P("/search?q=עבודות+שקופות&kind=all&filters={}&sortOrder=-year")' i18n>עבודות שקופות</a>
+      </h3>
+    </div>
   </div>
 </div>
 <app-fixed-background [color]='"white"'></app-fixed-background>
