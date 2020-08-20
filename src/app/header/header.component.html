@@ -1,13 +1,20 @@
-<div class='header' (click)='langSelected = menuSelected = false; true' appLtr>
-  <div class='container' appLtr>
-    <a [href]="_.P('/')"><img class='logo' src='assets/sticky-color-logo.svg'></a>
-    <a class='section-link purple' [class.active]='headerState.section === "publications"' i18n [href]="_.P('/publications')">ספריית מקורות</a>
-    <a class='section-link green'  [class.active]='headerState.section === "stats"' i18n [href]="_.P('/stats')">סטטיסטיקה מגדרית</a>
-    <a class='section-link orange' [class.active]='headerState.section === "orgs"' i18n [href]="_.P('/organisations')">ארגונים ופעילות בתחום המגדר</a>
-    <a class='section-link red'    [class.active]='headerState.section === "gender_index"' i18n [href]="_.P('/gender-index')">מדד המגדר</a>
-    <span class='separator'></span>
-    <app-header-search-icon></app-header-search-icon>
-    <app-header-lang-selector [(selected)]='langSelected'></app-header-lang-selector>
-    <app-header-menu [(selected)]='menuSelected'></app-header-menu>
-  </div>
+<div>
+  <a href='#main-content' class='skip-to-main-content'>דלג לתוכן מרכזי</a>
+  <nav class='header' (click)='langSelected = menuSelected = false; true' appLtr>
+    <div class='container' appLtr>
+      <a [href]="_.P('/')"><img class='logo' src='assets/sticky-color-logo.svg'></a>
+      <a class='section-link purple' [class.active]='headerState.section === "publications"' i18n
+        [href]="_.P('/publications')">ספריית מקורות</a>
+      <a class='section-link green' [class.active]='headerState.section === "stats"' i18n
+        [href]="_.P('/stats')">סטטיסטיקה מגדרית</a>
+      <a class='section-link orange' [class.active]='headerState.section === "orgs"' i18n
+        [href]="_.P('/organisations')">ארגונים ופעילות בתחום המגדר</a>
+      <a class='section-link red' [class.active]='headerState.section === "gender_index"' i18n
+        [href]="_.P('/gender-index')">מדד המגדר</a>
+      <span class='separator'></span>
+      <app-header-search-icon></app-header-search-icon>
+      <app-header-lang-selector [(selected)]='langSelected'></app-header-lang-selector>
+      <app-header-menu [(selected)]='menuSelected'></app-header-menu>
+    </div>
+  </nav>
 </div>

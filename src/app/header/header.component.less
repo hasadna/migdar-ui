@@ -5,6 +5,21 @@
     width: 100vw;
     background-color: white;
     height: calc(@headerHeight + 10px);
+    
+    .skip-to-main-content {
+        background: #e77e23;
+        height: 30px;
+        left: 50%;
+        padding: 8px;
+        position: absolute;
+        transform: translateY(-100%);
+        transition: transform 0.3s;
+    }
+
+    .skip-to-main-content:focus {
+        transform: translateY(0%);
+    }
+
 
     .header {
         width: 100vw;
