@@ -1,168 +1,125 @@
-<div class='title'>
-  <div class='right-hand'>
-    <img src='assets/landingpage-logo.svg'>
-    <h1 i18n>מרכז ידע בנושא נשים ומגדר בישראל</h1>
-    <h2 i18n>שיתוף, הנגשה ויצירה של ידע לקידום שוויון מגדרי</h2>
-    <app-search-bar
-      (changed)='search($event, "all")'
-      [color]='"rgba(67, 38, 58)"'
-      [backgroundColor]='"rgba(67, 38, 58, 0.2)"'
-      [icon]='"search-ic"'
-      [instant]='false'
-      placeholder='<strong>מה תרצו לחפש?</strong> שם מאמר, תוכן בנושא מסויים&hellip;'
-      i18n-placeholder
-    ></app-search-bar>
-    <div class='samples'>
-      <h3><span i18n>חיפושים לדוגמא:</span>&nbsp;
-          <strong><a [href]='_.P("/search?tag=מגיפת+הקורונה&kind=all&filters={}&sortOrder=")' i18n>מגיפת הקורונה</a></strong>
+<main id='main-content'>
+  <div class='title'>
+    <div class='right-hand'>
+      <img src='assets/landingpage-logo.svg'>
+      <h1 i18n>מרכז ידע בנושא נשים ומגדר בישראל</h1>
+      <h2 i18n>שיתוף, הנגשה ויצירה של ידע לקידום שוויון מגדרי</h2>
+      <app-search-bar (changed)='search($event, "all")' [color]='"rgba(67, 38, 58)"'
+        [backgroundColor]='"rgba(67, 38, 58, 0.2)"' [icon]='"search-ic"' [instant]='false'
+        placeholder='<strong>מה תרצו לחפש?</strong> שם מאמר, תוכן בנושא מסויים&hellip;' i18n-placeholder>
+      </app-search-bar>
+      <div class='samples'>
+        <h3><span i18n>חיפושים לדוגמא:</span>&nbsp;
+          <strong><a [href]='_.P("/search?tag=מגיפת+הקורונה&kind=all&filters={}&sortOrder=")' i18n>מגיפת
+              הקורונה</a></strong>
           <a [href]='_.P("/search?q=אלימות+במשפחה&kind=all&filters={}&sortOrder=")' i18n>אלימות במשפחה</a>
           <a [href]='_.P("/search?q=עבודות+שקופות&kind=all&filters={}&sortOrder=")' i18n>עבודות שקופות</a>
-      </h3>
-    </div>
-  </div>
-</div>
-<app-fixed-background [color]='"white"'></app-fixed-background>
-<div class='spinner-widget' appLtr>
-  <app-main-page-spinner></app-main-page-spinner>
-</div>
-<div class='square-links' appLtr>
-  <div class='square-link'>
-    <a [href]="_.P('/publications')">
-      <img src='assets/lp-library-ic.svg'>
-      <h1 i18n><span>ספריית</span><br/><span>מקורות</span></h1>
-      <h2 i18n>{{counts.publications.total_overall | number}} פריטים</h2>
-    </a>
-  </div>
-  <div class='square-link'>
-    <a [href]="_.P('/stats')">
-      <img src='assets/lp-stats-ic.svg'>
-      <h1 i18n><span>סטטיסטיקה</span><br/><span>מגדרית</span></h1>
-      <h2 i18n>{{counts.stats.total_overall}} פריטים</h2>
-    </a>
-  </div>
-  <div class='square-link'>
-    <a [href]="_.P('/organisations')">
-      <img src='assets/lp-orgs-ic.svg'>
-      <h1 i18n><span>ארגונים ופעילות</span><br/><span>בתחום המגדר</span></h1>
-      <h2 i18n>{{counts.orgs.total_overall}} ארגונים</h2>
-    </a>
-  </div>
-  <div class='square-link'>
-    <a [href]="_.P('/gender-index')">
-      <img src='assets/lp-madad-ic.svg'>
-      <h1 i18n><span>מדד</span><br/><span>המגדר</span></h1>
-      <h2 i18n>קראו עוד</h2>
-    </a>
-  </div>
-</div>
-<div class='recently-added'>
-  <h1 i18n>פריטים שהתווספו למאגר לאחרונה</h1>
-  <div class='cards'>
-    <app-result-card *ngFor='let result of (results | async)' [result]='result'></app-result-card>
-  </div>
-  <h2 i18n><a [href]="_.P('/search')">עוד פריטים שהתווספו לאחרונה&hellip;</a></h2>
-</div>
-<div class='need-help'>
-  <div class='need-help-main'>
-    <img class='logo' src='assets/question-ic.svg'/>
-    <span i18n>ביקרת במרכז הידע ולא מצאת מה שחיפשת?</span>
-    <span i18n>יש לך מידע רלוונטי לשתף איתנו?</span>
-    <span i18n>הגעת למקום הנכון!</span>
-    <div class='buttons'>
-      <div>
-        <img src='assets/neg-share-ic.svg'/>
-        <a class='text' [href]="_.P('/contact-us')"><span i18n>יש לי מה לשתף </span></a>
-      </div>
-      <div>
-        <img src='assets/info-ic.svg'/>
-        <a class='text' [href]="_.P('/contact-us')"><span i18n>עזרו לי לאתר מידע</span></a>
+        </h3>
       </div>
     </div>
   </div>
-</div>
-<app-main-page-card
-  *ngIf='reveal > 0'
-  [colors]="'red'"
-  [logo]='"assets/lp-madad-info-ic.svg"'
-  [types]='"datasets"'
-  [filters]='{"kind":"Gender Index"}'
-  >
-  <span class='title' i18n>מדד המגדר</span>
-  <span class='description' i18n>
-    ניטור אי השוויון בין נשים לגברים בישראל בתחומי חיים שונים,
-    המאפשר לזהות מגמות של שינוי באי שוויון המגדרי לאורך השנים
-  </span>
-  <app-search-bar
-    (changed)='search($event, "gender_index")'
-    [color]='"rgba(239, 82, 65)"'
-    [backgroundColor]='"rgba(239, 82, 65, 0.2)"'
-    [icon]='"search-red-ic"'
-    [instant]='false'
-    placeholder='<strong>לדוגמא:</strong> כלכלה ושוק העבודה, עוני&hellip;'
-    i18n-placeholder
-  ></app-search-bar>
-</app-main-page-card>
-<app-main-page-card
-  *ngIf='reveal > 1'
-  [colors]="'green'"
-  [logo]='"assets/lp-stats-info-ic.svg"'
-  [types]='"datasets"'
-  [filters]='{"kind":"Gender Statistics"}'
-  >
-  <span class='title' i18n>סטטיסטיקה מגדרית</span>
-  <span class='description' i18n>
-    כאן ניתן למצוא נתונים השוואתיים אודות מצבם של נשים וגברים בתחומי חיים שונים.
-    נתונים אלה יכולים לסייע לקידום יוזמות, מדיניות, אקטיביזם, הוראה ומחקר בתחום השוויון המגדרי
-  </span>
-  <app-search-bar
-    (changed)='search($event, "stats")'
-    [color]='"rgb(137, 163, 59)"'
-    [backgroundColor]='"rgba(137, 163, 59, 0.2)"'
-    [icon]='"search-green-ic"'
-    [instant]='false'
-    placeholder='<strong>חיפוש נתונים, אינפוגרפיקה</strong>'
-    i18n-placeholder
-  ></app-search-bar>
-</app-main-page-card>
-<app-main-page-card
-  *ngIf='reveal > 2'
-  [colors]="'orange'"
-  [logo]='"assets/lp-orgs-info-ic.svg"'
-  [types]='"orgs"'
-  [noMobileCard]='true'
-  >
-  <span class='title' i18n>ארגונים ופעילות בתחום המגדר</span>
-  <span class='description' i18n>
-    כאן ניתן למצוא מגוון עשיר של ארגונים, יוזמות וגורמים הפועלים לקידום שוויון מגדרי, וכן תכניות ללימודי מגדר במוסדות האקדמיים.
-    המאגר מפרט, בין היתר, תחומי פעילות, שירותים שניתן לקבל ופרטי התקשרות
-  </span>
-  <app-search-bar
-    (changed)='search($event, "orgs")'
-    [color]='"rgb(255, 178, 55)"'
-    [backgroundColor]='"rgba(255, 178, 55, 0.2)"'
-    [icon]='"search-orange-ic"'
-    [instant]='false'
-    placeholder='<strong>שם ארגון או פעילות בתחום</strong>'
-    i18n-placeholder
-  ></app-search-bar>
-</app-main-page-card>
-<app-main-page-card
-  *ngIf='reveal > 3'
-  [colors]="'purple'"
-  [logo]='"assets/lp-library-info-ic.svg"'
-  [types]='"publications"'
-  >
-  <span class='title' i18n>ספריית המקורות</span>
-  <span class='description' i18n>
-    כלל המידע המקוטלג במרכז הידע: פרסומים, דו״חות, ניירות עמדה, סרטונים, נתונים סטטיסטיים, ארגונים פמיניסטיים, מחקרים, ועוד ועוד
-  </span>
-  <app-search-bar
-    (changed)='search($event, "publications")'
-    [color]='"rgb(89, 51, 77)"'
-    [backgroundColor]='"rgba(89, 51, 77, 0.2)"'
-    [icon]='"search-ic"'
-    [instant]='false'
-    placeholder='<strong>חיפוש מאמר, דו״ח, סרטון, ארגונים&hellip;</strong>'
-    i18n-placeholder
-  ></app-search-bar>
-</app-main-page-card>
+  <app-fixed-background [color]='"white"'></app-fixed-background>
+  <div class='spinner-widget' appLtr>
+    <app-main-page-spinner></app-main-page-spinner>
+  </div>
+  <div class='square-links' appLtr>
+    <div class='square-link'>
+      <a [href]="_.P('/publications')">
+        <img src='assets/lp-library-ic.svg'>
+        <h1 i18n><span>ספריית</span><br /><span>מקורות</span></h1>
+        <h2 i18n>{{counts.publications.total_overall | number}} פריטים</h2>
+      </a>
+    </div>
+    <div class='square-link'>
+      <a [href]="_.P('/stats')">
+        <img src='assets/lp-stats-ic.svg'>
+        <h1 i18n><span>סטטיסטיקה</span><br /><span>מגדרית</span></h1>
+        <h2 i18n>{{counts.stats.total_overall}} פריטים</h2>
+      </a>
+    </div>
+    <div class='square-link'>
+      <a [href]="_.P('/organisations')">
+        <img src='assets/lp-orgs-ic.svg'>
+        <h1 i18n><span>ארגונים ופעילות</span><br /><span>בתחום המגדר</span></h1>
+        <h2 i18n>{{counts.orgs.total_overall}} ארגונים</h2>
+      </a>
+    </div>
+    <div class='square-link'>
+      <a [href]="_.P('/gender-index')">
+        <img src='assets/lp-madad-ic.svg'>
+        <h1 i18n><span>מדד</span><br /><span>המגדר</span></h1>
+        <h2 i18n>קראו עוד</h2>
+      </a>
+    </div>
+  </div>
+  <div class='recently-added'>
+    <h1 i18n>פריטים שהתווספו למאגר לאחרונה</h1>
+    <div class='cards'>
+      <app-result-card *ngFor='let result of (results | async)' [result]='result'></app-result-card>
+    </div>
+    <h2 i18n><a [href]="_.P('/search')">עוד פריטים שהתווספו לאחרונה&hellip;</a></h2>
+  </div>
+  <div class='need-help'>
+    <div class='need-help-main'>
+      <img class='logo' src='assets/question-ic.svg' />
+      <span i18n>ביקרת במרכז הידע ולא מצאת מה שחיפשת?</span>
+      <span i18n>יש לך מידע רלוונטי לשתף איתנו?</span>
+      <span i18n>הגעת למקום הנכון!</span>
+      <div class='buttons'>
+        <div>
+          <img src='assets/neg-share-ic.svg' />
+          <a class='text' [href]="_.P('/contact-us')"><span i18n>יש לי מה לשתף </span></a>
+        </div>
+        <div>
+          <img src='assets/info-ic.svg' />
+          <a class='text' [href]="_.P('/contact-us')"><span i18n>עזרו לי לאתר מידע</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-main-page-card *ngIf='reveal > 0' [colors]="'red'" [logo]='"assets/lp-madad-info-ic.svg"' [types]='"datasets"'
+    [filters]='{"kind":"Gender Index"}'>
+    <span class='title' i18n>מדד המגדר</span>
+    <span class='description' i18n>
+      ניטור אי השוויון בין נשים לגברים בישראל בתחומי חיים שונים,
+      המאפשר לזהות מגמות של שינוי באי שוויון המגדרי לאורך השנים
+    </span>
+    <app-search-bar (changed)='search($event, "gender_index")' [color]='"rgba(239, 82, 65)"'
+      [backgroundColor]='"rgba(239, 82, 65, 0.2)"' [icon]='"search-red-ic"' [instant]='false'
+      placeholder='<strong>לדוגמא:</strong> כלכלה ושוק העבודה, עוני&hellip;' i18n-placeholder></app-search-bar>
+  </app-main-page-card>
+  <app-main-page-card *ngIf='reveal > 1' [colors]="'green'" [logo]='"assets/lp-stats-info-ic.svg"' [types]='"datasets"'
+    [filters]='{"kind":"Gender Statistics"}'>
+    <span class='title' i18n>סטטיסטיקה מגדרית</span>
+    <span class='description' i18n>
+      כאן ניתן למצוא נתונים השוואתיים אודות מצבם של נשים וגברים בתחומי חיים שונים.
+      נתונים אלה יכולים לסייע לקידום יוזמות, מדיניות, אקטיביזם, הוראה ומחקר בתחום השוויון המגדרי
+    </span>
+    <app-search-bar (changed)='search($event, "stats")' [color]='"rgb(137, 163, 59)"'
+      [backgroundColor]='"rgba(137, 163, 59, 0.2)"' [icon]='"search-green-ic"' [instant]='false'
+      placeholder='<strong>חיפוש נתונים, אינפוגרפיקה</strong>' i18n-placeholder></app-search-bar>
+  </app-main-page-card>
+  <app-main-page-card *ngIf='reveal > 2' [colors]="'orange'" [logo]='"assets/lp-orgs-info-ic.svg"' [types]='"orgs"'
+    [noMobileCard]='true'>
+    <span class='title' i18n>ארגונים ופעילות בתחום המגדר</span>
+    <span class='description' i18n>
+      כאן ניתן למצוא מגוון עשיר של ארגונים, יוזמות וגורמים הפועלים לקידום שוויון מגדרי, וכן תכניות ללימודי מגדר במוסדות
+      האקדמיים.
+      המאגר מפרט, בין היתר, תחומי פעילות, שירותים שניתן לקבל ופרטי התקשרות
+    </span>
+    <app-search-bar (changed)='search($event, "orgs")' [color]='"rgb(255, 178, 55)"'
+      [backgroundColor]='"rgba(255, 178, 55, 0.2)"' [icon]='"search-orange-ic"' [instant]='false'
+      placeholder='<strong>שם ארגון או פעילות בתחום</strong>' i18n-placeholder></app-search-bar>
+  </app-main-page-card>
+  <app-main-page-card *ngIf='reveal > 3' [colors]="'purple'" [logo]='"assets/lp-library-info-ic.svg"'
+    [types]='"publications"'>
+    <span class='title' i18n>ספריית המקורות</span>
+    <span class='description' i18n>
+      כלל המידע המקוטלג במרכז הידע: פרסומים, דו״חות, ניירות עמדה, סרטונים, נתונים סטטיסטיים, ארגונים פמיניסטיים, מחקרים,
+      ועוד ועוד
+    </span>
+    <app-search-bar (changed)='search($event, "publications")' [color]='"rgb(89, 51, 77)"'
+      [backgroundColor]='"rgba(89, 51, 77, 0.2)"' [icon]='"search-ic"' [instant]='false'
+      placeholder='<strong>חיפוש מאמר, דו״ח, סרטון, ארגונים&hellip;</strong>' i18n-placeholder></app-search-bar>
+  </app-main-page-card>
+</main>
