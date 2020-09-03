@@ -9,6 +9,7 @@ import { I18nService } from '../i18n.service';
 export class ResultCardOrganisationComponent implements OnInit {
 
   @Input() result: any;
+  @Input() queryParams: string;
 
   constructor(public _: I18nService) { }
 

@@ -1,4 +1,8 @@
-<h1>{{_._(result, 'title')}}</h1>
+<header>
+  <a [href]='_.P("/item/" + result.doc_id + queryParams)'>
+    <h1>{{_._(result, 'title')}}</h1>
+  </a>
+</header>
 <div>
   <strong i18n>נוצר על ידי:&nbsp;</strong>
   <span>{{_._(result, 'authors')}}</span>

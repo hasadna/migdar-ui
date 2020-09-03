@@ -1,4 +1,8 @@
-<h1 [class.gender-index]='genderIndex' *ngIf='title'>{{_._(result, 'chart_title')}}</h1>
+<header *ngIf='title'>
+  <a [href]='_.P("/item/" + result.doc_id + queryParams)'>
+    <h1 [class.gender-index]='genderIndex'>{{_._(result, 'chart_title')}}</h1>
+  </a>
+</header>
 <div class='legend' *ngIf='_chart && _chart.chart_type !== "hbars"'>
   <div class='entry' *ngFor='let series of result.series; let idx = index;'>
     <div class='color' [style.border-color]='colorScale(series)'></div> 

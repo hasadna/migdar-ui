@@ -15,6 +15,7 @@ export class ResultCardDatasetComponent implements OnChanges {
   @Input() large: boolean;
   @Input() tags = true;
   @Input() title = true;
+  @Input() queryParams: string;
 
   colorScale = cs;
   _chart = null;
