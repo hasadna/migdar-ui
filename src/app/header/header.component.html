@@ -1,6 +1,6 @@
 <div class='header' (click)='langSelected = menuSelected = false; true' appLtr>
   <div class='container' appLtr>
-    <a [href]="_.P('/')"><img class='logo' src='assets/sticky-color-logo.svg'></a>
+    <a [href]="_.P('/')"><img class='logo' src='assets/sticky-color-logo.svg' alt='עמוד הבית' i18n-alt/></a>
     <a class='section-link purple' [class.active]='headerState.section === "publications"' i18n [href]="_.P('/publications')">ספריית מקורות</a>
     <a class='section-link green'  [class.active]='headerState.section === "stats"' i18n [href]="_.P('/stats')">סטטיסטיקה מגדרית</a>
     <a class='section-link orange' [class.active]='headerState.section === "orgs"' i18n [href]="_.P('/organisations')">ארגונים ופעילות בתחום המגדר</a>

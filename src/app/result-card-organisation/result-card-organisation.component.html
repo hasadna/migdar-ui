@@ -4,7 +4,7 @@
 </div>
 <div class='details'>
   <div>
-    <img [src]='logo()' onerror='this.style.display="none"'/>
+    <img [src]='logo()' onerror='this.style.display="none"' alt='לוגו הארגון' i18n-alt/>
     <strong class='website' *ngIf='result.org_website'><a [href]='result.org_website' target='_blank' i18n>לאתר הארגון
     </a></strong>
     <strong *ngIf='result.org_email_address'><a [href]='"mailto:" + result.org_email_address' target='_blank'>{{result.org_email_address}}</a></strong>

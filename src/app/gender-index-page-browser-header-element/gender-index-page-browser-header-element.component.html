@@ -1,7 +1,7 @@
 <div class='container' [class.active]='active === name'>
   <a [href]='_.P("/gender-index#" + name)' appLtr>
-    <img class='active' [src]='"assets/gender_index_30x30/White/neg-" + slug + "-ic.svg"'/>
-    <img class='inactive' [src]='"assets/gender_index_30x30/Red/" + slug + "-ic.svg"'/>
+    <img class='active' [src]='"assets/gender_index_30x30/White/neg-" + slug + "-ic.svg"' [alt]='display'/>
+    <img class='inactive' [src]='"assets/gender_index_30x30/Red/" + slug + "-ic.svg"' [alt]='display'/>
     <span>{{display}}</span>
   </a>
 </div>

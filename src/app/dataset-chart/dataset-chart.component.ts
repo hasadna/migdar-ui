@@ -116,7 +116,8 @@ export class DatasetChartComponent implements OnInit, OnChanges {
   addSvg(width, height) {
     const svg = d3.select(this.container.nativeElement)
               .append('svg')
-              .attr('viewBox', `0 0 ${width} ${height}`);
+              .attr('viewBox', `0 0 ${width} ${height}`)
+              .attr('alt', 'chart');
     if (this.large) {
       svg.attr('class', 'large');
     }

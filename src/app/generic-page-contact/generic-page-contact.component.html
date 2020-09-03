@@ -9,15 +9,15 @@
   <div class='contact-forms'>
     <div class='form-kinds' appLtr>
       <div class='kind' [class.active]='selected == "help"' (click)='selected = "help"'>
-        <img src='assets/contact-help-ic.svg'/>
+        <img src='assets/contact-help-ic.svg' alt='סיוע באיתור מידע' i18n-alt/>
         <h3 i18n>סיוע באיתור מידע</h3>
       </div>
       <div class='kind' [class.active]='selected == "add"' (click)='selected = "add"'>
-        <img src='assets/contact-add-ic.svg'/>
+        <img src='assets/contact-add-ic.svg' alt='הוספת חומרים למאגר' i18n-alt/>
         <h3 i18n>הוספת חומרים למאגר</h3>
       </div>
       <div class='kind' [class.active]='selected == "other"' (click)='selected = "other"'>
-        <img src='assets/contact-other-ic.svg'/>
+        <img src='assets/contact-other-ic.svg' alt='שירותים נוספים' i18n-alt/>
         <h3 i18n>שירותים נוספים</h3>
       </div>
     </div>
