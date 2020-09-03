@@ -1,6 +1,6 @@
 <div class='title'>
   <div class='right-hand'>
-    <img src='assets/landingpage-logo.svg'>
+    <img src='assets/landingpage-logo.svg' alt='לוגו האתר' i18n-alt>
     <h1 i18n>מרכז ידע בנושא נשים ומגדר בישראל</h1>
     <h2 i18n>שיתוף, הנגשה ויצירה של ידע לקידום שוויון מגדרי</h2>
     <app-search-bar
@@ -28,28 +28,28 @@
 <div class='square-links' appLtr>
   <div class='square-link'>
     <a [href]="_.P('/publications')">
-      <img src='assets/lp-library-ic.svg'>
+      <img src='assets/lp-library-ic.svg' alt='ספריית מקורות' i18n-alt>
       <h1 i18n><span>ספריית</span><br/><span>מקורות</span></h1>
       <h2 i18n>{{counts.publications.total_overall | number}} פריטים</h2>
     </a>
   </div>
   <div class='square-link'>
     <a [href]="_.P('/stats')">
-      <img src='assets/lp-stats-ic.svg'>
+      <img src='assets/lp-stats-ic.svg' alt='סטטיסטיקה מגדרית' i18n-alt/>
       <h1 i18n><span>סטטיסטיקה</span><br/><span>מגדרית</span></h1>
       <h2 i18n>{{counts.stats.total_overall}} פריטים</h2>
     </a>
   </div>
   <div class='square-link'>
     <a [href]="_.P('/organisations')">
-      <img src='assets/lp-orgs-ic.svg'>
+      <img src='assets/lp-orgs-ic.svg' alt='ארגונים ופעילות בתחום המגדר' i18n-alt/>
       <h1 i18n><span>ארגונים ופעילות</span><br/><span>בתחום המגדר</span></h1>
       <h2 i18n>{{counts.orgs.total_overall}} ארגונים</h2>
     </a>
   </div>
   <div class='square-link'>
     <a [href]="_.P('/gender-index')">
-      <img src='assets/lp-madad-ic.svg'>
+      <img src='assets/lp-madad-ic.svg' alt='מדד המגדר' i18n-alt/>
       <h1 i18n><span>מדד</span><br/><span>המגדר</span></h1>
       <h2 i18n>קראו עוד</h2>
     </a>
@@ -64,17 +64,17 @@
 </div>
 <div class='need-help'>
   <div class='need-help-main'>
-    <img class='logo' src='assets/question-ic.svg'/>
+    <img class='logo' src='assets/question-ic.svg' alt='סימן שאלה' i18n-alt/>
     <span i18n>ביקרת במרכז הידע ולא מצאת מה שחיפשת?</span>
     <span i18n>יש לך מידע רלוונטי לשתף איתנו?</span>
     <span i18n>הגעת למקום הנכון!</span>
     <div class='buttons'>
       <div>
-        <img src='assets/neg-share-ic.svg'/>
+        <img src='assets/neg-share-ic.svg' alt='יש לי מה לשתף' i18n-alt/>
         <a class='text' [href]="_.P('/contact-us')"><span i18n>יש לי מה לשתף </span></a>
       </div>
       <div>
-        <img src='assets/info-ic.svg'/>
+        <img src='assets/info-ic.svg' alt='עזרו לי לאתר מידע' i18n-alt/>
         <a class='text' [href]="_.P('/contact-us')"><span i18n>עזרו לי לאתר מידע</span></a>
       </div>
     </div>
