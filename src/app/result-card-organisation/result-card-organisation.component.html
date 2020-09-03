@@ -1,4 +1,8 @@
-<h1>{{_._(result, 'org_name')}}</h1>
+<header>
+  <a [href]='_.P("/item/" + result.doc_id + queryParams)'>
+    <h1>{{_._(result, 'org_name')}}</h1>
+  </a>
+</header>
 <div class='tagline'>
   <span>{{_._(result, 'tagline')}}</span>
 </div>

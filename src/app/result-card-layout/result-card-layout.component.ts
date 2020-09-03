@@ -17,7 +17,6 @@ export class ResultCardLayoutComponent implements OnInit {
   constructor(public router: Router, public _: I18nService) { }
 
   ngOnInit() {
-    this.queryParams = this.queryParams || '';
   }
 
 }

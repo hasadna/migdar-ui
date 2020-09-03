@@ -14,6 +14,7 @@ export class ResultCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.queryParams = this.queryParams || '';
   }
 
 }
