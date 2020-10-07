@@ -14,6 +14,11 @@ const CONFS = [
   ['/',    'he/'],
 ];
 const TITLE = 'יודעת هي تعرف she knows';
+const TITLE_LANGS = {
+  'he/': 'מרכז ידע נשים ומגדר',
+  'en/': 'Knowledge Hub on Women and Gender',
+  'ar/': 'مركز المعلومات عن النساء والجندر'
+}
 
 nunjucks.configure(rootDir, {
   autoescape: true,
@@ -37,6 +42,7 @@ for (const conf of CONFS) {
 for (const conf of CONFS) {
   const _rootDir = `${rootDir}${conf[1]}`;
   const langPrefix = conf[0];
+  const title = TITLE_LANGS[conf[1]];
   app.route(langPrefix + '*')
     .get(function(req, res) {
       const item_prefix = `${langPrefix}item`;
@@ -56,9 +62,9 @@ for (const conf of CONFS) {
             }
             res.render(`${conf[1]}index.html`, {
               lang: conf[1].slice(0, 2),
-              title: 'יודעת - ' + (body.org_name || body.title || body.chart_title),
+              title: TITLE + ' - ' + (body.org_name || body.title || body.chart_title),
               image_url: image_url,
-              description: 'מרכז ידע נשים ומגדר - ' + (body.objective || body.notes || body.chart_abstract),
+              description: title + ' - ' + (body.objective || body.notes || body.chart_abstract),
               url: `${externalUrl}${req.originalUrl}`
             })      
           }
@@ -70,7 +76,7 @@ for (const conf of CONFS) {
           lang: conf[1].slice(0, 2),
           title: TITLE + ' - ' + tag,
           image_url: image_url,
-          description: `מרכז ידע בנושא נשים ומגדר בישראל - פרסומים, ארגונים ומידע הקשורים ל${tag}`,
+          description: title + ` - פרסומים, ארגונים ומידע הקשורים ל${tag}`,
           url: `${externalUrl}${req.originalUrl}`
         });
       } else {
@@ -78,7 +84,7 @@ for (const conf of CONFS) {
           lang: conf[1].slice(0, 2),
           title: TITLE,
           image_url: 'https://yodaat.org/assets/social-preview.png',
-          description: 'מרכז ידע בנושא נשים ומגדר בישראל',
+          description: title,
           url: `${externalUrl}${req.originalUrl}`
         });  
       }

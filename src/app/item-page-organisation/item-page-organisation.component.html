@@ -34,7 +34,7 @@
     </span>
   </div>
   <div class='org-info'>
-    <span class='org-abstract'>{{_._(document, 'objective')}}</span>
+    <span class='org-abstract' [innerHtml]="_._(document, 'objective')"></span>
     <div class='org-prop' *ngIf='document.specialties && document.specialties.length'>
       <label i18n>תחומי פעילות עיקריים</label>
       <span>{{_._(document, 'specialties').join(', ')}}</span>

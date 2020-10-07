@@ -15,9 +15,7 @@
     </div>
   </div>
 </app-item-page-header>
-<div class='notes'>
-  {{_._(document, 'notes')}}
-</div>
+<div class='notes' [innerHtml]="_._(document, 'notes')"></div>
 <div class='actions'>
   <app-share-button kind='library'></app-share-button>
   <a class='link' *ngIf='document.url' [href]='document.url' target='_blank' i18n>קישור למקור</a>
