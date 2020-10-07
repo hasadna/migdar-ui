@@ -18,6 +18,36 @@
         background-color: white;
         z-index: 5;
 
+        .cookie-consent {
+            position: absolute;
+            width: 100%;
+            padding: 24px;
+            background: @primaryPurple;
+            z-index: 6;
+            transform: translateY(-100%);
+            transition-property: transform;
+            transition-duration: 1s;
+
+            &.cookie-visible {
+                transform: translateY(0%);
+            }
+
+            .message {
+                color: white;
+                font-family: @secondaryFont;
+                font-size: 17px;
+                font-weight: normal;
+
+                &.close {
+                    text-decoration: underline;
+                    cursor: pointer;
+                    font-weight: bold;
+                    margin: 0 20px;
+                }
+            }
+
+        }
+
         .container {
             max-width: 1300px;
             width: 100%;
@@ -98,6 +128,12 @@
 
     @media only screen and (max-width: 1290px)  {
         .header {
+            .cookie-consent {
+                &.cookie-visible {
+                    transform: translateY(@headerHeight);
+                }
+            }
+
             .container {
                 .logo {
                     margin-right: 20px;

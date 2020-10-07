@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HeaderStateService } from '../header-state.service';
 import { I18nService } from '../i18n.service';
@@ -8,7 +8,9 @@ import { I18nService } from '../i18n.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.less']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
+
+  cookie_visible = false;
 
   constructor(public router: Router,
               public headerState: HeaderStateService,
@@ -34,4 +36,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.cookie_visible = !localStorage.getItem('cookie_consented');
+    }, 0);
+  }
+
+  cookie_consented() {
+    localStorage.setItem('cookie_consented', 'yes');
+    this.cookie_visible = false;
+  }
 }

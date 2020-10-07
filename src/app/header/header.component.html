@@ -1,4 +1,11 @@
 <div class='header' (click)='langSelected = menuSelected = false; true' appLtr>
+  <div class='cookie-consent' [class.cookie-visible]='cookie_visible'>
+    <span class='message' i18n>
+      אתר יודעת עושה שימוש ב"עוגיות" (Cookies) לצורך תפעול שוטף ותקין, ובכלל זה כדי לאסוף נתונים סטטיסטיים אודות השימוש באתר, לאימות פרטים, כדי להתאים את האתר להעדפותיך ולצורכי אבטחת מידע.
+       דפדפנים מודרניים כוללים אפשרות להימנע מקבלת Cookies. אם אינך יודע/ת כיצד לעשות זאת, ניתן לבדוק בקובץ העזרה של הדפדפן שבו את/ה משתמש/ת.
+    </span>
+    <span class='message close' (click)='cookie_consented()' i18n>אישור</span>
+  </div>
   <div class='container' appLtr>
     <a [href]="_.P('/')"><img class='logo' src='assets/sticky-color-logo.svg'></a>
     <a class='section-link purple' [class.active]='headerState.section === "publications"' i18n [href]="_.P('/publications')">ספריית מקורות</a>
