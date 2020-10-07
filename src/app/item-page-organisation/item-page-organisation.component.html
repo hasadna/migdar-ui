@@ -59,9 +59,11 @@
       <label i18n>תחומי חיים</label>
       <span>{{_._(document, 'life_areas').join(', ')}}</span>
     </div>
-    <div class='org-prop' *ngIf='document.tags && document.tags.length'>
+    <div class='org-prop tags' *ngIf='document.tags && document.tags.length'>
       <label i18n>תגיות</label>
-      <span>{{_._(document, 'tags').join(', ')}}</span>
+      <span *ngFor="let tag of _.tags(document)"
+            [routerLink]='"/search"' [queryParams]='{"tag": tag.src, "itag": tag.dst, "kind": "all", "filters": "{}", "sortOrder": "-year"}'
+      ><a>{{tag.dst}}</a></span>
     </div>
   </div>
 </div>
