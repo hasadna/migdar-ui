@@ -16,4 +16,4 @@
     [routerLink]='"/search"' [queryParams]='{"tag": tag.src, "itag": tag.dst, "kind": "all", "filters": "{}", "sortOrder": "-year"}'
   ><a>{{tag.dst}}</a></span>
 </div>
-<p>{{_._(result, 'notes')}}</p>
+<p [innerHtml]="_._(result, 'notes')"></p>

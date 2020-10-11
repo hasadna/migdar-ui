@@ -1,11 +1,20 @@
 <app-fixed-background [color]='"rgba(0,0,0,0.05)"'></app-fixed-background>
 <app-stats-page-header></app-stats-page-header>
 <app-search-filters
-    [itemKind]='"datasets"'
-    [fixItemKind]='true'
+    [itemKind]='"stats"'
     [manager]='search'
+    [fixItemKind]='true'
     (updated)='search=search.newFromFilters($event)'
 >
 </app-search-filters>
+<app-search-bar
+    (changed)='search=search.newFromTerm($event)'
+    [color]='"#667a2c"'
+    [backgroundColor]='"rgba(137, 163, 59, 0.2)"'
+    [icon]='"search-green-ic"'
+    [instant]='true'
+    placeholder='<strong>שם סדרת נתונים</strong>'
+    i18n-placeholder
+></app-search-bar>
 <h1 i18n>סטטיסטיקה מגדרית</h1>
 <app-search-results [manager]='search'></app-search-results>
