@@ -2,11 +2,28 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="he" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="df3345ae43e9cd8d63bc5b38f5387adce431c39c" datatype="html">
+        <source>
+      אתר יודעת עושה שימוש ב&quot;עוגיות&quot; (Cookies) לצורך תפעול שוטף ותקין, ובכלל זה כדי לאסוף נתונים סטטיסטיים אודות השימוש באתר, לאימות פרטים, כדי להתאים את האתר להעדפותיך ולצורכי אבטחת מידע.
+       דפדפנים מודרניים כוללים אפשרות להימנע מקבלת Cookies. אם אינך יודע/ת כיצד לעשות זאת, ניתן לבדוק בקובץ העזרה של הדפדפן שבו את/ה משתמש/ת.
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e535681ff6df7fef6f91c538b2b54087d064ca49" datatype="html">
+        <source>אישור</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="791ab3d5f5f8f3791e071f7a84fdbb4054e26bca" datatype="html">
         <source>ספריית מקורות</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
-          <context context-type="linenumber">4</context>
+          <context context-type="linenumber">11</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/publications-page-header/publications-page-header.component.html</context>
@@ -17,7 +34,7 @@
         <source>סטטיסטיקה מגדרית</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">12</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
@@ -25,7 +42,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/stats-page/stats-page.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">19</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/stats-page-header/stats-page-header.component.html</context>
@@ -40,7 +57,7 @@
         <source>ארגונים ופעילות בתחום המגדר</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">13</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
@@ -59,7 +76,7 @@
         <source>מדד המגדר</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="linenumber">14</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
@@ -491,46 +508,46 @@
         <source>קישור למקור</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-publication/item-page-publication.component.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1e9e279b3943c6f6b2295c222cffe7523ce757bf" datatype="html">
         <source>סוג מקור:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-publication/item-page-publication.component.html</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="486c86e29e98f527c2bb75dd69ba0c4e8a2567ce" datatype="html">
         <source>סוג פריט:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-publication/item-page-publication.component.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="886ab92578ba30d28fa23ab2a862bcad8b48a283" datatype="html">
         <source>תחום חיים:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-publication/item-page-publication.component.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="637036aa0e4351d47ee15b1eee3b270219fe9ec7" datatype="html">
         <source>תגיות:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-publication/item-page-publication.component.html</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1da014e9769816e06fb56384d133a15e141c18d3" datatype="html">
         <source>אולי יעניין אותך גם…</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-publication/item-page-publication.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">41</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-organisation/item-page-organisation.component.html</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="linenumber">71</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
@@ -612,6 +629,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/organisations-page-header/organisations-page-header.component.html</context>
           <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="05da443d462d2daae33fe97d37d49552bf59a176" datatype="html">
+        <source>&lt;strong&gt;שם סדרת נתונים&lt;/strong&gt;</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/stats-page/stats-page.component.html</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fa3aa3521a4363c970d9cc3a995113728e654cdd" datatype="html">
@@ -2724,53 +2748,67 @@
           <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="ceed6bbc4f8f351cf244a7f8719a07d63e6346e2" datatype="html">
+        <source>כתובת אימייל*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8c1d578631f8858c2501ac293e619cff92e84d2f" datatype="html">
         <source>מספר טלפון/טלפון נייד</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b58d62c42238eae84b23d3cad7cfd7cb73d63d67" datatype="html">
         <source>שיוך ארגוני</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="eea2bde8f5995e88261a3c44054b494f2130cea1" datatype="html">
         <source>לינק לפריט המידע</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8f5962fdce88de26b9db799d797c80ecc02670a7" datatype="html">
         <source>מה חיפשת ולא מצאת? מה מטרת החיפוש?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2fe09e9214cec1ed72efc9b215e3913252164bcf" datatype="html">
         <source>פרטים אודות הפרסום/מידע: כותרת, תיאור קצר, מקור</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="23ac10be9e50d7de6aaa0817a74459e74ec4a20b" datatype="html">
         <source>ספרי לנו מהו השירות המבוקש</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="bfd1a1b6d5dfcf51db71bbbfa262592ea2a85453" datatype="html">
         <source>שליחת הודעה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c51ebaf0def2560bf137c14484fae43576aa6773" datatype="html">
+        <source>יש להזין כתובת אימייל ושם מלא</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="869d2a1cdf03c8fba7d64f057ef8a435c846a6e4" datatype="html">
