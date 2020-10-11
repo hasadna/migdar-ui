@@ -5,9 +5,12 @@
 </div>
 <div>
   <strong i18n>מקור:&nbsp;</strong>
-  <span>{{_._(result, 'publisher')}}</span>
+  <span>{{_._(result, 'publisher')}}</span><span *ngIf='result.source_kind'>&nbsp;({{_._(result, 'source_kind')}})</span>
 </div>
 <div>
+  <ng-container *ngIf='result.item_kind'>
+    <span>{{_._(result, 'item_kind')}}</span>&nbsp;|&nbsp;
+  </ng-container>
   <span>{{result.year}}</span>&nbsp;|&nbsp;<span>{{_._(result, 'languages').join(', ')}}</span>
 </div>
 <div class='tags'>
