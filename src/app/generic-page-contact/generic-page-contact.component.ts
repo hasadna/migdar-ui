@@ -1,6 +1,8 @@
 import { Location } from '@angular/common';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Component({
   selector: 'app-generic-page-contact',
@@ -19,6 +21,8 @@ export class GenericPageContactComponent implements OnInit {
   @ViewChild('requestBody') requestBody: ElementRef;
 
   canSend = null;
+  wasSent = false;
+  wasSentFade = false;
 
   constructor(private http: HttpClient, private location: Location) { }
 
@@ -28,6 +32,15 @@ export class GenericPageContactComponent implements OnInit {
 
   val(x) {
     return (x && x.nativeElement && x.nativeElement.value) || '';
+  }
+
+  clearAll() {
+    this.fullName.nativeElement.value = '';
+    this.emailAddress.nativeElement.value = '';
+    this.phoneNum.nativeElement.value = '';
+    this.organization.nativeElement.value = '';
+    this.itemLink.nativeElement.value = '';
+    this.requestBody.nativeElement.value = '';
   }
 
   validate() {
@@ -70,8 +83,20 @@ ${requestBody}
       body: this.rawBody()
     };
     this.http.post('/contact', body)
-        .subscribe((response) => {
-          this.location.back()
+        .pipe(
+          catchError((err) => of({err}))
+        )
+        .subscribe(() => {
+          console.log('DSAAS');
+          this.wasSent = true;
+          this.clearAll();
+          setTimeout(() => {
+            this.wasSentFade = true;
+          }, 100);
+          setTimeout(() => {
+            this.wasSent = false;
+            this.wasSentFade = false;
+          }, 7000);
         });
   }
 }

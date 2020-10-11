@@ -40,7 +40,7 @@ export class FilterManagerService {
       debounceTime(100)
     ).subscribe((kind) => {
       this.update(kind);
-    })
+    });
   }
 
   get(kind: string, field: string): string[] {

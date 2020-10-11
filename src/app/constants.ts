@@ -264,7 +264,7 @@ export const FILTERS_CONFIG = {
   ]
 };
 
-export const ALLOWED_FIELDS = new Set(['languages', 'life_areas', 'compact_services', 'regions','org_kind', 'item_kind', 'source_kind']);
+export const ALLOWED_FIELDS = new Set(['languages', 'life_areas', 'compact_services', 'regions', 'org_kind', 'item_kind', 'source_kind']);
 export const RANGE_FIELDS = new Set(['year__gte', 'year__lte']);
 
 export function analyzeColors(chart) {
@@ -279,7 +279,7 @@ export function analyzeColors(chart) {
     '#b658cc',
     '#f29eb5',
   ];
-  
+
   let numWomen = 0;
   let numMen = 0;
   for (const s of chart.series) {

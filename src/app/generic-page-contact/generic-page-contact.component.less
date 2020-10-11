@@ -112,6 +112,14 @@
                     font-size: 18px;
                     color: @primaryPurple;
                     margin: 0 16px;
+                    opacity: 1;
+                    transition-property: opacity;
+                    transition-duration: 1s;
+                    transition-delay: 5s;
+
+                    &.fade {
+                        opacity: 0;
+                    }
                 }
 
                 .send {

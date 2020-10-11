@@ -44,6 +44,7 @@
       <div class='submit'>
         <a class='send' (click)='send()' target='_blank' [class.disabled]='!canSend' i18n>שליחת הודעה</a>
         <span i18n *ngIf='canSend === false'>יש להזין כתובת אימייל ושם מלא</span>
+        <span i18n *ngIf='wasSent' [class.fade]='wasSentFade'>ההודעה נשלחה בהצלחה!</span>
       </div>
     </div>
   </div>
