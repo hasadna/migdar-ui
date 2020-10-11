@@ -5,10 +5,10 @@
 </app-item-page-header>
 <app-result-card-dataset class='main' [result]='document' [large]='true'></app-result-card-dataset>
 <div class='card-menu' appLtr>
-  <app-share-button kind='stats'></app-share-button>
   <a [href]='"https://api.yodaat.org/data" + _.P("/" + document.doc_id) + "-share.png"' target='_blank' i18n>הורדת תמונה</a>
   <a [href]='"https://api.yodaat.org/data/" + document.doc_id + ".xlsx"' target='_blank' i18n>קובץ נתונים</a>
   <a *ngIf='document.full_data_source' [href]='document.full_data_source' target='_blank' i18n>הנתונים המלאים</a>
+  <app-share-button kind='stats'></app-share-button>
 </div>
 <div class='item-props'>
   <div class='item-prop'>

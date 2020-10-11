@@ -19,6 +19,7 @@ export class CardSharePageComponent implements OnInit {
   routeSubs: Subscription;
 
   constructor(private route: ActivatedRoute, private api: ApiService) {
+    localStorage.setItem('cookie_consented', 'yes');
     this.routeSubs = this.route.url.pipe(
       map((segments) => {
             const parts = [];
