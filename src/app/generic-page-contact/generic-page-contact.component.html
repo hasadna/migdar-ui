@@ -33,14 +33,18 @@
         למידה מנסיונות מוצלחים (best practices), ועוד. 
         חלק משירותים אלה ניתנים בתשלום. לפרטים נוספים ניתן לפנות לצוות המרכז.
       </div>
-      <input type='text' #fullName     placeholder='שם מלא*' i18n-placeholder/>
+      <input type='text' #fullName     placeholder='שם מלא*' (change)='validate()' i18n-placeholder/>
+      <input type='email' #emailAddress placeholder='כתובת אימייל*' (change)='validate()' i18n-placeholder/>
       <input type='text' #phoneNum     placeholder='מספר טלפון/טלפון נייד' i18n-placeholder/>
       <input type='text' #organization placeholder='שיוך ארגוני' i18n-placeholder/>
       <input type='text' #itemLink     placeholder='לינק לפריט המידע' *ngIf='selected == "add"' i18n-placeholder/>
       <textarea rows='5' #requestBody  placeholder='מה חיפשת ולא מצאת? מה מטרת החיפוש?' *ngIf='selected == "help"' i18n-placeholder></textarea>
       <textarea rows='5' #requestBody  placeholder='פרטים אודות הפרסום/מידע: כותרת, תיאור קצר, מקור' *ngIf='selected == "add"' i18n-placeholder></textarea>
       <textarea rows='5' #requestBody  placeholder='ספרי לנו מהו השירות המבוקש' *ngIf='selected == "other"' i18n-placeholder></textarea>
-      <a class='send' [href]='mailto()' target='_blank' i18n>שליחת הודעה</a>
+      <div class='submit'>
+        <a class='send' (click)='send()' target='_blank' [class.disabled]='!canSend' i18n>שליחת הודעה</a>
+        <span i18n *ngIf='canSend === false'>יש להזין כתובת אימייל ושם מלא</span>
+      </div>
     </div>
   </div>
 

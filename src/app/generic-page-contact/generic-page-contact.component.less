@@ -100,18 +100,35 @@
                 font-family: @primaryFont;
             }
 
-            .send {
-                font-size: 18px;
-                font-family: @secondaryFont;
-                font-weight: bold;
-                padding: 10px 20px;
+            .submit {
                 margin: 10px 0;
-                color: white;
-                background-color: @primaryPurple;
-                border: none;
-                border-radius: 25px;
-                cursor: pointer;
-                text-decoration: none;
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+
+                span {
+                    font-family: @primaryFont;
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: @primaryPurple;
+                    margin: 0 16px;
+                }
+
+                .send {
+                    font-family: @secondaryFont;
+                    color: white;
+                    background-color: @primaryPurple;
+                    border: none;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    text-decoration: none;
+                    padding: 10px 20px;
+    
+                    &.disabled {
+                        color: gray;
+                        cursor: inherit; 
+                    }
+                }
             }
         }
     }

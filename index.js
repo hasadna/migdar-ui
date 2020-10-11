@@ -3,6 +3,10 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const request = require("request");
+const bodyParser = require('body-parser');
+const sgMail = require('@sendgrid/mail')
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const app = express();
 const rootDir = './dist/';
@@ -29,6 +33,26 @@ app.set('port', process.env.PORT || 8000);
 
 app.get('/sitemap.xml', function(req, res) {
   res.status(301).redirect('https://api.yodaat.org/data/sitemap.xml')
+});
+
+app.use('/contact', bodyParser.json())
+   .post('/contact', function(req, res) {
+      const msg = {
+        to: 'info@yodaat.org',
+        from: 'noreply@yodaat.org',
+        subject: req.body.subject,
+        text: req.body.body,
+        html: '<div style="direction:rtl">' + req.body.body.split('\n').join('<br/>') + '</div>',
+      };
+      console.log(msg);
+      sgMail
+        .send(msg)
+        .then(() => {
+          res.status(200).json({sent: true});
+        })
+        .catch((error) => {
+          res.status(200).json({sent: false, error: '' + error});
+        });
 });
 
 for (const conf of CONFS) {
