@@ -87,7 +87,6 @@ ${requestBody}
           catchError((err) => of({err}))
         )
         .subscribe(() => {
-          console.log('DSAAS');
           this.wasSent = true;
           this.clearAll();
           setTimeout(() => {

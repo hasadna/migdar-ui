@@ -479,6 +479,13 @@
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="0c77f0227837dcf87ff3fe376c4fc457746f2522" datatype="html">
+        <source>תגיות קשורות:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/search-page-header/search-page-header.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="90622d413c5775dc1f96e3d0238e66c756f3ba85" datatype="html">
         <source>
 כאן תמצאי את כלל המידע המקוטלג במרכז הידע: פרסומים, דו״חות, ניירות עמדה, סרטונים, נתונים סטטיסטיים,
@@ -2809,6 +2816,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
           <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="65848e3e0ff4944201be38be17747923823a38e4" datatype="html">
+        <source>ההודעה נשלחה בהצלחה!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/generic-page-contact/generic-page-contact.component.html</context>
+          <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="869d2a1cdf03c8fba7d64f057ef8a435c846a6e4" datatype="html">

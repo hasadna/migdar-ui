@@ -15,3 +15,11 @@
   ></app-search-bar>
   <div class='tag' *ngIf='tag'><span [routerLink]='"/search"'>&times;</span>{{tag}}</div>
 </div>
+<div class='related' *ngIf='sortedTags && sortedTags.length > 0'>
+  <h2 i18n>תגיות קשורות:</h2>
+  <div class='tags'>
+    <span *ngFor="let tag of sortedTags">
+      <a [href]='_.P("/search?tag=" + tag.src + "&itag=" + tag.dst + "&kind=all&filters={}&sortOrder=-year")'>{{tag.dst}}</a>
+    </span>
+  </div>
+</div>
