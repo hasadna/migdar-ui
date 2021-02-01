@@ -25,13 +25,13 @@
     <span *ngIf='document.org_address'>
       {{document.org_address}}
     </span>    
-    <app-share-button kind='orgs'></app-share-button>
     <!-- <span class='circles'>
       <a *ngIf='document.org_facebook' class='org-facebook' [href]='document.org_facebook' target='_blank'></a>
     </span> -->
     <span class='budgetkey' *ngIf='document.doc_id.indexOf("org/58") === 0'>
       <a [href]='"https://next.obudget.org/i/org/association/" + document.doc_id.slice(4)' target='_blank'>מידע נוסף על הארגון ב״מפתח התקציב״</a>
     </span>
+    <app-share-button kind='orgs'></app-share-button>
   </div>
   <div class='org-info'>
     <span class='org-abstract' [innerHtml]="_._(document, 'objective')"></span>
