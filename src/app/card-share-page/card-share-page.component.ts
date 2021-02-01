@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 import { ApiService } from '../api.service';
 import { Subscription } from 'rxjs';
+import { I18nService } from '../i18n.service';
 
 @AutoUnsubscribe()
 @Component({
@@ -18,7 +19,7 @@ export class CardSharePageComponent implements OnInit {
   document: any = null;
   routeSubs: Subscription;
 
-  constructor(private route: ActivatedRoute, private api: ApiService) {
+  constructor(private route: ActivatedRoute, private api: ApiService, public _: I18nService) {
     localStorage.setItem('cookie_consented', 'yes');
     this.routeSubs = this.route.url.pipe(
       map((segments) => {

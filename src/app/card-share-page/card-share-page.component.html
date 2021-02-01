@@ -2,7 +2,7 @@
   <app-result-card [result]='document' [tags]='false'></app-result-card>
   <div class='source' *ngIf='document.series && document.series[0].source_description'>
     <label i18n>מקור נתונים:</label>&nbsp;
-    <span>{{document.series[0].source_description}}</span>
+    <span>{{_._(document.series[0], 'source_description')}}</span>
   </div>
   <img src='assets/sticky-color-logo.svg'/>
 </div>

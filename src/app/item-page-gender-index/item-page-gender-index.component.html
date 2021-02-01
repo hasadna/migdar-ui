@@ -15,10 +15,10 @@
     <label i18n>תיאור</label>
     <span>{{_._(document, 'chart_abstract')}}</span>
   </div>
-  <div class='item-prop' *ngIf='document.series && document.series[0].source_description'>
+  <div class='item-prop' *ngIf='document.series && _._(document.series[0], "source_description")'>
     <label i18n>מקור נתונים</label>
-    <span *ngIf='!document.series[0].source_url'>{{document.series[0].source_description}}</span>
-    <a *ngIf='document.series[0].source_url' [href]='document.series[0].source_url' target='_blank'>{{document.series[0].source_description}}</a>
+    <span *ngIf='!document.series[0].source_url'>{{_._(document.series[0], 'source_description')}}</span>
+    <a *ngIf='document.series[0].source_url' [href]='document.series[0].source_url' target='_blank'>{{_._(document.series[0], 'source_description')}}</a>
   </div>
 </div>
 <app-gender-index-page-browser [active]='document.gender_index_dimension'></app-gender-index-page-browser>
