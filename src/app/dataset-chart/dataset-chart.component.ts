@@ -232,6 +232,7 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     const marginTop = 30;
     const leftPadding = 90;
     const rightPadding = 70;
+    const maxColumnWidth = 75;
     const yMargins = marginBottom + marginTop;
 
     const svg = this.addSvg(width, height);
@@ -245,6 +246,7 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     if (!this.large && fullXValues.length > 16) {
       xValues = fullXValues.filter((v, i) => i % 2);
     }
+    const maxWidth = Math.min(fullXValues.length * maxColumnWidth, width - leftPadding - rightPadding);
 
     let prepared = {};
 
@@ -261,10 +263,11 @@ export class DatasetChartComponent implements OnInit, OnChanges {
               .order(d3.stackOrderDescending);
     const stack = stackObj(<any>prepared);
 
+
     const x = d3.scaleBand()
-                .range([leftPadding, width - rightPadding])
+                .range([leftPadding, leftPadding + maxWidth])
                 .domain(data.map((d) => d.x).sort())
-                .padding(0.02);
+                .padding(0.05);
     const y = d3.scaleLinear()
                 .range([height - yMargins, 0])
                 .domain([0, d3.max(stack, (s) => d3.max(s, (d) => d[1]))])
@@ -320,7 +323,7 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     }
     let xValues = Array.from(new Set(data.map((d) => d.x))).sort();
     if (!this.large && xValues.length > 16) {
-      xValues = xValues.filter((v, i) => i % 2);
+      xValues = xValues.filter((v, i) => (i % 2) !== (xValues.length % 2));
     }
     const x = d3.scalePoint()
                 .range([leftPadding, width - rightPadding])

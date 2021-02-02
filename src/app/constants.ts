@@ -269,7 +269,9 @@ export const RANGE_FIELDS = new Set(['year__gte', 'year__lte']);
 
 export function analyzeColors(chart) {
   const colors = [
-    '#ef5241',
+    // '#ef5241',
+    // '#8f3127',
+    '#526223',
     '#6661d1',
     '#68788c',
     '#d6b618',
@@ -286,13 +288,18 @@ export function analyzeColors(chart) {
     if (s.gender) {
       if (s.gender.includes('נשים') || s.gender.includes('בנות') || s.gender.includes('אישה')) {
         s.__color__woman = true;
+        s.__priority = 0;
         numWomen++;
       } else if (s.gender.includes('גברים') || s.gender.includes('בנים') || s.gender.includes('גבר')) {
         s.__color__man = true;
+        s.__priority = 1;
         numMen++;
+      } else {
+        s.__priority = 2;
       }
     }
   }
+  chart.series = chart.series.sort((a, b) => a.__priority - b.__priority);
   const ignoreGenders = numWomen > 1 || numMen > 1;
   let index = 0;
   for (const s of chart.series) {
@@ -304,6 +311,9 @@ export function analyzeColors(chart) {
       s.__color = colors[index % colors.length];
       index++;
     }
+  }
+  if (chart.series.length === 1 && chart.kind === 'Gender Index')  {
+    chart.series[0].__color = '#ef5241';
   }
 }
 
