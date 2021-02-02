@@ -1,7 +1,8 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, OnChanges, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, OnChanges, EventEmitter, Output, OnDestroy } from '@angular/core';
 import { colorScale } from '../constants';
 import * as d3 from 'd3';
 import { I18nService } from '../i18n.service';
+import { fromEvent, Subscription } from 'rxjs';
 
 interface DataEl {
   x: string;
@@ -30,7 +31,13 @@ export class DatasetChartComponent implements OnInit, OnChanges {
   current = null;
   series: Series[] = null;
 
-  constructor(private _: I18nService) { }
+  tooltipSeries: any = null;
+  tooltipValueX: any = null;
+  tooltipValueY: any = null;
+  tooltipLocation = {x: 0, y: 0};
+
+
+  constructor(public _: I18nService) { }
 
   parseYear(x): number {
     return parseInt(x.split('/')[0], 10);
@@ -78,15 +85,19 @@ export class DatasetChartComponent implements OnInit, OnChanges {
         .call(xAxis);
   }
 
-  addYAxis(svg, y, top, left) {
+  yFormatter(series) {
     const suffix = {
       'אחוזים עד 100': '%',
       'ש"ח': ' ₪'
-    }[this.series[0].units] || '';
+    }[series.units] || '';
+    return (d: any) => d3.format(',.2~f')(d) + suffix;
+  }
+
+  addYAxis(svg, y, top, left) {
     const yAxis = d3.axisLeft(y)
                     .tickSize(0)
                     .ticks(5)
-                    .tickFormat((d: any) => d3.format(',.2~f')(d) + suffix)
+                    .tickFormat(this.yFormatter(this.series[0]))
                     .tickPadding(-4);
     svg.append('g')
        .attr('class', 'y-axis')
@@ -347,6 +358,36 @@ export class DatasetChartComponent implements OnInit, OnChanges {
          .attr('class', 'dataline')
          .attr('d', (d) => valueline(d.dataset.sort((a, b) => d3.ascending(a.x, b.x))))
          .style('stroke', colorScale);
+
+    const circles = chart.selectAll('.datapoints')
+         .data(this.series)
+         .enter()
+         .append('g')
+         .attr('class', 'datapoints')
+         .style('fill', colorScale);
+
+
+    circles.selectAll('.datapoint')
+         .data((d) => d.dataset.map((x) => Object.assign(x, {__series: d})))
+         .enter()
+         .append('circle')
+         .attr('class', 'datapoint')
+         .attr('cx', (d: any) => x(d.x))
+         .attr('cy', (d: any) => y(d.y))
+         .attr('r', 5)
+         .on("mouseover", (d) => {
+            this.tooltipSeries = d.__series;
+            this.tooltipValueX = d.x;
+            this.tooltipValueY = this.yFormatter(d.__series)(d.y);
+            this.tooltipLocation = {
+              x: d3.event.layerX,
+              y: d3.event.layerY
+            };
+          })
+          .on("mouseout", (d) => {
+            this.tooltipSeries = null;
+          });
+
 
     this.addXAxis(svg, x, xValues, height - marginBottom + 8);
     this.addYAxis(svg, y, leftPadding - 16, marginTop - 8);

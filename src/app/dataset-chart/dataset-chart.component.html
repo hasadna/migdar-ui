@@ -1,1 +1,12 @@
 <div class='container' #container></div>
+<div class='tooltip' *ngIf='tooltipSeries' 
+    [style.top]='tooltipLocation.y + "px"'
+    [style.left]='tooltipLocation.x + "px"'>
+    <div class='line'>
+        <span class='x'>{{tooltipValueX}}</span>
+    </div>
+    <div class='line'>
+        <span class='series'>{{_._(tooltipSeries, 'gender')}}</span>
+        <span class='y'>{{tooltipValueY}}</span>
+    </div>
+</div>
