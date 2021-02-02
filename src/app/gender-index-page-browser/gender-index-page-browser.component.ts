@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterContentInit, ElementRef } from '@angular/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -13,15 +13,12 @@ export class GenderIndexPageBrowserComponent implements OnInit {
 
   results: any[] = [];
   selected = null;
-  savedActive = null;
-  preload_item = 'השכלה';
 
-  constructor(private api: ApiService, private activatedRoute: ActivatedRoute) {
+  constructor(private api: ApiService, private activatedRoute: ActivatedRoute, private el: ElementRef) {
     this.activatedRoute.fragment.subscribe((fragment) => {
       const dimension = fragment;
       if (dimension) {
         this.selected = dimension;
-        this.preload_item = dimension;
       }
     });
   }
@@ -33,22 +30,11 @@ export class GenderIndexPageBrowserComponent implements OnInit {
             .filter((x) => x.kind === 'Gender Index')
             .sort((a, b) => a.series[0].order_index - b.series[0].order_index);
         this.results = gender_index_results;
-        window.setTimeout(() => {
-          this.setActive(this.savedActive);
-        }, 1000);
-        // this.datasets = gender_index_results.reduce((prev, curr) => {
-        //   const key = curr.gender_index_dimension;
-        //   (prev[key] = prev[key] || []).push(curr);
-        //   return prev;
-        // }, {});
       });
     }
 
   setActive(section) {
-    if (this.results && this.results.length) {
-      this.active = section;
-    } else {
-      this.savedActive = section;
-    }
+    console.log('SET ACTIVE', section);
+    this.active = section;
   }
 }

@@ -1,22 +1,11 @@
-<ng-container *ngIf='!image'>
+<ng-container>
   <div #column0 class='column desktop'>
-    <app-result-card *ngFor="let result of columns[0]" [result]='result'></app-result-card>
+    <app-result-card *ngFor="let result of columns[0]" [result]='result' [visible]='visible'></app-result-card>
   </div>
   <div #column1 class='column desktop'>
-    <app-result-card *ngFor="let result of columns[1]" [result]='result'></app-result-card>
+    <app-result-card *ngFor="let result of columns[1]" [result]='result' [visible]='visible'></app-result-card>
   </div>
   <div class='column mobile'>
-    <app-result-card *ngFor="let result of columnAll" [result]='result'></app-result-card>
-  </div>
-</ng-container>
-<ng-container *ngIf='image'>
-  <div #column0 class='column desktop'>
-    <app-result-card-img *ngFor="let result of columns[0]" [result]='result' [visible]='visible'></app-result-card-img>
-  </div>
-  <div #column1 class='column desktop'>
-    <app-result-card-img *ngFor="let result of columns[1]" [result]='result' [visible]='visible'></app-result-card-img>
-  </div>
-  <div #mobilecolumn class='column mobile'>
-    <app-result-card-img *ngFor="let result of columnAll" [result]='result' [visible]='visible'></app-result-card-img>
+    <app-result-card *ngFor="let result of columnAll" [result]='result' [visible]='visible'></app-result-card>
   </div>
 </ng-container>

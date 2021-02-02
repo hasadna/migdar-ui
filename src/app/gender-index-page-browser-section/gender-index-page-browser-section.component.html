@@ -13,4 +13,4 @@
     </a>
   </div>  
 </div>
-<app-search-results [results]='charts' [image]='true' [preload]='preload'></app-search-results>
+<app-search-results [results]='charts' (shown)='active.next(name)'></app-search-results>
