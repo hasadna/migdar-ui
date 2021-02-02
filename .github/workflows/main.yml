@@ -1,0 +1,26 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+jobs:
+  build-server:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build it
+      env:
+        TRAVIS_CI_OPERATOR: "1"
+        DOCKER_USER: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        TX_TOKEN: ${{ secrets.TX_TOKEN }}
+      run: |
+        echo install
+        pip install transifex-client
+        ./.travis.sh install
+        tx push --source
+        tx pull --mode sourceastranslation -l ar,en
+        echo script
+        ./.travis.sh script
+        echo deploy
+        ./.travis.sh deploy
