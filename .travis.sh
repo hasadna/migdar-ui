@@ -15,7 +15,7 @@ elif [ "${1}" == "script" ]; then
     exit 0
 
 elif [ "${1}" == "deploy" ]; then
-    TAG="${TRAVIS_TAG:-${TRAVIS_COMMIT}}"
+    TAG="${GITHUB_TAG:-${GITHUB_SHA}}"
     docker tag "${DOCKER_IMAGE}:latest" "${DOCKER_IMAGE}:${TAG}" &&\
     docker push "${DOCKER_IMAGE}:latest" &&\
     docker push "${DOCKER_IMAGE}:${TAG}"
