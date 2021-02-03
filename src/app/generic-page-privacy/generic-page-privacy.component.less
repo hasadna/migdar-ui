@@ -1,0 +1,28 @@
+:host {
+    counter-reset: section;
+
+    ol {
+        list-style-type: none;      
+      
+        > p {
+            &::before {
+                counter-increment: section;
+                content: counters(section, ".") ". ";
+            }
+            > p {
+                display: inline-block;    
+            }
+        }
+
+        ol {
+            counter-reset: section;
+        }
+    }
+
+    ul {
+        > p {
+            display: list-item;
+            list-style-type: circle;
+        }
+    }
+}
