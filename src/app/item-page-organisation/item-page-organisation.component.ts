@@ -27,23 +27,15 @@ export class ItemPageOrganisationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.search.queue.push(
-      {
-        types: 'publications',
-        filters: {
-          life_areas: this.document['life_areas'],
-        }
-      }
-    );
     this.search.search(
-      this.document['org_name'],
-      'publications',
-      this.document['alt_names'].map(
-        (name) => {
-          return {publisher__like: name};
-        }
-      ),
-      '-year'
+      null,
+      'orgs',
+      {
+        compact_services: this.document.compact_services,
+        tags: this.document.tags,
+        title_kw__not: this.document.title_kw
+      },
+      ''
     );
   }
 

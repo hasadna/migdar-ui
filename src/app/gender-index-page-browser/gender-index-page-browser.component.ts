@@ -34,7 +34,6 @@ export class GenderIndexPageBrowserComponent implements OnInit {
     }
 
   setActive(section) {
-    console.log('SET ACTIVE', section);
     this.active = section;
   }
 }

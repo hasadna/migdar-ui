@@ -41,6 +41,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges, Aft
           this.manager.searchMore();
         }
       });
+      this.visible = true;
     } else {
       this.visibleSub = this.visible$.subscribe((visible) => {
         if (!this.visible && visible) {

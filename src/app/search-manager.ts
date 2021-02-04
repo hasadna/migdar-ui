@@ -40,7 +40,7 @@ export class SearchManager {
     }
 
     search(term, types?, filters?, sortOrder?) {
-      if (!sortOrder && !term) {
+      if (!sortOrder && !term && !filters) {
         sortOrder = 'title_kw';
       }
       if (this.params &&

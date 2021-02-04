@@ -34,11 +34,11 @@ export class ItemPageStatsComponent implements OnInit, OnChanges {
       null,
       'datasets',
       {
-        life_areas: this.document['life_areas'],
-        tags: this.document['tags'],
-        doc_id__not: this.document['doc_id'],
+        life_areas: this.document.life_areas,
+        tags: this.document.tags,
+        title_kw__not: this.document.title_kw,
       },
-      'title_kw'
+      null
     );
   }
 
