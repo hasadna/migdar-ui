@@ -46,8 +46,10 @@ export class ResultCardDatasetComponent implements OnInit, OnChanges, OnDestroy 
 
   ngOnDestroy() {
     this.visibleSub.unsubscribe();
-    this.iobs.unobserve(this.el.nativeElement);
-    this.iobs.disconnect();
+    if (this.iobs) {
+      this.iobs.unobserve(this.el.nativeElement);
+      this.iobs.disconnect();  
+    }
   }
 
   ngOnChanges() {

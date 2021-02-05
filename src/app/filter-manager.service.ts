@@ -21,10 +21,10 @@ export class FilterManagerService {
   constructor(private api: ApiService) {
     forkJoin([
       this.api.fetch(
-        'publications', null, 1, 0, {}, 'year'
+        'publications', null, 1, 0, {}, null, 'year'
       ),
       this.api.fetch(
-        'publications', null, 1, 0, {}, '-year'
+        'publications', null, 1, 0, {}, null, '-year'
       )
     ]).subscribe((results) => {
       this.absRange = {
@@ -34,7 +34,6 @@ export class FilterManagerService {
       RANGE_FIELDS.forEach((field) => {
         this.selectedRange[field] = this.selectedRange[field] || this.absRange[field];
       });
-      console.log('GOT RANGES', this.absRange, this.selectedRange);
     });
     this.updateChannel.pipe(
       debounceTime(100)
@@ -85,7 +84,6 @@ export class FilterManagerService {
         this.selectedRange[field] = parseInt(filters[field], 10) || this.absRange[field];
       }
     }
-    console.log('updateFrom', kind, filters, this.selectedRange);
     this.update(kind);
   }
 

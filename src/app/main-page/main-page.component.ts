@@ -54,7 +54,7 @@ export class MainPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.results = this.api.fetch('all', null, 2, 0, {}, '-create_timestamp').pipe(
+    this.results = this.api.fetch('all', null, 2, 0, null, null, '-create_timestamp').pipe(
       map(({results, total}) => {
         return results.sort((a, b) => b.create_timestamp - a.create_timestamp).slice(0, 2);
       })

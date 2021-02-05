@@ -23,6 +23,7 @@ export class SearchManager {
                                 params.count,
                                 params.offset,
                                 params.filters,
+                                params.lookup,
                                 params.sortOrder);
         })
       ).subscribe(({results, total}) => {
@@ -39,14 +40,15 @@ export class SearchManager {
       });
     }
 
-    search(term, types?, filters?, sortOrder?) {
-      if (!sortOrder && !term && !filters) {
+    search(term, types?, filters?, sortOrder?, lookup?) {
+      if (!sortOrder && !term && !filters && !lookup) {
         sortOrder = 'title_kw';
       }
       if (this.params &&
           this.params.term === term &&
           this.params.types === types &&
           this.params.filters === filters &&
+          this.params.lookup === lookup &&
           this.params.sortOrder === sortOrder) {
         return;
       }
@@ -55,6 +57,7 @@ export class SearchManager {
         term: term,
         offset: 0,
         filters: filters,
+        lookup: lookup,
         sortOrder: sortOrder
       };
       this.terms.next(Object.assign({}, this.params));
@@ -64,7 +67,9 @@ export class SearchManager {
       this.search(term,
                   this.params ? this.params.types : null,
                   this.params ? this.params.filters : null,
-                  this.params ? this.params.sortOrder : null);
+                  this.params ? this.params.sortOrder : null,
+                  this.params ? this.params.lookup : null,
+                  );
     }
 
     searchMore(): any {
@@ -81,7 +86,6 @@ export class SearchManager {
 
     newFromTerm(term) {
       term = term || null;
-      console.log('new from term, current', this.params.term, ' new ', term);
       if (term === this.params.term) {
         return this;
       }

@@ -11,10 +11,15 @@ import { I18nService } from '../i18n.service';
 export class HeaderComponent implements OnInit, AfterViewInit {
 
   cookie_visible = false;
+  section = null;
 
   constructor(public router: Router,
               public headerState: HeaderStateService,
-              public _: I18nService) { }
+              public _: I18nService) {
+    headerState.sectionObs.subscribe((section) => {
+      this.section = section;
+    })
+  }
 
   _langSelected = false;
   _menuSelected = false;

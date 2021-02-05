@@ -13,13 +13,14 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
-  fetch(types, term?, count?, offset?, filters?, sortOrder?) {
+  fetch(types, term?, count?, offset?, filters?, lookup?, sortOrder?) {
     let params = '';
     console.log('FETCHING', types, term, offset, filters);
     if (term) { params += `&q=${encodeURIComponent(term)}`; }
     if (count) { params += `&size=${count}`; }
     if (offset) { params += `&offset=${offset}`; }
     if (filters) { params += `&filter=${encodeURIComponent(JSON.stringify(filters))}`; }
+    if (lookup) { params += `&lookup=${encodeURIComponent(JSON.stringify(lookup))}`; }
     if (sortOrder) { params += `&order=${sortOrder}`; }
     if (params.length > 0) {
       params = '?' + params.slice(1);

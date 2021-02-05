@@ -105,7 +105,6 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges, Aft
         });
     } else if (this.results && this.results.length) {
       this.assignCards(this.results);
-      console.log('CHANGES!!');
       setTimeout(() => {
         this.restartObserver();
       }, 0);

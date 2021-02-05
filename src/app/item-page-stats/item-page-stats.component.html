@@ -7,10 +7,15 @@
 <div class='card-menu' appLtr>
   <a [href]='"https://api.yodaat.org/data" + _.P("/" + document.doc_id) + "-share.png"' target='_blank' i18n>הורדת תמונה</a>
   <a [href]='"https://api.yodaat.org/data/" + document.doc_id + ".xlsx"' target='_blank' i18n>קובץ נתונים</a>
+  <a class='embed' (click)='embed = !embed' i18n>הטמעת התרשים</a>
   <a *ngIf='document.full_data_source' [href]='document.full_data_source' target='_blank' i18n>הנתונים המלאים</a>
   <app-share-button kind='stats'></app-share-button>
 </div>
 <div class='item-props'>
+  <div class='item-prop' *ngIf='embed'>
+    <label i18n>קוד הטמעה</label>
+    <pre>{{embedCode()}}</pre>
+  </div>
   <div class='item-prop'>
     <label i18n>תיאור</label>
     <span>{{_._(document, 'chart_abstract')}}</span>

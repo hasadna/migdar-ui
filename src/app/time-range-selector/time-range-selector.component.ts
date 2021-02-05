@@ -25,7 +25,6 @@ export class TimeRangeSelectorComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     const width = this.container.nativeElement.offsetWidth;
-    console.log(width);
     const height = 150;
     const padding = 20;
     const svg = d3.select(this.container.nativeElement)

@@ -1,7 +1,8 @@
-import { Component, OnInit, OnChanges, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, OnDestroy, ElementRef } from '@angular/core';
 import { ApiService } from '../api.service';
 import { HeaderStateService } from '../header-state.service';
 import { I18nService } from '../i18n.service';
+import { ItemPageStatsComponent } from '../item-page-stats/item-page-stats.component';
 
 @Component({
   selector: 'app-item-page-gender-index',
@@ -11,8 +12,10 @@ import { I18nService } from '../i18n.service';
 export class ItemPageGenderIndexComponent implements OnInit, OnDestroy {
 
   @Input() document: any;
+  embed = false;
 
   constructor(private header: HeaderStateService,
+              private el: ElementRef,
               public _: I18nService) { }
 
   ngOnInit() {
@@ -23,4 +26,7 @@ export class ItemPageGenderIndexComponent implements OnInit, OnDestroy {
     this.header.clear();
   }
 
+  embedCode() {
+    return ItemPageStatsComponent._embedCode(this.el);
+  }
 }

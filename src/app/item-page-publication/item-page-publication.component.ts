@@ -22,10 +22,12 @@ export class ItemPagePublicationComponent implements OnInit {
     this.search.search(
       null,
       'all',
+      null,
+      null,
       {
         tags: this.document.tags,
         title_kw__not: this.document.title_kw
-      }, null);
+      });
   }
 
 }

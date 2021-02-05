@@ -65,6 +65,7 @@ import { CardSharePageComponent } from './card-share-page/card-share-page.compon
 import { ShareButtonComponent } from './share-button/share-button.component';
 import { LtrDirective } from './ltr.directive';
 import { TimeRangeSelectorComponent } from './time-range-selector/time-range-selector.component';
+import { EmbedPageComponent } from './embed-page/embed-page.component';
 
 
 const appRoutes: Routes = [
@@ -72,6 +73,14 @@ const appRoutes: Routes = [
     children: [
       {
         path: '**', component: ItemPageComponent
+      }
+    ]
+  },
+  { path: 'embed',
+    data: {embed: true},
+    children: [
+      {
+        path: '**', component: EmbedPageComponent
       }
     ]
   },
@@ -166,7 +175,8 @@ const appRoutes: Routes = [
     CardSharePageComponent,
     ShareButtonComponent,
     LtrDirective,
-    TimeRangeSelectorComponent
+    TimeRangeSelectorComponent,
+    EmbedPageComponent
   ],
   imports: [
     BrowserModule,
