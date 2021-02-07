@@ -14,7 +14,7 @@
         placeholder='<strong>מה תרצו לחפש?</strong> שם מאמר, תוכן בנושא מסויים&hellip;'
         i18n-placeholder
       ></app-search-bar>
-      <app-search-dropdown [term]='term' (selected)='search($event)'></app-search-dropdown>
+      <app-search-dropdown [term]='term' (selected)='search($event, "all")'></app-search-dropdown>
     </div>
 
     <div class='samples'>
