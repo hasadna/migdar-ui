@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
@@ -24,6 +24,8 @@ export class MainPageComponent implements OnInit {
     stats: {total_overall: 0},
     gender_index: {total_overall: 0},
   };
+  term = '';
+  @ViewChild('searchBar') searchBar: ElementRef;
 
   constructor(private api: ApiService,
               public router: Router,
@@ -51,6 +53,13 @@ export class MainPageComponent implements OnInit {
     ]).subscribe((results) => {
       this.counts = results;
     });
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClickOutOfDropdown(event: any) {
+    if (!this.searchBar.nativeElement.contains(event.target)) {
+      this.term = '';
+    }
   }
 
   ngOnInit() {

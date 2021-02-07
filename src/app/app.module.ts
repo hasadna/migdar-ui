@@ -66,6 +66,7 @@ import { ShareButtonComponent } from './share-button/share-button.component';
 import { LtrDirective } from './ltr.directive';
 import { TimeRangeSelectorComponent } from './time-range-selector/time-range-selector.component';
 import { EmbedPageComponent } from './embed-page/embed-page.component';
+import { SearchDropdownComponent } from './search-dropdown/search-dropdown.component';
 
 
 const appRoutes: Routes = [
@@ -176,7 +177,8 @@ const appRoutes: Routes = [
     ShareButtonComponent,
     LtrDirective,
     TimeRangeSelectorComponent,
-    EmbedPageComponent
+    EmbedPageComponent,
+    SearchDropdownComponent
   ],
   imports: [
     BrowserModule,

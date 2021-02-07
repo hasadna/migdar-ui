@@ -6,13 +6,17 @@
     </a>
     <span i18n>הצטרפו אלינו</span>
   </div>
-  <app-search-bar
-      #searchBar
-      (changed)='search($event)'
-      [term]='term'
-      [color]='"rgba(67, 38, 58)"'
-      [backgroundColor]='"rgba(67, 38, 58, 0.2)"'
-      [icon]='"search-ic"'
-      [instant]='false'
-  ></app-search-bar>
+  <div class='search-bar'>
+    <app-search-bar
+        #searchBar
+        (changed)='search($event)'
+        (submit)='searchPage($event)'
+        [term]='term'
+        [color]='"rgba(67, 38, 58)"'
+        [backgroundColor]='"rgba(67, 38, 58, 0.2)"'
+        [icon]='"search-ic"'
+        [instant]='true'
+    ></app-search-bar>
+    <app-search-dropdown [term]='term' (selected)='searchPage($event)'></app-search-dropdown>
+  </div>
 </div>

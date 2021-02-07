@@ -1,5 +1,5 @@
 <input type='text' (focus)='focus=true' (blur)='focus=false'
-                   (change)='onChanged($event, true)' (keyup)='onChanged($event, false)'
+                   (change)='onChanged($event, false)' (keyup)='onChanged($event, false)'
                    [value]='term'
                    [style.color]='color' [style.background-color]='backgroundColor'
                    [style.background-image]='"url(\"assets/" + icon + ".svg\")"'

@@ -56,6 +56,7 @@ export class SearchManager {
         types: types || 'all',
         term: term,
         offset: 0,
+        count: 10,
         filters: filters,
         lookup: lookup,
         sortOrder: sortOrder

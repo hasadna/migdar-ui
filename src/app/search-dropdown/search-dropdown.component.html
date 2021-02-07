@@ -1,0 +1,12 @@
+<div class='dropdown' *ngIf='term && term.length'>
+  <div *ngFor='let result of results' [class]='"result " + resultKindClass(result)'>
+    <img class='publication' src='assets/lp-library-info-ic.svg'/>
+    <img class='organization' src='assets/lp-orgs-info-ic.svg'/>
+    <img class='dataset' src='assets/lp-stats-info-ic.svg'/>
+    <img class='gender-index' src='assets/lp-madad-info-ic.svg'/>
+    <span><a [routerLink]='"/item/" + result.doc_id'>{{ result.title_kw }}</a></span>
+  </div>
+  <div class='more' (click)='selected.next(term)'>
+    <img src='assets/sticky-langu-arrow.svg'/>
+  </div>
+</div>

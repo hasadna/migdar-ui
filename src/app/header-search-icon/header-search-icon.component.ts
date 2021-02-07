@@ -1,6 +1,8 @@
 import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
+import { SearchManager } from '../search-manager';
 
 @Component({
   selector: 'app-header-search-icon',
@@ -13,8 +15,11 @@ export class HeaderSearchIconComponent implements OnInit {
   @ViewChild('container') container: ElementRef;
   @ViewChild('searchBar') searchBar: SearchBarComponent;
   term = '';
+  searchManager: SearchManager;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private api: ApiService) {
+    this.searchManager = new SearchManager(api);
+  }
 
   @HostListener('document:click', ['$event'])
   onClickOutOfDropdown(event: any) {
@@ -28,12 +33,17 @@ export class HeaderSearchIconComponent implements OnInit {
 
   close() {
     window.setTimeout(() => {
+      this.term = '';
       this.searchBar.term = '';
     }, 500);
     this.active = false;
   }
 
   search(term) {
+    this.term = term;
+  }
+
+  searchPage(term) {
     this.close();
     this.router.navigateByUrl(`/search?q=${encodeURIComponent(term)}`);
   }

@@ -14,6 +14,7 @@ export class SearchBarComponent implements OnInit, OnChanges {
   @Input() instant = true;
   @Input() term = '';
   @Output() changed = new EventEmitter<string>();
+  @Output() submit = new EventEmitter<string>();
 
   focus = false;
 
@@ -23,9 +24,18 @@ export class SearchBarComponent implements OnInit, OnChanges {
   }
 
   onChanged(event, submit) {
+    if (event instanceof KeyboardEvent) {
+      if (event.key === 'Enter') {
+        submit = true;
+        console.log('SUBMIT!');
+      }
+    }
     this.term = event.target.value;
     if (this.instant || submit) {
       this.changed.emit(this.term);
+    }
+    if (submit) {
+      this.submit.emit(this.term);
     }
   }
 

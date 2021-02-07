@@ -3,15 +3,20 @@
     <img src='assets/landingpage-logo.svg'>
     <h1 i18n>מרכז ידע בנושא נשים ומגדר בישראל</h1>
     <h2 i18n>שיתוף, הנגשה ויצירה של ידע לקידום שוויון מגדרי</h2>
-    <app-search-bar
-      (changed)='search($event, "all")'
-      [color]='"rgba(67, 38, 58)"'
-      [backgroundColor]='"rgba(67, 38, 58, 0.2)"'
-      [icon]='"search-ic"'
-      [instant]='false'
-      placeholder='<strong>מה תרצו לחפש?</strong> שם מאמר, תוכן בנושא מסויים&hellip;'
-      i18n-placeholder
-    ></app-search-bar>
+    <div class='search-bar' #searchBar>
+      <app-search-bar
+        (submit)='search($event, "all")'
+        (changed)='term=$event'
+        [color]='"rgba(67, 38, 58)"'
+        [backgroundColor]='"rgba(67, 38, 58, 0.2)"'
+        [icon]='"search-ic"'
+        [instant]='true'
+        placeholder='<strong>מה תרצו לחפש?</strong> שם מאמר, תוכן בנושא מסויים&hellip;'
+        i18n-placeholder
+      ></app-search-bar>
+      <app-search-dropdown [term]='term' (selected)='search($event)'></app-search-dropdown>
+    </div>
+
     <div class='samples'>
       <h3><span i18n>חיפושים לדוגמא:</span>&nbsp;
           <strong><a [href]='_.P("/search?tag=מגיפת+הקורונה&kind=all&filters={}&sortOrder=")' i18n>מגיפת הקורונה</a></strong>

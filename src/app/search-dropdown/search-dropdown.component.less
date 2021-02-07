@@ -1,0 +1,72 @@
+@import '../../common.less';
+
+:host {
+    position: relative;
+    z-index: 10;
+
+    .dropdown {
+        background: white;
+        box-shadow: -4px 4px 10px 0px rgba(136,136,136,0.5);
+        padding: 8px 16px;
+        display: flex;
+        flex-flow: column;
+        align-items: stretch;
+    
+        .result {
+            margin: 4px 0;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            height: 40px;
+            img {
+                flex: 0 0 40px;
+                height: 32px;
+                display: none;
+                margin-inline-end: 8px;
+            }
+            span {
+                flex: 1 1 auto;
+                font-family: @primaryFont;
+                max-height: 40px;
+                line-height: 20px;
+                overflow: hidden;
+            }
+            &.publication {
+                img.publication { 
+                    display: block;
+                }
+                color: @primaryPurple;
+            }
+            &.organization {
+                img.organization { 
+                    display: block;
+                }
+                color: @primaryOrange;
+            }
+            &.dataset {
+                img.dataset { 
+                    display: block;
+                }
+                color: @primaryGreen;
+            }
+            &.gender-index {
+                img.gender-index { 
+                    display: block;
+                }
+                color: @primaryRed;
+            }
+        }
+        
+        .more {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            cursor: pointer;
+    
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
