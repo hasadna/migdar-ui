@@ -1,6 +1,6 @@
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 import { ApiService } from '../api.service';
@@ -13,7 +13,7 @@ import { I18nService } from '../i18n.service';
   templateUrl: './embed-page.component.html',
   styleUrls: ['./embed-page.component.less']
 })
-export class EmbedPageComponent implements OnInit {
+export class EmbedPageComponent implements OnInit, OnDestroy {
 
   kind: any = null;
   document: any = null;
@@ -44,6 +44,9 @@ export class EmbedPageComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy() {
   }
 
 }

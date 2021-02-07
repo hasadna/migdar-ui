@@ -1,6 +1,6 @@
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 import { ApiService } from '../api.service';
@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './card-page.component.html',
   styleUrls: ['./card-page.component.less']
 })
-export class CardPageComponent implements OnInit {
+export class CardPageComponent implements OnInit, OnDestroy {
 
   kind: any = null;
   document: any = null;
@@ -46,4 +46,6 @@ export class CardPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngOnDestroy() {
+  }
 }

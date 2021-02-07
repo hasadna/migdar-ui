@@ -1,6 +1,6 @@
 import { AutoUnsubscribe } from 'ngx-auto-unsubscribe';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 import { ApiService } from '../api.service';
@@ -13,7 +13,7 @@ import { I18nService } from '../i18n.service';
   templateUrl: './card-share-page.component.html',
   styleUrls: ['./card-share-page.component.less']
 })
-export class CardSharePageComponent implements OnInit {
+export class CardSharePageComponent implements OnInit, OnDestroy {
 
   kind: any = null;
   document: any = null;
@@ -45,6 +45,9 @@ export class CardSharePageComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy() {
   }
 
 }

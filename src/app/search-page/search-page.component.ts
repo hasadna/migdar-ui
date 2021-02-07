@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -13,7 +13,7 @@ import { filter } from 'rxjs/operators';
   templateUrl: './search-page.component.html',
   styleUrls: ['./search-page.component.less']
 })
-export class SearchPageComponent implements OnInit {
+export class SearchPageComponent implements OnInit, OnDestroy {
   term = '';
   kind = 'all';
   tag = null;
@@ -76,5 +76,8 @@ export class SearchPageComponent implements OnInit {
         queryParamsHandling: 'merge',
         replaceUrl: true
       });
+  }
+
+  ngOnDestroy() {
   }
 }

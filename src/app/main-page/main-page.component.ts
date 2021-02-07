@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
@@ -13,7 +13,7 @@ import { I18nService } from '../i18n.service';
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.less']
 })
-export class MainPageComponent implements OnInit {
+export class MainPageComponent implements OnInit, OnDestroy {
 
   results: Observable<any>;
   reveal = 0;
@@ -73,5 +73,8 @@ export class MainPageComponent implements OnInit {
   search(term, kind) {
     kind = kind || 'all';
     this.router.navigateByUrl(`/search?q=${encodeURIComponent(term)}&kind=${kind}`);
+  }
+
+  ngOnDestroy() {    
   }
 }
