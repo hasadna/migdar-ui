@@ -11,8 +11,10 @@
         position: relative;
         transition: width 1s;
         margin-left: 15px;
+        pointer-events: none;
         
         &.active {
+            pointer-events: all;
             width: 400px;
             .search-bar {
                 opacity: 1;
@@ -29,6 +31,7 @@
             margin-right: 20px;
             z-index: 1;
             flex: 0 0 auto;
+            pointer-events: all;
         }
         .fb {
             .icon {
