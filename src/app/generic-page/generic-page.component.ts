@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class GenericPageComponent implements OnInit {
 
   @Input() useBg = false;
+  @Input() fullWidth = false;
 
   constructor() { }
 

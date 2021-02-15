@@ -67,6 +67,7 @@ import { LtrDirective } from './ltr.directive';
 import { TimeRangeSelectorComponent } from './time-range-selector/time-range-selector.component';
 import { EmbedPageComponent } from './embed-page/embed-page.component';
 import { SearchDropdownComponent } from './search-dropdown/search-dropdown.component';
+import { GenericPageOpportunitiesComponent } from './generic-page-opportunities/generic-page-opportunities.component';
 
 
 const appRoutes: Routes = [
@@ -111,6 +112,7 @@ const appRoutes: Routes = [
   { path: 'contact-us', component: GenericPageContactComponent },
   { path: 'eula', component: GenericPageEulaComponent },
   { path: 'privacy', component: GenericPagePrivacyComponent },
+  { path: 'opportunities', component: GenericPageOpportunitiesComponent },
   { path: '', component: MainPageComponent },
 ];
 
@@ -178,7 +180,8 @@ const appRoutes: Routes = [
     LtrDirective,
     TimeRangeSelectorComponent,
     EmbedPageComponent,
-    SearchDropdownComponent
+    SearchDropdownComponent,
+    GenericPageOpportunitiesComponent
   ],
   imports: [
     BrowserModule,
