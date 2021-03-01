@@ -104,6 +104,7 @@ const appRoutes: Routes = [
   { path: 'organisations', component: OrganisationsPageComponent },
   { path: 'stats', component: StatsPageComponent },
   { path: 'gender-index', component: GenderIndexPageComponent },
+  { path: 'opportunities', component: GenericPageOpportunitiesComponent },
   { path: 'search', component: SearchPageComponent },
   { path: 'gaps', component: InfoPageGapsComponent },
   { path: 'inequality', component: InfoPageInequalityComponent },
@@ -112,7 +113,6 @@ const appRoutes: Routes = [
   { path: 'contact-us', component: GenericPageContactComponent },
   { path: 'eula', component: GenericPageEulaComponent },
   { path: 'privacy', component: GenericPagePrivacyComponent },
-  { path: 'opportunities', component: GenericPageOpportunitiesComponent },
   { path: '', component: MainPageComponent },
 ];
 

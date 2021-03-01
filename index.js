@@ -19,9 +19,19 @@ const CONFS = [
 ];
 const TITLE = 'יודעת هي تعرف she knows';
 const TITLE_LANGS = {
+  'he/': 'מרכז ידע בנושא נשים ומגדר בישראל',
+  'en/': 'Israel\'s Knowledge Center on Women and Gender',
+  'ar/': 'مركز للمعرفة والنساء والجندر في إسرائيل'
+}
+const ITEM_LANGS = {
   'he/': 'מרכז ידע נשים ומגדר',
-  'en/': 'Knowledge Hub on Women and Gender',
-  'ar/': 'مركز المعلومات عن النساء والجندر'
+  'en/': 'Knowledge Center on Women and Gender',
+  'ar/': 'مركز للمعرفة والنساء والجندر'
+}
+const TAG_LANGS = {
+  'he/': 'מרכז ידע בנושא נשים ומגדר בישראל - פרסומים, ארגונים ומידע הקשורים ל',
+  'en/': 'Israel\'s Knowledge Center on Women and Gender - Publications, organizations and information on ',
+  'ar/': 'مركز المعلومات حول النساء والجندر في اسرائيل - إصدارات، منظمات ومعلومات '
 }
 
 nunjucks.configure(rootDir, {
@@ -67,6 +77,8 @@ for (const conf of CONFS) {
   const _rootDir = `${rootDir}${conf[1]}`;
   const langPrefix = conf[0];
   const title = TITLE_LANGS[conf[1]];
+  const item_title = ITEM_LANGS[conf[1]];
+  const tag_title = TAG_LANGS[conf[1]];
   app.route(langPrefix + '*')
     .get(function(req, res) {
       const item_prefix = `${langPrefix}item`;
@@ -86,7 +98,7 @@ for (const conf of CONFS) {
             }
             res.render(`${conf[1]}index.html`, {
               lang: conf[1].slice(0, 2),
-              title: TITLE + ' - ' + (body.org_name || body.title || body.chart_title),
+              title: item_title + ' - ' + (body.org_name || body.title || body.chart_title),
               image_url: image_url,
               description: title + ' - ' + (body.objective || body.notes || body.chart_abstract),
               url: `${externalUrl}${req.originalUrl}`
@@ -98,9 +110,9 @@ for (const conf of CONFS) {
         const image_url='https://yodaat.org/assets/social-preview.png';
         res.render(`${conf[1]}index.html`, {
           lang: conf[1].slice(0, 2),
-          title: TITLE + ' - ' + tag,
+          title: title + ' - ' + tag,
           image_url: image_url,
-          description: title + ` - פרסומים, ארגונים ומידע הקשורים ל${tag}`,
+          description: tag_title + tag,
           url: `${externalUrl}${req.originalUrl}`
         });
       } else {

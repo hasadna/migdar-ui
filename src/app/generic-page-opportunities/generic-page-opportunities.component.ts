@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderStateService } from '../header-state.service';
 
 @Component({
   selector: 'app-generic-page-opportunities',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenericPageOpportunitiesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private header: HeaderStateService) { }
 
   ngOnInit() {
+    this.header.section = 'opportunities';
   }
 
 }
