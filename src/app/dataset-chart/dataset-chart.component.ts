@@ -274,7 +274,6 @@ export class DatasetChartComponent implements OnInit, OnChanges {
               .order(d3.stackOrderDescending);
     const stack = stackObj(<any>prepared);
 
-
     const x = d3.scaleBand()
                 .range([leftPadding, leftPadding + maxWidth])
                 .domain(data.map((d) => d.x).sort())
@@ -294,17 +293,51 @@ export class DatasetChartComponent implements OnInit, OnChanges {
          .enter()
          .append('g')
          .attr('class', 'bar-stack')
-         .style('fill', (d, i) => colorScale(this.series[i]));
+         .style('fill', (d, i) => colorScale(this.series[i]))
+        //  .on("mouseover", (d) => {
+        //     console.log('DDD', d);
+        //     const data = d[0].data;
+        //     const series = {gender: d.key};
+        //     this.tooltipSeries = series;
+        //     this.tooltipValueX = data.x;
+        //     this.tooltipValueY = this.yFormatter(series)(data[d.key]);
+        //     this.tooltipLocation = {
+        //       x: d3.event.layerX,
+        //       y: d3.event.layerY
+        //     };
+        //   })
+        // .on("mouseout", (d) => {
+        //    this.tooltipSeries = null;
+        // })
+        ;
+
 
 
     chart.selectAll('g.bar-stack').selectAll('rect')
-         .data((d) => <any[]>d, (s) => (<any>s).x)
+         .data((d: any[]) => d.map((x) => Object.assign(x, {__series: d})), (s: any) => s.x)
          .enter()
          .append('rect')
          .attr('x', (d, i) => x(prepared[i].x))
          .attr('y', (d) => y(d[1]))
          .attr('height', (d) => y(d[0]) - y(d[1]))
-         .attr('width', x.bandwidth());
+         .attr('width', x.bandwidth())
+         .on("mouseover", (d) => {
+            console.log('DDD', d);
+            const data = d.data;
+            const key = d.__series.key
+            const series = {gender: key};
+            this.tooltipSeries = series;
+            this.tooltipValueX = data.x;
+            this.tooltipValueY = this.yFormatter(series)(data[key]);
+            this.tooltipLocation = {
+              x: d3.event.layerX,
+              y: d3.event.layerY
+            };
+          })
+          .on("mouseout", (d) => {
+            this.tooltipSeries = null;
+          });
+         ;
 
     this.addXAxis(svg, x, xValues, height - marginBottom + 8);
     this.addYAxis(svg, y, leftPadding - 16, marginTop - 8);
