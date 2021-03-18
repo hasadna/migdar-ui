@@ -316,7 +316,7 @@ export function analyzeColors(chart) {
   if (chart.series.length === 1 && chart.kind === 'Gender Index')  {
     chart.series[0].__color = '#ef5241';
   }
-  if (chart.series.length === 1 && mw)  {
+  if (chart.series.length === 1 && mw && chart.series[0].__color !== '#8693a3')  {
     chart.series[0].__color = '#59334d';
   }
 }

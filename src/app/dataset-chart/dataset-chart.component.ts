@@ -153,7 +153,7 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     const seriesNames = this.series.map((s) => s.gender);
 
     const singleHeight = barHeight * xValues.length;
-    const height = singleHeight * seriesNames.length + seriesPadding * (seriesNames.length - 1);
+    const height = singleHeight * seriesNames.length + seriesPadding * (seriesNames.length - 1) + yMargins;
 
     const svg = this.addSvg(width, height);
 
