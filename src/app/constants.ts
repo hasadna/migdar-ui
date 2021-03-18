@@ -284,6 +284,7 @@ export function analyzeColors(chart) {
 
   let numWomen = 0;
   let numMen = 0;
+  const mw = chart.chart_type.indexOf('mw') > 0;
   for (const s of chart.series) {
     if (s.gender) {
       if (s.gender.includes('נשים') || s.gender.includes('בנות') || s.gender.includes('אישה')) {
@@ -314,6 +315,9 @@ export function analyzeColors(chart) {
   }
   if (chart.series.length === 1 && chart.kind === 'Gender Index')  {
     chart.series[0].__color = '#ef5241';
+  }
+  if (chart.series.length === 1 && mw)  {
+    chart.series[0].__color = '#59334d';
   }
 }
 

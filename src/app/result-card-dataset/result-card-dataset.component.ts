@@ -56,7 +56,8 @@ export class ResultCardDatasetComponent implements OnInit, OnChanges, OnDestroy 
     if (this.result !== this._savedResult) {
       this._savedResult = this.result;
     }
-    this.ratio = this.result.chart_kind === 'hbars' ? 200 : 60;
+    const chart_type = this.result.chart_type || '';
+    this.ratio = chart_type.indexOf('hbars') === 0 ? 200 : 60;
     this.visible$.next(this.visible);
   }
 

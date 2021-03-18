@@ -1,5 +1,5 @@
 <h1 [class.gender-index]='genderIndex' *ngIf='title'>{{_._(result, 'chart_title')}}</h1>
-<div class='legend' *ngIf='_chart && _chart.chart_type !== "hbars"'>
+<div class='legend' *ngIf='_chart && _chart.chart_type.indexOf("hbars") !== 0'>
   <div class='entry' *ngFor='let series of result.series; let idx = index;'>
     <div class='color' [style.border-color]='colorScale(series)'></div> 
     <div class='name'>{{_._(series, 'gender')}}</div>

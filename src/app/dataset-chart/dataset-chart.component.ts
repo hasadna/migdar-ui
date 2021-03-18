@@ -63,9 +63,10 @@ export class DatasetChartComponent implements OnInit, OnChanges {
       return;
     }
     let r = 0;
-    if (this.chart.chart_type === 'stacked') {
+    const chart_type: string = this.chart.chart_type || '';
+    if (chart_type.indexOf('stacked') === 0) {
       r = this.stacked();
-    } else if (this.chart.chart_type === 'hbars') {
+    } else if (chart_type.indexOf('hbars') === 0) {
       r = this.hbars();
     } else {
       r = this.line();
