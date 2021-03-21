@@ -19,80 +19,39 @@
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="791ab3d5f5f8f3791e071f7a84fdbb4054e26bca" datatype="html">
-        <source>ספריית מקורות</source>
+      <trans-unit id="18b9d38baa26bffa6ab5248098fe93f15ee4fed7" datatype="html">
+        <source>ספריית<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>מקורות</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/publications-page-header/publications-page-header.component.html</context>
-          <context context-type="linenumber">1</context>
-        </context-group>
       </trans-unit>
-      <trans-unit id="08b3a1d05d1a68da6f8cd992afd4ee737d323244" datatype="html">
-        <source>סטטיסטיקה מגדרית</source>
+      <trans-unit id="c5c6857004e5a20370d9d5eb1b5dded6c3855d85" datatype="html">
+        <source>סטטיסטיקה<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>מגדרית</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
           <context context-type="linenumber">12</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">112</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/stats-page/stats-page.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/stats-page-header/stats-page-header.component.html</context>
-          <context context-type="linenumber">2</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/search-filters-item-kind/search-filters-item-kind.component.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
       </trans-unit>
-      <trans-unit id="1527ea3c5be44dc7989b424ee0feb46544a1b7bb" datatype="html">
-        <source>ארגונים ופעילות בתחום המגדר</source>
+      <trans-unit id="3d311d6b1e9bdb875c8d78927dd36d9d565f2ae0" datatype="html">
+        <source>ארגונים ופעילות<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>בתחום המגדר</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">134</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/organisations-page/organisations-page.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/organisations-page-header/organisations-page-header.component.html</context>
-          <context context-type="linenumber">2</context>
-        </context-group>
       </trans-unit>
-      <trans-unit id="9f1844bda78f20a3a96a7303f7b5197a985f6607" datatype="html">
-        <source>מדד המגדר</source>
+      <trans-unit id="4e2f4c11d20751ebbb58e6a01038297b85a9f24b" datatype="html">
+        <source>מדד<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>המגדר</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/header/header.component.html</context>
           <context context-type="linenumber">14</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="4e1ee31f198a16b4c8f38fcab35739293127b8cc" datatype="html">
+        <source>מכרזים<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>וקולות קוראים</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">90</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/result-card-layout/result-card-layout.component.html</context>
-          <context context-type="linenumber">2</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
-          <context context-type="linenumber">2</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/search-filters-item-kind/search-filters-item-kind.component.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="sourcefile">app/header/header.component.html</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="395da2ed9695307d78b0dccea59a26550fa5eded" datatype="html">
@@ -113,140 +72,159 @@
         <source>&lt;strong&gt;מה תרצו לחפש?&lt;/strong&gt; שם מאמר, תוכן בנושא מסויים…</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="38f7b0676a73a10ad2a7d8562970038e1fa985b3" datatype="html">
         <source>חיפושים לדוגמא:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7c1c6efee55f2ee8e97d51820881324f92f1e26a" datatype="html">
         <source>מגיפת הקורונה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e15286ffa17235eb3b6fcf484cf352195492391e" datatype="html">
         <source>אלימות במשפחה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="05f3cf6e85276b147bbd0f1d406e3940a7851a76" datatype="html">
         <source>עבודות שקופות</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="dfa30a269da8940e993a789499ba3664824c5d84" datatype="html">
         <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>ספריית<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>מקורות<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="bfc93e6e3d7d77063a7e2a5c96c9cbd1c9d0b485" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{counts.publications.total_overall | number}}"/> פריטים</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f996d6a6fce7f80553af41a772e5b57cb2dce483" datatype="html">
         <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>סטטיסטיקה<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>מגדרית<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="732e86d4ae02c4f3e1a69ec4d8b8e7f9aa577057" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{counts.stats.total_overall}}"/> פריטים</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="831f1312714b9f5fd753523e144c79efd232deab" datatype="html">
         <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>ארגונים ופעילות<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>בתחום המגדר<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="581e44c75a10fa7bf39650c545ed169a0a2416b8" datatype="html">
         <source><x id="INTERPOLATION" equiv-text="{{counts.orgs.total_overall}}"/> ארגונים</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a80297e325d193236d65d773087aa86a89833da4" datatype="html">
         <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>מדד<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>המגדר<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="964157612130d65085e287bc8757704d36bf1291" datatype="html">
         <source>קראו עוד</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cd21ca316c2f0114e568489f5d078b6455f4c47c" datatype="html">
         <source>פריטים שהתווספו למאגר לאחרונה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8c414a4c76697f302194c8c9a190bc6f391d67c2" datatype="html">
         <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>עוד פריטים שהתווספו לאחרונה…<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="bd9cda8d9a69b179df82f014eb68cca0102eda98" datatype="html">
         <source>ביקרת במרכז הידע ולא מצאת מה שחיפשת?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6e520675211ff6fc29d723de48886686b4304873" datatype="html">
         <source>יש לך מידע רלוונטי לשתף איתנו?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="37ee176d2aa338791e7bd2a00ed83fea2ef6c96a" datatype="html">
         <source>הגעת למקום הנכון!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="92109867b4e799d92ea1b4513a4411e4f4c12fb3" datatype="html">
         <source>יש לי מה לשתף </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7bcd22ed82f6688542defa531ac76686c07e0b10" datatype="html">
         <source>עזרו לי לאתר מידע</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9f1844bda78f20a3a96a7303f7b5197a985f6607" datatype="html">
+        <source>מדד המגדר</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/main-page/main-page.component.html</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/result-card-layout/result-card-layout.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/gender-index-page-header/gender-index-page-header.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/search-filters-item-kind/search-filters-item-kind.component.html</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ab92061b6d477dfa777c8548c4875c2dab2b75e6" datatype="html">
@@ -256,14 +234,33 @@
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">91</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="86d0122b4708831e5027150cbe29e58af02bc680" datatype="html">
         <source>&lt;strong&gt;לדוגמא:&lt;/strong&gt; כלכלה ושוק העבודה, עוני…</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">101</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="08b3a1d05d1a68da6f8cd992afd4ee737d323244" datatype="html">
+        <source>סטטיסטיקה מגדרית</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/main-page/main-page.component.html</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/stats-page/stats-page.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/stats-page-header/stats-page-header.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/search-filters-item-kind/search-filters-item-kind.component.html</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="083a3bb6e6946a5538e1039e9384af5b2a10750a" datatype="html">
@@ -273,14 +270,29 @@
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">113</context>
+          <context context-type="linenumber">118</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3220ce6c3e1b635bb322d1c73beca9a747c7f916" datatype="html">
         <source>&lt;strong&gt;חיפוש נתונים, אינפוגרפיקה&lt;/strong&gt;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">123</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1527ea3c5be44dc7989b424ee0feb46544a1b7bb" datatype="html">
+        <source>ארגונים ופעילות בתחום המגדר</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/main-page/main-page.component.html</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/organisations-page/organisations-page.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/organisations-page-header/organisations-page-header.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="0fbd85c343992c16e3b926297b1283f12297d22f" datatype="html">
@@ -290,14 +302,14 @@
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">135</context>
+          <context context-type="linenumber">140</context>
         </context-group>
       </trans-unit>
       <trans-unit id="00b5423f7c0a9dd9f651d140d06ca74a4ea1c484" datatype="html">
         <source>&lt;strong&gt;שם ארגון או פעילות בתחום&lt;/strong&gt;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">145</context>
+          <context context-type="linenumber">150</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/organisations-page/organisations-page.component.html</context>
@@ -308,7 +320,7 @@
         <source>ספריית המקורות</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">155</context>
+          <context context-type="linenumber">160</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e91249af56f70452ef4973bc0fd034baf9b460e0" datatype="html">
@@ -317,14 +329,14 @@
   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">156</context>
+          <context context-type="linenumber">161</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8be85c2f4338945dee60173f20634bc96f5dc4a5" datatype="html">
         <source>&lt;strong&gt;חיפוש מאמר, דו״ח, סרטון, ארגונים…&lt;/strong&gt;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
-          <context context-type="linenumber">165</context>
+          <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8dd33355f133d81188b5f8551cbd0ffabad65a8a" datatype="html">
@@ -348,11 +360,25 @@
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3aee9752c769a32599e7896fbbb6253fd05f9a35" datatype="html">
-        <source>פותח ע״י הסדנא לידע ציבורי</source>
+      <trans-unit id="ff3810300a99971854ce815baae8f0338b9a87bb" datatype="html">
+        <source>פותח ע״י </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/footer/footer.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e9d359bb78e2ef06e858fef725470bedf41ace25" datatype="html">
+        <source>אדם קריב </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="62cd23e17c4cfc669c114974a636c8972612649d" datatype="html">
+        <source>והסדנא לידע ציבורי</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/footer/footer.component.html</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f0d0684c7380daddeee3bdcb8c57a4fab0a6a6aa" datatype="html">
@@ -486,6 +512,13 @@
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="791ab3d5f5f8f3791e071f7a84fdbb4054e26bca" datatype="html">
+        <source>ספריית מקורות</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/publications-page-header/publications-page-header.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="90622d413c5775dc1f96e3d0238e66c756f3ba85" datatype="html">
         <source>
 כאן תמצאי את כלל המידע המקוטלג במרכז הידע: פרסומים, דו״חות, ניירות עמדה, סרטונים, נתונים סטטיסטיים,
@@ -558,7 +591,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fcd4047ae8f1a04b5c6d8ee216af13dbf339d3e2" datatype="html">
@@ -1264,8 +1297,8 @@
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="dca42a858e7b884244810bb75797a5afaa072c72" datatype="html">
-        <source>הנתונים המלאים</source>
+      <trans-unit id="ceec22ca36ebceb3c36fee8010fe7bc77066c36c" datatype="html">
+        <source>הטמעת התרשים</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
           <context context-type="linenumber">10</context>
@@ -1273,28 +1306,50 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-gender-index/item-page-gender-index.component.html</context>
           <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dca42a858e7b884244810bb75797a5afaa072c72" datatype="html">
+        <source>הנתונים המלאים</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/item-page-gender-index/item-page-gender-index.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3c0a226762473a126b7ed6998be789014aaa364f" datatype="html">
+        <source>קוד הטמעה</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/item-page-gender-index/item-page-gender-index.component.html</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="409f8222555911c085a7c8eccedf5e0ab24f7829" datatype="html">
         <source>תיאור</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">20</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-gender-index/item-page-gender-index.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c1b1ff991bd496f9c8fb24f60029b9d115d33a41" datatype="html">
         <source>מקור נתונים</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-stats/item-page-stats.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">24</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/item-page-gender-index/item-page-gender-index.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8d8a9af5066449f4dc56fc1c15b2d94acaea0777" datatype="html">
@@ -1800,456 +1855,463 @@
         <source>מרכז הידע, נשים ומגדר &quot;יודעת&quot; (להלן: &quot;מרכז הידע&quot; או &quot;מרכז הידע &apos;יודעת&apos;&quot;) הינו מרכז ידע אינטרנטי להנגשה של ידע בנושאי מגדר ופמיניזם, המעמיד לרשות הציבור תכנים ומקורות מידע מגוונים בנושאים אלה, ללא תשלום ובכפוף לתנאי תקנון זה (להלן: ה&quot;תקנון&quot; או &quot;תנאי השימוש&quot;). מרכז הידע הוא פרויקט משותף של מכון ון ליר בירושלים, הסדנה לידע ציבורי ומוסד שמואל נאמן. כתובת לשליחת מכתבים למרכז הידע הינה info@yodaat.org. אתר האינטרנט של מרכז הידע פועל בכתובת האינטרנט www.yodaat.org ובכל כתובת אחרת שיקבע מרכז הידע.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f3b618f6be1421c7eee0b66065c3e655a8030e4d" datatype="html">
         <source>מטרתו של מרכז הידע &quot;יודעת&quot; הינה להנגיש מידע וידע הקיימים בתחום נשים ומגדר באופן נוח וידידותי, ולהציע אותם באופן חופשי ופתוח. משום כך, השאיפה היא שחומרים המוצגים במרכז הידע יהיו תחת רישיונות שימוש פתוחים. ידע שנוצר על ידי  צוות מרכז הידע מוצע למשתמשות תחת רישיון שימוש פתוח. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b51b69a1940c56ae7a36292e8f75da84fced8dd2" datatype="html">
         <source>מטרת התקנון של מרכז הידע הינה, בין היתר להסדיר את המנגנון ותנאי השירות המוצעים. כל פעולה של שיתוף ושימוש בתוכן הדיגיטלי באתר האינטרנט של מרכז הידע (להלן: &quot;אתר יודעת&quot; או &quot;אתר&quot;) תתבצע על-פי תקנון זה. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fd6b4a6b162f7a1cc43ecb6a183d7b526084978c" datatype="html">
         <source>השימוש באתר, לרבות בתכנים הכלולים בו ובשירותים השונים בו, מעיד על הסכמתך לתנאי השימוש באתר ולכל תנאי אחר המופיע באתר, לרבות מדיניות הפרטיות באתר. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e8cdf2c465086714169fbe669c1ea0563df4be37" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; ומי מטעמו שומרים על זכותם לשנות מעת לעת את התכנים הזמינים באתר, לרבות הוספה ו/או הסרה, ללא הודעה מראש. כמו גם, לשנות את תנאי השימוש מעת לעת ועל המשתמשות באתר לבחון תנאים אלה ולהתעדכן בשינויים. התנאים רלוונטיים לשימוש באתר בכל דרך שבה רואים את האתר - בין אם באמצעות מחשב ובין אם בטלפון הנייד ובין אם בדרך אחרת.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e994d13236297526d14c23d99f35c50db0a383dd" datatype="html">
         <source>השירותים והתכנים באתר ניתנים לשימוש כמות שהם. הם נועדו לספק מידע בלבד והמשתמשת מסכימה כי היא בלבד תישא בכל סיכון ואחריות לכל נזק ו/או הפסד שיגרמו לה בגין השימוש באתר, או כתוצאה מהסתמכות על התכנים באתר. מרכז הידע &quot;יודעת&quot;, אינו אחראי לתוכן הכתוב, ובכלל זה למידת דיוקו, אמינותו או אמיתותו.  </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="64e5ce09c90a57daee841758739f12f68d4edd96" datatype="html">
         <source>בכל מקום בו התקנון נוסח בלשון אישה מטעמי קיצור, הנאמר בו חל אף על גברים. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">16</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b0ef2117f4ab605a9f0fb07b4454b1e24797fff8" datatype="html">
         <source>הגדרות</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">19</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6c97511d8f1498c70c1cfab0241174f56c196545" datatype="html">
         <source>&quot;חוק זכות יוצרים&quot; - חוק זכות יוצרים, התשס&quot;ח-2007.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6ad3c5b02e959e451ff4fd165582a246a72235e7" datatype="html">
         <source>&quot;יצירה נגזרת&quot; - כהגדרתה בחוק זכות יוצרים.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="47abdb142ea3d112ad576c70e52bd149228070d1" datatype="html">
         <source>&quot;מטה-דאטה&quot; - לרבות כל המידע על מקור התוכן, יוצר/ת התוכן, הנושאים הנדונים בתוכן ולמעט תקציר של התוכן.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d80179babf7f71d5907127e31a889f4cca658368" datatype="html">
         <source>&quot;תוכן&quot; - כל יצירה כהגדרתה בחוק זכות יוצרים.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="314cfc1a9d8ba1bb5f0a317a753129c46fb5bc13" datatype="html">
         <source>&quot;תקציר&quot; - הסבר קצר על התוכן.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4d3d26d22b09349c3ab95bc8b59279881c804e8f" datatype="html">
         <source>השימוש באתר</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="84655d9f4be060261e0d0cbae048ff92ce8c70db" datatype="html">
         <source>השימוש באתר &quot;יודעת&quot; וקריאת התכנים שיועלו אליו יהיו פתוחים לכל, ללא צורך בהרשמה מוקדמת או יצירת חשבון משתמשת אישי.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="44a8f4173f5f17d5a3f344782cd58914867a7ba9" datatype="html">
         <source>השימוש באתר נעשה באחריותה הבלעדית של המשתמשת ומרכז הידע &quot;יודעת&quot; לא יישא בכל אחריות לכל נזק ישיר או עקיף שייגרמו למשתמשת או למי מטעמה או לצד שלישי, לרבות כל הפסד, אובדן או הוצאה הנובעים במישרין או בעקיפין מהשימוש באתר או בתכניו. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a1d1e283d171b834733c2cf013f5ad2c533cda87" datatype="html">
         <source>התכנים הניתנים באתר ניתנים כפי שהם ולא ניתן להתאימם לצרכים של כל אדם ואדם. למשתמשת אין כל טענה, תביעה או דרישה ממרכז הידע &quot;יודעת&quot; בגין האתר על שירותיו השונים. מרכז הידע &quot;יודעת&quot; לא מתחייב ולא אחראי לחשיפת התכנים המפורסמים בו או לתגובות שיגרור הפרסום של התוכן באתר או לכל נזק שייגרם במישרין או בעקיפין מהעלאת התכנים לאתר.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4dbd25635f263d215d694741cb472ca8281bc746" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; עושה כל שביכולתו לספק שירות רציף, בטוח וללא מגבלות. עם זאת מרכז הידע &quot;יודעת&quot; אינו יכול להתחייב כי האתר לא יופרע בפעילותו או לא ישובשו תכניו, וכי האתר יהיה חסין מתקיפות, נזקים, תקלות, בעיות או כשלים - לרבות בתוכנה, בחומרה בין אם אצל מרכז הידע &quot;יודעת&quot; או מי מספקי השירות שלו.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="311464b0a66b6887ad35d99dfdf72fcb8c1deb24" datatype="html">
         <source>האתר אינו דורש רישום, אולם מי שנרשמה לאתר על מנת להימנות על שירותים שונים שמוצעים באתר, תידרש להירשם בין אם באמצעות מדיה חברתית ובין אם באמצעות כתובת דואר אלקטרוני וסיסמה. על הפרטים שמוסרים להיות אמיתיים, מדוייקים ומלאים. עליך לשמור את שם המשתמשת ואת הסיסמה בסודיות, על מנת למנוע שימוש לרעה בהם. יש להחליף את הסיסמה לאתר מעת לעת ולפחות אחת לשישה חודשים.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="72b8b21e993d14bc3a3597b667562c00753991a3" datatype="html">
         <source>המידע שתמסרי בעת הרישום יישמר בידי מרכז הידע &quot;יודעת&quot; וייעשה בו שימוש בהתאם למדיניות הפרטיות של האתר, המהווה חלק בלתי נפרד מתנאי שימוש אלה. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ea52ad835fb23444154b2fe2f1df17c53a4226ca" datatype="html">
         <source>צוות מרכז הידע &quot;יודעת&quot; רשאי שלא לאפשר למשתמשת גישה לשירותי האתר הדורשים רישום, על פי שיקול דעתו הבלעדי. בנוסף, צוות מרכז הידע &quot;יודעת&quot; רשאי לחסום את הגישה לשירותים הדורשים רישום במקרים בהם - הפרטים שנמסרו אינם נכונים; המשתמשת התחזתה לאדם אחר; המשתמשת ביצעה או ניסה לבצע מעשה או מחדל האסורים על פי חוק או סייעה לכך או עודדה לכך; המשתמשת הפרה את תנאי השימוש באתר, לרבות את מדיניות הפרטיות; המשתמשת ניסתה למנוע מאחרת את הרישום לאתר; המשתמשת העבירה לשימושה של אחרת את פרטי ההתקשרות שלה לאתר &quot;יודעת&quot;. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="df443be7f752209a79955d8748338bda5ef40eb4" datatype="html">
         <source>מדיניות שיתוף תכנים באתר &quot;יודעת&quot;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e7d2dfe16d99d6c86fb4286698f0900081bf1012" datatype="html">
         <source>כללי שיתוף תכנים באתר &quot;יודעת&quot;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="25792e918d03a250923cb9c2ad79ac4e61e3d2d1" datatype="html">
-        <source>צוות מרכז הידע &quot;יודעת&quot; יאפשר מספר דרכים לשיתוף תכנים:            </source>
+      <trans-unit id="98f66e0575a4ca27ff8309d6ee73d9c43ad30f4e" datatype="html">
+        <source>צוות מרכז הידע &quot;יודעת&quot; יאפשר מספר דרכים לשיתוף תכנים:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="0a2977b0c72a360410fc9b7933baf3e77d715a09" datatype="html">
         <source>פניה יזומה אל מרכז הידע &quot;יודעת&quot;:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="0352e627d8d2026d94b4b7785b319afbcb1299e1" datatype="html">
         <source>המבקשות לשתף חומרים באתר, מוזמנות להציע אותם באמצעות משלוח מייל לכתובת הדואר האלקטרוני הבאה:  info@yodaat.org. אל הבקשה יש לצרף את התוכן המבוקש לפרסום, בפורמט דיגיטלי מקובל, כפי שייקבע מעת לעת על ידי צוות מרכז הידע &quot;יודעת&quot;. אנו מעודדות את הפונות לשתף את הידע או המידע שברשותם באופן חופשי ותחת רישיון שימוש פתוח.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="73ac23abd89e7e42dec020e5651d2339744e7141" datatype="html">
         <source>צוות מרכז הידע &quot;יודעת&quot; ידון בכל בקשה לשתף מידע באמצעות האתר, ויחליט, על פי שיקול דעתו הבלעדי, אם לקבלה אם לאו.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d0db5224934310ff5a26ce1de3232bdc911c1ecb" datatype="html">
         <source>פרסומים אשר יכללו תכנים פוגעניים מכל סוג שהוא, ובכלל זה גם תכנים שיש בהם חשש להוצאת לשון הרע, הסתה, פגיעה בפרטיות, אמירות גזעניות, אמירות פוגעניות על רקע של מגדר, גזע, אמונה דתית, נטייה מינית וכיו&quot;ב, או אם עולה מהם בעיה אחרת לא יפורסמו.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4aae83c19a26958db5c0d1e5747436a51006d156" datatype="html">
         <source>פניה יזומה של צוות מרכז הידע &quot;יודעת&quot;, על פי שיקול דעתו</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e7c2ccea0c089cf85ad79f1d82318aa3c2cb0105" datatype="html">
         <source>צוות מרכז הידע &quot;יודעת&quot; רשאי לפנות באופן יזום לגורמים שונים בהצעה לשתף את התכנים שלהם מסוגים שונים.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="0e32a421fdceb8f2a562965fac4eb7d4dd69ce4d" datatype="html">
         <source>אין בפנייה היזומה מצד צוות מרכז הידע &quot;יודעת&quot; אל הגורמים השונים בבחינת הבטחה לפרסום התכנים כאמור. צוות מרכז הידע &quot;יודעת&quot; ידחה על פי שיקול דעתו הבלעדי חלק מהחומרים או את כולם, לרבות תכנים פוגעניים מכל סוג שהוא, ובכלל זה גם תכנים שיש בהם חשש להוצאת לשון הרע, הסתה, פגיעה בפרטיות, אמירות גזעניות, אמירות פוגעניות על רקע של מגדר, גזע, אמונה דתית, נטייה מינית וכיו&quot;ב או אם עולה מהן בעיה אחרת.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c18b31b600f81b58d863be9e4af0bdfbf1854959" datatype="html">
         <source>בכל מקרה, צוות מרכז הידע &quot;יודעת&quot; לא יעסוק בעריכה מכל סוג שהוא של התכנים/חומרים שישלחו אליו. מרכז הידע &quot;יודעת&quot;  או כל גורם אחר מטעמו אשר אחראי על הפעלת אתר &quot;יודעת&quot; לא יישאו באחריות לתכנים, וזו תחול על הגורמים שמסרו את התכנים בלבד.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5d5730c96ffc84023f4ad94189f4f16228410488" datatype="html">
         <source>צוות מרכז הידע &quot;יודעת&quot; משאיר לו את הזכות ואת שיקול הדעת הבלעדי להסיר תכנים מהאתר בכל עת ובכלל זה, אם עולה חשד להפרת זכויות. גורם אשר העביר תכנים ל&quot;אתר יודעת&quot;, מתחייב בעת ההעברה לעדכן את צוות מרכז הידע &quot;יודעת&quot; בכתב לכתובת המייל של האתר אם תעלה בעיה הנוגעת לתוכן שהועבר לאתר &quot;יודעת&quot;, מייד עם היוודע הדבר. בנוסף, הגורם שהעביר את התכנים רשאי לחזור בו מהעברתם בכל שלב בהודעה בכתב, אולם המידע אודות התוכן (מטה-דאטה וכדומה) יישאר באתר &quot;יודעת&quot; ויעודכן בהתאם לצורך, לפי שיקול דעתו של צוות מרכז הידע &quot;יודעת&quot; וניתן יהיה לעשות בו שימוש, אלא אם כן יוחלט אחרת. הסרת התוכן על ידי צוות מרכז הידע &quot;יודעת&quot; ייעשה תוך פרק זמן סביר מיום קבלת הפנייה.  </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6a1347dcfe5799384885db78fecf861e385cbbb5" datatype="html">
-        <source>צוות מרכז הידע &quot;יודעת&quot; מציע לפרסם את התכנים השונים המועברים אליו תחת אחד מרישיונות creative commons, רישיונות פתוחים המאפשרים לבחור כי רק &quot;חלק מהזכויות שמורות&quot;. ישנם 7 רישיונות שימוש של creative commons. חלקם מתירים שימוש מסחרי, עשיית יצירות נגזרות ושיתוף יצירות נגזרות תחת אותו רישיון (השארת היצירות החדשות גם כן בשיתופיות).     </source>
+      <trans-unit id="800c99e3f933e698808383fcc2c5cc9681997e89" datatype="html">
+        <source>צוות מרכז הידע &quot;יודעת&quot; מציע לפרסם את התכנים השונים המועברים אליו תחת אחד מרישיונות creative commons, רישיונות פתוחים המאפשרים לבחור כי רק &quot;חלק מהזכויות שמורות&quot;. ישנם 7 רישיונות שימוש של creative commons. חלקם מתירים שימוש מסחרי, עשיית יצירות נגזרות ושיתוף יצירות נגזרות תחת אותו רישיון (השארת היצירות החדשות גם כן בשיתופיות).</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8d3cf3c00c1d45dc5fbd11133e4f01de24127bd1" datatype="html">
         <source>המלצת צוות מרכז הידע &quot;יודעת&quot; היא לפרסם תחת רישיון CC-BY-SA, אשר מהווה אף את רישיון השימוש באתר ויקיפדיה. רישיון זה מאפשר לציבור לעשות שימוש כלשהו בתוכן אליו מוצמד הרישיון, תוך מתן קרדיט ליוצר/ת ותוך שמירת יצירות הנגזרות מיצירה זו אף הן בשיתופיות. מטרת הרישיונות הפתוחים היא  לעודד את השימוש בחומרים והפצתם לשם השמירה על המידע והידע. כך, הציבור הרחב יודע בוודאות רבה יותר מהם השימושים שמותר לעשות בתכנים, מהם השימושים האסורים ומהם התנאים לשימוש. באמצעות רישיונות שימוש אלה התוכן לרוב מופץ בבמות רבות יותר ונחשף בפני אנשים רבים יותר.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="28352ac16e8b771e2c5a4548c851879b3de0f806" datatype="html">
         <source>הצהרה והתחייבות בעניין זכות קניין רוחני וזכויות אחרות בעת העברת תכנים למרכז הידע &quot;יודעת&quot;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">61</context>
         </context-group>
       </trans-unit>
       <trans-unit id="22fa17baca1e90865cadeb537f849f35185fe044" datatype="html">
         <source>עצם משלוח התכנים לפרסום או מתן הסכמה כתובה לשיתופם באתר &quot;יודעת&quot; יהווה התחייבות והצהרה של שולחי התוכן כי הם בעלי הרשאה חוקית מלאה להעביר את התכנים במלואם (לרבות תמונות, למשל, אם שולבו בהם) לפרסום, ואין בהעברת החומר משום הפרת זכות יוצרים או זכות פטנט של מאן דהוא או פגיעה בזכות אחרת לרבות, סוד מסחרי, הזכות לפרטיות, הזכות לשם טוב (לשון הרע) וכיו&quot;ב. כל זאת, בכפוף לכך שאם יתגלה כי ההצהרה שניתנה אינה נכונה או אם שולחת התוכן תבקש להסירו מסיבות אחרות - שולחת התוכן תעדכן בהקדם האפשרי בכתב כי יש להסיר את התוכן כאמור בסעיף 16 דלעיל. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d555b465edd7cf977c47343991d8c798a2098535" datatype="html">
         <source>בכל מקרה בו תוגש נגד מרכז הידע &quot;יודעת&quot; או מי מבין השותפים לפרויקט &quot;יודעת&quot; או נגד כל אישיות משפטית מטעמם אשר תתפעל את מרכז הידע או את אתר &quot;יודעת&quot;, תביעה משפטית לרבות בגין הפרת זכויות יוצרים בתוכן שהועלה לאתר, תעמודנה בפני מי ששלחו ו/או אישרו את התוכן לפרסום שתי האפשרויות הבאות: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">49</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="75ffecc29350054b17dd77da0503df2867137997" datatype="html">
         <source>(1) להשאיר את ניהול התובענה בידי מכון ון ליר או מי מטעמו, כאמור, ולשלם למכון ון ליר או לכל גורם כאמור כל סכום שייפסק נגדם, אם ייפסק, בתום ההליך או; </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c8acc94ddff71e2577e74ae9ea83ad5dcad5a2aa" datatype="html">
         <source>(2) לקבל על עצמם את ניהול התביעה, בשמם ובשם מכון ון ליר או בשם כל גורם אחר מטעמו, ולשאת בתוצאת ההליך, כפי שתתקבלנה עם סיומו.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f196bfdadd1d9ee53e21fda6111c46731a549245" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; עושה כל שביכולתו לשמור על כלל הזכויות המשפטיות לרבות על זכות היוצרים. עם זאת, אם גילית חשד להפרה של זכות יוצרים או כל זכות אחרת, אנא פני לכתובת הדואר האלקטרוני info@yodaat.org ואם אכן קיימת הפרה אנו נפעל להסרת התכנים או לקבלת האישורים הנדרשים בתוך פרק זמן סביר מרגע קבלת הפנייה. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="90d0e1b57c96d11bb86f876f882496f4e800755a" datatype="html">
         <source>קניין רוחני ואופן השימוש בתכני האתר</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">55</context>
+          <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3933d41f10bd625f8956491a1071df64e78e5889" datatype="html">
         <source>זכויות הקניין הרוחני, לרבות זכויות היוצרים ביצירות ובתכנים המוצגים באתר הם בבעלות מרכז הידע &quot;יודעת&quot; ו/או היוצרים ו/או המו&quot;לים ו/או צדדים שלישיים ו/או בנחלת הכלל, הכל כמפורט לצד היצירה הרלוונטית.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c3c3237dfd6e08494951b07f6f54ca38b06d3443" datatype="html">
         <source>   אין לשכפל, להעתיק, לצלם, להקליט, לתרגם, לאחסן במאגר מידע, לשדר או להעביר בכל דרך או אמצעי, או לעשות כל שימוש בחומרים המצויים באתר, בתמורה או שלא בתמורה, ללא קבלת אישור, בכתב ומראש, מאת בעלי/ות זכויות היוצרים בהם, אלא אם הוצמד אל התכנים רישיון שימוש מסוג Creative commons. אין בסעיף זה בכדי לגרוע מהשימושים המותרים על פי חוק זכות יוצרים, או כל דין אחר.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="709f13e33c9351b3bfe99b76438715ad1a299408" datatype="html">
         <source>אם תכנים הועלו לאתר &quot;יודעת&quot; והוצמד להם רישיון שימוש מסוג Creative Commons, ניתן לעשות שימוש בתוכן על פי הרישיון כאמור. העושה שימוש בתוכן בניגוד לרישיון שהוצמד אליו, מפרה אף את הרישיון. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="436c78243a7a90d7f8b993543c8b68ffb0fd6f1e" datatype="html">
         <source>על המשתמשת האחריות הבלעדית לברר את מצב הזכויות ביחס לתוכן כלשהו באתר בטרם יעשה בו שימוש. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="349b5352488d29ce3fabe7ec6888c15dc7a9ede3" datatype="html">
-        <source>כל המטה דאטה באתר &quot;יודעת&quot; ניתן תחת רישיון פתוח וחופשי Creative Commons BY (CC-BY)  (הקובע כי יש זכות יוצרים ביצירה, אולם ניתן לעשות שימוש ביצירה כל עוד נותנים קרדיט). אנו מזמינות את הציבור לעשות בו שימוש. התקצירים אינם נכללים במטה דאטה ובהם כל הזכויות שמורות כאמור בסעיף 22 לעיל, אלא אם הוצמד אל התכנים רישיון שימוש אחר. ניתן לפנות לצוות מרכז הידע &quot;יודעת&quot; בכל עניין הקשור לתנאי שיתוף ושימוש בתוכן המופיע באתר באמצעות כתובת מייל info@yodaat.org .</source>
+      <trans-unit id="be1498808f62e5f551c03e9f217c597799d7a157" datatype="html">
+        <source>כל המטה דאטה באתר &quot;יודעת&quot; ניתן תחת רישיון פתוח וחופשי Creative Commons BY (CC-BY)  (הקובע כי יש זכות יוצרים ביצירה, אולם ניתן לעשות שימוש ביצירה כל עוד נותנים קרדיט). אנו מזמינות את הציבור לעשות בו שימוש. התקצירים אינם נכללים במטה דאטה ובהם כל הזכויות שמורות כאמור בסעיף 22 לעיל, אלא אם הוצמד אל התכנים רישיון שימוש אחר.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9b1ced789e31e806207e4dc263c3c3600d742929" datatype="html">
+        <source> ניתן לפנות לצוות מרכז הידע &quot;יודעת&quot; בכל עניין הקשור לתנאי שיתוף ושימוש בתוכן המופיע באתר באמצעות כתובת מייל info@yodaat.org .</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
+          <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
       <trans-unit id="13e6232f24daee2e9e0aba959ba20e2bef4c19ac" datatype="html">
         <source> אסור לקשר לאתר ולתכניו ממקורות המכילים תכנים שאינם חוקיים או הקוראים לפעילות בלתי חוקית, תכנים פורנוגרפיים, תכנים המעודדים להסתה ולגזענות, תכנים הקוראים לצמצום חופש הביטוי ולתכנים כגון אלה.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">61</context>
+          <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="362e552256f104ea29dc79ed3f16ae9c3c6e12c6" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; אינו אחראי לכל נזק שייגרם כתוצאה מהצגה כלשהי של תכנים באתר (לרבות מתן קישור). על המפנה לתכני האתר או לאתר, האחריות המלאה והבלעדית לכך. המפנה לתכני האתר או לאתר מתחייבת לשפות את מרכז הידע בגין כל נזק שייגרם כתוצאה מכך. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">62</context>
+          <context context-type="linenumber">84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b5af08d8abf7b3e0022ae40273b6876fa1bca3f0" datatype="html">
         <source>צוות מרכז הידע &quot;יודעת&quot; רשאי לתת קישורים לאתרים אחרים. ברוב המקרים לצוות מרכז הידע &quot;יודעת&quot; אין שליטה בתכנים או פיקוח עליהם, ואין לו כל קשר אליהם. לעיתים קישורים אלה עלולים לא לעבוד (קישור ריק) וצוות מרכז הידע &quot;יודעת&quot; רשאי להסירם או לא לעדכנם על פי שיקול דעתו הבלעדי. יתר על כן, צוות מרכז הידע &quot;יודעת&quot; מסיר כל אחריות לתכנים באתרים אלה וכן לנזקים שייגרמו כתוצאה משימוש בתכנים אלה.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4b2fd38e19befadb74cbd5dc3b58cab267088163" datatype="html">
         <source>אין להפעיל או לאפשר להפעיל כל יישום של מחשב או כל אמצעי אחר, לרבות תוכנות מסוג Crawlers, Robots  וכדומה, לשם חיפוש, סריקה, העתקה או אחזור אוטומטי של תכנים מהאתר. בכלל זה, אין ליצור ואין להשתמש באמצעים כאמור לשם יצירת לקט, אוסף או מאגר שיכילו תכנים או מידע מהאתר, אלא אם רישיון השימוש הצמוד לתכנים מאפשר זאת;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">64</context>
+          <context context-type="linenumber">86</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3d79cc4241097994c0c00119930149a91a558db4" datatype="html">
         <source>אין להציג תכנים מהאתר בתוך מסגרת (Frame), גלויה או סמויה;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">87</context>
         </context-group>
       </trans-unit>
       <trans-unit id="293e6e56cd270650939dccfbae29689b722f1f56" datatype="html">
         <source>אין להציג תכנים מהאתר בכל דרך שהיא – ובכלל זה באמצעות כל תוכנה, מכשיר, אביזר או פרוטוקול תקשורת המשנים את עיצובם או מחסירים מהם תכנים או מידע;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">88</context>
         </context-group>
       </trans-unit>
       <trans-unit id="905f8cb8475bb1a761136012afc4a767351c54ec" datatype="html">
         <source>אין לקשר לתכנים מהאתר שאינם דף הבית של האתר (&quot;קישור עמוק&quot;) ואין להציג, או לפרסם תכנים כאמור בכל דרך אחרת, אלא אם הקישור העמוק יהיה לדף אינטרנט באתר במלואו וכפי שהוא (AS IS) כך שניתן יהיה לצפות ולהשתמש בו באופן זהה לחלוטין לשימוש ולצפייה בו באתר. במסגרת זו, חל איסור לקשר לתכנים מהאתר במנותק מדפי האינטרנט שבהם הם מופיעים באתר (לדוגמה – אסור לקשר במישרין לסרטון וידאו באתר, אלא לעמוד המלא שבו הוא מופיע). כמו כן, על כתובתו המדויקת של דף האינטרנט באתר להופיע במקום הרגיל המיועד לכך בממשק המשתמשת (לדוגמה – בשורת הכתובת (Status Bar) בדפדפן המשתמשת). אין לשנות, לסלף או להסתיר כתובת זו ואין להחליפה בכל כתובת אחרת.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">89</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ba4099a9046bd5f8d059774eadf072daa7f5fab6" datatype="html">
         <source>תפעול האתר ושינוי מדיניות </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="linenumber">92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f519a50e9d477a15a93b29d9714edecdb65e4373" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; יהיה רשאי, לפי שיקול דעתו הבלעדי, להחליט על הפסקת ההפעלה של &quot;יודעת&quot; ובכלל זה של האתר, באופן חלקי או מלא, בכל עת, ומבלי להתחייב בפיצוי כלשהו בשל כך או בהודעה מוקדמת.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">94</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3619482c275ab2514c4fb3b7e9be9b2d601b4da9" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; רשאי להעביר את ניהול &quot;יודעת&quot; לגוף אחר, ללא הודעה מראש, בכפוף לדרך קבלת ההחלטות במרכז הידע.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">95</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f63991947f7765c156a2c0c4242ec04b3371a5b6" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; ינקוט אמצעי אבטחת מידע סבירים, כמקובל, להגנה על הקבצים שיועלו לאתר. עם זאת, מרכז הידע &quot;יודעת&quot; לא יישא באחריות במקרה של שימוש לא מורשה בתכנים או בשיבוש תכנים וכיו&quot;ב, כמפורט אף במדיניות הפרטיות.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">72</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4774163b7d65326d2fdea766441e18af1bd88a2d" datatype="html">
         <source>צוות מרכז הידע &quot;יודעת&quot; יהיה רשאי לשנות מעת לעת את תנאי השימוש באתר ו/או מדינות הפרטיות. אם יבוצעו שינויים מהותיים תופיע על כך הודעה בעמוד הבית של אתר &quot;יודעת&quot; 7 ימים לפני כניסת השינוי לתוקף. עם זאת, אם התיקון מחוייב על פי דין - ישונה לאלתר ותיתן הודעה על כך באתר הבית של אתר &quot;יודעת&quot;. אם המשתמשת לא מסכימה לשינוי, היא רשאית לחדול מלעשות שימוש באתר ואם נרשמה אליו - לבקש את הסרת רישומה מהאתר. צוות מרכז הידע &quot;יודעת&quot; יסיר את המשתמשת תוך פרק זמן סביר מרגע הגשת בקשתה. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c643ff5ac7b0aea71d310776cb8a7a75a800806b" datatype="html">
         <source>פרטיות</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">75</context>
+          <context context-type="linenumber">101</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d7042c63a8c9d3e6f29ca725c571d110c36ca4f2" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; מתחייב לשמור על פרטיות המשתמשות באתר בכפוף לכל דין. מדיניות הפרטיות של האתר מהווה חלק בלתי נפרד מתנאי השימוש באתר. מדיניות הפרטיות עשויה להשתנות מעת לעת. כאמור, על המשתמשת מוטלת האחריות להתעדכן.  </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">76</context>
+          <context context-type="linenumber">103</context>
         </context-group>
       </trans-unit>
       <trans-unit id="02193f1c21e2f1264b950ecb0b6ae729926c8221" datatype="html">
         <source>דין וסמכות שיפוט</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">106</context>
         </context-group>
       </trans-unit>
       <trans-unit id="eb172ff552fa872febc031a3ee6f185fca3cb005" datatype="html">
         <source>על השימוש באתר יחולו דיני מדינת ישראל בלבד. מקום השיפוט הבלעדי של כל עניין העולה משימוש באתר הינו בתי המשפט במחוז ירושלים, ישראל. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">79</context>
+          <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="bc52fc8463dc98410807c55ba6a919edee8b9415" datatype="html">
         <source>* הנוסח בעברית של התקנון ותנאי השימוש הוא הנוסח התקף מבחינה משפטית, אם יש אי התאמה או סתירה בין הנוסחים (עברית/ערבית/אנגלית).</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-eula/generic-page-eula.component.html</context>
-          <context context-type="linenumber">81</context>
+          <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2165cc631d6cf1c29ef1eb4298f8c95875042795" datatype="html">
@@ -2265,392 +2327,392 @@
         <source>מרכז הידע נשים ומגדר &quot;יודעת&quot; (להלן: &quot;מרכז הידע&quot; או &quot;מרכז הידע &apos;יודעת&apos;&quot;) הינו מרכז ידע אינטרנטי להנגשה של ידע בנושאי מגדר ופמיניזם, המעמיד לרשות הציבור תכנים ומקורות מידע מגוונים בנושאים אלה, ללא תשלום ובכפוף לתנאי תקנון זה. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a03bb2af763234ce3f76acff1f15bc305717d927" datatype="html">
         <source>מדיניות הפרטיות מהווה חלק בלתי נפרד מתנאי השימוש באתר האינטרנט של מרכז הידע (להלן: &quot;אתר יודעת&quot; או &quot;אתר&quot;) והשימוש באתר, לרבות בתכנים הכלולים בו ובשירותים השונים בו, מעיד על הסכמתך לתנאי השימוש באתר ולכל תנאי אחר המופיע בו, לרבות מדיניות הפרטיות באתר. תנאים אלה תקפים לשימוש באתר ולשירותים השונים הכלולים בו בין אם באמצעות מחשב, טלפון נייד או בכל דרך אחרת. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d6a4442d1bcf02467753c32d7d3fd5bbc0a5d4b4" datatype="html">
         <source>מדיניות פרטיות זו אינה מתייחסת לאתרים של צדדים שלישיים. ככל שאתר האינטרנט של מרכז הידע &quot;יודעת&quot; יכלול קישור לאתר של צד ג&apos;, אין בכך משום תמיכה באתר המקושר, אחריות כלשהי בגין התכנים המופיעים באתר המקושר או תמיכה במדיניות הפרטיות של אותו אתר. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="510de6c6ee5b0cbc5be64a22bdebb79e4dc2d4f4" datatype="html">
         <source>על אף האמור לעיל, מרכז הידע &quot;יודעת&quot; ומי מטעמו שומרים על זכותם לשנות את התנאים מעת לעת ועל המשתמשות באתר לבחון תנאים אלה ולהתעדכן בשינויים. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="239884f07309d49dc6c7b7dbb3b79f3fa8a824bf" datatype="html">
         <source>&quot;מידע אישי&quot; - מידע שמאפשר את זיהויו של האדם אשר אליו הוא מתייחס. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="00fb49b59fe6dd01a3d5956f6b4651ce5db1c6bd" datatype="html">
         <source>איסוף מידע ומסירת פרטים </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d503d1da121b9410325e7d608e5b67a3c41da10c" datatype="html">
         <source> ככלל, השימוש באתר מרכז הידע &quot;יודעת&quot; אינו דורש רישום ו/או מסירת פרטים ו/או מידע אישי. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5e7d64a41eb25f5e794f10c540008b27a19b386d" datatype="html">
         <source>במהלך השימוש באתר מרכז הידע &quot;יודעת&quot;, ייתכן שיצטבר בידי מרכז הידע &quot;יודעת&quot; מידע סטטיסטי באשר לעמודים בהם צפית, שירותים בהם השתמשת או בחנת, מקום המחשב ממנו את גולשת באתר וכתובת האינטרנט של המחשב, סוג מערכת ההפעלה בה את עושה שימוש, סוג מכשיר הקצה בו את עושה שימוש, משך הזמן בו צפית בעמוד וכדומה. יחד עם זאת, אין מדובר בשום אופן במידע אשר עשוי להוביל, במישרין או בעקיפין, לזיהוי של אדם מסוים.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="52af306c265051a5d7595e0a5c01f9f8941f18ea" datatype="html">
         <source>שירותים אחדים באתר יודעת טעונים הרשמה ועשויים להיות כרוכים בהתחברות באמצעות רשתות חברתיות ו/או מסירת פרטי קשר ומידע אשר עלולים לזהות אותך באופן אישי,כגון, שם מלא, כתובת, טלפון, כתובת דואר אלקטרוני ופרטים נוספים על פי הצורך. אינך חייבת על פי חוק למסור את הפרטים הללו. אולם, מסירת פרטים שגויים, או אי מסירת מלוא הפרטים הנדרשים עלולים למנוע ממך את האפשרות להשתמש בשירותים באתר, או שהשימוש יהיה חסר, פחות איכותי, פחות יעיל וכיו&quot;ב.   בעת שאת מוסרת את הפרטים הנדרשים, את מצהירה כי מסרת פרטים נכונים, מדויקים ומלאים, מתוך רצון חופשי ובהסכמה מלאה וכי את יודעת כי אין חובה על פי חוק למסור אותם. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ceaf4d3fd6050f7f2e371b688957ab46b5689414" datatype="html">
         <source>בנוסף לכך, בעת פניות יזומות לאתר מרכז הידע &quot;יודעת&quot;, מרכז הידע &quot;יודעת&quot; עשוי לאסוף מידע נוסף, ובעצם הפניה את מצהירה כי הסכמת למסור מידע זה למרכז הידע &quot;יודעת&quot;.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="efb9e84a1fcf35778c74e9d8626f12f49778a3dd" datatype="html">
         <source>הפרטים והמידע האישי שמסרת וכן פרטים אחרים אודות השימוש באתר (כמפורט להלן) יישמרו במאגרי המידע של מרכז הידע &quot;יודעת&quot; ויעשו בהם שימוש כמפורט במדיניות פרטיות זו.   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="87a9e61c9b5be63784e9ffa9685d894e298cfdaf" datatype="html">
         <source>אם את מוסרת מידע אישי או פרטים על צד שלישי (למשל, בעת הפקדת תוכן שיצר צד שלישי), את מצהירה בזאת כי את רשאית לעשות כן, לאור קבלת הסכמתו המפורשת של הצד השלישי למסירת המידע לאתר מרכז הידע &quot;יודעת&quot;, בכפוף לתנאי השימוש של אתר &quot;יודעת&quot; ולמדיניות הפרטיות בו. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="857971311d25d03ca080f2a205872e01abec1ebc" datatype="html">
         <source>שימוש במידע על ידי אתר מרכז הידע &quot;יודעת&quot;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="0f3924c78b94d51d832eec1087196df505db6aed" datatype="html">
         <source>בפרטים ובמידע האישי אותו מסרת או שמרכז הידע &quot;יודעת&quot; יאסוף במהלך השימוש באתר &quot;יודעת&quot; כאמור, ייעשה שימוש בהתאם להוראות מדיניות הפרטיות הזו או על פי הוראות כל דין למטרות המפורטות להלן:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="26f94e9dc96306cde922e20e6af5e98cd96c9f62" datatype="html">
         <source>משלוח עדכונים באמצעות כתב עת אלקטרוני (&quot;ניוזלטר&quot;) שמפיק מרכז הידע &quot;יודעת&quot;;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="eeeae3936b3fac11c5ff888bbd1d539990b94ab6" datatype="html">
         <source>משלוח &quot;קול קורא&quot; להשתתפות בפעילויות שונות של מרכז הידע &quot;יודעת&quot;.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="99f39ecbdca69df3a12d20e5a8924ff9bafb78a3" datatype="html">
         <source>משלוח עדכונים על פרסומים חדשים אשר כוללים לעתים גם קישור לעמוד אינטרנט דרכו ניתן לראות פרסומים אלה;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7631d770304bfe3c35cd178215f6fae98ddc3148" datatype="html">
         <source>משלוח הצעות להשתתף בפרויקטים חדשים;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a209e9b126b8b24e27b311868c0dcb2718d5d9e4" datatype="html">
         <source>הזמנה להעביר תרומות למרכז הידע &quot;יודעת&quot;;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="a332baf9caa48abf73122af26903a5968467e9df" datatype="html">
         <source>הזמנה להשתתף באירועים שמארגן מרכז הידע &quot;יודעת&quot;;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="12d1333b8956943975988e8752e0d26d87258b6c" datatype="html">
         <source>ניהול של מסעות יחסי ציבור (לא לצרכים מסחריים) באמצעות הרשתות החברתיות.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="befc5b82bf820935e4b7d145bd226ac01fdd69be" datatype="html">
         <source>לאפשר שימוש באתר ותפקוד תקין שלו, בתכנים בו ובשירותים שהאתר מציע. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3de1c39b154a4c23a68c422e310893a9bf8d69a3" datatype="html">
         <source>לייעל את הכניסה החוזרת שלך לאזורים המוגבלים וכדי לאפשר לך שלא להזין את הפרטים בכל כניסה חוזרת, תוך התאמה אפשרית להעדפותיך. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b32a4cf41364697815396dd33f76d1df2f5dfb99" datatype="html">
         <source>לפיתוח האתר, לשיפורם של תנאי השימוש באתר ושיפור התכנים בו, לרבות שדרוג ושינוי שירותים, התאמת שירותים והעשרת תכנים.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e43b28bf3cc67d6592a2634ea6f9ca662219ef47" datatype="html">
         <source>ליצירת קשר איתך אם יש צורך בכך, על פי שיקול דעתו של צוות מרכז הידע &quot;יודעת&quot;.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fffd24c35cf8a01df060d246c7efb8877e2d4411" datatype="html">
         <source>למלא את תנאי השימוש של אתר מרכז הידע &quot;יודעת&quot; ואת מדיניות הפרטיות שלו וכן על מנת למלא אחר דרישות כל חיקוק אחר וכן על מנת לסייע לרשויות המוסמכות ולכל צד שלישי כשצוות אתר מרכז הידע &quot;יודעת&quot; סבור בתום לב שיש לעשות כן. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cdd64089312ebf22b718f05faed4c52a3a56726f" datatype="html">
         <source>מסירת מידע לצדדים שלישיים</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6caa5658ab2fe3c77aa35fa14af67bb67a4dbce7" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; לא יעביר לצדדים שלישיים את הפרטים והמידע האישי שמסרת או שנאסף עליך תוך כדי השימוש באתר &quot;יודעת&quot;, אלא: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="linenumber">50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8f3e348f8e6fac3b7eaba4e018423f4529ba1c73" datatype="html">
         <source>על פי בקשתך המפורשת;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="0758c34f328279aa56dcbe99afb00bfe0e2b3f9c" datatype="html">
         <source>אם הדבר דרוש לצורך אספקה תקינה של שירותי האתר; </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fc8ebb1131701c142316848327a8303b3060e42e" datatype="html">
         <source>אם תפרי את הוראות השימוש באתר או את מדיניות הפרטיות או תעשי שימוש באתר או באמצעותו על מנת להפר כל חיקוק או שתנסי לעשות כן; </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e716362471849b7f5902cae7975d86dfd9211a74" datatype="html">
         <source>אם יתקבל צו שיפוטי בידי מרכז הידע &quot;יודעת&quot; או כל דרישה כדין של רשות מוסמכת, המורה לו למסור את פרטיך או את המידע אודותיך לצד שלישי; </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6e4ad4e17dc47fa3b2f10697bd1799a5fb095a05" datatype="html">
         <source>בכל מחלוקת משפטית, טענה, דרישה וכדומה, בינך לבין מרכז הידע &quot;יודעת&quot; או מי מטעמו;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1657614229edd4ac465f1708a0bce4049069c33c" datatype="html">
         <source>בכל מקרה בו מרכז הידע &quot;יודעת&quot; סבור כי יש למסור את המידע על מנת למנוע נזק חמור גופני או כלכלי לך או לאחרים;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e3eb143701c4cacd930bbcb9df56cea35aa58ff7" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; יהיה רשאי להעביר על פי שיקול דעתו הבלעדי נתונים סטטיסטיים, מידע אנונימי ואחר שאין בו, ככל הידוע למרכז הידע &quot;יודעת&quot;, כדי לזהות אותך ללא הסכמתך;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6865fbd9ea42fbdfb9ae71b5025829c7bdb93dbd" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; יהיה רשאי להעביר את המידע לגופים הפועלים מטעמו שיעשו במידע שימוש בכפוף להוראות מדיניות פרטיות זו. כך גם רשאי מרכז הידע &quot;יודעת&quot; להעביר את הפרטים והמידע האישי כאמור לכל גוף שייכנס בנעליו ובלבד שהשימוש בהם יהיה בכפוף להוראות מדינות פרטיות זו.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5f1cee1a7638ceb7d904838edbc0f0cb2341339e" datatype="html">
         <source>שימוש במידע - רשתות חברתיות ושירותים נוספים של צד שלישי</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="813a09b14a0059f942134e01fd9b5ed9c596c980" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; מאפשר רישום דרך רשתות חברתיות וכן מעמיד כלים לשיתוף ולקישור תכנים מהאתר באמצעות רשתות חברתיות ו/או שירותים נוספים של צד שלישי. יובהר להלן, השימוש ברשתות חברתיות וכן בכל שירות אחר של צד שלישי, הינו חיצוני ונפרד מהאתר של מרכז הידע &quot;יודעת&quot; וכפוף לתנאי השימוש ולמדיניות הפרטיות הרלוונטיים. מרכז הידע &quot;יודעת&quot; אינו אחראי לכל פעילות של אותן רשתות חברתיות ו/או נותני השירותים הנוספים.  </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">49</context>
+          <context context-type="linenumber">65</context>
         </context-group>
       </trans-unit>
       <trans-unit id="67384b8238abd926647d534757ed46e4ebd51e9d" datatype="html">
         <source>הכניסה לאתר מרכז הידע &quot;יודעת&quot; באמצעות רשת חברתית ו/או כל שירות אחר של צד שלישי, עשויה למסור לאתר מרכז הידע &quot;יודעת&quot; פרטים אישיים ומידע אישי. בעת הכניסה לאתר דרך הרשת החברתית ו/או כל שירות אחר את מסכימה למסירת פרטים אלה. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c4bc56989521f2e291ca3f779ec5c0b037855f4e" datatype="html">
         <source>שימוש בעוגיות (Cookies)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="e3d1d3015b036c1a99129dfea1648789f03c3e05" datatype="html">
         <source> מרכז הידע &quot;יודעת&quot; עשוי לעשות שימוש באתר &quot;יודעת&quot; בעוגיות לצורך תפעולו התקין והשוטף של האתר. כך גם, מרכז הידע &quot;יודעת&quot; רשאי להיעזר בעוגיות שמקורן בצדדים שלישיים, בין היתר, לצרכים של ניתוחים סטטיסטיים, שימוש בשירותים של צדדים שלישיים ועוד.  </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8561ac8f56fd74ccc3de45c9ebf9697bec2981b7" datatype="html">
         <source>תוכלי להימנע משימוש בעוגיות, על ידי שינוי ההגדרות בדפדפן שלך. כך גם, ניתן למחוק את העוגיות במחשבך. עם זאת, נטרול העוגיות עלול לגרום לכך שלא תוכלי לעשות שימוש בחלק מהשירותים או התכונות באתר &quot;יודעת&quot; או באתרים אחרים.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fad2699d49d8c065afb0c3d62f346a27c299eb27" datatype="html">
         <source>אופן שמירת המידע האישי, מיקומו, זכות העיון במידע ו&quot;הזכות להישכח&quot;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fb61782062b4c2881b738692847eb4a242ff3c66" datatype="html">
         <source>כל אישה תהא זכאית לעיין בעצמה או על ידי בא כוחה שהרשתהו בכתב או על ידי אפוטרופוס במידע עליה המחוזק במאגר מידע של מרכז הידע &quot;יודעת&quot;. הפונה רשאית לבקש את תיקון המידע או את מחיקתו. סירוב למחיקת או שינוי המידע יובא לידיעת הפונה. על החלטה זו ניתן לערער בהתאם לקבוע בחיקוקים. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fde0e67a7a59cfd453cfebfa209ce5e7c2ca725b" datatype="html">
         <source>משתמשות אשר תהינה מעוניינות כי המידע האישי שנצבר אודותיהן במאגר המידע של מרכז הידע &quot;יודעת&quot; יימחק, מתבקשות לשלוח בקשה בכתב, באמצעות דואר אלקטרוני, לכתובת הבאה: privacy@yodaat.org. הבקשות תיבחנה ותעננה תוך פרק זמן סביר.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1d85133bdaeb0341998ec2ce97f628a256e90d4f" datatype="html">
         <source>יש לשים לב כי אם המידע המבוקש נמחק, עלול הדבר למנוע ממך את קבלת השירותים באתר או שהשימוש יהיה חסר, פחות איכותי, פחות יעיל וכיו&quot;ב. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="750c99eae6d09e9cf1e1e8f468bfd1e2b61b5ba9" datatype="html">
         <source>למעט אם הוגשה בקשה כאמור, מרכז הידע &quot;יודעת&quot; ישמור את המידע האישי שנאגר במאגר המידע שלו במשך הזמן הדרוש על מנת לספק את השירותים המפורטים במדיניות פרטיות זו.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c54bc33c3f593c6881b17e77d910334eade08168" datatype="html">
         <source>בכל מקרה, מרכז הידע &quot;יודעת&quot; ישמור מידע אישי, כאמור, אם וככל שהדבר יידרש על פי דין או במקרים בהם המידע עשוי לשמש ראיה בהליך משפטי (קיים או עתידי).</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">61</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d2b02262f61d329c2926999ab0f78c9cf961dc0b" datatype="html">
         <source>המידע שמרכז הידע &quot;יודעת&quot; אוסף נשמר במאגר הידע שלו, המאוחסן אצל ספקי שירותים של אירוח שרתים וגיבוי מידע, אשר חלקם או כולם יכולים להימצא אף מחוץ לגבולות ישראל. כך גם הדבר לגבי המידע שניתן להעביר לפי מדיניות פרטיות זו לאחר. השימוש באתר ומסירת פרטים באתר מהווים הסכמה גם לשמירת מידע בחו&quot;ל ולהעברתו של המידע אל מחוץ לגבולות ישראל. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">62</context>
+          <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
       <trans-unit id="12aae54cb6fdd44a9bd742034352fb36be3bff8e" datatype="html">
         <source>אמצעי הגנה על מידע אישי שנשמר במאגרי המידע</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">64</context>
+          <context context-type="linenumber">85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1c4bb4915ad2205e6d3923e390432efc7da2a1c8" datatype="html">
         <source>מרכז הידע &quot;יודעת&quot; מתייחס ברצינות רבה לחובתו לשמור על פרטיותם של משתמשים המוסרים לידיו מידע אישי, באמצעות אתר/י האינטרנט שהוא מפעיל או בכל דרך אחרת (כמו למשל: הרשמה לרשימות תפוצה). מרכז הידע &quot;יודעת&quot; משתמש באמצעים טכנולוגיים העונים לסטנדרטים סבירים ומקובלים, על מנת לוודא שמידע אישי אשר נמסר לו בפורמט דיגיטלי, יזכה להגנה הראויה מפני שימוש בלתי ראוי ובלתי מורשה. מרכז הידע &quot;יודעת&quot; פועל, באופן רציף, על מנת להתאים את עצמו לרגולציה העדכנית ביותר, בכל הנוגע להגנה על מידע אישי. עם זאת, יש להבין כי עלולים להיווצר מקרים, על אף כל ההגנות, בהם עלול להיחשף מידע אישי או ייגנב מידע. לא ניתן לצפות לכך שהמערכות תהינה חסינות לחלוטין מפני גישה לא מורשית. בעצם השימוש באתר את מסכימה לסיכון זה. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">87</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2d1ff3afd6359c2c1331a0e4da69df327c585454" datatype="html">
         <source>דיווח על פגיעה אפשרית בפרטיות </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">67</context>
+          <context context-type="linenumber">90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b39a78e8879e84074203d53877e10575ed3158d5" datatype="html">
         <source>אם את חושבת כי פרטיותך נפגעה בעת השימוש באתר, אנא פני למרכז הידע &quot;יודעת&quot; באמצעות כתובת הדואר האלקטרוני privacy@yodaat.org. צוות אתר מרכז הידע &quot;יודעת&quot; עומד לרשותך לכל פניה, שאלה או בקשה.  הפניות תיבחנה ותעננה תוך פרק זמן סביר.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3a28323bed868b28ab4bd39dec93a27290bfb061" datatype="html">
         <source>שינויים במדיניות הפרטיות </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="linenumber">95</context>
         </context-group>
       </trans-unit>
       <trans-unit id="837f6de3b316cf47ec33d43caf333569fb259337" datatype="html">
         <source>צוות מרכז הידע &quot;יודעת&quot; יהיה רשאי לשנות מעת לעת את תנאי השימוש באתר ו/או מדינות הפרטיות. אם יבוצעו שינויים מהותיים תופיע על כך הודעה בעמוד הבית של אתר &quot;יודעת&quot; 7 ימים לפני כניסת השינוי לתוקף. עם זאת, אם התיקון מחויב על פי דין - ישונה לאלתר ותינתן הודעה על כך באתר הבית של אתר &quot;יודעת&quot;. אם המשתמשת לא מסכימה לשינוי, היא רשאית לחדול מלעשות שימוש באתר, רשאית לבקש את מחיקת המידע האישי, אם קיים, ממאגר מרכז הידע &quot;יודעת&quot;. צוות מרכז הידע &quot;יודעת&quot; יסיר את המשתמשת תוך פרק זמן סביר מרגע הגשת בקשתה. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2b88255bbba183e509582f3a078c4852ede85ef3" datatype="html">
         <source>* הנוסח בעברית של מדיניות הפרטיות הוא הנוסח התקף מבחינה משפטית, אם יש אי התאמה או סתירה בין הנוסחים (עברית/ערבית/אנגלית).</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/generic-page-privacy/generic-page-privacy.component.html</context>
-          <context context-type="linenumber">72</context>
+          <context context-type="linenumber">100</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5bfede3887c5fc747ccbcf45180ab8863fdd219c" datatype="html">
@@ -2831,6 +2893,10 @@
           <context context-type="sourcefile">app/card-share-page/card-share-page.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/embed-page/embed-page.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="7182e3bd48229575a3345e86033d5d423bde986a" datatype="html">
         <source>מציג תוצאות</source>
@@ -2851,6 +2917,15 @@
         <context-group purpose="location">
           <context context-type="sourcefile">app/time-range-selector/time-range-selector.component.html</context>
           <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="07e24435dc96de6cf1d8509fba061a558125e7f2" datatype="html">
+        <source>
+    מכרזים וקולות קוראים בתחום המגדר 
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/generic-page-opportunities/generic-page-opportunities.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
     </body>
