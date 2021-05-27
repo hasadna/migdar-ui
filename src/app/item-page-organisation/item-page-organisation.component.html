@@ -12,6 +12,9 @@
     <a [href]='website()' class='org-website' *ngIf='document.org_website' target='_blank' i18n>
     לאתר הארגון
     </a>
+    <a [href]='document.org_facebook' class='org-website' *ngIf='document.org_facebook' target='_blank' i18n>
+    לעמוד הפייסבוק של הארגון
+    </a>
     <a [href]='"mailto:" + document.org_email_address'
        *ngIf='document.org_email_address' class='ltr'>
       {{document.org_email_address}}
