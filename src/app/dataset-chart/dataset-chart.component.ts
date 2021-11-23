@@ -74,16 +74,20 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     this.ratio.emit(r);
   }
 
-  addXAxis(svg, x, xValues, position) {
+  addXAxis(svg, x, xValues, position, rotate=false) {
     // Add the X Axis
     const xAxis = d3.axisBottom(x)
                     .tickSize(0)
                     .tickValues(xValues)
                     .tickFormat((d: string) => d.replace(RegExp('[0-9]{2}([0-9]{2})', 'g'), `'$1`))
                     ;
-    svg.append('g')
+    const axis = svg.append('g')
         .attr('transform', `translate(0, ${position})`)
-        .call(xAxis);
+        .call(xAxis)
+    if (rotate) {
+      axis.selectAll("text")  
+      .attr("transform", "translate(-10) rotate(-45)");    
+    }
   }
 
   yFormatter(series) {
@@ -255,8 +259,9 @@ export class DatasetChartComponent implements OnInit, OnChanges {
     }
     const fullXValues = Array.from(new Set(data.map((d) => d.x))).sort();
     let xValues;
-    if (!this.large && fullXValues.length > 16) {
-      xValues = fullXValues.filter((v, i) => i % 2);
+    if (!this.large && fullXValues.length > 12) {
+      const d = 3;
+      xValues = fullXValues.filter((v, i) => (i % d) === ((fullXValues.length - 1) % d));
     }
     const maxWidth = Math.min(fullXValues.length * maxColumnWidth, width - leftPadding - rightPadding);
 
@@ -323,7 +328,6 @@ export class DatasetChartComponent implements OnInit, OnChanges {
          .attr('height', (d) => y(d[0]) - y(d[1]))
          .attr('width', x.bandwidth())
          .on("mouseover", (d) => {
-            console.log('DDD', d);
             const data = d.data;
             const key = d.__series.key
             const series = {gender: key};
@@ -340,8 +344,8 @@ export class DatasetChartComponent implements OnInit, OnChanges {
           });
          ;
 
-    this.addXAxis(svg, x, xValues, height - marginBottom + 8);
-    this.addYAxis(svg, y, leftPadding - 16, marginTop - 8);
+    this.addXAxis(svg, x, xValues, height - marginBottom + 8, this.large && x.domain().length >= 20);
+    this.addYAxis(svg, y, leftPadding - 16, marginTop - 8); 
 
     svg.append('path')
        .attr('class', 'bottom')
@@ -367,8 +371,9 @@ export class DatasetChartComponent implements OnInit, OnChanges {
       data.push(...dataset.dataset);
     }
     let xValues = Array.from(new Set(data.map((d) => d.x))).sort();
-    if (!this.large && xValues.length > 16) {
-      xValues = xValues.filter((v, i) => (i % 2) !== (xValues.length % 2));
+    if (!this.large && xValues.length > 12) {
+      const d = 2;
+      xValues = xValues.filter((v, i) => (i % d) === ((xValues.length - 1) % d));
     }
     const x = d3.scalePoint()
                 .range([leftPadding, width - rightPadding])

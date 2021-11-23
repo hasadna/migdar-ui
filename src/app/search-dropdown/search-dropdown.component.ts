@@ -23,7 +23,6 @@ export class SearchDropdownComponent implements OnInit, OnChanges, OnDestroy {
   ngOnInit() {
     this.resultsSub = this.manager.results.subscribe((result) => {
       if (this.results.length < 8) {
-        console.log('RESULT', result);
         this.results.push(result);
       }
     })
@@ -37,7 +36,6 @@ export class SearchDropdownComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnChanges() {
-    console.log('TERM', this.term);
     this.results = [];
     if (this.term) {
       this.manager.searchTerm(this.term);

@@ -27,13 +27,11 @@ export class SearchFiltersComponent implements OnInit {
     this.itemKind = this.itemKind || 'all';
     this.refresh();
     this.filters.updated.subscribe((filters) => {
-      console.log('FILTERS', filters);
       this.refresh();
     });
   }
 
   switchKind(itemKind) {
-    console.log('switchKind', itemKind);
     this.itemKind = itemKind;
     const filters = this.filters.update(itemKind);
     this.router.navigate(
