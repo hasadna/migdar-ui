@@ -11,11 +11,11 @@ import { debounceTime, map } from 'rxjs/operators';
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.less']
 })
-export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges, AfterContentInit {
+export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input() manager: SearchManager;
   @Input() results: any[];
-  @Output() shown = new EventEmitter<void>();
+
   columns = [[], []];
   columnAll = [];
   @ViewChild('column0') column0ref: ElementRef;
@@ -26,9 +26,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges, Aft
   visible = false;
 
   iobs: IntersectionObserver;
-  visible$ = new BehaviorSubject<boolean>(false);
-  visibleSub: Subscription = null;
-
+  
   constructor(public api: ApiService,
               private bottommer: BottommerService,
               private el: ElementRef) {
@@ -42,35 +40,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges, Aft
         }
       });
       this.visible = true;
-    } else {
-      this.visibleSub = this.visible$.subscribe((visible) => {
-        if (!this.visible && visible) {
-          this.visible = visible;
-          this.shown.next();
-        }
-        this.visible = visible;
-      });
     }
-  }
-
-  restartObserver() {
-    if (this.iobs) {
-      this.iobs.disconnect();
-    }
-    this.iobs.observe(this.el.nativeElement);
-  }
-
-  ngAfterContentInit() {
-    this.iobs = new IntersectionObserver(
-      (entries) => {
-        this.visible$.next(entries[0].isIntersecting);
-      },
-      {
-        rootMargin: '0px',
-        threshold: 0
-      }
-    );
-    this.restartObserver();
   }
 
   clear() {
@@ -87,10 +57,6 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges, Aft
       this.searchResultsSubs.unsubscribe();
       this.searchResultsSubs = null;
     }
-    if (this.visibleSub) {
-      this.visibleSub.unsubscribe();
-      this.visibleSub = null;
-    }
   }
 
   ngOnChanges() {
@@ -105,9 +71,6 @@ export class SearchResultsComponent implements OnInit, OnDestroy, OnChanges, Aft
         });
     } else if (this.results && this.results.length) {
       this.assignCards(this.results);
-      setTimeout(() => {
-        this.restartObserver();
-      }, 0);
     }
   }
 

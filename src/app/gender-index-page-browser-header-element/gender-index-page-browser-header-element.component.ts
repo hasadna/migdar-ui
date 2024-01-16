@@ -8,7 +8,6 @@ import { I18nService } from '../i18n.service';
 })
 export class GenderIndexPageBrowserHeaderElementComponent implements OnInit {
 
-  @Input() selected: string;
   @Input() active: string;
   @Input() slug: string;
   @Input() name: string;
