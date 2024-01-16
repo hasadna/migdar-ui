@@ -82,8 +82,8 @@
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7c1c6efee55f2ee8e97d51820881324f92f1e26a" datatype="html">
-        <source>מגיפת הקורונה</source>
+      <trans-unit id="ba4540a837397bc75e79a0ef861e21e7db86cbe7" datatype="html">
+        <source>נשים ומלחמה</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
           <context context-type="linenumber">22</context>
@@ -96,8 +96,8 @@
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="05f3cf6e85276b147bbd0f1d406e3940a7851a76" datatype="html">
-        <source>עבודות שקופות</source>
+      <trans-unit id="ea71746fd5a7cee444bdc76bff9d40d4f7cba60c" datatype="html">
+        <source>נשק במרחב הציבורי והפרטי</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/main-page/main-page.component.html</context>
           <context context-type="linenumber">24</context>
