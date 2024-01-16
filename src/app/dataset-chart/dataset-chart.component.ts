@@ -193,13 +193,26 @@ export class DatasetChartComponent implements OnInit, OnChanges {
           .style('fill', colorScale);
 
     const group = chart.selectAll('g.bar-group').selectAll('rect')
-         .data((d: any) => d.dataset)
+         .data((d: any) => d.dataset.map((x) => Object.assign(x, {__series: d})))
          .enter();
     group.append('rect')
           .attr('x', leftPadding)
           .attr('y', (d: any) => y(d.x))
           .attr('width', (d: any) => x(d.y))
-          .attr('height', y.bandwidth());
+          .attr('height', y.bandwidth())
+          .on("mouseover", (d: any) => {
+            const series = d.__series;
+            this.tooltipSeries = series;
+            this.tooltipValueX = d.x;
+            this.tooltipValueY = this.yFormatter(series)(d.y);
+            this.tooltipLocation = {
+              x: d3.event.layerX,
+              y: d3.event.layerY
+            };
+          })
+          .on("mouseout", (d) => {
+            this.tooltipSeries = null;
+          });
     group.append('text')
          .attr('class', 'label')
          .attr('x', leftPadding)
