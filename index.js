@@ -4,9 +4,17 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 const request = require("request");
 const bodyParser = require('body-parser');
-const sgMail = require('@sendgrid/mail')
+const nodemailer = require('nodemailer');
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+const mailTransport = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: parseInt(process.env.SMTP_PORT, 10),
+  secure: parseInt(process.env.SMTP_PORT, 10) === 465,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASSWORD,
+  },
+});
 
 const app = express();
 const rootDir = './dist/';
@@ -55,8 +63,8 @@ app.use('/contact', bodyParser.json())
         html: '<div style="direction:rtl">' + req.body.body.split('\n').join('<br/>') + '</div>',
       };
       console.log(msg);
-      sgMail
-        .send(msg)
+      mailTransport
+        .sendMail(msg)
         .then(() => {
           res.status(200).json({sent: true});
         })
