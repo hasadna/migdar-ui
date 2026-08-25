@@ -1,5 +1,12 @@
 # MigdarUi
 
+## API documentation
+
+The public HTTP API this app talks to (`https://api.yodaat.org`) is documented in
+[`docs/`](docs/README.md) — endpoint reference, the filter/lookup query language,
+the full data model for all three document types, a cookbook, and a list of known
+quirks.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
 ## Development server
